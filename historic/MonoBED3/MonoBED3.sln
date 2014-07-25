@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoBED3", "MonoBED3\MonoBED3.csproj", "{623DB914-9862-4756-A452-9D159A94D737}"
+EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "Packages", "Packages.mdproj", "{7818297D-AB3A-421D-A283-49DBE727C7E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{623DB914-9862-4756-A452-9D159A94D737}.Debug|x86.ActiveCfg = Debug|x86
+		{623DB914-9862-4756-A452-9D159A94D737}.Debug|x86.Build.0 = Debug|x86
+		{623DB914-9862-4756-A452-9D159A94D737}.Release|x86.ActiveCfg = Release|x86
+		{623DB914-9862-4756-A452-9D159A94D737}.Release|x86.Build.0 = Release|x86
+		{7818297D-AB3A-421D-A283-49DBE727C7E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7818297D-AB3A-421D-A283-49DBE727C7E6}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MonoBED3\MonoBED3.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.StandardHeader = $2
+		$2.Text = 
+		$2.IncludeInNewFiles = True
+		$0.VersionControlPolicy = $3
+		$3.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal

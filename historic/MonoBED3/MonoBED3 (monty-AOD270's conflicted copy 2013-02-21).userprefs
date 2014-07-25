@@ -1,0 +1,45 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoBED3/View/Views/PaletteWidget.cs">
+    <Files>
+      <File FileName="MonoBED3/View/Views/PaletteWidget.cs" Line="50" Column="109" />
+      <File FileName="MonoBED3/Controller/EditorContext.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/Facades/GameObjectFacade.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/Sector.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/Actor.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/FacadeConnection.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/GameObject.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/World.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MonoBED3" expanded="True" selected="True">
+            <Node name="Controller" expanded="True">
+              <Node name="Protocols" expanded="True" />
+            </Node>
+            <Node name="Model" expanded="True">
+              <Node name="Facades" expanded="True" />
+            </Node>
+            <Node name="View" expanded="True">
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="29" />
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="189" />
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="194" />
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="381" />
+      <Breakpoint file="/Users/monty/Dropbox/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Model/Sector.cs" line="21" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

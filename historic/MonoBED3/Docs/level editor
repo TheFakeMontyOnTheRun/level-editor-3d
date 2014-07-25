@@ -1,0 +1,356 @@
+Estou em LEVEL MODIFICATION
+BZK3 Game Engine
+Requirements for BZK2/BZK3 level editor - First Draft
+Aug 13th, 2010 - Daniel Monteiro - Niterói, RJ, Brazil.
+==============================================================================
+===Table of contents============================================================
+- About this document
+- About BZK2 and BZK3
+- TODO for this document
+- About the level editor
+- Top level requirements
+==============================================================================
+
+===About this document=========================================================
+	
+	The goal is to have a full analysis before even drawing a single class 
+diagram. In this document, you will find a top level description of the system,
+use cases, functional and non-functional restrictions and some key semantics,
+if possible, explained in natural language. In case you want to see the full
+BZK2 and BZK3 file format specs, they are to be found in the parent directory of
+this document's own directory.
+	Hopefully, it will be possible to have some milestones set too.
+==============================================================================
+
+===About BZK2 and BZK3========================================================
+	The BZK2 project came from the Maemo platform, where it had the very
+specific goal of exploring the potential of the then internet tablets, with its
+low-power hardware and big screens. Today, it seems that even low-end phones
+have power enough to handle the kind of graphics the original games boasted.
+So, the goal of this project is to design a new game engine, capable of handling
+everything BZK2 had, plus more.
+	Of course, only high-end phones will aim for better graphics. The basic
+experience is good enough for low-end phones. For the high-end phones, there is
+some hope of devising a nice profile, BZK3, with shaders and everything the new
+batch of Android phones seem to support. And this is the advantage of finally
+adopting the Java language.
+	The point is not fast paced action, but rather, more suited user 
+experience for users playing on the go, such as playing with one hand, eventual
+switching of applications to answer a phone call or even stepping out of a bus.
+One could think of this project as the zen of mobile game development, or better say it,
+a exercise of simplicity. The goal is the smallest game engine possible.
+==============================================================================
+
+=== TODO for this document ======================================================
+- Add notice about “tagging” objects
+- Add notice about adding “notes” to level’s XML
+==============================================================================
+
+===About the level editor=======================================================
+	The current version of the BZK level editor only supports BZK2. It dates
+back from the original software rendered SDL and only supporting geometry and
+very basic game logic. The editing is still very crude and buggy, but works.
+There are plans for some strong overhaul on editing methods and data formats.
+The XML format will be restricted now for editing purposes - a newer file format
+is already being designed.
+	The BZK3 file format is still to be defined, but will probably be the 
+current modus operandi of bounding boxes, but filled with free-form meshes edited
+into blender.
+==============================================================================
+
+===Target Platforms============================================================
+	The editor was originally written in C#, for the Mono Common Language
+Runtime - and meant to run under GNU/Linux, but pretty much capable of running
+on every platform supported by Mono and GTK#. Of course, it can
+be re-written in Java and Swing, if its the case.
+==============================================================================
+
+===Top level Requirements======================================================
+	Since the focus is on simplicity and according to the BZK2 specifications
+(BZK3 will be formalized later on), it's required that the level editor support
+the specified geometry editing, the decals and material assignment, property 
+editing and script assignment. The editor must use XML as its intermediate file 
+format and a compressed binary format for its final format.
+	The level editor must support previewing parts of the level and try to
+optimize it as much as possible. It is not required that it must be fast or light
+, since the focus is on productivity. 
+	Due to limitations on the target platforms, all graphical assets must be
+pre-processed before being displayed in game. Its mostly a OpenGL ES and JSR184
+(and to a lesser degree, OpenGL) limitation, since the original software renderer
+had no issues rendering concave polygons and complex meshes.
+==============================================================================
+
+===Risk Management===========================================================
+There are 5 big risks on this project
+* Memory usage:
+Memory usage might be a concern if the data structures and internal buffers, 
+even if only for a split second, get too big. The game will break in the face of
+the user - and that's a major showstopper. Everything must be as lean as possible
+with optional extra eye candy for devices that can afford it.
+
+* Package sizes:
+As of 2010, this is, surprisingly still a issue. Some high-end phones cant take
+big data packages - hence, the more vector and synthesized we use, the better.
+
+* Processing speeds: 
+Not every M3G phone has acceleration for it. The game engine must make wise use
+of the rendering power available. But since this is best done offline, the editor
+must take as much care of this as possible.
+
+* Form Factor Discrepancies:
+Lots of Java phones have different form factors and usage methods. The system
+must be flexible enough to handle different usage scenarios and flexible enough
+so the player can choose his favorite. This is only partially true for Android,
+since the guys from Montain View took good care while designing the platform.
+
+* Screen Resolution Discrepancies:
+Besides the user experience of the previous item, there is also the fact that
+different screen resolutions might also bring new aspect ratios - and just 
+stretching the content is not a good solution. The layout manager must handle 
+this scenario too, while. The Level editor must be capable of displaying all the
+possibilities and suggesting solutions. 
+==============================================================================
+
+===Rough Use Cases Specification================================================
+These are the use cases for the main tasks to be performed inside the system:
+* Level geometry editing a previewing
+* Asset management and processing
+* Script debugging
+* Packaging
+Each has his own set of use cases and views associated. And each is independent
+of each other
+==============================================================================
+
+===Use Case: Level geometry editing and previewing==============================
+This use case covers:
+* starting a new level
+* modifying a level
+* saving it to disk
+* loading it from disk
+* previewing it from different angles, both in 2D and 3D
+* configuring the application/UI
+* importing levels from other file formats
+
+--- starting a new level -------------------------------------------------------
+Pre-requisites for this use case scenario: none
+Expected post. state: A blank level, with just a master sector, a actor with a 
+camera binded to it.
+Remarks: This use case just covers the "starting new level" action, not the case
+of the user asking for a new level while editing another. This action deserves a
+use section for itself.
+User interactivity: none.
+
+This sub-section of the use case tries to dissect what the user expect and gets
+when he/she starts working on a new level. Must it be part of a bigger project?
+Its there a shared pool of assets? How this all integrates with the engine's
+code base? What does the user see?
+
+To answer the questions:
+- The idea of a project is good, but might complicate the sharing of resources, 
+since projects cant be a closed idea. Angstron 2 itself is not a closed idea - 
+There are the official episodes, but there are spin-offs and prequels that might
+share elements with the others. So, no , there is no "Project" idea.
+
+- The assets of the current level will be listed and the designer is encouraged
+to re-use as much as possible. Everything is packaged in raw binary files before
+the final deployment on the target platform.
+
+- The UI state must be reverted to the default (or to the user's saved.
+preferences).
+
+- The zoom and the camera panning goes back to 100% and (0,0,0), respectively.
+
+- No currently selected object.
+--------------------------------------------------------------------------------
+
+--- level modification ---------------------------------------------------------
+Pre-requisites: There is a level already loaded, with at least a master sector 
+and one actor and a camera. (the camera might not be binded to the actor).
+Expected post. state: The same state as the pre-requisite, but with the geometry
+or position of the objects potentially diferent.
+Remarks: This is the core experience of the level editor.
+User Interaction: See below.
+Restrictions: The user cant have a level without a master sector, a actor or a 
+camera. Those three objects are all needed. There is no need for a lamp or a
+bind between the camera and a actor, but the UI must warn the user (discreetly)
+all the time about this.
+
+This use case covers any modification to the level geometry and structure made
+by the user. It must be made through one of the views the user has to the level
+and the system must keep some state persistence, so that the user can undo the 
+his actions at any time, from the very beginning of the editing, and with disk
+persistance of the history (a lot like how GIMP handles it) - allowing going 
+back and forth the history.
+
+Most of the interaction starts with the mouse, but some key bindings may happen
+- be it from the default key bindings or from the users custom key bindings. Not
+every mouse action must be logged. There are two levels of modification - and 
+only what really changes the level must be logged. It is desirable that the log
+includes information regarding who did the changes and on what machines, when
+and when it was stopped.
+
+The kind of mouse interaction expected is a "desktop mouse" experience, with
+some actions performed by mouse clicks, other by mouse drags and with quick data
+available by hovering the mouse over a object. 
+
+There is the concept of a selected object, with its properties, behaviour (where
+applicable) and linkage. Those objects can have names, appearance and sounds.
+Everything attributed to the master sector entity (but not to its components, 
+such as his lines and faces) happen all through the sessions (thats the place to
+attribute fixed text, music - as enviromental sounds - and etc).
+
+To select a object, the user must hover the mouse over it and expect it to be
+hightlighted. Being the case, the user can click it to select.
+
+If the user just wait for it to be highlighted and simply drags, it moves the 
+mouse.  If the moved object is ruled by any special rule (such as faces in a 
+sector), over objects might be affected by the action (in the case of moving a 
+vertex, others will probably moved along)
+
+Every Object has a handle to scale it. Even actors. Every scalled object must be
+processed by the editor before being compiled to the engine. What happens during
+the final exporting depends on whats better for the asset. Certainly, for a 
+single object thats replicated a lot, but only transformed once, its better to 
+apply the transforming later in the level loading. For a object only used once,
+with a associated transform, its better to apply it during the exporting.
+
+To delete a object, the user must select it first - but not all object can be 
+deleted.
+
+To create a new object, the user can click with the right button of the mouse to
+place the virtual cursor (not every kind of object can be created directly). 
+Certain kinds of object can also be cloned. This is true for Actors, Cameras, 
+Lamps, Triggers, Brushes and Sectors (but not for its components).
+
+The moment the user changes some property of a object, it is applied to the 
+object both in memory (engine) and in the visual.
+
+In case the user makes changes to different objects and undo those changes one 
+by one, the UI must change its state to show what was undone (possibly by 
+changing the focused widget)
+
+The modification of the level roughly represents one of the possible modes of
+mouse handling of the tool. The others will be presented on other scenarios.
+--------------------------------------------------------------------------------
+
+--- saving a level to disk -----------------------------------------------------
+Pre-requisites: A valid map, with a camera binded to a actor
+Expected post. state: No change in level state.
+Remarks: The "modified" state for the level is reseted.
+User Interaction: If no file was already attributed to the level, the user is
+presented with a choice.
+Restrictions: if the designer chooses to save into a pre-existant file, the 
+system must ask for confirmation before proceeding.
+
+It is a good idea to have visual feedback on the current operation and some 
+options on what to save.
+
+I, for one, dislike auto-save, but enjoy auto-backup, so this could be a good
+solution for eventual crashes. 
+
+Its worth noting that this is not the same as the final packaging for the target
+platforms. This is just the saving for the XML-based exchange format, with the
+only purpose of saving interesting versions, sharing work with others or simply
+halt the work for later resume.
+--------------------------------------------------------------------------------
+
+--- loading a level from disk --------------------------------------------------
+Pre-requisites: A selected file to load
+Expected post. state: the level state must be exactly the same it where when the
+level was saved.
+Remarks: The "modified" state for the level is reseted.
+User Interaction: The user has to select a file to be loaded. Be it from the 
+proper load window or from the "recently edited" dropdown menu.
+Restrictions: If the user cancels the operation, the editor must return to its
+previous state, as if never have ever happened.
+
+If the load fails, the editor must restore its previous state, as if it was 
+never commanded to load a new file.
+
+The result is the loaded level with the same camera angle that it had when the
+file was saved, and the same settings for the panes. (all views must be restored
+ as if the save have never taken place). The selected object must also be the 
+same.
+--------------------------------------------------------------------------------
+
+--- previewing a level ---------------------------------------------------------
+Pre-requisites: A camera binded to a actor and a valid level in memory
+Remarks: Its just a geometry preview - no game rules apply.
+User Interaction: Using both the keyboard and the mouse. 3D movement.
+Restrictions: none.
+
+The preview just presents the designer with a view of the level, unconstrained
+and with toggable options, such a lightning, collisions and visibility
+processing.
+--------------------------------------------------------------------------------
+
+--- configuring the application/UI ---------------------------------------------
+Pre-requisites: A fully loaded and valid level in memory
+Remarks: application configurations persist when you start a new level, but get
+loaded from disk when you load a level with a different UI configuration. Maybe
+its a good idea to provide UI templates, maybe with disk persistency too.
+
+User Interaction: The user is provided with a combo box containing the 
+configurable items and another combo with the options. There is a button for 
+undoing the last selection, one for loading from disk (opens a file system 
+browsing window) and one for saving to disk (also opens the file system browsing
+window). If the user makes a change, changes the "configurable item" combo box
+and then clicks undo, the "configurable item" combo box must change back to the
+last changed item and undo the change.
+
+Ok validates the changes and cancel undo it altogheter.
+
+Restrictions: For now, the changes only take place after the user clicks on "on"
+But in the future, changes could be previewable on a small pane or even on the 
+UI itself. Also, only the "configurable items" will be able to be configured 
+(doh!)
+
+This is a quite simple scenario. Its actually a less important item and will be
+probably left for the last adjustments, since the continuos use and testing will
+refine the list of "configurable items" to figure on this window.
+
+There must be a "forget remembered decisions" too.
+--------------------------------------------------------------------------------
+
+--- importing levels from other file formats -----------------------------------
+Pre-requisites: A valid BZK2 map
+
+Remarks: This goes in one way only. Just input.
+User Interaction: Maybe there are some structures where the user will be able to
+select how they're going to be converted to the internal map representation.
+(with a "remember my decision"). A base path for resources must also be 
+specified.
+
+Restrictions: Some resources might not be converted or not be available due to
+diferences in the formats. It all depends on how the project will proceed.
+--------------------------------------------------------------------------------
+==============================================================================
+
+=== Asset management and processing ============================================
+* Importing a resource
+* Managing existing resources
+* Using resources
+* Inspecting resources
+* deleting a resource
+* saving a resource collection
+--- Importing a resource -------------------------------------------------------
+Pre-requisites: A valid resource (valid from the file format perspectve), a 
+valid collection loaded in memory.
+Expected post. state: The resource added and fully validated against to the 
+resources collection.
+Remarks: After being loaded, all resources are equal, except for the "kind" of 
+resource (sound, image or mesh). Different file formats for the same kind must 
+be leveraged, so that the same resource importe from two different file formats
+must result in the same internal representation in memory.
+User Interaction: Drag n Drop or file browser? maybe both?
+Restrictions: All names must be unique from inside. If needed a name mangling 
+must take place.
+
+--- Managing existing resources ------------------------------------------------
+Pre-requisites:
+Expected post. state:
+Remarks:
+User Interaction:
+Restrictions:
+--------------------------------------------------------------------------------
+==============================================================================

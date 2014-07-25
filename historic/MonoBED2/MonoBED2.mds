@@ -1,0 +1,43 @@
+<Combine fileversion="2.0" name="MonoBED2">
+  <Policies>
+    <DotNetNamingPolicy DirectoryNamespaceAssociation="None" ResourceNamePolicy="FileFormatDefault" />
+    <ChangeLogPolicy UpdateMode="None" inheritsSet="Mono">
+      <MessageStyle LineAlign="0" />
+    </ChangeLogPolicy>
+    <VersionControlPolicy inheritsSet="Mono" />
+    <TextStylePolicy FileWidth="120" TabWidth="4" inheritsSet="Mono" inheritsScope="text/plain" />
+    <StandardHeader Text="" inheritsSet="Apache2License" />
+  </Policies>
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="MonoBED2" configuration="Debug" />
+      <Entry build="True" name="Packages" configuration="Debug" />
+      <Entry build="True" name="MonoBED2Translation" configuration="Debug" />
+      <Entry build="False" name="MonoBED2TestsTranslation" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="MonoBED2" configuration="Release" />
+      <Entry build="True" name="Packages" configuration="Release" />
+      <Entry build="True" name="MonoBED2Translation" configuration="Release" />
+      <Entry build="False" name="MonoBED2TestsTranslation" configuration="Release" />
+    </Configuration>
+    <Configuration name="Default" ctype="CombineConfiguration">
+      <Entry build="True" name="MonoBED2" configuration="Default" />
+      <Entry build="True" name="Packages" configuration="Default" />
+      <Entry build="True" name="MonoBED2Translation" configuration="Default" />
+      <Entry build="False" name="MonoBED2TestsTranslation" configuration="Default" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="MonoBED2" single="True">
+    <Execute type="None" entry="MonoBED2" />
+    <Execute type="None" entry="Packages" />
+    <Execute type="None" entry="MonoBED2Translation" />
+    <Execute type="None" entry="MonoBED2TestsTranslation" />
+  </StartMode>
+  <Entries>
+    <Entry filename="MonoBED2/MonoBED2.mdp" />
+    <Entry filename="Packages.mdse" />
+    <Entry filename="MonoBED2Translation/MonoBED2Translation.mdse" />
+    <Entry filename="MonoBED2TestsTranslation/MonoBED2TestsTranslation.mdse" />
+  </Entries>
+</Combine>

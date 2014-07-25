@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{623DB914-9862-4756-A452-9D159A94D737}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MonoBED3</RootNamespace>
+    <AssemblyName>MonoBED3</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+    <DebugSymbols>true</DebugSymbols>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="System.Xml" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\..\lib\ikvm-7.2.4630.5\bin\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\..\..\lib\ikvm-7.2.4630.5\bin\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework" />
+    <Reference Include="portalizer_lib">
+      <HintPath>..\..\..\..\..\BZK3 Project\source\Tools\BZK3Portalizer\dist\portalizer_lib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Controller\Protocols\GtkDrawable.cs" />
+    <Compile Include="View\Windows\MainWindow.cs" />
+    <Compile Include="View\Windows\AboutDlg.cs" />
+    <Compile Include="gtk-gui\MonoBED3.AboutDlg.cs" />
+    <Compile Include="View\Widgets\EditViewWidget.cs" />
+    <Compile Include="gtk-gui\MonoBED3.EditViewWidget.cs" />
+    <Compile Include="gtk-gui\MonoBED3.PaletteWidget.cs" />
+    <Compile Include="View\Views\PaletteWidget.cs" />
+    <Compile Include="Controller\EditorContext.cs" />
+    <Compile Include="View\Views\XZView.cs" />
+    <Compile Include="Controller\Protocols\ContextAware.cs" />
+    <Compile Include="Controller\Protocols\Spatial.cs" />
+    <Compile Include="Controller\Cursor.cs" />
+    <Compile Include="View\Views\XYView.cs" />
+    <Compile Include="Controller\Protocols\ContextListener.cs" />
+    <Compile Include="Model\BZK2Helper.cs" />
+    <Compile Include="Controller\Protocols\ZoomLevelListener.cs" />
+    <Compile Include="Controller\Protocols\Zoomable.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="Controller\Logger.cs" />
+    <Compile Include="Model\Exceptions\InvalidBZK2FileException.cs" />
+    <Compile Include="View\Dialogs\ExportMap.cs" />
+    <Compile Include="gtk-gui\MonoBED3.ExportMap.cs" />
+    <Compile Include="View\Dialogs\MapProperties.cs" />
+    <Compile Include="gtk-gui\MonoBED3.MapProperties.cs" />
+    <Compile Include="Tests\EditorContextTests.cs" />
+    <Compile Include="Model\Utils.cs" />
+    <Compile Include="Controller\Protocols\Drawable.cs" />
+    <Compile Include="Model\EditorWorld.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="View\" />
+    <Folder Include="View\Views\" />
+    <Folder Include="View\Widgets\" />
+    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
+    <Folder Include="Controller\Protocols\" />
+    <Folder Include="View\Windows\" />
+    <Folder Include="Model\Exceptions\" />
+    <Folder Include="View\Dialogs\" />
+    <Folder Include="Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

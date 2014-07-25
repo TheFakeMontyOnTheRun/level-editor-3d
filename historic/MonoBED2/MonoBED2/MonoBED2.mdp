@@ -1,0 +1,59 @@
+<Project name="MonoBED2" fileversion="2.0" DefaultNamespace="MonoBED2" language="C#" clr-version="Net_2_0" targetFramework="2.0" ctype="DotNetProject">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Debug" assembly="MonoBED2" />
+      <Build debugmode="True" target="Exe" />
+      <Execution consolepause="True" runwithwarnings="True" runtime="MsNet" clr-version="Net_2_0" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" definesymbols="DEBUG" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Release" assembly="MonoBED2" />
+      <Build debugmode="False" target="Exe" />
+      <Execution consolepause="True" runwithwarnings="True" runtime="MsNet" clr-version="Net_2_0" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File subtype="Code" buildaction="EmbedAsResource" name="gtk-gui/gui.stetic" />
+    <File subtype="Code" buildaction="Compile" name="gtk-gui/generated.cs" />
+    <File subtype="Code" buildaction="Compile" name="MainWindow.cs" />
+    <File subtype="Code" buildaction="Compile" name="gtk-gui/MainWindow.cs" />
+    <File subtype="Code" buildaction="Compile" name="Main.cs" />
+    <File subtype="Code" buildaction="Compile" name="AssemblyInfo.cs" />
+    <File subtype="Code" name="app.desktop" DeployService.Deploy="True" DeployService.TargetDirectoryId="Linux.DesktopApplications" buildaction="FileCopy" />
+    <File subtype="Directory" buildaction="Compile" name="DataEngine" />
+    <File subtype="Directory" buildaction="Compile" name="GraphicalEngine" />
+    <File subtype="Code" buildaction="Compile" name="DataEngine/ActorManager.cs" />
+    <File subtype="Code" buildaction="Compile" name="DataEngine/Actor.cs" />
+    <File subtype="Code" buildaction="Compile" name="gtk-gui/MonoBED2.EditRules.cs" />
+    <File subtype="Code" buildaction="Compile" name="EditRules.cs" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="../mono2icon.png" />
+    <File subtype="Code" buildaction="Compile" name="GraphicalEngine/WorldView.cs" />
+    <File subtype="Code" buildaction="Compile" name="DataEngine/Sector.cs" />
+    <File subtype="Code" buildaction="Compile" name="DataEngine/World.cs" />
+    <File subtype="Code" buildaction="Compile" name="DataEngine/SectorConstants.cs" />
+    <File subtype="Code" buildaction="Compile" name="DataEngine/GameLogicConstants.cs" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="True" refto="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="True" refto="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="True" refto="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Charsets, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Corba, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Core, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Jdbc, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Management, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Misc, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Security, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.SwingAWT, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Text, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.Util, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.OpenJDK.XML, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="IKVM.Runtime, Version=0.40.0.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference specificVersion="False" type="Assembly" localcopy="True" refto="portalizer.dll" />
+  </References>
+  <LanguageParameters ApplicationIcon="." ctype="CSharpProjectParameters" />
+</Project>

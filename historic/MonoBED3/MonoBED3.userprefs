@@ -1,0 +1,25 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoBED3/Model/BZK2Helper.cs">
+    <Files>
+      <File FileName="../../../../bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/Protocols/Editable.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/Editable.cs" Line="1" Column="1" />
+      <File FileName="../../../../bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/Protocols/Editable.cs" Line="1" Column="1" />
+      <File FileName="../../../../bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/Protocols/Editable.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/ContextAware.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/ContextListener.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/Drawable.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/Editable.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/GtkDrawable.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/Spatial.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Controller/Protocols/Zoomable.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/BZK2Helper.cs" Line="62" Column="4" />
+      <File FileName="MonoBED3/Controller/EditorContext.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/Model/EditorWorld.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

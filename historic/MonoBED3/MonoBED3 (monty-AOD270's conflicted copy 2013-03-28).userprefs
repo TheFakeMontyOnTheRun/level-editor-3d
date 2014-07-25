@@ -1,0 +1,44 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoBED3/View/Views/XZView.cs">
+    <Files>
+      <File FileName="MonoBED3/View/Views/PaletteWidget.cs" Line="462" Column="4" />
+      <File FileName="MonoBED3/View/Widgets/EditViewWidget.cs" Line="18" Column="3" />
+      <File FileName="MonoBED3/View/Views/XYView.cs" Line="4" Column="19" />
+      <File FileName="MonoBED3/View/Windows/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MonoBED3/View/Views/XZView.cs" Line="187" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MonoBED3" expanded="True">
+            <Node name="Model" expanded="True">
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Facades" expanded="True" />
+            </Node>
+            <Node name="View" expanded="True">
+              <Node name="Dialogs" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="XZView.cs" selected="True" />
+              </Node>
+              <Node name="Widgets" expanded="True" />
+              <Node name="Windows" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="29" />
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="189" />
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="194" />
+      <Breakpoint file="/home/monty/Projects/bzk3/source/LevelEditor/MonoBED3/MonoBED3/Controller/EditorContext.cs" line="381" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

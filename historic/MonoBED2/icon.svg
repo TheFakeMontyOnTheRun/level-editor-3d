@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="icon.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3200">
+      <stop
+         style="stop-color:#445016;stop-opacity:1;"
+         offset="0"
+         id="stop3202" />
+      <stop
+         style="stop-color:#445016;stop-opacity:0;"
+         offset="1"
+         id="stop3204" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="6.1230318e-14 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3200"
+       id="linearGradient3208"
+       x1="179.16319"
+       y1="302.16608"
+       x2="213.19269"
+       y2="302.16608"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#552200;fill-opacity:1;stroke:none"
+       id="rect2399"
+       width="50"
+       height="50"
+       x="-28.683834"
+       y="283.87906"
+       transform="matrix(0.676429,-0.7365079,0.7365079,0.676429,0,0)"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="opacity:1;fill:#aa4400;fill-opacity:1;stroke:none"
+       d="M 226.50243,246.95432 L 260.16857,209.56481 L 260.16857,259.56482 L 226.50243,296.95433 L 226.50243,246.95432 z"
+       id="rect2403"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3176"
+       d="M 226.53368,246.91707 L 189.67918,213.15912 L 189.67918,261.10264 L 226.50243,296.95433 L 226.53368,246.91707 z"
+       style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="opacity:1;fill:#1f241c;fill-opacity:1;stroke:none"
+       id="rect3184"
+       width="50.000008"
+       height="50.000008"
+       x="-78.535454"
+       y="265.52594"
+       transform="matrix(0.676429,-0.7365079,0.7365079,0.676429,0,0)"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="opacity:1;fill:#3e4837;fill-opacity:1;stroke:none"
+       d="M 179.2641,271.25584 L 212.93024,233.86633 L 212.93024,283.86634 L 179.2641,321.25585 L 179.2641,271.25584 z"
+       id="path3186"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       transform="matrix(0.676429,-0.7365079,0.7365079,0.676429,0,0)"
+       y="333.27585"
+       x="-36.877285"
+       height="50.000004"
+       width="50.000004"
+       id="rect3178"
+       style="opacity:1;fill:#112b00;fill-opacity:1;stroke:none"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3180"
+       d="M 257.34126,286.40228 L 291.0074,249.01277 L 291.0074,299.01278 L 257.34126,336.40229 L 257.34126,286.40228 z"
+       style="opacity:1;fill:#225500;fill-opacity:1;stroke:none"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="opacity:1;fill:#338000;fill-opacity:1;stroke:none"
+       d="M 257.37251,286.36503 L 220.51801,252.60708 L 220.51801,300.5506 L 257.34126,336.40229 L 257.37251,286.36503 z"
+       id="path3182"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3188"
+       d="M 179.29535,271.21859 L 142.44085,237.46064 L 142.44085,285.40416 L 179.2641,321.25585 L 179.29535,271.21859 z"
+       style="opacity:1;fill:#5d6c53;fill-opacity:1;stroke:none"
+       inkscape:export-filename="/home/daniel/Projects/MonoBED2/mono2icon.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

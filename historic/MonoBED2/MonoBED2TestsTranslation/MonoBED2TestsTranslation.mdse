@@ -1,0 +1,5 @@
+<CombineEntry name="MonoBED2TestsTranslation" fileversion="2.0" outputType="RelativeToOutput" ctype="TranslationProject">
+  <translations>
+    <Translation isoCode="pt" />
+  </translations>
+</CombineEntry>

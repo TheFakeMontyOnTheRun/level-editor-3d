@@ -1,0 +1,42 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ctype="Workbench">
+    <Files>
+      <File FileName="MonoBED2/DataEngine/Sector.cs" Line="1" Column="1" />
+      <File FileName="MonoBED2/DataEngine/World.cs" Line="1" Column="1" />
+      <File FileName="MonoBED2/DataEngine/SectorConstants.cs" Line="1" Column="1" />
+      <File FileName="MonoBED2/GraphicalEngine/WorldView.cs" Line="1" Column="1" />
+      <File FileName="MonoBED2/DataEngine/ActorManager.cs" Line="1" Column="1" />
+      <File FileName="MonoBED2/gtk-gui/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MonoBED2/MainWindow.cs" Line="518" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MonoBED2" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="UserInterface" expanded="True" />
+            <Node name="DataEngine" expanded="True" />
+            <Node name="GraphicalEngine" expanded="True" />
+            <Node name="MainWindow.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True">
+          <Node name="MonoBED2" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches ctype="PinnedWatchStore" />
+</Properties>

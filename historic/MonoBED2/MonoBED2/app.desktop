@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=MonoBED2
+Exec=monobed2
+Terminal=false
+GenericName=MonoBED
+Comment=second version of MonoBED
+Categories=Graphics;3DGraphics;
