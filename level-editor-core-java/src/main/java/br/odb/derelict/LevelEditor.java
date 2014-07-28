@@ -2,11 +2,14 @@ package br.odb.derelict;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-
-import java.util.LinkedList;
+import br.odb.libscene.World;
 
 public class LevelEditor extends ConsoleApplication {
 
+	String filename;
+	World world;
+	
+	
     public LevelEditor() {
     }
 

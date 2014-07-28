@@ -1,15 +1,13 @@
 package br.odb.derelict;
 
-import br.odb.disksofdoom.DisksOfDoomMainApp.Disk;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
+import br.odb.gameapp.UserMetaCommandLineAction;
+import br.odb.libscene.World;
 
-public class NewSectorCommand extends UserCommandLineAction {
+public class LoadFileCommand extends UserCommandLineAction {
 
-	public NewGameCommand(ConsoleApplication app) {
-		super( );
-	}
-
+	
 	@Override
 	public String getHelp() {
 		return null;
@@ -22,12 +20,17 @@ public class NewSectorCommand extends UserCommandLineAction {
 
 	@Override
 	public void run(ConsoleApplication app, String operand ) throws Exception {
-
-	}
+			World world;
+			world= new World();
+            
+            world.internalize( operand, operand, app, meshFactory );
+            
+            ((LevelEditor)app).world = world;
+        }
 
 	@Override
 	public String toString() {
-		return "new-sector";
+		return "load";
 	}
 
 }

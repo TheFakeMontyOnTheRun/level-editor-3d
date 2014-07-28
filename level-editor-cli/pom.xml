@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.odb.derelict</groupId>
-  <artifactId>level-editor-core-java</artifactId>
+  <artifactId>level-editor-app-cli</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>level-editor-core-java</name>
+  <name>level-editor-app-cli</name>
   <url>http://www.montyprojects.com</url>
   <dependencies>
     <dependency>
@@ -27,17 +27,34 @@
       <artifactId>gameutils</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+  
 
     <dependency>
-      <groupId>br.odb</groupId>
-      <artifactId>libscene</artifactId>
+      <groupId>br.odb.derelict</groupId>
+      <artifactId>level-editor-core-java</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
   
-
 	<properties>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
+
 	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+			<groupId>
+				org.codehaus.mojo
+			</groupId>
+			<artifactId>
+				exec-maven-plugin
+			</artifactId>
+			<configuration>
+				<mainClass>br.odb.derelict.leveleditor.LevelEditorCliApp</mainClass>
+			</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
