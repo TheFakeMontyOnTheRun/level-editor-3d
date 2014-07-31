@@ -52,7 +52,7 @@
 				exec-maven-plugin
 			</artifactId>
 			<configuration>
-				<mainClass>br.odb.derelict.LevelEditorCliApp</mainClass>
+				<mainClass>br.odb.derelict.leveleditor.LevelEditorCliApp</mainClass>
 			</configuration>
 			</plugin>
 		</plugins>

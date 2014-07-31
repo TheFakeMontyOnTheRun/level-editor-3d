@@ -1,5 +1,9 @@
 package br.odb.derelict;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.World;
@@ -11,6 +15,13 @@ public class LevelEditor extends ConsoleApplication {
 	
 	
     public LevelEditor() {
+    }
+    
+    
+    @Override
+    public InputStream openAsInputStream(String filename) throws IOException {
+    	 FileInputStream fis = new FileInputStream(filename);
+         return fis;
     }
 
 
@@ -48,7 +59,7 @@ public class LevelEditor extends ConsoleApplication {
         continueRunning = true;
 
         for (UserCommandLineAction cmd : new UserCommandLineAction[]{
-            new QuitCommand(this), new NewFileCommand( this ), new NewSectorCommand( this ), new MoveCommand(), new SaveCommand(this), new ResizeCommand( this ),
+            new QuitCommand(this), new LoadFileCommand( ), new NewFileCommand( this ), new NewSectorCommand( this ), new MoveCommand(), new SaveCommand(this), new ResizeCommand( this ),
             new StatusCommand(this)}) {
 
             this.registerCommand(cmd);

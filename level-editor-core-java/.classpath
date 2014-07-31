@@ -9,5 +9,4 @@
   <classpathentry kind="var" path="M2_REPO/br/odb/gameutils/1.0-SNAPSHOT/gameutils-1.0-SNAPSHOT.jar"/>
   <classpathentry kind="var" path="M2_REPO/br/odb/libscene/1.0-SNAPSHOT/libscene-1.0-SNAPSHOT.jar"/>
   <classpathentry kind="var" path="M2_REPO/br/odb/libstrip/1.0-SNAPSHOT/libstrip-1.0-SNAPSHOT.jar"/>
-  <classpathentry kind="var" path="M2_REPO/br/odb/gameworld/1.0-SNAPSHOT/gameworld-1.0-SNAPSHOT.jar"/>
 </classpath>

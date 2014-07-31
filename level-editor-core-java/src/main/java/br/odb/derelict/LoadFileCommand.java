@@ -4,6 +4,7 @@ import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.gameapp.UserMetaCommandLineAction;
 import br.odb.libscene.World;
+import br.odb.libscene.builder.WorldLoader;
 
 public class LoadFileCommand extends UserCommandLineAction {
 
@@ -21,12 +22,9 @@ public class LoadFileCommand extends UserCommandLineAction {
 	@Override
 	public void run(ConsoleApplication app, String operand ) throws Exception {
 			World world;
-			world= new World();
-            
-            world.internalize( operand, operand, app, meshFactory );
-            
-            ((LevelEditor)app).world = world;
-        }
+			world = WorldLoader.build( app.openAsInputStream( operand ) );
+			((LevelEditor)app).world = world;
+	}
 
 	@Override
 	public String toString() {
