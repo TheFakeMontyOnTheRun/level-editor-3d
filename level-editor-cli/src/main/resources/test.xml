@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<place>
+	<location id="dorms 2">
+		<description>Another part of the dorms hallway. On those, the panels
+			were visibly well
+		</description>
+		<link direction="N" location="pod 3" />
+		<link direction="S" location="pod 4" />
+		<link direction="W" location="dorms 1" />
+		<link direction="E" location="lounge" />
+	</location>
+
+	<location id="RLS BOHR 2" class="LanderShip">
+
+		<description>A rescue lander ship. Only for emergencies. Named after
+			some Niels Bohr scientist guy or whatever.
+		</description>
+
+		<link direction="E" location="hangar" />
+	</location>
+
+	<location id="LSS DAEDALUS" class="DaedalusSpaceShip">
+		<description>My trusty old scrap ship. Built it myself.</description>
+		<link direction="N" location="hangar" />
+	</location>
+
+	<location id="hangar">
+		<description>The station main hangar is rather unremarkable. The only
+			thing you notice is a slight yellow tint of the air, as if a mist
+			slides next to the floor. It's very faint. Your wrist computer tells
+			you this is harmless.
+		</description>
+		<link direction="N" location="main hall 1" />		
+	</location>
+
+	<location id="pod 2">
+		<description>A empty living pod. Looks as if it was never ever used.
+			If can even see some of the factory stickers in it.
+		</description>
+	</location>
+
+	<location id="pod 4">
+		<description>A scientists pod, for sure. It's neat, clean and
+			organized. Not much around.
+		</description>
+	</location>
+	<location id="pod 3">
+		<description>A young woman's pod. You do recognize a few items, but
+			its badly mixed up. It's hard to make the age of girl, but she was
+			young.
+		</description>
+	</location>
+	<location id="pod 1">
+		<description>Part of the dorms hallway. There are some (busted)
+			control panels for ejecting the pods.
+		</description>
+	</location>
+	<location id="lounge">
+		<description>Here, it seems like a relaxation place. You gaze at the
+			stars and the planet. Very nice.
+		</description>
+	</location>
+	<location id="dorms 1">
+		<description>Part of the dorms hallway. There are some (busted)
+			control panels for ejecting the pods.
+		</description>
+		<link direction="N" location="pod 1" />
+		<link direction="S" location="pod 2" />
+		<link direction="W" location="main hall 1" />
+		<link direction="E" location="dorms 2" />
+	</location>
+	<location id="elevator 1">
+		<description>Going down?</description>
+		<link direction="S" location="main hall 1" />
+		<link direction="FLOOR" location="elevator 2" />
+	</location>
+	<location id="main hall 1">
+		<description>A well lit hall, with doors. It's the main hub of the
+			station. Despite being right next to the hangar and the control room,
+			it's rather quiet.
+		</description>
+	</location>
+
+	<location id="main hall 2">
+		<description>
+			Not as imponent as the main hall from Level1, this hall
+			has a busier feel. Here you see objects thrown all over the place,
+			as
+			if someone was in the middle of a day-to-day routine and had to
+			quickly run.
+		</description>
+		<link direction="N" location="elevator 2" />
+		<link direction="E" location="hyggym" />
+		<link direction="S" location="control room" />
+		<link direction="W" location="dinner room" />
+	</location>
+
+
+	<location id="main hall 3">
+		<description>
+			This was a restricted area, so it's rather sparse. Mostly
+			labs and equipment. A constant hum from the generators can be heard
+		</description>
+		<link direction="N" location="elevator 3" />
+		<link direction="E" location="lab 1" />
+		<link direction="S" location="lab 2" />
+		<link direction="W" location="lab 3" />
+
+	</location>
+
+
+
+
+	<location id="hyggym">
+		<description>
+			This is where they used to workout to keep their health
+			and where they
+			would stay clean.
+		</description>
+	</location>
+
+	<location id="dinner room">
+		<description>
+			Empty stomach makes no science. Those thinkers were
+			really into fancy
+			stuff. Too bad it all went bad a long time ago.
+		</description>
+	</location>
+
+	<location id="control room">
+		<description>
+			Lots of old equipment. JACKPOT! At the corner, is the
+			central computer
+			stand.
+		</description>
+	</location>
+
+	<location id="lounge">
+		<description>
+			Here, it seems like a relaxation place. You gaze at the
+			stars and the
+			planet. Very nice.
+		</description>
+	</location>
+
+	<location id="lab 1">
+		<description>
+			A micro-g-hydrostatic lab. Lots of old equipments. There
+			must be
+			something valuable here.
+		</description>
+	</location>
+
+	<location id="lab 2">
+		<description>
+			A low-atmosphere-electricity lab. Lots of strange
+			equipment. Looks
+			dangerous.
+		</description>
+	</location>
+
+	<location id="lab 3">
+		<description>
+			Looks like this was a chemistry lab. Looks badly
+			destroyed. I was told
+			this was due to space-trash. That's why they got
+			us!
+		</description>
+	</location>
+
+
+	<location id="elevator 2">
+		<description>
+			Going up or down?
+		</description>
+		<link direction="CEILING" location="elevator 1" />
+		<link direction="FLOOR" location="elevator 3" />
+	</location>
+
+	<location id="elevator 3">
+		<description>
+			Going up?
+		</description>
+		<link direction="CEILING" location="elevator 2" />
+	</location>
+
+	<location id="floor1" />
+	<location id="floor2" />
+	<location id="floor3" />
+</place>
