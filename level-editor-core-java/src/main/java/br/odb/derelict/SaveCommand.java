@@ -1,5 +1,7 @@
 package br.odb.derelict;
 
+import java.io.OutputStream;
+
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserMetaCommandLineAction;
 
@@ -27,8 +29,14 @@ public class SaveCommand extends UserMetaCommandLineAction {
 
 	@Override
 	public void run(ConsoleApplication app, String operand) throws Exception {
-	
+		LevelEditor editor = (LevelEditor) app;
+		OutputStream os = app.openAsOutputStream( operand );
 		
+		byte[] bytes = editor.world.toString().getBytes();
+		
+		os.write( bytes );
+		
+		os.close();		
 	}
 
 	@Override
