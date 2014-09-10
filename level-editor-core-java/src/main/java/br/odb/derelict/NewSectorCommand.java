@@ -2,6 +2,7 @@ package br.odb.derelict;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
+import br.odb.libscene.GroupSector;
 
 public class NewSectorCommand extends UserCommandLineAction {
 
@@ -21,7 +22,23 @@ public class NewSectorCommand extends UserCommandLineAction {
 
 	@Override
 	public void run(ConsoleApplication app, String operand ) throws Exception {
-
+		
+		LevelEditor editor = (LevelEditor) app;
+		String[] parms;
+		
+		parms = operand.split( "[ ]+" );
+		
+		GroupSector parent = null;
+		
+		if ( parms.length > 1 && parms[ 1 ] != null ) {
+			parent = (GroupSector) editor.world.masterSector.getChild( parms[ 1 ].trim() );
+		}
+		
+		if ( parent == null ) {
+			parent = editor.world.masterSector;
+		}
+		
+		parent.addChild( new GroupSector( parms[ 0 ].trim() ) );
 	}
 
 	@Override

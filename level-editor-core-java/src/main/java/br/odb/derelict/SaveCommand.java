@@ -4,6 +4,7 @@ import java.io.OutputStream;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserMetaCommandLineAction;
+import br.odb.libscene.builder.WorldLoader;
 
 public class SaveCommand extends UserMetaCommandLineAction {
 	
@@ -32,7 +33,7 @@ public class SaveCommand extends UserMetaCommandLineAction {
 		LevelEditor editor = (LevelEditor) app;
 		OutputStream os = app.openAsOutputStream( operand );
 		
-		byte[] bytes = editor.world.toString().getBytes();
+		byte[] bytes = WorldLoader.toXML( editor.world ).getBytes();
 		
 		os.write( bytes );
 		

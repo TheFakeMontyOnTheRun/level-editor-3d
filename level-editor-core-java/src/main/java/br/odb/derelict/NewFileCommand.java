@@ -3,6 +3,8 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.gameapp.UserMetaCommandLineAction;
+import br.odb.libscene.GroupSector;
+import br.odb.libscene.World;
 
 public class NewFileCommand extends UserMetaCommandLineAction {
 
@@ -17,12 +19,13 @@ public class NewFileCommand extends UserMetaCommandLineAction {
 
 	@Override
 	public int requiredOperands() {
-		return 1;
+		return 0;
 	}
 
 	@Override
 	public void run(ConsoleApplication app, String operand ) throws Exception {
-		
+		LevelEditor editor = (LevelEditor) app;
+		editor.world = new World( new GroupSector( "root" ) );
 	}
 
 	@Override
