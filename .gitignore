@@ -10,3 +10,15 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+level-editor-cli/.project
+
+level-editor-core-java/.project
+
+level-editor-core-java/.classpath
+
+level-editor-cli/target/classes/test.xml
+
+level-editor-cli/target/maven-archiver/pom.properties
+
+level-editor-cli/.classpath
