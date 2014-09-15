@@ -59,7 +59,7 @@ public class LevelEditor extends ConsoleApplication {
         continueRunning = true;
 
         for (UserCommandLineAction cmd : new UserCommandLineAction[]{
-            new QuitCommand(this), new LoadFileCommand( ), new NewFileCommand( this ), new NewSectorCommand( this ), new MoveCommand(), new SaveCommand(this), new ResizeCommand( this ),
+            new QuitCommand(this), new LoadFileCommand( ), new NewFileCommand( this ), new NewSectorCommand( this ), new MoveCommand(), new SaveCommand(this), new ImportOBJCommand(), new GenerateSVGCommand(), new ResizeCommand( this ),
             new StatusCommand(this)}) {
 
             this.registerCommand(cmd);

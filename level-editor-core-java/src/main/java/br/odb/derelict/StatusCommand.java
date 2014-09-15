@@ -2,7 +2,6 @@ package br.odb.derelict;
 
 
 import br.odb.gameapp.ConsoleApplication;
-import br.odb.gameapp.UserCommandLineAction;
 import br.odb.gameapp.UserMetaCommandLineAction;
 import br.odb.libscene.builder.WorldLoader;
 

@@ -1,13 +1,9 @@
 package br.odb.derelict;
 
 import br.odb.gameapp.ConsoleApplication;
-import br.odb.gameapp.UserMetaCommandLineAction;
+import br.odb.gameapp.UserCommandLineAction;
 
-public class QuitCommand extends UserMetaCommandLineAction {
-
-	public QuitCommand( ConsoleApplication app) {
-		super( app );
-	}
+public class GenerateSVGCommand extends UserCommandLineAction {
 
 	@Override
 	public String getHelp() {
@@ -23,13 +19,14 @@ public class QuitCommand extends UserMetaCommandLineAction {
 
 	@Override
 	public void run(ConsoleApplication arg0, String arg1) throws Exception {
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "quit";
+		return null;
 	}
 
 }
