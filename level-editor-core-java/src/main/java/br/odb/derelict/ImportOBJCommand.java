@@ -9,14 +9,12 @@ public class ImportOBJCommand extends UserCommandLineAction {
 
 	@Override
 	public String getHelp() {
-		// TODO Auto-generated method stub
-		return null;
+		return "import obj";
 	}
 
 	@Override
 	public int requiredOperands() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	@Override
