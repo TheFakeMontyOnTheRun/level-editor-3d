@@ -1,5 +1,7 @@
 package br.odb.derelict;
 
+import java.io.OutputStream;
+
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 
@@ -7,26 +9,24 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 
 	@Override
 	public String getHelp() {
-		// TODO Auto-generated method stub
-		return null;
+		return "generates SVG view for map";
 	}
 
 	@Override
 	public int requiredOperands() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public void run(ConsoleApplication arg0, String arg1) throws Exception {
-		// TODO Auto-generated method stub
-
+	public void run(ConsoleApplication app, String arg1) throws Exception {
+		OutputStream os;
+		LevelEditor editor = (LevelEditor) app;
+		os = editor.openAsOutputStream( "/home/monty/view.svg" );
+		os.write( SVGRenderer.renderXZ( SceneTesselator.generateQuadsForWorld( editor.world ) ).getBytes() );
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return "svg";
 	}
-
 }
