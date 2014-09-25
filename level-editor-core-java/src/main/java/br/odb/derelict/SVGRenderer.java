@@ -3,9 +3,7 @@ package br.odb.derelict;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-import br.odb.libstrip.GeneralQuad;
 import br.odb.libstrip.IndexedSetFace;
-import br.odb.utils.Direction;
 
 public class SVGRenderer {
 
@@ -43,7 +41,7 @@ public class SVGRenderer {
 			toReturn += " />\n";
 		}
 		
-		for ( SpaceRegion sr : sector.sons ) {
+		for ( SpaceRegion sr : sector.getSons() ) {
 			if ( sr instanceof GroupSector ) {
 				toReturn += generateSVGForSector( (GroupSector) sr );
 			}
