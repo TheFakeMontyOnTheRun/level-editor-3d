@@ -30,6 +30,12 @@
 
     <dependency>
       <groupId>br.odb</groupId>
+      <artifactId>liboldfart</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>br.odb</groupId>
       <artifactId>libscene</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
