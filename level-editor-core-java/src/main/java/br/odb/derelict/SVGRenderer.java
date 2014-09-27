@@ -9,30 +9,13 @@ public class SVGRenderer {
 
 	private static String generateSVGForSector(GroupSector sector) {
 		
-		String toReturn = "";
+		String toReturn = "<g id='" + sector.id + "' >";
 				
-//		if ( sector.colorForDirection.get( Direction.CEILING ) == null ) {
-//			quad = new GeneralQuad();
-//			quad.vertex[ 0 ].set( sector.position );
-//			quad.vertex[ 2 ].set( sector.position.add( sector.size ) );
-//			quad.color.set( sector.colorForDirection.get( Direction.CEILING ) );
-//			sector.mesh.addFace( quad );
-//		}
-//
-//		if ( sector.colorForDirection.get( Direction.FLOOR ) == null ) {
-//			quad = new GeneralQuad();
-//			quad.vertex[ 0 ].set( sector.position );
-//			quad.vertex[ 2 ].set( sector.position.add( sector.size ) );
-//			quad.color.set( sector.colorForDirection.get( Direction.FLOOR ) );
-//			sector.mesh.addFace( quad );
-//		}
-		
 		for ( IndexedSetFace isf : sector.mesh.faces ) {
 			toReturn += "<rect ";
 			
 			toReturn += " x = '" + isf.getVertex( 0 ).x + "' ";
 			toReturn += " y = '" + isf.getVertex( 0 ).z + "' ";
-			toReturn += " id = '" + sector.id + "' ";
 			toReturn += " width = '" + ( isf.getVertex( 2 ).x - isf.getVertex( 0 ).x ) + "' ";
 			toReturn += " height = '" + ( isf.getVertex( 2 ).z - isf.getVertex( 0 ).z ) + "' ";
 			
@@ -46,6 +29,8 @@ public class SVGRenderer {
 				toReturn += generateSVGForSector( (GroupSector) sr );
 			}
 		}
+		
+		toReturn += "</g>";
 		
 		return toReturn;
 	}
