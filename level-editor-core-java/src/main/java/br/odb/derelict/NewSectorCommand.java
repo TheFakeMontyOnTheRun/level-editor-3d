@@ -24,21 +24,7 @@ public class NewSectorCommand extends UserCommandLineAction {
 	public void run(ConsoleApplication app, String operand ) throws Exception {
 		
 		LevelEditor editor = (LevelEditor) app;
-		String[] parms;
-		
-		parms = operand.split( "[ ]+" );
-		
-		GroupSector parent = null;
-		
-		if ( parms.length > 1 && parms[ 1 ] != null ) {
-			parent = (GroupSector) editor.world.masterSector.getChild( parms[ 1 ].trim() );
-		}
-		
-		if ( parent == null ) {
-			parent = editor.world.masterSector;
-		}
-		
-		parent.addChild( new GroupSector( parms[ 0 ].trim() ) );
+		editor.world.masterSector.addChild( new GroupSector( operand.trim() ) );
 	}
 
 	@Override
