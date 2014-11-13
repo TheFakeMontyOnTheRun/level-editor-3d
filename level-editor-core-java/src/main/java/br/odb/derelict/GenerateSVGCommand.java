@@ -4,6 +4,7 @@ import java.io.OutputStream;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
+import br.odb.libscene.SceneTesselator;
 
 public class GenerateSVGCommand extends UserCommandLineAction {
 
