@@ -39,6 +39,6 @@ public class SetSectorMeshCommand extends UserCommandLineAction {
 
 	@Override
 	public String toString() {
-		return "setMeshForSector";
+		return "set-mesh-sector";
 	}
 }

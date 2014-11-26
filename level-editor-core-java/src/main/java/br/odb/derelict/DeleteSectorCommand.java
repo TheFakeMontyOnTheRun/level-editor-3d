@@ -32,6 +32,6 @@ public class DeleteSectorCommand extends UserCommandLineAction {
 
 	@Override
 	public String toString() {
-		return "deleteSector";
+		return "delete-sector";
 	}
 }

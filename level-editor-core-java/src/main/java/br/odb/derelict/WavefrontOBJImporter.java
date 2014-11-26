@@ -24,7 +24,7 @@ public class WavefrontOBJImporter {
 
 			if ( m.faces.size() > 0) {
 				System.out.println( "sector: " + m.name );
-				sector = SpaceRegion.getConvexHull( 1, m );
+				sector = (GroupSector) SpaceRegion.getConvexHull( 1, m );
 
 				if (!sector.isDegenerate()) {
 					master.addChild( sector );

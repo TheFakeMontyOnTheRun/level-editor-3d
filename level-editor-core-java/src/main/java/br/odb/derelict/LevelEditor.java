@@ -11,7 +11,7 @@ import br.odb.libscene.World;
 public class LevelEditor extends ConsoleApplication {
 
 	String filename;
-	World world;
+	public World world;
 	
 	
     public LevelEditor() {

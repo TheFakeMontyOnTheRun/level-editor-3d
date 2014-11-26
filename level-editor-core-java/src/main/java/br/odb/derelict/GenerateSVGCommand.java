@@ -22,7 +22,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 	public void run(ConsoleApplication app, String arg1) throws Exception {
 		OutputStream os;
 		LevelEditor editor = (LevelEditor) app;
-		os = editor.openAsOutputStream( "/home/monty/view.svg" );
+		os = editor.openAsOutputStream( "/Users/monty/view.svg" );
 		os.write( SVGRenderer.renderXZ( SceneTesselator.generateQuadsForWorld( editor.world ) ).getBytes() );
 	}
 

@@ -1,4 +1,4 @@
-package br.odb.demo3d;
+package br.odb.leveleditor3d.android;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,8 +27,8 @@ public class MainActivity extends Activity {
 			InputStream fragmentShader = getAssets().open( "fragment.glsl" );
 			view = new SceneView( this, vertexShader, fragmentShader );
 			setContentView( view );
-			view.renderer.camera.set( 552.0f, 487.0f, 1107.0f );
-			InputStream fileInput = getAssets().open( "test.xml" );
+			view.renderer.camera.set( -162.0f, 13.0f, -141.0f );
+			InputStream fileInput = getAssets().open( "prison.xml" );
 			World world = WorldLoader.build( fileInput );			
 			view.setScene( SceneTesselator.generateQuadsForWorld( world ) );
 

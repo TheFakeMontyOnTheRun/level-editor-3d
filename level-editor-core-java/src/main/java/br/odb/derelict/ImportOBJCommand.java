@@ -28,6 +28,6 @@ public class ImportOBJCommand extends UserCommandLineAction {
 
 	@Override
 	public String toString() {
-		return "importobj";
+		return "import-obj";
 	}
 }
