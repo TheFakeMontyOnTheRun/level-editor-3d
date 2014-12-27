@@ -35,7 +35,7 @@ public class MoveCommand extends UserCommandLineAction {
 			pos = new Vec3( Float.parseFloat( parms[ 1 ]), Float.parseFloat( parms[ 2 ]), Float.parseFloat( parms[ 3 ]) );
 			
 			if ( target != null && pos != null ) {
-				target.position.set( pos );
+				target.setPositionFromGlobal( pos );
 			}
 		}
 	}

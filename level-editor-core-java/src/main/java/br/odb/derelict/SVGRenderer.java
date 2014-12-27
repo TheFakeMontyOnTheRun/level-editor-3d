@@ -3,6 +3,7 @@ package br.odb.derelict;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
+import br.odb.libstrip.GeneralPolygon;
 import br.odb.libstrip.IndexedSetFace;
 
 public class SVGRenderer {
@@ -13,6 +14,10 @@ public class SVGRenderer {
 				
 		for ( IndexedSetFace isf : sector.mesh.faces ) {
 			toReturn += "<rect ";
+			
+			if ( isf instanceof GeneralPolygon ) {
+				toReturn += " id='" + (( GeneralPolygon) isf ).id + "' ";
+			}
 			
 			toReturn += " x = '" + isf.getVertex( 0 ).x + "' ";
 			toReturn += " y = '" + isf.getVertex( 0 ).z + "' ";
