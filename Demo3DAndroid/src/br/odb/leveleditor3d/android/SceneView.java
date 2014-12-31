@@ -8,6 +8,7 @@ import java.security.Key;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
+import android.util.Log;
 import android.view.KeyEvent;
 import br.odb.gamelib.android.geometry.GLES1Square;
 import br.odb.gamelib.android.geometry.GLES1SquareFactory;
@@ -59,6 +60,8 @@ public class SceneView extends GLSurfaceView {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
+		Log.d( "Demo3D" , "angle: " + renderer.angle );
+		
 		switch (keyCode) {
 		case KeyEvent.KEYCODE_DPAD_LEFT:
 			renderer.angle -= 10;

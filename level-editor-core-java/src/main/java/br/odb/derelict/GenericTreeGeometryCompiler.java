@@ -5,6 +5,8 @@ import br.odb.worldprocessing.DegenerateSectorCuller;
 import br.odb.worldprocessing.GeometryCompiler;
 import br.odb.worldprocessing.RemoveCoincidantSectors;
 import br.odb.worldprocessing.RemoveLeafSectors;
+import br.odb.worldprocessing.SectorLinker;
+import br.odb.worldprocessing.SectorSnapper;
 import br.odb.worldprocessing.WorldLocalPartitioner;
 
 public class GenericTreeGeometryCompiler extends GeometryCompiler {
@@ -14,11 +16,13 @@ public class GenericTreeGeometryCompiler extends GeometryCompiler {
 		
 		this.world = world;
 		
+		this.processingPipeline.add( new SectorSnapper() );
 		this.processingPipeline.add( new RemoveLeafSectors() );
 		this.processingPipeline.add( new DegenerateSectorCuller() );
 		this.processingPipeline.add( new WorldLocalPartitioner() );
 		this.processingPipeline.add( new RemoveCoincidantSectors() );
 		this.processingPipeline.add( new DegenerateSectorCuller() );
+		this.processingPipeline.add( new SectorLinker() );
 	}
 	
 	@Override

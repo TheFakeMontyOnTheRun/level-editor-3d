@@ -1,5 +1,6 @@
 package br.odb.leveleditor3d.android;
 
+import br.odb.derelict.GenericTreeGeometryCompiler;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,11 @@ public class MenuActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		
+		case R.id.btnCompile:
+			GenericTreeGeometryCompiler g;
+			break;
+		
 		case R.id.btnViewIn3D:
 			Intent intent = new Intent(this, MainActivity.class);
 			startActivity(intent);

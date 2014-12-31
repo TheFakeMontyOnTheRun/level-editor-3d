@@ -30,43 +30,43 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 		OutputStream os;
 		LevelEditor editor = (LevelEditor) app;
 		os = editor.openAsOutputStream("/Users/monty/view.svg");
-		os.write( SVGRenderer.renderXZ( SceneTesselator.generateQuadsForWorld( editor.world ) ).getBytes() );
+		os.write( SVGRenderer.renderXZ( SceneTesselator.generateSubSectorQuadsForWorld( editor.world ) ).getBytes() );
 		
-		os = editor.openAsOutputStream("/Users/monty/view.opt.svg");
-		StringBuilder sb = new StringBuilder(
-				"<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n<svg xmlns='http://www.w3.org/2000/svg'>\n");
-		Color c;
-		Vec3 v;
-		
-		for (SpaceRegion sr : Utils
-				.getAllRegionsAsList(editor.world.masterSector)) {
-
-			if (sr instanceof Sector || sr instanceof GroupSector ) {
-				
-				v = sr.getAbsolutePosition();
-				
-				sb.append("<rect ");
-				sb.append(" x = '" + v.x + "' ");
-				sb.append(" y = '" + v.z + "' ");
-				sb.append(" width = '" + sr.size.x + "' ");
-				sb.append(" height = '" + sr.size.z + "' ");
-
-				if (sr.colorForDirection.get(Direction.FLOOR) != null) {
-					c = sr.colorForDirection.get(Direction.FLOOR);
-				} else {
-					c = new Color(64, 64, 64, 64);
-				}
-
-				sb.append(" style = 'fill: " + c.getHTMLColor() + ";' ");
-
-				sb.append(" />\n");
-			}
-
-		}
-
-		sb.append("\n</svg>");
-
-		os.write(sb.toString().getBytes());
+//		os = editor.openAsOutputStream("/Users/monty/view.opt.svg");
+//		StringBuilder sb = new StringBuilder(
+//				"<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n<svg xmlns='http://www.w3.org/2000/svg'>\n");
+//		Color c;
+//		Vec3 v;
+//		
+//		for (SpaceRegion sr : Utils
+//				.getAllRegionsAsList(editor.world.masterSector)) {
+//
+//			if (sr instanceof Sector || sr instanceof GroupSector ) {
+//				
+//				v = sr.getAbsolutePosition();
+//				
+//				sb.append("<rect ");
+//				sb.append(" x = '" + v.x + "' ");
+//				sb.append(" y = '" + v.z + "' ");
+//				sb.append(" width = '" + sr.size.x + "' ");
+//				sb.append(" height = '" + sr.size.z + "' ");
+//
+//				if (sr.colorForDirection.get(Direction.FLOOR) != null) {
+//					c = sr.colorForDirection.get(Direction.FLOOR);
+//				} else {
+//					c = new Color(64, 64, 64, 64);
+//				}
+//
+//				sb.append(" style = 'fill: " + c.getHTMLColor() + ";' ");
+//
+//				sb.append(" />\n");
+//			}
+//
+//		}
+//
+//		sb.append("\n</svg>");
+//
+//		os.write(sb.toString().getBytes());
 	}
 
 	@Override
