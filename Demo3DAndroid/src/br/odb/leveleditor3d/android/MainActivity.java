@@ -27,10 +27,11 @@ public class MainActivity extends Activity {
 			InputStream fragmentShader = getAssets().open( "fragment.glsl" );
 			view = new SceneView( this, vertexShader, fragmentShader );
 			setContentView( view );
-			//view.renderer.camera.set( -162.0f, 13.0f, -141.0f );
-			view.renderer.camera.set( -3.0f, -21.0f, 8.0f );
+			view.renderer.camera.set( -162.0f, 13.0f, -141.0f );
+//			view.renderer.camera.set( -3.0f, -21.0f, 8.0f );
+//			view.renderer.camera.set( 17.0f, 21.0f, -4.0f );
 			view.renderer.angle = 180.0f;
-			InputStream fileInput = getAssets().open( "notso.opt.xml" );
+			InputStream fileInput = getAssets().open( "prison.opt.xml" );
 			World world = WorldLoader.build( fileInput );			
 			view.setScene( SceneTesselator.generateSubSectorQuadsForWorld( world ) );
 

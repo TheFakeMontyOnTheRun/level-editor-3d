@@ -20,7 +20,7 @@ public class GenericTreeGeometryCompiler extends GeometryCompiler {
 		this.processingPipeline.add( new RemoveLeafSectors() );
 		this.processingPipeline.add( new DegenerateSectorCuller() );
 		this.processingPipeline.add( new WorldLocalPartitioner() );
-		this.processingPipeline.add( new RemoveCoincidantSectors() );
+//		this.processingPipeline.add( new RemoveCoincidantSectors() );
 		this.processingPipeline.add( new DegenerateSectorCuller() );
 		this.processingPipeline.add( new SectorLinker() );
 	}
