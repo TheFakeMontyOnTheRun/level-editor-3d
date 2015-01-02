@@ -12,6 +12,7 @@ import android.os.Bundle;
 import br.odb.libscene.SceneTesselator;
 import br.odb.libscene.World;
 import br.odb.libscene.WorldLoader;
+import br.odb.libscene.SpaceRegion;
 
 public class MainActivity extends Activity {
 
@@ -27,13 +28,12 @@ public class MainActivity extends Activity {
 			InputStream fragmentShader = getAssets().open( "fragment.glsl" );
 			view = new SceneView( this, vertexShader, fragmentShader );
 			setContentView( view );
-			view.renderer.camera.set( -162.0f, 13.0f, -141.0f );
-//			view.renderer.camera.set( -3.0f, -21.0f, 8.0f );
-//			view.renderer.camera.set( 17.0f, 21.0f, -4.0f );
 			view.renderer.angle = 180.0f;
 			InputStream fileInput = getAssets().open( "prison.opt.xml" );
 			World world = WorldLoader.build( fileInput );			
 			view.setScene( SceneTesselator.generateSubSectorQuadsForWorld( world ) );
+
+			view.renderer.camera.set( ( (SpaceRegion) world.masterSector.getSons().toArray()[ 0 ] ).getAbsolutePosition() );
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -60,8 +60,6 @@ public class SceneView extends GLSurfaceView {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
-		Log.d( "Demo3D" , "angle: " + renderer.angle );
-		
 		switch (keyCode) {
 		case KeyEvent.KEYCODE_DPAD_LEFT:
 			renderer.angle -= 10;
