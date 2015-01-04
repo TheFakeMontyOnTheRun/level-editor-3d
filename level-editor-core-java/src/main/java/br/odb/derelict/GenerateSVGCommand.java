@@ -38,8 +38,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 		Color c;
 		Vec3 v;
 		
-		for (SpaceRegion sr : Utils
-				.getAllRegionsAsList(editor.world.masterSector)) {
+		for (SpaceRegion sr : editor.world.getAllRegionsAsList()) {
 
 			if (sr instanceof Sector || sr instanceof GroupSector ) {
 				

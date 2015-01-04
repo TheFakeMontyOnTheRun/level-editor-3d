@@ -1,0 +1,10006 @@
+<world>
+<id>
+root</id>
+<position>
+0.0
+0.0
+0.0
+</position>
+<size>
+1.0
+1.0
+1.0
+</size>
+
+<group>
+<mesh><name>Cube.006_Cube.004</name>
+
+239.0 -137.0 -26.0
+239.0 -133.0 17.0
+239.0 -137.0 17.0
+
+239.0 -137.0 -26.0
+239.0 -133.0 -26.0
+239.0 -133.0 17.0
+
+214.0 -137.0 -26.0
+239.0 -137.0 -26.0
+239.0 -137.0 17.0
+
+214.0 -137.0 -26.0
+239.0 -137.0 17.0
+214.0 -137.0 17.0
+
+239.0 -137.0 17.0
+239.0 -133.0 32.0
+239.0 -137.0 32.0
+
+239.0 -137.0 17.0
+239.0 -133.0 17.0
+239.0 -133.0 32.0
+
+214.0 -137.0 17.0
+239.0 -137.0 17.0
+239.0 -137.0 32.0
+
+214.0 -137.0 17.0
+239.0 -137.0 32.0
+214.0 -137.0 32.0
+
+166.0 -137.0 -26.0
+166.0 -133.0 17.0
+166.0 -137.0 17.0
+
+166.0 -137.0 -26.0
+166.0 -133.0 -26.0
+166.0 -133.0 17.0
+
+166.0 -137.0 -26.0
+214.0 -137.0 -26.0
+214.0 -137.0 17.0
+
+166.0 -137.0 -26.0
+214.0 -137.0 17.0
+166.0 -137.0 17.0
+
+166.0 -137.0 -138.0
+214.0 -133.0 -138.0
+214.0 -137.0 -138.0
+
+166.0 -137.0 -138.0
+166.0 -133.0 -138.0
+214.0 -133.0 -138.0
+
+166.0 -137.0 -138.0
+166.0 -133.0 -26.0
+166.0 -137.0 -26.0
+
+166.0 -137.0 -138.0
+166.0 -133.0 -138.0
+166.0 -133.0 -26.0
+
+166.0 -137.0 -138.0
+214.0 -137.0 -138.0
+214.0 -137.0 -26.0
+
+166.0 -137.0 -138.0
+214.0 -137.0 -26.0
+166.0 -137.0 -26.0
+
+239.0 -137.0 -138.0
+239.0 -133.0 -26.0
+239.0 -137.0 -26.0
+
+239.0 -137.0 -138.0
+239.0 -133.0 -138.0
+239.0 -133.0 -26.0
+
+214.0 -137.0 -138.0
+239.0 -137.0 -138.0
+239.0 -137.0 -26.0
+
+214.0 -137.0 -138.0
+239.0 -137.0 -26.0
+214.0 -137.0 -26.0
+
+239.0 -133.0 32.0
+239.0 -64.0 42.0
+239.0 -133.0 42.0
+
+239.0 -133.0 32.0
+239.0 -64.0 32.0
+239.0 -64.0 42.0
+
+214.0 -133.0 42.0
+239.0 -64.0 42.0
+239.0 -133.0 42.0
+
+214.0 -133.0 42.0
+214.0 -64.0 42.0
+239.0 -64.0 42.0
+
+214.0 -133.0 32.0
+214.0 -64.0 42.0
+214.0 -133.0 42.0
+
+214.0 -133.0 32.0
+214.0 -64.0 32.0
+214.0 -64.0 42.0
+
+214.0 -64.0 32.0
+239.0 -64.0 32.0
+239.0 -64.0 42.0
+
+214.0 -64.0 32.0
+239.0 -64.0 42.0
+214.0 -64.0 42.0
+
+239.0 -133.0 17.0
+239.0 -64.0 32.0
+239.0 -133.0 32.0
+
+239.0 -133.0 17.0
+239.0 -64.0 17.0
+239.0 -64.0 32.0
+
+214.0 -64.0 17.0
+239.0 -64.0 17.0
+239.0 -64.0 32.0
+
+214.0 -64.0 17.0
+239.0 -64.0 32.0
+214.0 -64.0 32.0
+
+239.0 -137.0 32.0
+239.0 -133.0 42.0
+239.0 -137.0 42.0
+
+239.0 -137.0 32.0
+239.0 -133.0 32.0
+239.0 -133.0 42.0
+
+214.0 -137.0 42.0
+239.0 -133.0 42.0
+239.0 -137.0 42.0
+
+214.0 -137.0 42.0
+214.0 -133.0 42.0
+239.0 -133.0 42.0
+
+214.0 -137.0 32.0
+239.0 -137.0 32.0
+239.0 -137.0 42.0
+
+214.0 -137.0 32.0
+239.0 -137.0 42.0
+214.0 -137.0 42.0
+
+166.0 -133.0 -26.0
+166.0 -64.0 17.0
+166.0 -133.0 17.0
+
+166.0 -133.0 -26.0
+166.0 -64.0 -26.0
+166.0 -64.0 17.0
+
+166.0 -64.0 -26.0
+214.0 -64.0 -26.0
+214.0 -64.0 17.0
+
+166.0 -64.0 -26.0
+214.0 -64.0 17.0
+166.0 -64.0 17.0
+
+166.0 -133.0 -138.0
+214.0 -64.0 -138.0
+214.0 -133.0 -138.0
+
+166.0 -133.0 -138.0
+166.0 -64.0 -138.0
+214.0 -64.0 -138.0
+
+166.0 -133.0 -138.0
+166.0 -64.0 -26.0
+166.0 -133.0 -26.0
+
+166.0 -133.0 -138.0
+166.0 -64.0 -138.0
+166.0 -64.0 -26.0
+
+166.0 -64.0 -138.0
+214.0 -64.0 -138.0
+214.0 -64.0 -26.0
+
+166.0 -64.0 -138.0
+214.0 -64.0 -26.0
+166.0 -64.0 -26.0
+
+239.0 -133.0 -26.0
+239.0 -64.0 17.0
+239.0 -133.0 17.0
+
+239.0 -133.0 -26.0
+239.0 -64.0 -26.0
+239.0 -64.0 17.0
+
+214.0 -64.0 -26.0
+239.0 -64.0 -26.0
+239.0 -64.0 17.0
+
+214.0 -64.0 -26.0
+239.0 -64.0 17.0
+214.0 -64.0 17.0
+
+166.0 -133.0 -172.0
+214.0 -64.0 -172.0
+214.0 -133.0 -172.0
+
+166.0 -133.0 -172.0
+166.0 -64.0 -172.0
+214.0 -64.0 -172.0
+
+166.0 -137.0 -172.0
+214.0 -133.0 -172.0
+214.0 -137.0 -172.0
+
+166.0 -137.0 -172.0
+166.0 -133.0 -172.0
+214.0 -133.0 -172.0
+
+166.0 -137.0 17.0
+166.0 -133.0 32.0
+166.0 -137.0 32.0
+
+166.0 -137.0 17.0
+166.0 -133.0 17.0
+166.0 -133.0 32.0
+
+166.0 -137.0 17.0
+214.0 -137.0 17.0
+214.0 -137.0 32.0
+
+166.0 -137.0 17.0
+214.0 -137.0 32.0
+166.0 -137.0 32.0
+
+166.0 -133.0 32.0
+214.0 -64.0 32.0
+214.0 -133.0 32.0
+
+166.0 -133.0 32.0
+166.0 -64.0 32.0
+214.0 -64.0 32.0
+
+166.0 -133.0 17.0
+166.0 -64.0 32.0
+166.0 -133.0 32.0
+
+166.0 -133.0 17.0
+166.0 -64.0 17.0
+166.0 -64.0 32.0
+
+166.0 -64.0 17.0
+214.0 -64.0 17.0
+214.0 -64.0 32.0
+
+166.0 -64.0 17.0
+214.0 -64.0 32.0
+166.0 -64.0 32.0
+
+239.0 -133.0 -138.0
+239.0 -64.0 -26.0
+239.0 -133.0 -26.0
+
+239.0 -133.0 -138.0
+239.0 -64.0 -138.0
+239.0 -64.0 -26.0
+
+214.0 -64.0 -138.0
+239.0 -64.0 -138.0
+239.0 -64.0 -26.0
+
+214.0 -64.0 -138.0
+239.0 -64.0 -26.0
+214.0 -64.0 -26.0
+
+</mesh><id>
+Cube.006_Cube.004</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+166.0
+-137.0
+-196.0
+</position>
+<size>
+73.0
+73.0
+238.0
+</size>
+
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-137.0
+-26.0
+</position>
+<size>
+25.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-137.0
+17.0
+</position>
+<size>
+25.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-137.0
+-26.0
+</position>
+<size>
+48.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-137.0
+-138.0
+</position>
+<size>
+48.0
+4.0
+112.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-137.0
+-138.0
+</position>
+<size>
+25.0
+4.0
+112.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-133.0
+32.0
+</position>
+<size>
+25.0
+69.0
+10.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-133.0
+17.0
+</position>
+<size>
+25.0
+69.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-137.0
+32.0
+</position>
+<size>
+25.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-133.0
+-26.0
+</position>
+<size>
+48.0
+69.0
+43.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-133.0
+-196.0
+</position>
+<size>
+25.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-133.0
+-138.0
+</position>
+<size>
+48.0
+69.0
+112.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-133.0
+-26.0
+</position>
+<size>
+25.0
+69.0
+43.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-133.0
+-196.0
+</position>
+<size>
+48.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-137.0
+-196.0
+</position>
+<size>
+48.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-137.0
+17.0
+</position>
+<size>
+48.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-137.0
+-196.0
+</position>
+<size>
+25.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+166.0
+-133.0
+17.0
+</position>
+<size>
+48.0
+69.0
+15.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.006_Cube.004</id>
+<position>
+214.0
+-133.0
+-138.0
+</position>
+<size>
+25.0
+69.0
+112.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube.001_Cube.039</name>
+
+-78.0 -133.0 32.0
+-78.0 -64.0 42.0
+-78.0 -133.0 42.0
+
+-78.0 -133.0 32.0
+-78.0 -64.0 32.0
+-78.0 -64.0 42.0
+
+-112.0 -64.0 32.0
+-78.0 -64.0 32.0
+-78.0 -64.0 42.0
+
+-112.0 -64.0 32.0
+-78.0 -64.0 42.0
+-112.0 -64.0 42.0
+
+-114.0 -133.0 17.0
+-114.0 -64.0 32.0
+-114.0 -133.0 32.0
+
+-114.0 -133.0 17.0
+-114.0 -64.0 17.0
+-114.0 -64.0 32.0
+
+-114.0 -64.0 17.0
+-112.0 -64.0 17.0
+-112.0 -64.0 32.0
+
+-114.0 -64.0 17.0
+-112.0 -64.0 32.0
+-114.0 -64.0 32.0
+
+-41.0 -137.0 32.0
+-41.0 -133.0 42.0
+-41.0 -137.0 42.0
+
+-41.0 -137.0 32.0
+-41.0 -133.0 32.0
+-41.0 -133.0 42.0
+
+-78.0 -137.0 32.0
+-41.0 -137.0 32.0
+-41.0 -137.0 42.0
+
+-78.0 -137.0 32.0
+-41.0 -137.0 42.0
+-78.0 -137.0 42.0
+
+-78.0 -133.0 32.0
+-41.0 -133.0 32.0
+-41.0 -133.0 42.0
+
+-78.0 -133.0 32.0
+-41.0 -133.0 42.0
+-78.0 -133.0 42.0
+
+-114.0 -137.0 17.0
+-114.0 -133.0 32.0
+-114.0 -137.0 32.0
+
+-114.0 -137.0 17.0
+-114.0 -133.0 17.0
+-114.0 -133.0 32.0
+
+-114.0 -137.0 17.0
+-112.0 -137.0 17.0
+-112.0 -137.0 32.0
+
+-114.0 -137.0 17.0
+-112.0 -137.0 32.0
+-114.0 -137.0 32.0
+
+-114.0 -133.0 47.0
+-112.0 -64.0 47.0
+-112.0 -133.0 47.0
+
+-114.0 -133.0 47.0
+-114.0 -64.0 47.0
+-112.0 -64.0 47.0
+
+-114.0 -133.0 45.0
+-114.0 -64.0 47.0
+-114.0 -133.0 47.0
+
+-114.0 -133.0 45.0
+-114.0 -64.0 45.0
+-114.0 -64.0 47.0
+
+-114.0 -64.0 45.0
+-112.0 -64.0 45.0
+-112.0 -64.0 47.0
+
+-114.0 -64.0 45.0
+-112.0 -64.0 47.0
+-114.0 -64.0 47.0
+
+-112.0 -137.0 42.0
+-78.0 -137.0 42.0
+-78.0 -137.0 45.0
+
+-112.0 -137.0 42.0
+-78.0 -137.0 45.0
+-112.0 -137.0 45.0
+
+-114.0 -137.0 32.0
+-114.0 -133.0 42.0
+-114.0 -137.0 42.0
+
+-114.0 -137.0 32.0
+-114.0 -133.0 32.0
+-114.0 -133.0 42.0
+
+-114.0 -137.0 32.0
+-112.0 -137.0 32.0
+-112.0 -137.0 42.0
+
+-114.0 -137.0 32.0
+-112.0 -137.0 42.0
+-114.0 -137.0 42.0
+
+-112.0 -133.0 47.0
+-78.0 -64.0 47.0
+-78.0 -133.0 47.0
+
+-112.0 -133.0 47.0
+-112.0 -64.0 47.0
+-78.0 -64.0 47.0
+
+-112.0 -64.0 45.0
+-78.0 -64.0 45.0
+-78.0 -64.0 47.0
+
+-112.0 -64.0 45.0
+-78.0 -64.0 47.0
+-112.0 -64.0 47.0
+
+-114.0 -137.0 47.0
+-112.0 -133.0 47.0
+-112.0 -137.0 47.0
+
+-114.0 -137.0 47.0
+-114.0 -133.0 47.0
+-112.0 -133.0 47.0
+
+-114.0 -137.0 45.0
+-114.0 -133.0 47.0
+-114.0 -137.0 47.0
+
+-114.0 -137.0 45.0
+-114.0 -133.0 45.0
+-114.0 -133.0 47.0
+
+-114.0 -137.0 45.0
+-112.0 -137.0 45.0
+-112.0 -137.0 47.0
+
+-114.0 -137.0 45.0
+-112.0 -137.0 47.0
+-114.0 -137.0 47.0
+
+-112.0 -64.0 42.0
+-78.0 -64.0 42.0
+-78.0 -64.0 45.0
+
+-112.0 -64.0 42.0
+-78.0 -64.0 45.0
+-112.0 -64.0 45.0
+
+-114.0 -133.0 32.0
+-114.0 -64.0 42.0
+-114.0 -133.0 42.0
+
+-114.0 -133.0 32.0
+-114.0 -64.0 32.0
+-114.0 -64.0 42.0
+
+-114.0 -64.0 32.0
+-112.0 -64.0 32.0
+-112.0 -64.0 42.0
+
+-114.0 -64.0 32.0
+-112.0 -64.0 42.0
+-114.0 -64.0 42.0
+
+-112.0 -137.0 -26.0
+-78.0 -133.0 -26.0
+-78.0 -137.0 -26.0
+
+-112.0 -137.0 -26.0
+-112.0 -133.0 -26.0
+-78.0 -133.0 -26.0
+
+-112.0 -137.0 -26.0
+-78.0 -137.0 -26.0
+-78.0 -137.0 17.0
+
+-112.0 -137.0 -26.0
+-78.0 -137.0 17.0
+-112.0 -137.0 17.0
+
+-41.0 -137.0 42.0
+-41.0 -133.0 45.0
+-41.0 -137.0 45.0
+
+-41.0 -137.0 42.0
+-41.0 -133.0 42.0
+-41.0 -133.0 45.0
+
+-78.0 -137.0 42.0
+-41.0 -137.0 42.0
+-41.0 -137.0 45.0
+
+-78.0 -137.0 42.0
+-41.0 -137.0 45.0
+-78.0 -137.0 45.0
+
+-78.0 -133.0 32.0
+-41.0 -64.0 32.0
+-41.0 -133.0 32.0
+
+-78.0 -133.0 32.0
+-78.0 -64.0 32.0
+-41.0 -64.0 32.0
+
+-112.0 -133.0 -26.0
+-78.0 -64.0 -26.0
+-78.0 -133.0 -26.0
+
+-112.0 -133.0 -26.0
+-112.0 -64.0 -26.0
+-78.0 -64.0 -26.0
+
+-112.0 -64.0 -26.0
+-78.0 -64.0 -26.0
+-78.0 -64.0 17.0
+
+-112.0 -64.0 -26.0
+-78.0 -64.0 17.0
+-112.0 -64.0 17.0
+
+-78.0 -137.0 -26.0
+-41.0 -133.0 -26.0
+-41.0 -137.0 -26.0
+
+-78.0 -137.0 -26.0
+-78.0 -133.0 -26.0
+-41.0 -133.0 -26.0
+
+-41.0 -137.0 -26.0
+-41.0 -133.0 17.0
+-41.0 -137.0 17.0
+
+-41.0 -137.0 -26.0
+-41.0 -133.0 -26.0
+-41.0 -133.0 17.0
+
+-78.0 -137.0 -26.0
+-41.0 -137.0 -26.0
+-41.0 -137.0 17.0
+
+-78.0 -137.0 -26.0
+-41.0 -137.0 17.0
+-78.0 -137.0 17.0
+
+-41.0 -137.0 45.0
+-41.0 -133.0 47.0
+-41.0 -137.0 47.0
+
+-41.0 -137.0 45.0
+-41.0 -133.0 45.0
+-41.0 -133.0 47.0
+
+-78.0 -137.0 47.0
+-41.0 -133.0 47.0
+-41.0 -137.0 47.0
+
+-78.0 -137.0 47.0
+-78.0 -133.0 47.0
+-41.0 -133.0 47.0
+
+-78.0 -137.0 45.0
+-41.0 -137.0 45.0
+-41.0 -137.0 47.0
+
+-78.0 -137.0 45.0
+-41.0 -137.0 47.0
+-78.0 -137.0 47.0
+
+-112.0 -64.0 17.0
+-78.0 -64.0 17.0
+-78.0 -64.0 32.0
+
+-112.0 -64.0 17.0
+-78.0 -64.0 32.0
+-112.0 -64.0 32.0
+
+-41.0 -137.0 17.0
+-41.0 -133.0 32.0
+-41.0 -137.0 32.0
+
+-41.0 -137.0 17.0
+-41.0 -133.0 17.0
+-41.0 -133.0 32.0
+
+-78.0 -137.0 17.0
+-41.0 -137.0 17.0
+-41.0 -137.0 32.0
+
+-78.0 -137.0 17.0
+-41.0 -137.0 32.0
+-78.0 -137.0 32.0
+
+-112.0 -137.0 17.0
+-78.0 -137.0 17.0
+-78.0 -137.0 32.0
+
+-112.0 -137.0 17.0
+-78.0 -137.0 32.0
+-112.0 -137.0 32.0
+
+-114.0 -137.0 -26.0
+-112.0 -133.0 -26.0
+-112.0 -137.0 -26.0
+
+-114.0 -137.0 -26.0
+-114.0 -133.0 -26.0
+-112.0 -133.0 -26.0
+
+-114.0 -137.0 -26.0
+-114.0 -133.0 17.0
+-114.0 -137.0 17.0
+
+-114.0 -137.0 -26.0
+-114.0 -133.0 -26.0
+-114.0 -133.0 17.0
+
+-114.0 -137.0 -26.0
+-112.0 -137.0 -26.0
+-112.0 -137.0 17.0
+
+-114.0 -137.0 -26.0
+-112.0 -137.0 17.0
+-114.0 -137.0 17.0
+
+-114.0 -133.0 -26.0
+-112.0 -64.0 -26.0
+-112.0 -133.0 -26.0
+
+-114.0 -133.0 -26.0
+-114.0 -64.0 -26.0
+-112.0 -64.0 -26.0
+
+-114.0 -133.0 -26.0
+-114.0 -64.0 17.0
+-114.0 -133.0 17.0
+
+-114.0 -133.0 -26.0
+-114.0 -64.0 -26.0
+-114.0 -64.0 17.0
+
+-114.0 -64.0 -26.0
+-112.0 -64.0 -26.0
+-112.0 -64.0 17.0
+
+-114.0 -64.0 -26.0
+-112.0 -64.0 17.0
+-114.0 -64.0 17.0
+
+-78.0 -133.0 -26.0
+-41.0 -64.0 -26.0
+-41.0 -133.0 -26.0
+
+-78.0 -133.0 -26.0
+-78.0 -64.0 -26.0
+-41.0 -64.0 -26.0
+
+-41.0 -133.0 -26.0
+-41.0 -64.0 17.0
+-41.0 -133.0 17.0
+
+-41.0 -133.0 -26.0
+-41.0 -64.0 -26.0
+-41.0 -64.0 17.0
+
+-78.0 -64.0 -26.0
+-41.0 -64.0 -26.0
+-41.0 -64.0 17.0
+
+-78.0 -64.0 -26.0
+-41.0 -64.0 17.0
+-78.0 -64.0 17.0
+
+-114.0 -137.0 42.0
+-114.0 -133.0 45.0
+-114.0 -137.0 45.0
+
+-114.0 -137.0 42.0
+-114.0 -133.0 42.0
+-114.0 -133.0 45.0
+
+-114.0 -137.0 42.0
+-112.0 -137.0 42.0
+-112.0 -137.0 45.0
+
+-114.0 -137.0 42.0
+-112.0 -137.0 45.0
+-114.0 -137.0 45.0
+
+-114.0 -133.0 42.0
+-114.0 -64.0 45.0
+-114.0 -133.0 45.0
+
+-114.0 -133.0 42.0
+-114.0 -64.0 42.0
+-114.0 -64.0 45.0
+
+-114.0 -64.0 42.0
+-112.0 -64.0 42.0
+-112.0 -64.0 45.0
+
+-114.0 -64.0 42.0
+-112.0 -64.0 45.0
+-114.0 -64.0 45.0
+
+-112.0 -137.0 47.0
+-78.0 -133.0 47.0
+-78.0 -137.0 47.0
+
+-112.0 -137.0 47.0
+-112.0 -133.0 47.0
+-78.0 -133.0 47.0
+
+-112.0 -137.0 45.0
+-78.0 -137.0 45.0
+-78.0 -137.0 47.0
+
+-112.0 -137.0 45.0
+-78.0 -137.0 47.0
+-112.0 -137.0 47.0
+
+-112.0 -137.0 32.0
+-78.0 -137.0 32.0
+-78.0 -137.0 42.0
+
+-112.0 -137.0 32.0
+-78.0 -137.0 42.0
+-112.0 -137.0 42.0
+
+</mesh><id>
+Cube.001_Cube.039</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+-114.0
+-137.0
+-26.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+32.0
+</position>
+<size>
+34.0
+69.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+17.0
+</position>
+<size>
+2.0
+69.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+32.0
+</position>
+<size>
+37.0
+4.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+17.0
+</position>
+<size>
+2.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+45.0
+</position>
+<size>
+2.0
+69.0
+2.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+42.0
+</position>
+<size>
+34.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+32.0
+</position>
+<size>
+2.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+45.0
+</position>
+<size>
+34.0
+69.0
+2.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+45.0
+</position>
+<size>
+2.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+42.0
+</position>
+<size>
+34.0
+69.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+32.0
+</position>
+<size>
+2.0
+69.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+-26.0
+</position>
+<size>
+34.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+42.0
+</position>
+<size>
+37.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+17.0
+</position>
+<size>
+37.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+-26.0
+</position>
+<size>
+34.0
+69.0
+43.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+-26.0
+</position>
+<size>
+37.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+45.0
+</position>
+<size>
+37.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+17.0
+</position>
+<size>
+34.0
+69.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+17.0
+</position>
+<size>
+37.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+17.0
+</position>
+<size>
+34.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+-26.0
+</position>
+<size>
+2.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+-26.0
+</position>
+<size>
+2.0
+69.0
+43.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+-26.0
+</position>
+<size>
+37.0
+69.0
+43.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+42.0
+</position>
+<size>
+2.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+42.0
+</position>
+<size>
+2.0
+69.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+45.0
+</position>
+<size>
+34.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+32.0
+</position>
+<size>
+34.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube.002_Cube.000</name>
+
+141.0 -133.0 105.0
+159.0 -64.0 105.0
+159.0 -133.0 105.0
+
+141.0 -133.0 105.0
+141.0 -64.0 105.0
+159.0 -64.0 105.0
+
+141.0 -133.0 90.0
+141.0 -64.0 105.0
+141.0 -133.0 105.0
+
+141.0 -133.0 90.0
+141.0 -64.0 90.0
+141.0 -64.0 105.0
+
+141.0 -64.0 90.0
+159.0 -64.0 90.0
+159.0 -64.0 105.0
+
+141.0 -64.0 90.0
+159.0 -64.0 105.0
+141.0 -64.0 105.0
+
+141.0 -137.0 45.0
+159.0 -137.0 45.0
+159.0 -137.0 47.0
+
+141.0 -137.0 45.0
+159.0 -137.0 47.0
+141.0 -137.0 47.0
+
+166.0 -137.0 32.0
+214.0 -137.0 32.0
+214.0 -137.0 42.0
+
+166.0 -137.0 32.0
+214.0 -137.0 42.0
+166.0 -137.0 42.0
+
+166.0 -133.0 32.0
+214.0 -133.0 32.0
+214.0 -133.0 42.0
+
+166.0 -133.0 32.0
+214.0 -133.0 42.0
+166.0 -133.0 42.0
+
+214.0 -137.0 45.0
+214.0 -133.0 47.0
+214.0 -137.0 47.0
+
+214.0 -137.0 45.0
+214.0 -133.0 45.0
+214.0 -133.0 47.0
+
+166.0 -137.0 45.0
+214.0 -137.0 45.0
+214.0 -137.0 47.0
+
+166.0 -137.0 45.0
+214.0 -137.0 47.0
+166.0 -137.0 47.0
+
+214.0 -137.0 47.0
+214.0 -133.0 77.0
+214.0 -137.0 77.0
+
+214.0 -137.0 47.0
+214.0 -133.0 47.0
+214.0 -133.0 77.0
+
+166.0 -137.0 47.0
+214.0 -137.0 47.0
+214.0 -137.0 77.0
+
+166.0 -137.0 47.0
+214.0 -137.0 77.0
+166.0 -137.0 77.0
+
+159.0 -137.0 105.0
+166.0 -133.0 105.0
+166.0 -137.0 105.0
+
+159.0 -137.0 105.0
+159.0 -133.0 105.0
+166.0 -133.0 105.0
+
+159.0 -137.0 90.0
+166.0 -137.0 90.0
+166.0 -137.0 105.0
+
+159.0 -137.0 90.0
+166.0 -137.0 105.0
+159.0 -137.0 105.0
+
+141.0 -137.0 105.0
+159.0 -133.0 105.0
+159.0 -137.0 105.0
+
+141.0 -137.0 105.0
+141.0 -133.0 105.0
+159.0 -133.0 105.0
+
+141.0 -137.0 90.0
+141.0 -133.0 105.0
+141.0 -137.0 105.0
+
+141.0 -137.0 90.0
+141.0 -133.0 90.0
+141.0 -133.0 105.0
+
+141.0 -137.0 90.0
+159.0 -137.0 90.0
+159.0 -137.0 105.0
+
+141.0 -137.0 90.0
+159.0 -137.0 105.0
+141.0 -137.0 105.0
+
+166.0 -133.0 42.0
+214.0 -64.0 42.0
+214.0 -133.0 42.0
+
+166.0 -133.0 42.0
+166.0 -64.0 42.0
+214.0 -64.0 42.0
+
+214.0 -133.0 42.0
+214.0 -64.0 45.0
+214.0 -133.0 45.0
+
+214.0 -133.0 42.0
+214.0 -64.0 42.0
+214.0 -64.0 45.0
+
+166.0 -64.0 42.0
+214.0 -64.0 42.0
+214.0 -64.0 45.0
+
+166.0 -64.0 42.0
+214.0 -64.0 45.0
+166.0 -64.0 45.0
+
+159.0 -64.0 77.0
+166.0 -64.0 77.0
+166.0 -64.0 90.0
+
+159.0 -64.0 77.0
+166.0 -64.0 90.0
+159.0 -64.0 90.0
+
+141.0 -137.0 77.0
+141.0 -133.0 90.0
+141.0 -137.0 90.0
+
+141.0 -137.0 77.0
+141.0 -133.0 77.0
+141.0 -133.0 90.0
+
+141.0 -137.0 77.0
+159.0 -137.0 77.0
+159.0 -137.0 90.0
+
+141.0 -137.0 77.0
+159.0 -137.0 90.0
+141.0 -137.0 90.0
+
+214.0 -133.0 77.0
+214.0 -64.0 90.0
+214.0 -133.0 90.0
+
+214.0 -133.0 77.0
+214.0 -64.0 77.0
+214.0 -64.0 90.0
+
+166.0 -64.0 77.0
+214.0 -64.0 77.0
+214.0 -64.0 90.0
+
+166.0 -64.0 77.0
+214.0 -64.0 90.0
+166.0 -64.0 90.0
+
+214.0 -133.0 45.0
+214.0 -64.0 47.0
+214.0 -133.0 47.0
+
+214.0 -133.0 45.0
+214.0 -64.0 45.0
+214.0 -64.0 47.0
+
+166.0 -64.0 45.0
+214.0 -64.0 45.0
+214.0 -64.0 47.0
+
+166.0 -64.0 45.0
+214.0 -64.0 47.0
+166.0 -64.0 47.0
+
+141.0 -137.0 42.0
+141.0 -133.0 45.0
+141.0 -137.0 45.0
+
+141.0 -137.0 42.0
+141.0 -133.0 42.0
+141.0 -133.0 45.0
+
+141.0 -137.0 42.0
+159.0 -137.0 42.0
+159.0 -137.0 45.0
+
+141.0 -137.0 42.0
+159.0 -137.0 45.0
+141.0 -137.0 45.0
+
+159.0 -137.0 32.0
+166.0 -133.0 32.0
+166.0 -137.0 32.0
+
+159.0 -137.0 32.0
+159.0 -133.0 32.0
+166.0 -133.0 32.0
+
+159.0 -137.0 32.0
+166.0 -137.0 32.0
+166.0 -137.0 42.0
+
+159.0 -137.0 32.0
+166.0 -137.0 42.0
+159.0 -137.0 42.0
+
+159.0 -64.0 47.0
+166.0 -64.0 47.0
+166.0 -64.0 77.0
+
+159.0 -64.0 47.0
+166.0 -64.0 77.0
+159.0 -64.0 77.0
+
+214.0 -137.0 77.0
+214.0 -133.0 90.0
+214.0 -137.0 90.0
+
+214.0 -137.0 77.0
+214.0 -133.0 77.0
+214.0 -133.0 90.0
+
+166.0 -137.0 77.0
+214.0 -137.0 77.0
+214.0 -137.0 90.0
+
+166.0 -137.0 77.0
+214.0 -137.0 90.0
+166.0 -137.0 90.0
+
+159.0 -133.0 105.0
+166.0 -64.0 105.0
+166.0 -133.0 105.0
+
+159.0 -133.0 105.0
+159.0 -64.0 105.0
+166.0 -64.0 105.0
+
+159.0 -64.0 90.0
+166.0 -64.0 90.0
+166.0 -64.0 105.0
+
+159.0 -64.0 90.0
+166.0 -64.0 105.0
+159.0 -64.0 105.0
+
+159.0 -137.0 77.0
+166.0 -137.0 77.0
+166.0 -137.0 90.0
+
+159.0 -137.0 77.0
+166.0 -137.0 90.0
+159.0 -137.0 90.0
+
+141.0 -64.0 45.0
+159.0 -64.0 45.0
+159.0 -64.0 47.0
+
+141.0 -64.0 45.0
+159.0 -64.0 47.0
+141.0 -64.0 47.0
+
+214.0 -137.0 90.0
+214.0 -133.0 105.0
+214.0 -137.0 105.0
+
+214.0 -137.0 90.0
+214.0 -133.0 90.0
+214.0 -133.0 105.0
+
+166.0 -137.0 105.0
+214.0 -133.0 105.0
+214.0 -137.0 105.0
+
+166.0 -137.0 105.0
+166.0 -133.0 105.0
+214.0 -133.0 105.0
+
+166.0 -137.0 90.0
+214.0 -137.0 90.0
+214.0 -137.0 105.0
+
+166.0 -137.0 90.0
+214.0 -137.0 105.0
+166.0 -137.0 105.0
+
+214.0 -133.0 47.0
+214.0 -64.0 77.0
+214.0 -133.0 77.0
+
+214.0 -133.0 47.0
+214.0 -64.0 47.0
+214.0 -64.0 77.0
+
+166.0 -64.0 47.0
+214.0 -64.0 47.0
+214.0 -64.0 77.0
+
+166.0 -64.0 47.0
+214.0 -64.0 77.0
+166.0 -64.0 77.0
+
+159.0 -137.0 47.0
+166.0 -137.0 47.0
+166.0 -137.0 77.0
+
+159.0 -137.0 47.0
+166.0 -137.0 77.0
+159.0 -137.0 77.0
+
+159.0 -64.0 45.0
+166.0 -64.0 45.0
+166.0 -64.0 47.0
+
+159.0 -64.0 45.0
+166.0 -64.0 47.0
+159.0 -64.0 47.0
+
+141.0 -133.0 32.0
+159.0 -64.0 32.0
+159.0 -133.0 32.0
+
+141.0 -133.0 32.0
+141.0 -64.0 32.0
+159.0 -64.0 32.0
+
+141.0 -133.0 32.0
+141.0 -64.0 42.0
+141.0 -133.0 42.0
+
+141.0 -133.0 32.0
+141.0 -64.0 32.0
+141.0 -64.0 42.0
+
+141.0 -64.0 32.0
+159.0 -64.0 32.0
+159.0 -64.0 42.0
+
+141.0 -64.0 32.0
+159.0 -64.0 42.0
+141.0 -64.0 42.0
+
+159.0 -133.0 32.0
+166.0 -64.0 32.0
+166.0 -133.0 32.0
+
+159.0 -133.0 32.0
+159.0 -64.0 32.0
+166.0 -64.0 32.0
+
+166.0 -133.0 32.0
+166.0 -64.0 42.0
+166.0 -133.0 42.0
+
+166.0 -133.0 32.0
+166.0 -64.0 32.0
+166.0 -64.0 42.0
+
+159.0 -64.0 32.0
+166.0 -64.0 32.0
+166.0 -64.0 42.0
+
+159.0 -64.0 32.0
+166.0 -64.0 42.0
+159.0 -64.0 42.0
+
+141.0 -137.0 47.0
+159.0 -137.0 47.0
+159.0 -137.0 77.0
+
+141.0 -137.0 47.0
+159.0 -137.0 77.0
+141.0 -137.0 77.0
+
+141.0 -133.0 42.0
+141.0 -64.0 45.0
+141.0 -133.0 45.0
+
+141.0 -133.0 42.0
+141.0 -64.0 42.0
+141.0 -64.0 45.0
+
+141.0 -64.0 42.0
+159.0 -64.0 42.0
+159.0 -64.0 45.0
+
+141.0 -64.0 42.0
+159.0 -64.0 45.0
+141.0 -64.0 45.0
+
+141.0 -133.0 77.0
+141.0 -64.0 90.0
+141.0 -133.0 90.0
+
+141.0 -133.0 77.0
+141.0 -64.0 77.0
+141.0 -64.0 90.0
+
+141.0 -64.0 77.0
+159.0 -64.0 77.0
+159.0 -64.0 90.0
+
+141.0 -64.0 77.0
+159.0 -64.0 90.0
+141.0 -64.0 90.0
+
+214.0 -133.0 90.0
+214.0 -64.0 105.0
+214.0 -133.0 105.0
+
+214.0 -133.0 90.0
+214.0 -64.0 90.0
+214.0 -64.0 105.0
+
+166.0 -133.0 105.0
+214.0 -64.0 105.0
+214.0 -133.0 105.0
+
+166.0 -133.0 105.0
+166.0 -64.0 105.0
+214.0 -64.0 105.0
+
+166.0 -64.0 90.0
+214.0 -64.0 90.0
+214.0 -64.0 105.0
+
+166.0 -64.0 90.0
+214.0 -64.0 105.0
+166.0 -64.0 105.0
+
+214.0 -137.0 42.0
+214.0 -133.0 45.0
+214.0 -137.0 45.0
+
+214.0 -137.0 42.0
+214.0 -133.0 42.0
+214.0 -133.0 45.0
+
+166.0 -137.0 42.0
+214.0 -137.0 42.0
+214.0 -137.0 45.0
+
+166.0 -137.0 42.0
+214.0 -137.0 45.0
+166.0 -137.0 45.0
+
+159.0 -137.0 42.0
+166.0 -137.0 42.0
+166.0 -137.0 45.0
+
+159.0 -137.0 42.0
+166.0 -137.0 45.0
+159.0 -137.0 45.0
+
+141.0 -137.0 32.0
+159.0 -133.0 32.0
+159.0 -137.0 32.0
+
+141.0 -137.0 32.0
+141.0 -133.0 32.0
+159.0 -133.0 32.0
+
+141.0 -137.0 32.0
+141.0 -133.0 42.0
+141.0 -137.0 42.0
+
+141.0 -137.0 32.0
+141.0 -133.0 32.0
+141.0 -133.0 42.0
+
+141.0 -137.0 32.0
+159.0 -137.0 32.0
+159.0 -137.0 42.0
+
+141.0 -137.0 32.0
+159.0 -137.0 42.0
+141.0 -137.0 42.0
+
+141.0 -64.0 47.0
+159.0 -64.0 47.0
+159.0 -64.0 77.0
+
+141.0 -64.0 47.0
+159.0 -64.0 77.0
+141.0 -64.0 77.0
+
+159.0 -137.0 45.0
+166.0 -137.0 45.0
+166.0 -137.0 47.0
+
+159.0 -137.0 45.0
+166.0 -137.0 47.0
+159.0 -137.0 47.0
+
+159.0 -64.0 42.0
+166.0 -64.0 42.0
+166.0 -64.0 45.0
+
+159.0 -64.0 42.0
+166.0 -64.0 45.0
+159.0 -64.0 45.0
+
+</mesh><id>
+Cube.002_Cube.000</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+141.0
+-137.0
+32.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+90.0
+</position>
+<size>
+18.0
+69.0
+15.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+45.0
+</position>
+<size>
+18.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+32.0
+</position>
+<size>
+48.0
+4.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+45.0
+</position>
+<size>
+48.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+47.0
+</position>
+<size>
+48.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+90.0
+</position>
+<size>
+7.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+90.0
+</position>
+<size>
+18.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+42.0
+</position>
+<size>
+48.0
+69.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+77.0
+</position>
+<size>
+7.0
+69.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+77.0
+</position>
+<size>
+18.0
+4.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+77.0
+</position>
+<size>
+48.0
+69.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+45.0
+</position>
+<size>
+48.0
+69.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+42.0
+</position>
+<size>
+18.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+32.0
+</position>
+<size>
+7.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+47.0
+</position>
+<size>
+7.0
+69.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+77.0
+</position>
+<size>
+48.0
+4.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+90.0
+</position>
+<size>
+7.0
+69.0
+15.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+77.0
+</position>
+<size>
+7.0
+4.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+45.0
+</position>
+<size>
+18.0
+69.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+90.0
+</position>
+<size>
+48.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+47.0
+</position>
+<size>
+48.0
+69.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+47.0
+</position>
+<size>
+7.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+45.0
+</position>
+<size>
+7.0
+69.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+32.0
+</position>
+<size>
+18.0
+69.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+32.0
+</position>
+<size>
+7.0
+69.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+47.0
+</position>
+<size>
+18.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+42.0
+</position>
+<size>
+18.0
+69.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+77.0
+</position>
+<size>
+18.0
+69.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+90.0
+</position>
+<size>
+48.0
+69.0
+15.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+42.0
+</position>
+<size>
+48.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+42.0
+</position>
+<size>
+7.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+32.0
+</position>
+<size>
+18.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+47.0
+</position>
+<size>
+18.0
+69.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+45.0
+</position>
+<size>
+7.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+42.0
+</position>
+<size>
+7.0
+69.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube.004_Cube.002</name>
+
+-78.0 -133.0 -172.0
+-41.0 -64.0 -172.0
+-41.0 -133.0 -172.0
+
+-78.0 -133.0 -172.0
+-78.0 -64.0 -172.0
+-41.0 -64.0 -172.0
+
+-78.0 -64.0 -196.0
+-41.0 -64.0 -196.0
+-41.0 -64.0 -172.0
+
+-78.0 -64.0 -196.0
+-41.0 -64.0 -172.0
+-78.0 -64.0 -172.0
+
+-78.0 -137.0 -245.0
+-41.0 -133.0 -245.0
+-41.0 -137.0 -245.0
+
+-78.0 -137.0 -245.0
+-78.0 -133.0 -245.0
+-41.0 -133.0 -245.0
+
+-78.0 -137.0 -245.0
+-41.0 -137.0 -245.0
+-41.0 -137.0 -196.0
+
+-78.0 -137.0 -245.0
+-41.0 -137.0 -196.0
+-78.0 -137.0 -196.0
+
+-78.0 -137.0 -172.0
+-41.0 -133.0 -172.0
+-41.0 -137.0 -172.0
+
+-78.0 -137.0 -172.0
+-78.0 -133.0 -172.0
+-41.0 -133.0 -172.0
+
+-78.0 -137.0 -196.0
+-41.0 -137.0 -196.0
+-41.0 -137.0 -172.0
+
+-78.0 -137.0 -196.0
+-41.0 -137.0 -172.0
+-78.0 -137.0 -172.0
+
+-112.0 -133.0 -172.0
+-78.0 -64.0 -172.0
+-78.0 -133.0 -172.0
+
+-112.0 -133.0 -172.0
+-112.0 -64.0 -172.0
+-78.0 -64.0 -172.0
+
+-112.0 -133.0 -196.0
+-112.0 -64.0 -172.0
+-112.0 -133.0 -172.0
+
+-112.0 -133.0 -196.0
+-112.0 -64.0 -196.0
+-112.0 -64.0 -172.0
+
+-112.0 -64.0 -196.0
+-78.0 -64.0 -196.0
+-78.0 -64.0 -172.0
+
+-112.0 -64.0 -196.0
+-78.0 -64.0 -172.0
+-112.0 -64.0 -172.0
+
+-112.0 -137.0 -245.0
+-78.0 -133.0 -245.0
+-78.0 -137.0 -245.0
+
+-112.0 -137.0 -245.0
+-112.0 -133.0 -245.0
+-78.0 -133.0 -245.0
+
+-112.0 -137.0 -245.0
+-112.0 -133.0 -196.0
+-112.0 -137.0 -196.0
+
+-112.0 -137.0 -245.0
+-112.0 -133.0 -245.0
+-112.0 -133.0 -196.0
+
+-112.0 -137.0 -245.0
+-78.0 -137.0 -245.0
+-78.0 -137.0 -196.0
+
+-112.0 -137.0 -245.0
+-78.0 -137.0 -196.0
+-112.0 -137.0 -196.0
+
+-39.0 -133.0 -196.0
+-39.0 -64.0 -172.0
+-39.0 -133.0 -172.0
+
+-39.0 -133.0 -196.0
+-39.0 -64.0 -196.0
+-39.0 -64.0 -172.0
+
+-41.0 -133.0 -172.0
+-39.0 -64.0 -172.0
+-39.0 -133.0 -172.0
+
+-41.0 -133.0 -172.0
+-41.0 -64.0 -172.0
+-39.0 -64.0 -172.0
+
+-41.0 -64.0 -196.0
+-39.0 -64.0 -196.0
+-39.0 -64.0 -172.0
+
+-41.0 -64.0 -196.0
+-39.0 -64.0 -172.0
+-41.0 -64.0 -172.0
+
+-39.0 -137.0 -196.0
+-39.0 -133.0 -172.0
+-39.0 -137.0 -172.0
+
+-39.0 -137.0 -196.0
+-39.0 -133.0 -196.0
+-39.0 -133.0 -172.0
+
+-41.0 -137.0 -172.0
+-39.0 -133.0 -172.0
+-39.0 -137.0 -172.0
+
+-41.0 -137.0 -172.0
+-41.0 -133.0 -172.0
+-39.0 -133.0 -172.0
+
+-41.0 -137.0 -196.0
+-39.0 -137.0 -196.0
+-39.0 -137.0 -172.0
+
+-41.0 -137.0 -196.0
+-39.0 -137.0 -172.0
+-41.0 -137.0 -172.0
+
+-78.0 -133.0 -245.0
+-41.0 -64.0 -245.0
+-41.0 -133.0 -245.0
+
+-78.0 -133.0 -245.0
+-78.0 -64.0 -245.0
+-41.0 -64.0 -245.0
+
+-78.0 -64.0 -245.0
+-41.0 -64.0 -245.0
+-41.0 -64.0 -196.0
+
+-78.0 -64.0 -245.0
+-41.0 -64.0 -196.0
+-78.0 -64.0 -196.0
+
+-112.0 -137.0 -172.0
+-78.0 -133.0 -172.0
+-78.0 -137.0 -172.0
+
+-112.0 -137.0 -172.0
+-112.0 -133.0 -172.0
+-78.0 -133.0 -172.0
+
+-112.0 -137.0 -196.0
+-112.0 -133.0 -172.0
+-112.0 -137.0 -172.0
+
+-112.0 -137.0 -196.0
+-112.0 -133.0 -196.0
+-112.0 -133.0 -172.0
+
+-112.0 -137.0 -196.0
+-78.0 -137.0 -196.0
+-78.0 -137.0 -172.0
+
+-112.0 -137.0 -196.0
+-78.0 -137.0 -172.0
+-112.0 -137.0 -172.0
+
+-41.0 -133.0 -245.0
+-39.0 -64.0 -245.0
+-39.0 -133.0 -245.0
+
+-41.0 -133.0 -245.0
+-41.0 -64.0 -245.0
+-39.0 -64.0 -245.0
+
+-39.0 -133.0 -245.0
+-39.0 -64.0 -196.0
+-39.0 -133.0 -196.0
+
+-39.0 -133.0 -245.0
+-39.0 -64.0 -245.0
+-39.0 -64.0 -196.0
+
+-41.0 -64.0 -245.0
+-39.0 -64.0 -245.0
+-39.0 -64.0 -196.0
+
+-41.0 -64.0 -245.0
+-39.0 -64.0 -196.0
+-41.0 -64.0 -196.0
+
+-41.0 -137.0 -245.0
+-39.0 -133.0 -245.0
+-39.0 -137.0 -245.0
+
+-41.0 -137.0 -245.0
+-41.0 -133.0 -245.0
+-39.0 -133.0 -245.0
+
+-39.0 -137.0 -245.0
+-39.0 -133.0 -196.0
+-39.0 -137.0 -196.0
+
+-39.0 -137.0 -245.0
+-39.0 -133.0 -245.0
+-39.0 -133.0 -196.0
+
+-41.0 -137.0 -245.0
+-39.0 -137.0 -245.0
+-39.0 -137.0 -196.0
+
+-41.0 -137.0 -245.0
+-39.0 -137.0 -196.0
+-41.0 -137.0 -196.0
+
+-112.0 -133.0 -245.0
+-78.0 -64.0 -245.0
+-78.0 -133.0 -245.0
+
+-112.0 -133.0 -245.0
+-112.0 -64.0 -245.0
+-78.0 -64.0 -245.0
+
+-112.0 -133.0 -245.0
+-112.0 -64.0 -196.0
+-112.0 -133.0 -196.0
+
+-112.0 -133.0 -245.0
+-112.0 -64.0 -245.0
+-112.0 -64.0 -196.0
+
+-112.0 -64.0 -245.0
+-78.0 -64.0 -245.0
+-78.0 -64.0 -196.0
+
+-112.0 -64.0 -245.0
+-78.0 -64.0 -196.0
+-112.0 -64.0 -196.0
+
+</mesh><id>
+Cube.004_Cube.002</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+-112.0
+-137.0
+-245.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-133.0
+-196.0
+</position>
+<size>
+37.0
+69.0
+24.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-137.0
+-245.0
+</position>
+<size>
+37.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-137.0
+-196.0
+</position>
+<size>
+37.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-133.0
+-196.0
+</position>
+<size>
+34.0
+69.0
+24.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-137.0
+-245.0
+</position>
+<size>
+34.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-133.0
+-196.0
+</position>
+<size>
+2.0
+69.0
+24.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-137.0
+-196.0
+</position>
+<size>
+2.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-133.0
+-245.0
+</position>
+<size>
+37.0
+69.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-137.0
+-196.0
+</position>
+<size>
+34.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-133.0
+-245.0
+</position>
+<size>
+2.0
+69.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-137.0
+-245.0
+</position>
+<size>
+2.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-133.0
+-245.0
+</position>
+<size>
+34.0
+69.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube_Cube.038</name>
+
+-41.0 -60.0 42.0
+-39.0 -60.0 42.0
+-39.0 -60.0 45.0
+
+-41.0 -60.0 42.0
+-39.0 -60.0 45.0
+-41.0 -60.0 45.0
+
+-78.0 -133.0 42.0
+-41.0 -64.0 42.0
+-41.0 -133.0 42.0
+
+-78.0 -133.0 42.0
+-78.0 -64.0 42.0
+-41.0 -64.0 42.0
+
+-39.0 -60.0 45.0
+-23.0 -60.0 45.0
+-23.0 -60.0 47.0
+
+-39.0 -60.0 45.0
+-23.0 -60.0 47.0
+-39.0 -60.0 47.0
+
+-41.0 -133.0 47.0
+-39.0 -133.0 47.0
+-39.0 -133.0 77.0
+
+-41.0 -133.0 47.0
+-39.0 -133.0 77.0
+-41.0 -133.0 77.0
+
+-41.0 -133.0 45.0
+-39.0 -133.0 45.0
+-39.0 -133.0 47.0
+
+-41.0 -133.0 45.0
+-39.0 -133.0 47.0
+-41.0 -133.0 47.0
+
+-78.0 -64.0 32.0
+-78.0 -60.0 42.0
+-78.0 -64.0 42.0
+
+-78.0 -64.0 32.0
+-78.0 -60.0 32.0
+-78.0 -60.0 42.0
+
+-78.0 -64.0 32.0
+-41.0 -64.0 32.0
+-41.0 -64.0 42.0
+
+-78.0 -64.0 32.0
+-41.0 -64.0 42.0
+-78.0 -64.0 42.0
+
+-78.0 -60.0 32.0
+-41.0 -60.0 32.0
+-41.0 -60.0 42.0
+
+-78.0 -60.0 32.0
+-41.0 -60.0 42.0
+-78.0 -60.0 42.0
+
+-41.0 -133.0 90.0
+-39.0 -64.0 90.0
+-39.0 -133.0 90.0
+
+-41.0 -133.0 90.0
+-41.0 -64.0 90.0
+-39.0 -64.0 90.0
+
+-41.0 -133.0 77.0
+-39.0 -133.0 77.0
+-39.0 -133.0 90.0
+
+-41.0 -133.0 77.0
+-39.0 -133.0 90.0
+-41.0 -133.0 90.0
+
+-78.0 -64.0 45.0
+-78.0 -60.0 47.0
+-78.0 -64.0 47.0
+
+-78.0 -64.0 45.0
+-78.0 -60.0 45.0
+-78.0 -60.0 47.0
+
+-78.0 -60.0 45.0
+-41.0 -60.0 45.0
+-41.0 -60.0 47.0
+
+-78.0 -60.0 45.0
+-41.0 -60.0 47.0
+-78.0 -60.0 47.0
+
+-41.0 -64.0 90.0
+-39.0 -60.0 90.0
+-39.0 -64.0 90.0
+
+-41.0 -64.0 90.0
+-41.0 -60.0 90.0
+-39.0 -60.0 90.0
+
+-41.0 -60.0 77.0
+-39.0 -60.0 77.0
+-39.0 -60.0 90.0
+
+-41.0 -60.0 77.0
+-39.0 -60.0 90.0
+-41.0 -60.0 90.0
+
+-5.0 -64.0 42.0
+-5.0 -60.0 45.0
+-5.0 -64.0 45.0
+
+-5.0 -64.0 42.0
+-5.0 -60.0 42.0
+-5.0 -60.0 45.0
+
+-23.0 -60.0 42.0
+-5.0 -60.0 42.0
+-5.0 -60.0 45.0
+
+-23.0 -60.0 42.0
+-5.0 -60.0 45.0
+-23.0 -60.0 45.0
+
+-39.0 -60.0 47.0
+-23.0 -60.0 47.0
+-23.0 -60.0 77.0
+
+-39.0 -60.0 47.0
+-23.0 -60.0 77.0
+-39.0 -60.0 77.0
+
+-23.0 -133.0 47.0
+-23.0 -64.0 77.0
+-23.0 -133.0 77.0
+
+-23.0 -133.0 47.0
+-23.0 -64.0 47.0
+-23.0 -64.0 77.0
+
+-39.0 -133.0 47.0
+-23.0 -133.0 47.0
+-23.0 -133.0 77.0
+
+-39.0 -133.0 47.0
+-23.0 -133.0 77.0
+-39.0 -133.0 77.0
+
+-41.0 -60.0 32.0
+-39.0 -60.0 32.0
+-39.0 -60.0 42.0
+
+-41.0 -60.0 32.0
+-39.0 -60.0 42.0
+-41.0 -60.0 42.0
+
+-5.0 -64.0 77.0
+-5.0 -60.0 90.0
+-5.0 -64.0 90.0
+
+-5.0 -64.0 77.0
+-5.0 -60.0 77.0
+-5.0 -60.0 90.0
+
+-23.0 -64.0 90.0
+-5.0 -60.0 90.0
+-5.0 -64.0 90.0
+
+-23.0 -64.0 90.0
+-23.0 -60.0 90.0
+-5.0 -60.0 90.0
+
+-23.0 -60.0 77.0
+-5.0 -60.0 77.0
+-5.0 -60.0 90.0
+
+-23.0 -60.0 77.0
+-5.0 -60.0 90.0
+-23.0 -60.0 90.0
+
+-39.0 -64.0 17.0
+-23.0 -60.0 17.0
+-23.0 -64.0 17.0
+
+-39.0 -64.0 17.0
+-39.0 -60.0 17.0
+-23.0 -60.0 17.0
+
+-39.0 -60.0 17.0
+-23.0 -60.0 17.0
+-23.0 -60.0 32.0
+
+-39.0 -60.0 17.0
+-23.0 -60.0 32.0
+-39.0 -60.0 32.0
+
+-78.0 -133.0 90.0
+-41.0 -64.0 90.0
+-41.0 -133.0 90.0
+
+-78.0 -133.0 90.0
+-78.0 -64.0 90.0
+-41.0 -64.0 90.0
+
+-78.0 -133.0 77.0
+-78.0 -64.0 90.0
+-78.0 -133.0 90.0
+
+-78.0 -133.0 77.0
+-78.0 -64.0 77.0
+-78.0 -64.0 90.0
+
+-78.0 -133.0 77.0
+-41.0 -133.0 77.0
+-41.0 -133.0 90.0
+
+-78.0 -133.0 77.0
+-41.0 -133.0 90.0
+-78.0 -133.0 90.0
+
+-78.0 -133.0 47.0
+-78.0 -64.0 77.0
+-78.0 -133.0 77.0
+
+-78.0 -133.0 47.0
+-78.0 -64.0 47.0
+-78.0 -64.0 77.0
+
+-78.0 -133.0 47.0
+-41.0 -133.0 47.0
+-41.0 -133.0 77.0
+
+-78.0 -133.0 47.0
+-41.0 -133.0 77.0
+-78.0 -133.0 77.0
+
+-5.0 -133.0 32.0
+-5.0 -64.0 42.0
+-5.0 -133.0 42.0
+
+-5.0 -133.0 32.0
+-5.0 -64.0 32.0
+-5.0 -64.0 42.0
+
+-23.0 -133.0 32.0
+-5.0 -133.0 32.0
+-5.0 -133.0 42.0
+
+-23.0 -133.0 32.0
+-5.0 -133.0 42.0
+-23.0 -133.0 42.0
+
+-78.0 -64.0 17.0
+-41.0 -60.0 17.0
+-41.0 -64.0 17.0
+
+-78.0 -64.0 17.0
+-78.0 -60.0 17.0
+-41.0 -60.0 17.0
+
+-78.0 -64.0 17.0
+-78.0 -60.0 32.0
+-78.0 -64.0 32.0
+
+-78.0 -64.0 17.0
+-78.0 -60.0 17.0
+-78.0 -60.0 32.0
+
+-78.0 -60.0 17.0
+-41.0 -60.0 17.0
+-41.0 -60.0 32.0
+
+-78.0 -60.0 17.0
+-41.0 -60.0 32.0
+-78.0 -60.0 32.0
+
+-78.0 -64.0 47.0
+-78.0 -60.0 77.0
+-78.0 -64.0 77.0
+
+-78.0 -64.0 47.0
+-78.0 -60.0 47.0
+-78.0 -60.0 77.0
+
+-78.0 -60.0 47.0
+-41.0 -60.0 47.0
+-41.0 -60.0 77.0
+
+-78.0 -60.0 47.0
+-41.0 -60.0 77.0
+-78.0 -60.0 77.0
+
+-39.0 -133.0 17.0
+-23.0 -64.0 17.0
+-23.0 -133.0 17.0
+
+-39.0 -133.0 17.0
+-39.0 -64.0 17.0
+-23.0 -64.0 17.0
+
+-39.0 -133.0 17.0
+-23.0 -133.0 17.0
+-23.0 -133.0 32.0
+
+-39.0 -133.0 17.0
+-23.0 -133.0 32.0
+-39.0 -133.0 32.0
+
+-5.0 -133.0 42.0
+-5.0 -64.0 45.0
+-5.0 -133.0 45.0
+
+-5.0 -133.0 42.0
+-5.0 -64.0 42.0
+-5.0 -64.0 45.0
+
+-23.0 -133.0 45.0
+-5.0 -64.0 45.0
+-5.0 -133.0 45.0
+
+-23.0 -133.0 45.0
+-23.0 -64.0 45.0
+-5.0 -64.0 45.0
+
+-23.0 -133.0 42.0
+-5.0 -133.0 42.0
+-5.0 -133.0 45.0
+
+-23.0 -133.0 42.0
+-5.0 -133.0 45.0
+-23.0 -133.0 45.0
+
+-5.0 -64.0 45.0
+-5.0 -60.0 47.0
+-5.0 -64.0 47.0
+
+-5.0 -64.0 45.0
+-5.0 -60.0 45.0
+-5.0 -60.0 47.0
+
+-23.0 -64.0 45.0
+-5.0 -64.0 45.0
+-5.0 -64.0 47.0
+
+-23.0 -64.0 45.0
+-5.0 -64.0 47.0
+-23.0 -64.0 47.0
+
+-23.0 -60.0 45.0
+-5.0 -60.0 45.0
+-5.0 -60.0 47.0
+
+-23.0 -60.0 45.0
+-5.0 -60.0 47.0
+-23.0 -60.0 47.0
+
+-39.0 -133.0 90.0
+-23.0 -64.0 90.0
+-23.0 -133.0 90.0
+
+-39.0 -133.0 90.0
+-39.0 -64.0 90.0
+-23.0 -64.0 90.0
+
+-39.0 -133.0 77.0
+-23.0 -133.0 77.0
+-23.0 -133.0 90.0
+
+-39.0 -133.0 77.0
+-23.0 -133.0 90.0
+-39.0 -133.0 90.0
+
+-41.0 -64.0 17.0
+-39.0 -60.0 17.0
+-39.0 -64.0 17.0
+
+-41.0 -64.0 17.0
+-41.0 -60.0 17.0
+-39.0 -60.0 17.0
+
+-41.0 -60.0 17.0
+-39.0 -60.0 17.0
+-39.0 -60.0 32.0
+
+-41.0 -60.0 17.0
+-39.0 -60.0 32.0
+-41.0 -60.0 32.0
+
+-39.0 -60.0 32.0
+-23.0 -60.0 32.0
+-23.0 -60.0 42.0
+
+-39.0 -60.0 32.0
+-23.0 -60.0 42.0
+-39.0 -60.0 42.0
+
+-5.0 -64.0 32.0
+-5.0 -60.0 42.0
+-5.0 -64.0 42.0
+
+-5.0 -64.0 32.0
+-5.0 -60.0 32.0
+-5.0 -60.0 42.0
+
+-23.0 -60.0 32.0
+-5.0 -60.0 32.0
+-5.0 -60.0 42.0
+
+-23.0 -60.0 32.0
+-5.0 -60.0 42.0
+-23.0 -60.0 42.0
+
+-78.0 -64.0 90.0
+-41.0 -60.0 90.0
+-41.0 -64.0 90.0
+
+-78.0 -64.0 90.0
+-78.0 -60.0 90.0
+-41.0 -60.0 90.0
+
+-78.0 -64.0 77.0
+-78.0 -60.0 90.0
+-78.0 -64.0 90.0
+
+-78.0 -64.0 77.0
+-78.0 -60.0 77.0
+-78.0 -60.0 90.0
+
+-78.0 -60.0 77.0
+-41.0 -60.0 77.0
+-41.0 -60.0 90.0
+
+-78.0 -60.0 77.0
+-41.0 -60.0 90.0
+-78.0 -60.0 90.0
+
+-41.0 -133.0 17.0
+-39.0 -64.0 17.0
+-39.0 -133.0 17.0
+
+-41.0 -133.0 17.0
+-41.0 -64.0 17.0
+-39.0 -64.0 17.0
+
+-41.0 -133.0 17.0
+-39.0 -133.0 17.0
+-39.0 -133.0 32.0
+
+-41.0 -133.0 17.0
+-39.0 -133.0 32.0
+-41.0 -133.0 32.0
+
+-41.0 -133.0 32.0
+-41.0 -64.0 42.0
+-41.0 -133.0 42.0
+
+-41.0 -133.0 32.0
+-41.0 -64.0 32.0
+-41.0 -64.0 42.0
+
+-41.0 -133.0 32.0
+-39.0 -133.0 32.0
+-39.0 -133.0 42.0
+
+-41.0 -133.0 32.0
+-39.0 -133.0 42.0
+-41.0 -133.0 42.0
+
+-39.0 -60.0 42.0
+-23.0 -60.0 42.0
+-23.0 -60.0 45.0
+
+-39.0 -60.0 42.0
+-23.0 -60.0 45.0
+-39.0 -60.0 45.0
+
+-23.0 -133.0 17.0
+-5.0 -64.0 17.0
+-5.0 -133.0 17.0
+
+-23.0 -133.0 17.0
+-23.0 -64.0 17.0
+-5.0 -64.0 17.0
+
+-5.0 -133.0 17.0
+-5.0 -64.0 32.0
+-5.0 -133.0 32.0
+
+-5.0 -133.0 17.0
+-5.0 -64.0 17.0
+-5.0 -64.0 32.0
+
+-23.0 -133.0 17.0
+-5.0 -133.0 17.0
+-5.0 -133.0 32.0
+
+-23.0 -133.0 17.0
+-5.0 -133.0 32.0
+-23.0 -133.0 32.0
+
+-23.0 -133.0 45.0
+-23.0 -64.0 47.0
+-23.0 -133.0 47.0
+
+-23.0 -133.0 45.0
+-23.0 -64.0 45.0
+-23.0 -64.0 47.0
+
+-39.0 -133.0 45.0
+-23.0 -133.0 45.0
+-23.0 -133.0 47.0
+
+-39.0 -133.0 45.0
+-23.0 -133.0 47.0
+-39.0 -133.0 47.0
+
+-39.0 -133.0 32.0
+-23.0 -133.0 32.0
+-23.0 -133.0 42.0
+
+-39.0 -133.0 32.0
+-23.0 -133.0 42.0
+-39.0 -133.0 42.0
+
+-23.0 -64.0 17.0
+-5.0 -60.0 17.0
+-5.0 -64.0 17.0
+
+-23.0 -64.0 17.0
+-23.0 -60.0 17.0
+-5.0 -60.0 17.0
+
+-5.0 -64.0 17.0
+-5.0 -60.0 32.0
+-5.0 -64.0 32.0
+
+-5.0 -64.0 17.0
+-5.0 -60.0 17.0
+-5.0 -60.0 32.0
+
+-23.0 -60.0 17.0
+-5.0 -60.0 17.0
+-5.0 -60.0 32.0
+
+-23.0 -60.0 17.0
+-5.0 -60.0 32.0
+-23.0 -60.0 32.0
+
+-41.0 -133.0 42.0
+-39.0 -133.0 42.0
+-39.0 -133.0 45.0
+
+-41.0 -133.0 42.0
+-39.0 -133.0 45.0
+-41.0 -133.0 45.0
+
+-41.0 -60.0 47.0
+-39.0 -60.0 47.0
+-39.0 -60.0 77.0
+
+-41.0 -60.0 47.0
+-39.0 -60.0 77.0
+-41.0 -60.0 77.0
+
+-23.0 -133.0 77.0
+-5.0 -64.0 77.0
+-5.0 -133.0 77.0
+
+-23.0 -133.0 77.0
+-23.0 -64.0 77.0
+-5.0 -64.0 77.0
+
+-5.0 -133.0 77.0
+-5.0 -64.0 90.0
+-5.0 -133.0 90.0
+
+-5.0 -133.0 77.0
+-5.0 -64.0 77.0
+-5.0 -64.0 90.0
+
+-23.0 -133.0 90.0
+-5.0 -64.0 90.0
+-5.0 -133.0 90.0
+
+-23.0 -133.0 90.0
+-23.0 -64.0 90.0
+-5.0 -64.0 90.0
+
+-23.0 -133.0 77.0
+-5.0 -133.0 77.0
+-5.0 -133.0 90.0
+
+-23.0 -133.0 77.0
+-5.0 -133.0 90.0
+-23.0 -133.0 90.0
+
+-78.0 -133.0 32.0
+-41.0 -64.0 32.0
+-41.0 -133.0 32.0
+
+-78.0 -133.0 32.0
+-78.0 -64.0 32.0
+-41.0 -64.0 32.0
+
+-5.0 -64.0 47.0
+-5.0 -60.0 77.0
+-5.0 -64.0 77.0
+
+-5.0 -64.0 47.0
+-5.0 -60.0 47.0
+-5.0 -60.0 77.0
+
+-23.0 -64.0 47.0
+-5.0 -64.0 47.0
+-5.0 -64.0 77.0
+
+-23.0 -64.0 47.0
+-5.0 -64.0 77.0
+-23.0 -64.0 77.0
+
+-23.0 -60.0 47.0
+-5.0 -60.0 47.0
+-5.0 -60.0 77.0
+
+-23.0 -60.0 47.0
+-5.0 -60.0 77.0
+-23.0 -60.0 77.0
+
+-78.0 -64.0 42.0
+-78.0 -60.0 45.0
+-78.0 -64.0 45.0
+
+-78.0 -64.0 42.0
+-78.0 -60.0 42.0
+-78.0 -60.0 45.0
+
+-78.0 -60.0 42.0
+-41.0 -60.0 42.0
+-41.0 -60.0 45.0
+
+-78.0 -60.0 42.0
+-41.0 -60.0 45.0
+-78.0 -60.0 45.0
+
+-39.0 -133.0 42.0
+-23.0 -133.0 42.0
+-23.0 -133.0 45.0
+
+-39.0 -133.0 42.0
+-23.0 -133.0 45.0
+-39.0 -133.0 45.0
+
+-41.0 -60.0 45.0
+-39.0 -60.0 45.0
+-39.0 -60.0 47.0
+
+-41.0 -60.0 45.0
+-39.0 -60.0 47.0
+-41.0 -60.0 47.0
+
+-39.0 -64.0 90.0
+-23.0 -60.0 90.0
+-23.0 -64.0 90.0
+
+-39.0 -64.0 90.0
+-39.0 -60.0 90.0
+-23.0 -60.0 90.0
+
+-39.0 -60.0 77.0
+-23.0 -60.0 77.0
+-23.0 -60.0 90.0
+
+-39.0 -60.0 77.0
+-23.0 -60.0 90.0
+-39.0 -60.0 90.0
+
+</mesh><id>
+Cube_Cube.038</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+-78.0
+-133.0
+17.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+42.0
+</position>
+<size>
+2.0
+4.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+42.0
+</position>
+<size>
+37.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+45.0
+</position>
+<size>
+16.0
+4.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+47.0
+</position>
+<size>
+2.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+45.0
+</position>
+<size>
+2.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+32.0
+</position>
+<size>
+37.0
+4.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+77.0
+</position>
+<size>
+2.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+45.0
+</position>
+<size>
+37.0
+4.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+77.0
+</position>
+<size>
+2.0
+4.0
+13.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+42.0
+</position>
+<size>
+18.0
+4.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+47.0
+</position>
+<size>
+16.0
+4.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+47.0
+</position>
+<size>
+16.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+32.0
+</position>
+<size>
+2.0
+4.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+77.0
+</position>
+<size>
+18.0
+4.0
+13.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+17.0
+</position>
+<size>
+16.0
+4.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+77.0
+</position>
+<size>
+37.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+47.0
+</position>
+<size>
+37.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+32.0
+</position>
+<size>
+18.0
+69.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+17.0
+</position>
+<size>
+37.0
+4.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+47.0
+</position>
+<size>
+37.0
+4.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+17.0
+</position>
+<size>
+16.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+42.0
+</position>
+<size>
+18.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+45.0
+</position>
+<size>
+18.0
+4.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+77.0
+</position>
+<size>
+16.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+17.0
+</position>
+<size>
+2.0
+4.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+32.0
+</position>
+<size>
+16.0
+4.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+32.0
+</position>
+<size>
+18.0
+4.0
+10.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+77.0
+</position>
+<size>
+37.0
+4.0
+13.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+45.0
+</position>
+<size>
+37.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+17.0
+</position>
+<size>
+2.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+32.0
+</position>
+<size>
+2.0
+69.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+42.0
+</position>
+<size>
+16.0
+4.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+17.0
+</position>
+<size>
+18.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+45.0
+</position>
+<size>
+16.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+32.0
+</position>
+<size>
+16.0
+69.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+17.0
+</position>
+<size>
+18.0
+4.0
+15.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+42.0
+</position>
+<size>
+2.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+47.0
+</position>
+<size>
+2.0
+4.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+77.0
+</position>
+<size>
+18.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+17.0
+</position>
+<size>
+37.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+47.0
+</position>
+<size>
+18.0
+4.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+42.0
+</position>
+<size>
+37.0
+4.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+42.0
+</position>
+<size>
+16.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+45.0
+</position>
+<size>
+2.0
+4.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+77.0
+</position>
+<size>
+16.0
+4.0
+13.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube.003_Cube.001</name>
+
+113.0 -60.0 -245.0
+113.0 -31.0 -196.0
+113.0 -60.0 -196.0
+
+113.0 -60.0 -245.0
+113.0 -31.0 -245.0
+113.0 -31.0 -196.0
+
+113.0 -31.0 -245.0
+141.0 -31.0 -245.0
+141.0 -31.0 -196.0
+
+113.0 -31.0 -245.0
+141.0 -31.0 -196.0
+113.0 -31.0 -196.0
+
+113.0 -60.0 -277.0
+141.0 -31.0 -277.0
+141.0 -60.0 -277.0
+
+113.0 -60.0 -277.0
+113.0 -31.0 -277.0
+141.0 -31.0 -277.0
+
+113.0 -60.0 -277.0
+113.0 -31.0 -245.0
+113.0 -60.0 -245.0
+
+113.0 -60.0 -277.0
+113.0 -31.0 -277.0
+113.0 -31.0 -245.0
+
+113.0 -31.0 -277.0
+141.0 -31.0 -277.0
+141.0 -31.0 -245.0
+
+113.0 -31.0 -277.0
+141.0 -31.0 -245.0
+113.0 -31.0 -245.0
+
+159.0 -60.0 -138.0
+166.0 -31.0 -138.0
+166.0 -60.0 -138.0
+
+159.0 -60.0 -138.0
+159.0 -31.0 -138.0
+166.0 -31.0 -138.0
+
+159.0 -31.0 -172.0
+166.0 -31.0 -172.0
+166.0 -31.0 -138.0
+
+159.0 -31.0 -172.0
+166.0 -31.0 -138.0
+159.0 -31.0 -138.0
+
+141.0 -137.0 -138.0
+159.0 -133.0 -138.0
+159.0 -137.0 -138.0
+
+141.0 -137.0 -138.0
+141.0 -133.0 -138.0
+159.0 -133.0 -138.0
+
+141.0 -170.0 -245.0
+159.0 -170.0 -245.0
+159.0 -170.0 -196.0
+
+141.0 -170.0 -245.0
+159.0 -170.0 -196.0
+141.0 -170.0 -196.0
+
+113.0 -64.0 -196.0
+113.0 -60.0 -172.0
+113.0 -64.0 -172.0
+
+113.0 -64.0 -196.0
+113.0 -60.0 -196.0
+113.0 -60.0 -172.0
+
+113.0 -170.0 -196.0
+113.0 -137.0 -172.0
+113.0 -170.0 -172.0
+
+113.0 -170.0 -196.0
+113.0 -137.0 -196.0
+113.0 -137.0 -172.0
+
+113.0 -170.0 -196.0
+141.0 -170.0 -196.0
+141.0 -170.0 -172.0
+
+113.0 -170.0 -196.0
+141.0 -170.0 -172.0
+113.0 -170.0 -172.0
+
+141.0 -60.0 -138.0
+159.0 -31.0 -138.0
+159.0 -60.0 -138.0
+
+141.0 -60.0 -138.0
+141.0 -31.0 -138.0
+159.0 -31.0 -138.0
+
+141.0 -31.0 -172.0
+159.0 -31.0 -172.0
+159.0 -31.0 -138.0
+
+141.0 -31.0 -172.0
+159.0 -31.0 -138.0
+141.0 -31.0 -138.0
+
+141.0 -64.0 -138.0
+159.0 -60.0 -138.0
+159.0 -64.0 -138.0
+
+141.0 -64.0 -138.0
+141.0 -60.0 -138.0
+159.0 -60.0 -138.0
+
+141.0 -170.0 -138.0
+159.0 -137.0 -138.0
+159.0 -170.0 -138.0
+
+141.0 -170.0 -138.0
+141.0 -137.0 -138.0
+159.0 -137.0 -138.0
+
+141.0 -170.0 -172.0
+159.0 -170.0 -172.0
+159.0 -170.0 -138.0
+
+141.0 -170.0 -172.0
+159.0 -170.0 -138.0
+141.0 -170.0 -138.0
+
+252.0 -137.0 -172.0
+252.0 -133.0 -138.0
+252.0 -137.0 -138.0
+
+252.0 -137.0 -172.0
+252.0 -133.0 -172.0
+252.0 -133.0 -138.0
+
+239.0 -137.0 -138.0
+252.0 -133.0 -138.0
+252.0 -137.0 -138.0
+
+239.0 -137.0 -138.0
+239.0 -133.0 -138.0
+252.0 -133.0 -138.0
+
+252.0 -60.0 -245.0
+252.0 -31.0 -196.0
+252.0 -60.0 -196.0
+
+252.0 -60.0 -245.0
+252.0 -31.0 -245.0
+252.0 -31.0 -196.0
+
+239.0 -31.0 -245.0
+252.0 -31.0 -245.0
+252.0 -31.0 -196.0
+
+239.0 -31.0 -245.0
+252.0 -31.0 -196.0
+239.0 -31.0 -196.0
+
+252.0 -64.0 -172.0
+252.0 -60.0 -138.0
+252.0 -64.0 -138.0
+
+252.0 -64.0 -172.0
+252.0 -60.0 -172.0
+252.0 -60.0 -138.0
+
+239.0 -64.0 -138.0
+252.0 -60.0 -138.0
+252.0 -64.0 -138.0
+
+239.0 -64.0 -138.0
+239.0 -60.0 -138.0
+252.0 -60.0 -138.0
+
+214.0 -60.0 -277.0
+239.0 -31.0 -277.0
+239.0 -60.0 -277.0
+
+214.0 -60.0 -277.0
+214.0 -31.0 -277.0
+239.0 -31.0 -277.0
+
+214.0 -31.0 -277.0
+239.0 -31.0 -277.0
+239.0 -31.0 -245.0
+
+214.0 -31.0 -277.0
+239.0 -31.0 -245.0
+214.0 -31.0 -245.0
+
+159.0 -31.0 -245.0
+166.0 -31.0 -245.0
+166.0 -31.0 -196.0
+
+159.0 -31.0 -245.0
+166.0 -31.0 -196.0
+159.0 -31.0 -196.0
+
+113.0 -64.0 -277.0
+141.0 -60.0 -277.0
+141.0 -64.0 -277.0
+
+113.0 -64.0 -277.0
+113.0 -60.0 -277.0
+141.0 -60.0 -277.0
+
+113.0 -64.0 -277.0
+113.0 -60.0 -245.0
+113.0 -64.0 -245.0
+
+113.0 -64.0 -277.0
+113.0 -60.0 -277.0
+113.0 -60.0 -245.0
+
+214.0 -137.0 -172.0
+214.0 -133.0 -138.0
+214.0 -137.0 -138.0
+
+214.0 -137.0 -172.0
+214.0 -133.0 -172.0
+214.0 -133.0 -138.0
+
+159.0 -170.0 -196.0
+166.0 -170.0 -196.0
+166.0 -170.0 -172.0
+
+159.0 -170.0 -196.0
+166.0 -170.0 -172.0
+159.0 -170.0 -172.0
+
+141.0 -64.0 -277.0
+159.0 -60.0 -277.0
+159.0 -64.0 -277.0
+
+141.0 -64.0 -277.0
+141.0 -60.0 -277.0
+159.0 -60.0 -277.0
+
+141.0 -170.0 -277.0
+159.0 -137.0 -277.0
+159.0 -170.0 -277.0
+
+141.0 -170.0 -277.0
+141.0 -137.0 -277.0
+159.0 -137.0 -277.0
+
+141.0 -170.0 -277.0
+159.0 -170.0 -277.0
+159.0 -170.0 -245.0
+
+141.0 -170.0 -277.0
+159.0 -170.0 -245.0
+141.0 -170.0 -245.0
+
+214.0 -170.0 -245.0
+239.0 -170.0 -245.0
+239.0 -170.0 -196.0
+
+214.0 -170.0 -245.0
+239.0 -170.0 -196.0
+214.0 -170.0 -196.0
+
+159.0 -137.0 -277.0
+166.0 -133.0 -277.0
+166.0 -137.0 -277.0
+
+159.0 -137.0 -277.0
+159.0 -133.0 -277.0
+166.0 -133.0 -277.0
+
+113.0 -137.0 -196.0
+113.0 -133.0 -172.0
+113.0 -137.0 -172.0
+
+113.0 -137.0 -196.0
+113.0 -133.0 -196.0
+113.0 -133.0 -172.0
+
+113.0 -133.0 -245.0
+113.0 -64.0 -196.0
+113.0 -133.0 -196.0
+
+113.0 -133.0 -245.0
+113.0 -64.0 -245.0
+113.0 -64.0 -196.0
+
+214.0 -31.0 -245.0
+239.0 -31.0 -245.0
+239.0 -31.0 -196.0
+
+214.0 -31.0 -245.0
+239.0 -31.0 -196.0
+214.0 -31.0 -196.0
+
+252.0 -60.0 -196.0
+252.0 -31.0 -172.0
+252.0 -60.0 -172.0
+
+252.0 -60.0 -196.0
+252.0 -31.0 -196.0
+252.0 -31.0 -172.0
+
+239.0 -31.0 -196.0
+252.0 -31.0 -196.0
+252.0 -31.0 -172.0
+
+239.0 -31.0 -196.0
+252.0 -31.0 -172.0
+239.0 -31.0 -172.0
+
+166.0 -170.0 -245.0
+214.0 -170.0 -245.0
+214.0 -170.0 -196.0
+
+166.0 -170.0 -245.0
+214.0 -170.0 -196.0
+166.0 -170.0 -196.0
+
+239.0 -133.0 -277.0
+252.0 -64.0 -277.0
+252.0 -133.0 -277.0
+
+239.0 -133.0 -277.0
+239.0 -64.0 -277.0
+252.0 -64.0 -277.0
+
+252.0 -133.0 -277.0
+252.0 -64.0 -245.0
+252.0 -133.0 -245.0
+
+252.0 -133.0 -277.0
+252.0 -64.0 -277.0
+252.0 -64.0 -245.0
+
+166.0 -64.0 -277.0
+214.0 -60.0 -277.0
+214.0 -64.0 -277.0
+
+166.0 -64.0 -277.0
+166.0 -60.0 -277.0
+214.0 -60.0 -277.0
+
+166.0 -170.0 -277.0
+214.0 -137.0 -277.0
+214.0 -170.0 -277.0
+
+166.0 -170.0 -277.0
+166.0 -137.0 -277.0
+214.0 -137.0 -277.0
+
+166.0 -170.0 -277.0
+214.0 -170.0 -277.0
+214.0 -170.0 -245.0
+
+166.0 -170.0 -277.0
+214.0 -170.0 -245.0
+166.0 -170.0 -245.0
+
+252.0 -133.0 -196.0
+252.0 -64.0 -172.0
+252.0 -133.0 -172.0
+
+252.0 -133.0 -196.0
+252.0 -64.0 -196.0
+252.0 -64.0 -172.0
+
+252.0 -137.0 -196.0
+252.0 -133.0 -172.0
+252.0 -137.0 -172.0
+
+252.0 -137.0 -196.0
+252.0 -133.0 -196.0
+252.0 -133.0 -172.0
+
+252.0 -64.0 -196.0
+252.0 -60.0 -172.0
+252.0 -64.0 -172.0
+
+252.0 -64.0 -196.0
+252.0 -60.0 -196.0
+252.0 -60.0 -172.0
+
+214.0 -31.0 -196.0
+239.0 -31.0 -196.0
+239.0 -31.0 -172.0
+
+214.0 -31.0 -196.0
+239.0 -31.0 -172.0
+214.0 -31.0 -172.0
+
+166.0 -133.0 -172.0
+166.0 -64.0 -138.0
+166.0 -133.0 -138.0
+
+166.0 -133.0 -172.0
+166.0 -64.0 -172.0
+166.0 -64.0 -138.0
+
+159.0 -133.0 -138.0
+166.0 -64.0 -138.0
+166.0 -133.0 -138.0
+
+159.0 -133.0 -138.0
+159.0 -64.0 -138.0
+166.0 -64.0 -138.0
+
+141.0 -170.0 -196.0
+159.0 -170.0 -196.0
+159.0 -170.0 -172.0
+
+141.0 -170.0 -196.0
+159.0 -170.0 -172.0
+141.0 -170.0 -172.0
+
+239.0 -170.0 -277.0
+252.0 -137.0 -277.0
+252.0 -170.0 -277.0
+
+239.0 -170.0 -277.0
+239.0 -137.0 -277.0
+252.0 -137.0 -277.0
+
+252.0 -170.0 -277.0
+252.0 -137.0 -245.0
+252.0 -170.0 -245.0
+
+252.0 -170.0 -277.0
+252.0 -137.0 -277.0
+252.0 -137.0 -245.0
+
+239.0 -170.0 -277.0
+252.0 -170.0 -277.0
+252.0 -170.0 -245.0
+
+239.0 -170.0 -277.0
+252.0 -170.0 -245.0
+239.0 -170.0 -245.0
+
+141.0 -133.0 -138.0
+159.0 -64.0 -138.0
+159.0 -133.0 -138.0
+
+141.0 -133.0 -138.0
+141.0 -64.0 -138.0
+159.0 -64.0 -138.0
+
+159.0 -170.0 -245.0
+166.0 -170.0 -245.0
+166.0 -170.0 -196.0
+
+159.0 -170.0 -245.0
+166.0 -170.0 -196.0
+159.0 -170.0 -196.0
+
+113.0 -133.0 -196.0
+113.0 -64.0 -172.0
+113.0 -133.0 -172.0
+
+113.0 -133.0 -196.0
+113.0 -64.0 -196.0
+113.0 -64.0 -172.0
+
+166.0 -60.0 -277.0
+214.0 -31.0 -277.0
+214.0 -60.0 -277.0
+
+166.0 -60.0 -277.0
+166.0 -31.0 -277.0
+214.0 -31.0 -277.0
+
+166.0 -31.0 -277.0
+214.0 -31.0 -277.0
+214.0 -31.0 -245.0
+
+166.0 -31.0 -277.0
+214.0 -31.0 -245.0
+166.0 -31.0 -245.0
+
+214.0 -133.0 -277.0
+239.0 -64.0 -277.0
+239.0 -133.0 -277.0
+
+214.0 -133.0 -277.0
+214.0 -64.0 -277.0
+239.0 -64.0 -277.0
+
+214.0 -137.0 -277.0
+239.0 -133.0 -277.0
+239.0 -137.0 -277.0
+
+214.0 -137.0 -277.0
+214.0 -133.0 -277.0
+239.0 -133.0 -277.0
+
+113.0 -60.0 -138.0
+141.0 -31.0 -138.0
+141.0 -60.0 -138.0
+
+113.0 -60.0 -138.0
+113.0 -31.0 -138.0
+141.0 -31.0 -138.0
+
+113.0 -60.0 -172.0
+113.0 -31.0 -138.0
+113.0 -60.0 -138.0
+
+113.0 -60.0 -172.0
+113.0 -31.0 -172.0
+113.0 -31.0 -138.0
+
+113.0 -31.0 -172.0
+141.0 -31.0 -172.0
+141.0 -31.0 -138.0
+
+113.0 -31.0 -172.0
+141.0 -31.0 -138.0
+113.0 -31.0 -138.0
+
+214.0 -170.0 -277.0
+239.0 -137.0 -277.0
+239.0 -170.0 -277.0
+
+214.0 -170.0 -277.0
+214.0 -137.0 -277.0
+239.0 -137.0 -277.0
+
+214.0 -170.0 -277.0
+239.0 -170.0 -277.0
+239.0 -170.0 -245.0
+
+214.0 -170.0 -277.0
+239.0 -170.0 -245.0
+214.0 -170.0 -245.0
+
+214.0 -64.0 -277.0
+239.0 -60.0 -277.0
+239.0 -64.0 -277.0
+
+214.0 -64.0 -277.0
+214.0 -60.0 -277.0
+239.0 -60.0 -277.0
+
+113.0 -133.0 -277.0
+141.0 -64.0 -277.0
+141.0 -133.0 -277.0
+
+113.0 -133.0 -277.0
+113.0 -64.0 -277.0
+141.0 -64.0 -277.0
+
+113.0 -133.0 -277.0
+113.0 -64.0 -245.0
+113.0 -133.0 -245.0
+
+113.0 -133.0 -277.0
+113.0 -64.0 -277.0
+113.0 -64.0 -245.0
+
+113.0 -170.0 -277.0
+141.0 -137.0 -277.0
+141.0 -170.0 -277.0
+
+113.0 -170.0 -277.0
+113.0 -137.0 -277.0
+141.0 -137.0 -277.0
+
+113.0 -170.0 -277.0
+113.0 -137.0 -245.0
+113.0 -170.0 -245.0
+
+113.0 -170.0 -277.0
+113.0 -137.0 -277.0
+113.0 -137.0 -245.0
+
+113.0 -170.0 -277.0
+141.0 -170.0 -277.0
+141.0 -170.0 -245.0
+
+113.0 -170.0 -277.0
+141.0 -170.0 -245.0
+113.0 -170.0 -245.0
+
+159.0 -64.0 -138.0
+166.0 -60.0 -138.0
+166.0 -64.0 -138.0
+
+159.0 -64.0 -138.0
+159.0 -60.0 -138.0
+166.0 -60.0 -138.0
+
+159.0 -170.0 -138.0
+166.0 -137.0 -138.0
+166.0 -170.0 -138.0
+
+159.0 -170.0 -138.0
+159.0 -137.0 -138.0
+166.0 -137.0 -138.0
+
+159.0 -170.0 -172.0
+166.0 -170.0 -172.0
+166.0 -170.0 -138.0
+
+159.0 -170.0 -172.0
+166.0 -170.0 -138.0
+159.0 -170.0 -138.0
+
+159.0 -60.0 -277.0
+166.0 -31.0 -277.0
+166.0 -60.0 -277.0
+
+159.0 -60.0 -277.0
+159.0 -31.0 -277.0
+166.0 -31.0 -277.0
+
+159.0 -31.0 -277.0
+166.0 -31.0 -277.0
+166.0 -31.0 -245.0
+
+159.0 -31.0 -277.0
+166.0 -31.0 -245.0
+159.0 -31.0 -245.0
+
+159.0 -170.0 -277.0
+166.0 -137.0 -277.0
+166.0 -170.0 -277.0
+
+159.0 -170.0 -277.0
+159.0 -137.0 -277.0
+166.0 -137.0 -277.0
+
+159.0 -170.0 -277.0
+166.0 -170.0 -277.0
+166.0 -170.0 -245.0
+
+159.0 -170.0 -277.0
+166.0 -170.0 -245.0
+159.0 -170.0 -245.0
+
+159.0 -64.0 -277.0
+166.0 -60.0 -277.0
+166.0 -64.0 -277.0
+
+159.0 -64.0 -277.0
+159.0 -60.0 -277.0
+166.0 -60.0 -277.0
+
+113.0 -137.0 -277.0
+141.0 -133.0 -277.0
+141.0 -137.0 -277.0
+
+113.0 -137.0 -277.0
+113.0 -133.0 -277.0
+141.0 -133.0 -277.0
+
+113.0 -137.0 -277.0
+113.0 -133.0 -245.0
+113.0 -137.0 -245.0
+
+113.0 -137.0 -277.0
+113.0 -133.0 -277.0
+113.0 -133.0 -245.0
+
+141.0 -31.0 -196.0
+159.0 -31.0 -196.0
+159.0 -31.0 -172.0
+
+141.0 -31.0 -196.0
+159.0 -31.0 -172.0
+141.0 -31.0 -172.0
+
+166.0 -170.0 -196.0
+214.0 -170.0 -196.0
+214.0 -170.0 -172.0
+
+166.0 -170.0 -196.0
+214.0 -170.0 -172.0
+166.0 -170.0 -172.0
+
+214.0 -60.0 -138.0
+239.0 -31.0 -138.0
+239.0 -60.0 -138.0
+
+214.0 -60.0 -138.0
+214.0 -31.0 -138.0
+239.0 -31.0 -138.0
+
+214.0 -31.0 -172.0
+239.0 -31.0 -172.0
+239.0 -31.0 -138.0
+
+214.0 -31.0 -172.0
+239.0 -31.0 -138.0
+214.0 -31.0 -138.0
+
+141.0 -133.0 -277.0
+159.0 -64.0 -277.0
+159.0 -133.0 -277.0
+
+141.0 -133.0 -277.0
+141.0 -64.0 -277.0
+159.0 -64.0 -277.0
+
+252.0 -60.0 -172.0
+252.0 -31.0 -138.0
+252.0 -60.0 -138.0
+
+252.0 -60.0 -172.0
+252.0 -31.0 -172.0
+252.0 -31.0 -138.0
+
+239.0 -60.0 -138.0
+252.0 -31.0 -138.0
+252.0 -60.0 -138.0
+
+239.0 -60.0 -138.0
+239.0 -31.0 -138.0
+252.0 -31.0 -138.0
+
+239.0 -31.0 -172.0
+252.0 -31.0 -172.0
+252.0 -31.0 -138.0
+
+239.0 -31.0 -172.0
+252.0 -31.0 -138.0
+239.0 -31.0 -138.0
+
+159.0 -31.0 -196.0
+166.0 -31.0 -196.0
+166.0 -31.0 -172.0
+
+159.0 -31.0 -196.0
+166.0 -31.0 -172.0
+159.0 -31.0 -172.0
+
+166.0 -137.0 -172.0
+214.0 -133.0 -172.0
+214.0 -137.0 -172.0
+
+166.0 -137.0 -172.0
+166.0 -133.0 -172.0
+214.0 -133.0 -172.0
+
+166.0 -133.0 -277.0
+214.0 -64.0 -277.0
+214.0 -133.0 -277.0
+
+166.0 -133.0 -277.0
+166.0 -64.0 -277.0
+214.0 -64.0 -277.0
+
+166.0 -60.0 -138.0
+214.0 -31.0 -138.0
+214.0 -60.0 -138.0
+
+166.0 -60.0 -138.0
+166.0 -31.0 -138.0
+214.0 -31.0 -138.0
+
+166.0 -31.0 -172.0
+214.0 -31.0 -172.0
+214.0 -31.0 -138.0
+
+166.0 -31.0 -172.0
+214.0 -31.0 -138.0
+166.0 -31.0 -138.0
+
+239.0 -137.0 -277.0
+252.0 -133.0 -277.0
+252.0 -137.0 -277.0
+
+239.0 -137.0 -277.0
+239.0 -133.0 -277.0
+252.0 -133.0 -277.0
+
+252.0 -137.0 -277.0
+252.0 -133.0 -245.0
+252.0 -137.0 -245.0
+
+252.0 -137.0 -277.0
+252.0 -133.0 -277.0
+252.0 -133.0 -245.0
+
+239.0 -64.0 -277.0
+252.0 -60.0 -277.0
+252.0 -64.0 -277.0
+
+239.0 -64.0 -277.0
+239.0 -60.0 -277.0
+252.0 -60.0 -277.0
+
+252.0 -64.0 -277.0
+252.0 -60.0 -245.0
+252.0 -64.0 -245.0
+
+252.0 -64.0 -277.0
+252.0 -60.0 -277.0
+252.0 -60.0 -245.0
+
+252.0 -133.0 -245.0
+252.0 -64.0 -196.0
+252.0 -133.0 -196.0
+
+252.0 -133.0 -245.0
+252.0 -64.0 -245.0
+252.0 -64.0 -196.0
+
+214.0 -64.0 -138.0
+239.0 -60.0 -138.0
+239.0 -64.0 -138.0
+
+214.0 -64.0 -138.0
+214.0 -60.0 -138.0
+239.0 -60.0 -138.0
+
+214.0 -170.0 -138.0
+239.0 -137.0 -138.0
+239.0 -170.0 -138.0
+
+214.0 -170.0 -138.0
+214.0 -137.0 -138.0
+239.0 -137.0 -138.0
+
+214.0 -170.0 -172.0
+239.0 -170.0 -172.0
+239.0 -170.0 -138.0
+
+214.0 -170.0 -172.0
+239.0 -170.0 -138.0
+214.0 -170.0 -138.0
+
+252.0 -170.0 -245.0
+252.0 -137.0 -196.0
+252.0 -170.0 -196.0
+
+252.0 -170.0 -245.0
+252.0 -137.0 -245.0
+252.0 -137.0 -196.0
+
+239.0 -170.0 -245.0
+252.0 -170.0 -245.0
+252.0 -170.0 -196.0
+
+239.0 -170.0 -245.0
+252.0 -170.0 -196.0
+239.0 -170.0 -196.0
+
+113.0 -60.0 -196.0
+113.0 -31.0 -172.0
+113.0 -60.0 -172.0
+
+113.0 -60.0 -196.0
+113.0 -31.0 -196.0
+113.0 -31.0 -172.0
+
+113.0 -31.0 -196.0
+141.0 -31.0 -196.0
+141.0 -31.0 -172.0
+
+113.0 -31.0 -196.0
+141.0 -31.0 -172.0
+113.0 -31.0 -172.0
+
+166.0 -137.0 -277.0
+214.0 -133.0 -277.0
+214.0 -137.0 -277.0
+
+166.0 -137.0 -277.0
+166.0 -133.0 -277.0
+214.0 -133.0 -277.0
+
+113.0 -137.0 -245.0
+113.0 -133.0 -196.0
+113.0 -137.0 -196.0
+
+113.0 -137.0 -245.0
+113.0 -133.0 -245.0
+113.0 -133.0 -196.0
+
+252.0 -64.0 -245.0
+252.0 -60.0 -196.0
+252.0 -64.0 -196.0
+
+252.0 -64.0 -245.0
+252.0 -60.0 -245.0
+252.0 -60.0 -196.0
+
+252.0 -137.0 -245.0
+252.0 -133.0 -196.0
+252.0 -137.0 -196.0
+
+252.0 -137.0 -245.0
+252.0 -133.0 -245.0
+252.0 -133.0 -196.0
+
+166.0 -133.0 -196.0
+214.0 -64.0 -196.0
+214.0 -133.0 -196.0
+
+166.0 -133.0 -196.0
+166.0 -64.0 -196.0
+214.0 -64.0 -196.0
+
+166.0 -133.0 -172.0
+214.0 -64.0 -172.0
+214.0 -133.0 -172.0
+
+166.0 -133.0 -172.0
+166.0 -64.0 -172.0
+214.0 -64.0 -172.0
+
+166.0 -133.0 -196.0
+166.0 -64.0 -172.0
+166.0 -133.0 -172.0
+
+166.0 -133.0 -196.0
+166.0 -64.0 -196.0
+166.0 -64.0 -172.0
+
+166.0 -137.0 -172.0
+166.0 -133.0 -138.0
+166.0 -137.0 -138.0
+
+166.0 -137.0 -172.0
+166.0 -133.0 -172.0
+166.0 -133.0 -138.0
+
+159.0 -137.0 -138.0
+166.0 -133.0 -138.0
+166.0 -137.0 -138.0
+
+159.0 -137.0 -138.0
+159.0 -133.0 -138.0
+166.0 -133.0 -138.0
+
+252.0 -133.0 -172.0
+252.0 -64.0 -138.0
+252.0 -133.0 -138.0
+
+252.0 -133.0 -172.0
+252.0 -64.0 -172.0
+252.0 -64.0 -138.0
+
+239.0 -133.0 -138.0
+252.0 -64.0 -138.0
+252.0 -133.0 -138.0
+
+239.0 -133.0 -138.0
+239.0 -64.0 -138.0
+252.0 -64.0 -138.0
+
+239.0 -60.0 -277.0
+252.0 -31.0 -277.0
+252.0 -60.0 -277.0
+
+239.0 -60.0 -277.0
+239.0 -31.0 -277.0
+252.0 -31.0 -277.0
+
+252.0 -60.0 -277.0
+252.0 -31.0 -245.0
+252.0 -60.0 -245.0
+
+252.0 -60.0 -277.0
+252.0 -31.0 -277.0
+252.0 -31.0 -245.0
+
+239.0 -31.0 -277.0
+252.0 -31.0 -277.0
+252.0 -31.0 -245.0
+
+239.0 -31.0 -277.0
+252.0 -31.0 -245.0
+239.0 -31.0 -245.0
+
+113.0 -133.0 -138.0
+141.0 -64.0 -138.0
+141.0 -133.0 -138.0
+
+113.0 -133.0 -138.0
+113.0 -64.0 -138.0
+141.0 -64.0 -138.0
+
+113.0 -133.0 -172.0
+113.0 -64.0 -138.0
+113.0 -133.0 -138.0
+
+113.0 -133.0 -172.0
+113.0 -64.0 -172.0
+113.0 -64.0 -138.0
+
+166.0 -31.0 -196.0
+214.0 -31.0 -196.0
+214.0 -31.0 -172.0
+
+166.0 -31.0 -196.0
+214.0 -31.0 -172.0
+166.0 -31.0 -172.0
+
+113.0 -64.0 -138.0
+141.0 -60.0 -138.0
+141.0 -64.0 -138.0
+
+113.0 -64.0 -138.0
+113.0 -60.0 -138.0
+141.0 -60.0 -138.0
+
+113.0 -64.0 -172.0
+113.0 -60.0 -138.0
+113.0 -64.0 -138.0
+
+113.0 -64.0 -172.0
+113.0 -60.0 -172.0
+113.0 -60.0 -138.0
+
+113.0 -170.0 -138.0
+141.0 -137.0 -138.0
+141.0 -170.0 -138.0
+
+113.0 -170.0 -138.0
+113.0 -137.0 -138.0
+141.0 -137.0 -138.0
+
+113.0 -170.0 -172.0
+113.0 -137.0 -138.0
+113.0 -170.0 -138.0
+
+113.0 -170.0 -172.0
+113.0 -137.0 -172.0
+113.0 -137.0 -138.0
+
+113.0 -170.0 -172.0
+141.0 -170.0 -172.0
+141.0 -170.0 -138.0
+
+113.0 -170.0 -172.0
+141.0 -170.0 -138.0
+113.0 -170.0 -138.0
+
+252.0 -170.0 -196.0
+252.0 -137.0 -172.0
+252.0 -170.0 -172.0
+
+252.0 -170.0 -196.0
+252.0 -137.0 -196.0
+252.0 -137.0 -172.0
+
+239.0 -170.0 -196.0
+252.0 -170.0 -196.0
+252.0 -170.0 -172.0
+
+239.0 -170.0 -196.0
+252.0 -170.0 -172.0
+239.0 -170.0 -172.0
+
+166.0 -64.0 -138.0
+214.0 -60.0 -138.0
+214.0 -64.0 -138.0
+
+166.0 -64.0 -138.0
+166.0 -60.0 -138.0
+214.0 -60.0 -138.0
+
+166.0 -64.0 -172.0
+214.0 -64.0 -172.0
+214.0 -64.0 -138.0
+
+166.0 -64.0 -172.0
+214.0 -64.0 -138.0
+166.0 -64.0 -138.0
+
+166.0 -170.0 -138.0
+214.0 -137.0 -138.0
+214.0 -170.0 -138.0
+
+166.0 -170.0 -138.0
+166.0 -137.0 -138.0
+214.0 -137.0 -138.0
+
+166.0 -170.0 -172.0
+214.0 -170.0 -172.0
+214.0 -170.0 -138.0
+
+166.0 -170.0 -172.0
+214.0 -170.0 -138.0
+166.0 -170.0 -138.0
+
+166.0 -137.0 -172.0
+214.0 -137.0 -172.0
+214.0 -137.0 -138.0
+
+166.0 -137.0 -172.0
+214.0 -137.0 -138.0
+166.0 -137.0 -138.0
+
+214.0 -133.0 -172.0
+214.0 -64.0 -138.0
+214.0 -133.0 -138.0
+
+214.0 -133.0 -172.0
+214.0 -64.0 -172.0
+214.0 -64.0 -138.0
+
+113.0 -137.0 -138.0
+141.0 -133.0 -138.0
+141.0 -137.0 -138.0
+
+113.0 -137.0 -138.0
+113.0 -133.0 -138.0
+141.0 -133.0 -138.0
+
+113.0 -137.0 -172.0
+113.0 -133.0 -138.0
+113.0 -137.0 -138.0
+
+113.0 -137.0 -172.0
+113.0 -133.0 -172.0
+113.0 -133.0 -138.0
+
+141.0 -60.0 -277.0
+159.0 -31.0 -277.0
+159.0 -60.0 -277.0
+
+141.0 -60.0 -277.0
+141.0 -31.0 -277.0
+159.0 -31.0 -277.0
+
+141.0 -31.0 -277.0
+159.0 -31.0 -277.0
+159.0 -31.0 -245.0
+
+141.0 -31.0 -277.0
+159.0 -31.0 -245.0
+141.0 -31.0 -245.0
+
+141.0 -31.0 -245.0
+159.0 -31.0 -245.0
+159.0 -31.0 -196.0
+
+141.0 -31.0 -245.0
+159.0 -31.0 -196.0
+141.0 -31.0 -196.0
+
+159.0 -133.0 -277.0
+166.0 -64.0 -277.0
+166.0 -133.0 -277.0
+
+159.0 -133.0 -277.0
+159.0 -64.0 -277.0
+166.0 -64.0 -277.0
+
+252.0 -170.0 -172.0
+252.0 -137.0 -138.0
+252.0 -170.0 -138.0
+
+252.0 -170.0 -172.0
+252.0 -137.0 -172.0
+252.0 -137.0 -138.0
+
+239.0 -170.0 -138.0
+252.0 -137.0 -138.0
+252.0 -170.0 -138.0
+
+239.0 -170.0 -138.0
+239.0 -137.0 -138.0
+252.0 -137.0 -138.0
+
+239.0 -170.0 -172.0
+252.0 -170.0 -172.0
+252.0 -170.0 -138.0
+
+239.0 -170.0 -172.0
+252.0 -170.0 -138.0
+239.0 -170.0 -138.0
+
+166.0 -31.0 -245.0
+214.0 -31.0 -245.0
+214.0 -31.0 -196.0
+
+166.0 -31.0 -245.0
+214.0 -31.0 -196.0
+166.0 -31.0 -196.0
+
+214.0 -170.0 -196.0
+239.0 -170.0 -196.0
+239.0 -170.0 -172.0
+
+214.0 -170.0 -196.0
+239.0 -170.0 -172.0
+214.0 -170.0 -172.0
+
+141.0 -137.0 -277.0
+159.0 -133.0 -277.0
+159.0 -137.0 -277.0
+
+141.0 -137.0 -277.0
+141.0 -133.0 -277.0
+159.0 -133.0 -277.0
+
+113.0 -64.0 -245.0
+113.0 -60.0 -196.0
+113.0 -64.0 -196.0
+
+113.0 -64.0 -245.0
+113.0 -60.0 -245.0
+113.0 -60.0 -196.0
+
+113.0 -170.0 -245.0
+113.0 -137.0 -196.0
+113.0 -170.0 -196.0
+
+113.0 -170.0 -245.0
+113.0 -137.0 -245.0
+113.0 -137.0 -196.0
+
+113.0 -170.0 -245.0
+141.0 -170.0 -245.0
+141.0 -170.0 -196.0
+
+113.0 -170.0 -245.0
+141.0 -170.0 -196.0
+113.0 -170.0 -196.0
+
+</mesh><id>
+Cube.003_Cube.001</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+113.0
+-170.0
+-277.0
+</position>
+<size>
+139.0
+139.0
+139.0
+</size>
+
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-133.0
+-245.0
+</position>
+<size>
+25.0
+69.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-60.0
+-245.0
+</position>
+<size>
+28.0
+29.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-60.0
+-277.0
+</position>
+<size>
+28.0
+29.0
+32.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-60.0
+-172.0
+</position>
+<size>
+7.0
+29.0
+34.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-137.0
+-172.0
+</position>
+<size>
+18.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-64.0
+-245.0
+</position>
+<size>
+18.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-170.0
+-245.0
+</position>
+<size>
+18.0
+33.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-64.0
+-196.0
+</position>
+<size>
+28.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-170.0
+-196.0
+</position>
+<size>
+28.0
+33.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-60.0
+-172.0
+</position>
+<size>
+18.0
+29.0
+34.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-64.0
+-172.0
+</position>
+<size>
+18.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-170.0
+-172.0
+</position>
+<size>
+18.0
+33.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-137.0
+-172.0
+</position>
+<size>
+13.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-60.0
+-245.0
+</position>
+<size>
+13.0
+29.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-64.0
+-172.0
+</position>
+<size>
+13.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-60.0
+-277.0
+</position>
+<size>
+25.0
+29.0
+32.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-60.0
+-245.0
+</position>
+<size>
+7.0
+29.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-64.0
+-277.0
+</position>
+<size>
+28.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-137.0
+-172.0
+</position>
+<size>
+25.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-133.0
+-196.0
+</position>
+<size>
+7.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-133.0
+-245.0
+</position>
+<size>
+48.0
+69.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-64.0
+-196.0
+</position>
+<size>
+7.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-170.0
+-196.0
+</position>
+<size>
+7.0
+33.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-64.0
+-277.0
+</position>
+<size>
+18.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-170.0
+-277.0
+</position>
+<size>
+18.0
+33.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-133.0
+-245.0
+</position>
+<size>
+7.0
+69.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-64.0
+-245.0
+</position>
+<size>
+25.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-170.0
+-245.0
+</position>
+<size>
+25.0
+33.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-137.0
+-277.0
+</position>
+<size>
+7.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-137.0
+-196.0
+</position>
+<size>
+28.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-133.0
+-245.0
+</position>
+<size>
+28.0
+69.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-60.0
+-245.0
+</position>
+<size>
+25.0
+29.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-137.0
+-245.0
+</position>
+<size>
+48.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-137.0
+-196.0
+</position>
+<size>
+18.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-60.0
+-196.0
+</position>
+<size>
+13.0
+29.0
+24.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-170.0
+-245.0
+</position>
+<size>
+48.0
+33.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-64.0
+-245.0
+</position>
+<size>
+48.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-133.0
+-277.0
+</position>
+<size>
+13.0
+69.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-64.0
+-277.0
+</position>
+<size>
+48.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-170.0
+-277.0
+</position>
+<size>
+48.0
+33.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-137.0
+-245.0
+</position>
+<size>
+25.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-133.0
+-196.0
+</position>
+<size>
+13.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-137.0
+-196.0
+</position>
+<size>
+13.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-64.0
+-196.0
+</position>
+<size>
+13.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-60.0
+-196.0
+</position>
+<size>
+25.0
+29.0
+24.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-133.0
+-172.0
+</position>
+<size>
+7.0
+69.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-137.0
+-196.0
+</position>
+<size>
+7.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-137.0
+-245.0
+</position>
+<size>
+18.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-64.0
+-196.0
+</position>
+<size>
+18.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-170.0
+-196.0
+</position>
+<size>
+18.0
+33.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-170.0
+-277.0
+</position>
+<size>
+13.0
+33.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-133.0
+-172.0
+</position>
+<size>
+18.0
+69.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-64.0
+-245.0
+</position>
+<size>
+7.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-170.0
+-245.0
+</position>
+<size>
+7.0
+33.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-133.0
+-196.0
+</position>
+<size>
+28.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-60.0
+-277.0
+</position>
+<size>
+48.0
+29.0
+32.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-133.0
+-277.0
+</position>
+<size>
+25.0
+69.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-137.0
+-277.0
+</position>
+<size>
+25.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-60.0
+-172.0
+</position>
+<size>
+28.0
+29.0
+34.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-170.0
+-277.0
+</position>
+<size>
+25.0
+33.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-64.0
+-277.0
+</position>
+<size>
+25.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-133.0
+-277.0
+</position>
+<size>
+28.0
+69.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-170.0
+-277.0
+</position>
+<size>
+28.0
+33.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-133.0
+-196.0
+</position>
+<size>
+25.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-64.0
+-172.0
+</position>
+<size>
+7.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-170.0
+-172.0
+</position>
+<size>
+7.0
+33.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-60.0
+-277.0
+</position>
+<size>
+7.0
+29.0
+32.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-170.0
+-277.0
+</position>
+<size>
+7.0
+33.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-64.0
+-277.0
+</position>
+<size>
+7.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-137.0
+-277.0
+</position>
+<size>
+28.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-60.0
+-196.0
+</position>
+<size>
+18.0
+29.0
+24.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-64.0
+-196.0
+</position>
+<size>
+48.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-170.0
+-196.0
+</position>
+<size>
+48.0
+33.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-60.0
+-172.0
+</position>
+<size>
+25.0
+29.0
+34.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-137.0
+-196.0
+</position>
+<size>
+25.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-133.0
+-196.0
+</position>
+<size>
+18.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-137.0
+-245.0
+</position>
+<size>
+7.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-133.0
+-277.0
+</position>
+<size>
+18.0
+69.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-60.0
+-172.0
+</position>
+<size>
+13.0
+29.0
+34.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-60.0
+-196.0
+</position>
+<size>
+7.0
+29.0
+24.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-137.0
+-196.0
+</position>
+<size>
+48.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-133.0
+-277.0
+</position>
+<size>
+48.0
+69.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-60.0
+-172.0
+</position>
+<size>
+48.0
+29.0
+34.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-137.0
+-277.0
+</position>
+<size>
+13.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-64.0
+-277.0
+</position>
+<size>
+13.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-133.0
+-245.0
+</position>
+<size>
+13.0
+69.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-64.0
+-172.0
+</position>
+<size>
+25.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-170.0
+-172.0
+</position>
+<size>
+25.0
+33.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-170.0
+-245.0
+</position>
+<size>
+13.0
+33.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-60.0
+-196.0
+</position>
+<size>
+28.0
+29.0
+24.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-137.0
+-277.0
+</position>
+<size>
+48.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-137.0
+-245.0
+</position>
+<size>
+28.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-133.0
+-245.0
+</position>
+<size>
+18.0
+69.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-64.0
+-245.0
+</position>
+<size>
+13.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-137.0
+-245.0
+</position>
+<size>
+13.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-133.0
+-196.0
+</position>
+<size>
+48.0
+69.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-137.0
+-172.0
+</position>
+<size>
+7.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-133.0
+-172.0
+</position>
+<size>
+13.0
+69.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-60.0
+-277.0
+</position>
+<size>
+13.0
+29.0
+32.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-133.0
+-172.0
+</position>
+<size>
+28.0
+69.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-60.0
+-196.0
+</position>
+<size>
+48.0
+29.0
+24.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-64.0
+-172.0
+</position>
+<size>
+28.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-170.0
+-172.0
+</position>
+<size>
+28.0
+33.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-170.0
+-196.0
+</position>
+<size>
+13.0
+33.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-64.0
+-172.0
+</position>
+<size>
+48.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-170.0
+-172.0
+</position>
+<size>
+48.0
+33.0
+34.0
+</size>
+<connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-133.0
+-172.0
+</position>
+<size>
+25.0
+69.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-137.0
+-172.0
+</position>
+<size>
+28.0
+4.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-60.0
+-277.0
+</position>
+<size>
+18.0
+29.0
+32.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-60.0
+-245.0
+</position>
+<size>
+18.0
+29.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+159.0
+-133.0
+-277.0
+</position>
+<size>
+7.0
+69.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+239.0
+-170.0
+-172.0
+</position>
+<size>
+13.0
+33.0
+34.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+166.0
+-60.0
+-245.0
+</position>
+<size>
+48.0
+29.0
+49.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-170.0
+-196.0
+</position>
+<size>
+25.0
+33.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+214.0
+-64.0
+-196.0
+</position>
+<size>
+25.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+141.0
+-137.0
+-277.0
+</position>
+<size>
+18.0
+4.0
+32.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-64.0
+-245.0
+</position>
+<size>
+28.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.003_Cube.001</id>
+<position>
+113.0
+-170.0
+-245.0
+</position>
+<size>
+28.0
+33.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube.005_Cube.003</name>
+
+-23.0 -137.0 45.0
+-5.0 -133.0 45.0
+-5.0 -137.0 45.0
+
+-23.0 -137.0 45.0
+-23.0 -133.0 45.0
+-5.0 -133.0 45.0
+
+-23.0 -137.0 45.0
+-23.0 -133.0 47.0
+-23.0 -137.0 47.0
+
+-23.0 -137.0 45.0
+-23.0 -133.0 45.0
+-23.0 -133.0 47.0
+
+-23.0 -137.0 45.0
+-5.0 -137.0 45.0
+-5.0 -137.0 47.0
+
+-23.0 -137.0 45.0
+-5.0 -137.0 47.0
+-23.0 -137.0 47.0
+
+-23.0 -133.0 45.0
+-5.0 -133.0 45.0
+-5.0 -133.0 47.0
+
+-23.0 -133.0 45.0
+-5.0 -133.0 47.0
+-23.0 -133.0 47.0
+
+113.0 -137.0 45.0
+141.0 -133.0 45.0
+141.0 -137.0 45.0
+
+113.0 -137.0 45.0
+113.0 -133.0 45.0
+141.0 -133.0 45.0
+
+113.0 -137.0 45.0
+141.0 -137.0 45.0
+141.0 -137.0 47.0
+
+113.0 -137.0 45.0
+141.0 -137.0 47.0
+113.0 -137.0 47.0
+
+-23.0 -137.0 77.0
+-5.0 -133.0 77.0
+-5.0 -137.0 77.0
+
+-23.0 -137.0 77.0
+-23.0 -133.0 77.0
+-5.0 -133.0 77.0
+
+-23.0 -137.0 47.0
+-23.0 -133.0 77.0
+-23.0 -137.0 77.0
+
+-23.0 -137.0 47.0
+-23.0 -133.0 47.0
+-23.0 -133.0 77.0
+
+-23.0 -137.0 47.0
+-5.0 -137.0 47.0
+-5.0 -137.0 77.0
+
+-23.0 -137.0 47.0
+-5.0 -137.0 77.0
+-23.0 -137.0 77.0
+
+-23.0 -133.0 47.0
+-5.0 -133.0 47.0
+-5.0 -133.0 77.0
+
+-23.0 -133.0 47.0
+-5.0 -133.0 77.0
+-23.0 -133.0 77.0
+
+113.0 -133.0 77.0
+141.0 -64.0 77.0
+141.0 -133.0 77.0
+
+113.0 -133.0 77.0
+113.0 -64.0 77.0
+141.0 -64.0 77.0
+
+113.0 -64.0 47.0
+141.0 -64.0 47.0
+141.0 -64.0 77.0
+
+113.0 -64.0 47.0
+141.0 -64.0 77.0
+113.0 -64.0 77.0
+
+-5.0 -133.0 45.0
+113.0 -64.0 45.0
+113.0 -133.0 45.0
+
+-5.0 -133.0 45.0
+-5.0 -64.0 45.0
+113.0 -64.0 45.0
+
+-5.0 -133.0 45.0
+-5.0 -64.0 47.0
+-5.0 -133.0 47.0
+
+-5.0 -133.0 45.0
+-5.0 -64.0 45.0
+-5.0 -64.0 47.0
+
+-5.0 -64.0 45.0
+113.0 -64.0 45.0
+113.0 -64.0 47.0
+
+-5.0 -64.0 45.0
+113.0 -64.0 47.0
+-5.0 -64.0 47.0
+
+-5.0 -133.0 77.0
+113.0 -64.0 77.0
+113.0 -133.0 77.0
+
+-5.0 -133.0 77.0
+-5.0 -64.0 77.0
+113.0 -64.0 77.0
+
+-5.0 -133.0 47.0
+-5.0 -64.0 77.0
+-5.0 -133.0 77.0
+
+-5.0 -133.0 47.0
+-5.0 -64.0 47.0
+-5.0 -64.0 77.0
+
+-5.0 -64.0 47.0
+113.0 -64.0 47.0
+113.0 -64.0 77.0
+
+-5.0 -64.0 47.0
+113.0 -64.0 77.0
+-5.0 -64.0 77.0
+
+-5.0 -137.0 77.0
+113.0 -133.0 77.0
+113.0 -137.0 77.0
+
+-5.0 -137.0 77.0
+-5.0 -133.0 77.0
+113.0 -133.0 77.0
+
+-5.0 -137.0 47.0
+113.0 -137.0 47.0
+113.0 -137.0 77.0
+
+-5.0 -137.0 47.0
+113.0 -137.0 77.0
+-5.0 -137.0 77.0
+
+-5.0 -137.0 45.0
+113.0 -133.0 45.0
+113.0 -137.0 45.0
+
+-5.0 -137.0 45.0
+-5.0 -133.0 45.0
+113.0 -133.0 45.0
+
+-5.0 -137.0 45.0
+113.0 -137.0 45.0
+113.0 -137.0 47.0
+
+-5.0 -137.0 45.0
+113.0 -137.0 47.0
+-5.0 -137.0 47.0
+
+113.0 -133.0 45.0
+141.0 -64.0 45.0
+141.0 -133.0 45.0
+
+113.0 -133.0 45.0
+113.0 -64.0 45.0
+141.0 -64.0 45.0
+
+113.0 -64.0 45.0
+141.0 -64.0 45.0
+141.0 -64.0 47.0
+
+113.0 -64.0 45.0
+141.0 -64.0 47.0
+113.0 -64.0 47.0
+
+113.0 -137.0 77.0
+141.0 -133.0 77.0
+141.0 -137.0 77.0
+
+113.0 -137.0 77.0
+113.0 -133.0 77.0
+141.0 -133.0 77.0
+
+113.0 -137.0 47.0
+141.0 -137.0 47.0
+141.0 -137.0 77.0
+
+113.0 -137.0 47.0
+141.0 -137.0 77.0
+113.0 -137.0 77.0
+
+</mesh><id>
+Cube.005_Cube.003</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+-23.0
+-137.0
+45.0
+</position>
+<size>
+182.0
+73.0
+32.0
+</size>
+
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+-23.0
+-137.0
+45.0
+</position>
+<size>
+18.0
+4.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+113.0
+-137.0
+45.0
+</position>
+<size>
+28.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+-23.0
+-137.0
+47.0
+</position>
+<size>
+18.0
+4.0
+30.0
+</size>
+<connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+113.0
+-133.0
+47.0
+</position>
+<size>
+28.0
+69.0
+30.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+-5.0
+-133.0
+45.0
+</position>
+<size>
+118.0
+69.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+-5.0
+-133.0
+47.0
+</position>
+<size>
+118.0
+69.0
+30.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+-5.0
+-137.0
+47.0
+</position>
+<size>
+118.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+N</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+-5.0
+-137.0
+45.0
+</position>
+<size>
+118.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+113.0
+-133.0
+45.0
+</position>
+<size>
+28.0
+69.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.005_Cube.003</id>
+<position>
+113.0
+-137.0
+47.0
+</position>
+<size>
+28.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+</world>
