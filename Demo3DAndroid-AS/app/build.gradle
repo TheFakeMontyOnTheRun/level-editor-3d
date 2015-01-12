@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "br.odb.leveleditor3d.android"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/gameapp-1.0-SNAPSHOT.jar')
+    compile files('libs/gamerendering-1.0-SNAPSHOT.jar')
+    compile files('libs/gameutils-1.0-SNAPSHOT.jar')
+    compile files('libs/gameworld-1.0-SNAPSHOT.jar')
+    compile files('libs/level-editor-app-cli-1.0-SNAPSHOT.jar')
+    compile files('libs/level-editor-core-java-1.0-SNAPSHOT.jar')
+    compile files('libs/liboldfart-1.0-SNAPSHOT.jar')
+    compile files('libs/libscene-1.0-SNAPSHOT.jar')
+    compile files('libs/libstrip-1.0-SNAPSHOT.jar')
+    compile files('libs/libsvg-1.0-SNAPSHOT.jar')
+    compile files('libs/libworldproc-1.0-SNAPSHOT.jar')
+}

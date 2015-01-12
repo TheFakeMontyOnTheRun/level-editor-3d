@@ -1,0 +1,789 @@
+<world>
+<id>
+root</id>
+<position>
+0.0
+0.0
+0.0
+</position>
+<size>
+1.0
+1.0
+1.0
+</size>
+
+<group>
+<mesh><name>Cube.001_Cube.039</name>
+
+-17.0 -32.0 -19.0
+0.0 -30.0 -19.0
+0.0 -32.0 -19.0
+
+-17.0 -32.0 -19.0
+-17.0 -30.0 -19.0
+0.0 -30.0 -19.0
+
+0.0 -32.0 -19.0
+0.0 -30.0 0.0
+0.0 -32.0 0.0
+
+0.0 -32.0 -19.0
+0.0 -30.0 -19.0
+0.0 -30.0 0.0
+
+-17.0 -32.0 -19.0
+0.0 -32.0 -19.0
+0.0 -32.0 0.0
+
+-17.0 -32.0 -19.0
+0.0 -32.0 0.0
+-17.0 -32.0 0.0
+
+-17.0 -30.0 -19.0
+0.0 0.0 -19.0
+0.0 -30.0 -19.0
+
+-17.0 -30.0 -19.0
+-17.0 0.0 -19.0
+0.0 0.0 -19.0
+
+0.0 -30.0 -19.0
+0.0 0.0 0.0
+0.0 -30.0 0.0
+
+0.0 -30.0 -19.0
+0.0 0.0 -19.0
+0.0 0.0 0.0
+
+-17.0 0.0 -19.0
+0.0 0.0 -19.0
+0.0 0.0 0.0
+
+-17.0 0.0 -19.0
+0.0 0.0 0.0
+-17.0 0.0 0.0
+
+-32.0 -32.0 13.0
+-17.0 -30.0 13.0
+-17.0 -32.0 13.0
+
+-32.0 -32.0 13.0
+-32.0 -30.0 13.0
+-17.0 -30.0 13.0
+
+-32.0 -32.0 0.0
+-32.0 -30.0 13.0
+-32.0 -32.0 13.0
+
+-32.0 -32.0 0.0
+-32.0 -30.0 0.0
+-32.0 -30.0 13.0
+
+-32.0 -32.0 0.0
+-17.0 -32.0 0.0
+-17.0 -32.0 13.0
+
+-32.0 -32.0 0.0
+-17.0 -32.0 13.0
+-32.0 -32.0 13.0
+
+0.0 -32.0 0.0
+0.0 -30.0 13.0
+0.0 -32.0 13.0
+
+0.0 -32.0 0.0
+0.0 -30.0 0.0
+0.0 -30.0 13.0
+
+-17.0 -32.0 13.0
+0.0 -30.0 13.0
+0.0 -32.0 13.0
+
+-17.0 -32.0 13.0
+-17.0 -30.0 13.0
+0.0 -30.0 13.0
+
+-17.0 -32.0 0.0
+0.0 -32.0 0.0
+0.0 -32.0 13.0
+
+-17.0 -32.0 0.0
+0.0 -32.0 13.0
+-17.0 -32.0 13.0
+
+-32.0 -32.0 -19.0
+-17.0 -30.0 -19.0
+-17.0 -32.0 -19.0
+
+-32.0 -32.0 -19.0
+-32.0 -30.0 -19.0
+-17.0 -30.0 -19.0
+
+-32.0 -32.0 -19.0
+-32.0 -30.0 0.0
+-32.0 -32.0 0.0
+
+-32.0 -32.0 -19.0
+-32.0 -30.0 -19.0
+-32.0 -30.0 0.0
+
+-32.0 -32.0 -19.0
+-17.0 -32.0 -19.0
+-17.0 -32.0 0.0
+
+-32.0 -32.0 -19.0
+-17.0 -32.0 0.0
+-32.0 -32.0 0.0
+
+-32.0 -30.0 13.0
+-17.0 0.0 13.0
+-17.0 -30.0 13.0
+
+-32.0 -30.0 13.0
+-32.0 0.0 13.0
+-17.0 0.0 13.0
+
+-32.0 -30.0 0.0
+-32.0 0.0 13.0
+-32.0 -30.0 13.0
+
+-32.0 -30.0 0.0
+-32.0 0.0 0.0
+-32.0 0.0 13.0
+
+-32.0 0.0 0.0
+-17.0 0.0 0.0
+-17.0 0.0 13.0
+
+-32.0 0.0 0.0
+-17.0 0.0 13.0
+-32.0 0.0 13.0
+
+-32.0 -30.0 -19.0
+-17.0 0.0 -19.0
+-17.0 -30.0 -19.0
+
+-32.0 -30.0 -19.0
+-32.0 0.0 -19.0
+-17.0 0.0 -19.0
+
+-32.0 -30.0 -19.0
+-32.0 0.0 0.0
+-32.0 -30.0 0.0
+
+-32.0 -30.0 -19.0
+-32.0 0.0 -19.0
+-32.0 0.0 0.0
+
+-32.0 0.0 -19.0
+-17.0 0.0 -19.0
+-17.0 0.0 0.0
+
+-32.0 0.0 -19.0
+-17.0 0.0 0.0
+-32.0 0.0 0.0
+
+</mesh><id>
+Cube.001_Cube.039</id>
+<material>
+<direction>
+W</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+U</direction>
+<color>
+#cccccc</color>
+</material>
+<position>
+-32.0
+-32.0
+-19.0
+</position>
+<size>
+32.0
+32.0
+32.0
+</size>
+
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-17.0
+-32.0
+-19.0
+</position>
+<size>
+17.0
+2.0
+19.0
+</size>
+<connection>
+W</connection>
+ <connection>
+S</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-17.0
+-30.0
+-19.0
+</position>
+<size>
+17.0
+30.0
+19.0
+</size>
+<connection>
+W</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-17.0
+-30.0
+0.0
+</position>
+<size>
+17.0
+30.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-32.0
+-32.0
+0.0
+</position>
+<size>
+15.0
+2.0
+13.0
+</size>
+<connection>
+N</connection>
+ <connection>
+E</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-17.0
+-32.0
+0.0
+</position>
+<size>
+17.0
+2.0
+13.0
+</size>
+<connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-32.0
+-32.0
+-19.0
+</position>
+<size>
+15.0
+2.0
+19.0
+</size>
+<connection>
+S</connection>
+ <connection>
+E</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-32.0
+-30.0
+0.0
+</position>
+<size>
+15.0
+30.0
+13.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-32.0
+-30.0
+-19.0
+</position>
+<size>
+15.0
+30.0
+19.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+<group>
+<mesh><name>Cube_Cube.038</name>
+
+-17.0 -30.0 32.0
+0.0 0.0 32.0
+0.0 -30.0 32.0
+
+-17.0 -30.0 32.0
+-17.0 0.0 32.0
+0.0 0.0 32.0
+
+-17.0 -30.0 13.0
+-17.0 0.0 32.0
+-17.0 -30.0 32.0
+
+-17.0 -30.0 13.0
+-17.0 0.0 13.0
+-17.0 0.0 32.0
+
+-17.0 -30.0 13.0
+0.0 -30.0 13.0
+0.0 -30.0 32.0
+
+-17.0 -30.0 13.0
+0.0 -30.0 32.0
+-17.0 -30.0 32.0
+
+-17.0 0.0 32.0
+0.0 2.0 32.0
+0.0 0.0 32.0
+
+-17.0 0.0 32.0
+-17.0 2.0 32.0
+0.0 2.0 32.0
+
+-17.0 0.0 13.0
+-17.0 2.0 32.0
+-17.0 0.0 32.0
+
+-17.0 0.0 13.0
+-17.0 2.0 13.0
+-17.0 2.0 32.0
+
+-17.0 2.0 13.0
+0.0 2.0 13.0
+0.0 2.0 32.0
+
+-17.0 2.0 13.0
+0.0 2.0 32.0
+-17.0 2.0 32.0
+
+15.0 -30.0 13.0
+15.0 0.0 32.0
+15.0 -30.0 32.0
+
+15.0 -30.0 13.0
+15.0 0.0 13.0
+15.0 0.0 32.0
+
+0.0 -30.0 32.0
+15.0 0.0 32.0
+15.0 -30.0 32.0
+
+0.0 -30.0 32.0
+0.0 0.0 32.0
+15.0 0.0 32.0
+
+0.0 -30.0 13.0
+15.0 -30.0 13.0
+15.0 -30.0 32.0
+
+0.0 -30.0 13.0
+15.0 -30.0 32.0
+0.0 -30.0 32.0
+
+15.0 0.0 13.0
+15.0 2.0 32.0
+15.0 0.0 32.0
+
+15.0 0.0 13.0
+15.0 2.0 13.0
+15.0 2.0 32.0
+
+0.0 0.0 32.0
+15.0 2.0 32.0
+15.0 0.0 32.0
+
+0.0 0.0 32.0
+0.0 2.0 32.0
+15.0 2.0 32.0
+
+0.0 2.0 13.0
+15.0 2.0 13.0
+15.0 2.0 32.0
+
+0.0 2.0 13.0
+15.0 2.0 32.0
+0.0 2.0 32.0
+
+0.0 -30.0 0.0
+15.0 0.0 0.0
+15.0 -30.0 0.0
+
+0.0 -30.0 0.0
+0.0 0.0 0.0
+15.0 0.0 0.0
+
+15.0 -30.0 0.0
+15.0 0.0 13.0
+15.0 -30.0 13.0
+
+15.0 -30.0 0.0
+15.0 0.0 0.0
+15.0 0.0 13.0
+
+0.0 -30.0 0.0
+15.0 -30.0 0.0
+15.0 -30.0 13.0
+
+0.0 -30.0 0.0
+15.0 -30.0 13.0
+0.0 -30.0 13.0
+
+0.0 0.0 0.0
+15.0 2.0 0.0
+15.0 0.0 0.0
+
+0.0 0.0 0.0
+0.0 2.0 0.0
+15.0 2.0 0.0
+
+15.0 0.0 0.0
+15.0 2.0 13.0
+15.0 0.0 13.0
+
+15.0 0.0 0.0
+15.0 2.0 0.0
+15.0 2.0 13.0
+
+0.0 2.0 0.0
+15.0 2.0 0.0
+15.0 2.0 13.0
+
+0.0 2.0 0.0
+15.0 2.0 13.0
+0.0 2.0 13.0
+
+-17.0 0.0 0.0
+0.0 2.0 0.0
+0.0 0.0 0.0
+
+-17.0 0.0 0.0
+-17.0 2.0 0.0
+0.0 2.0 0.0
+
+-17.0 0.0 0.0
+-17.0 2.0 13.0
+-17.0 0.0 13.0
+
+-17.0 0.0 0.0
+-17.0 2.0 0.0
+-17.0 2.0 13.0
+
+-17.0 2.0 0.0
+0.0 2.0 0.0
+0.0 2.0 13.0
+
+-17.0 2.0 0.0
+0.0 2.0 13.0
+-17.0 2.0 13.0
+
+</mesh><id>
+Cube_Cube.038</id>
+<material>
+<direction>
+W</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#cccccc</color>
+</material>
+<material>
+<direction>
+U</direction>
+<color>
+#cccccc</color>
+</material>
+<position>
+-17.0
+-30.0
+0.0
+</position>
+<size>
+32.0
+32.0
+32.0
+</size>
+
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-17.0
+-30.0
+13.0
+</position>
+<size>
+17.0
+30.0
+19.0
+</size>
+<connection>
+N</connection>
+ <connection>
+E</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-17.0
+-30.0
+0.0
+</position>
+<size>
+17.0
+30.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-17.0
+0.0
+13.0
+</position>
+<size>
+17.0
+2.0
+19.0
+</size>
+<connection>
+D</connection>
+ <connection>
+N</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+0.0
+-30.0
+13.0
+</position>
+<size>
+15.0
+30.0
+19.0
+</size>
+<connection>
+W</connection>
+ <connection>
+N</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+0.0
+0.0
+13.0
+</position>
+<size>
+15.0
+2.0
+19.0
+</size>
+<connection>
+W</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+0.0
+-30.0
+0.0
+</position>
+<size>
+15.0
+30.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+U</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+0.0
+0.0
+0.0
+</position>
+<size>
+15.0
+2.0
+13.0
+</size>
+<connection>
+W</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-17.0
+0.0
+0.0
+</position>
+<size>
+17.0
+2.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+E</connection>
+ 
+</sector>
+</group>
+</world>

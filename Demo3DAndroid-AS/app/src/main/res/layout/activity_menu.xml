@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    android:orientation="vertical"
+    tools:context="${packageName}.${activityClass}" >
+
+    <br.odb.gamelib.android.GameView
+        android:id="@+id/gameView1"
+        android:layout_width="wrap_content"
+        android:layout_height="219dp"
+        android:background="#FFF" />
+
+    <TextView
+        android:id="@+id/txtFilename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnViewIn3D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View in 3D" />
+
+    <Button
+        android:id="@+id/btnNewProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Project" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Project" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save project" />
+
+    <Button
+        android:id="@+id/btnModifyGeometry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modify Geometry" />
+
+    <Button
+        android:id="@+id/btnCompile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compile geometry" />
+
+</LinearLayout>

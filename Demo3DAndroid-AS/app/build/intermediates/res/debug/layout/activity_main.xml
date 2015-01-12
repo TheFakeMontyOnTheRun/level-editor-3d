@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${packageName}.${activityClass}"
+    android:weightSum="1">
+
+    <view
+        android:layout_width="622dp"
+        android:layout_height="wrap_content"
+        class="br.odb.leveleditor3d.android.SceneView"
+        android:id="@+id/svScene"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1.05" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:layout_weight="1"
+            android:id="@+id/btnLeft" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Walk"
+            android:layout_weight="1"
+            android:id="@+id/btnWalk" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=">"
+            android:layout_weight="1"
+            android:id="@+id/btnRight" />
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/home/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/src/main/res/layout/activity_main.xml -->
