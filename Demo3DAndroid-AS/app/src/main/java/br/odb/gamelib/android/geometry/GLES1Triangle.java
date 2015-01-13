@@ -25,7 +25,7 @@ import br.odb.utils.math.Vec3;
 public class GLES1Triangle extends GeneralTriangle implements
 		GLESIndexedSetFace, AbstractTriangle {
 
-	private FloatBuffer textureBuffer;
+	//private FloatBuffer textureBuffer;
 	private FloatBuffer colorBuffer;
 	private FloatBuffer vertexBuffer;
 	private float[] vertices = new float[9];
@@ -33,7 +33,7 @@ public class GLES1Triangle extends GeneralTriangle implements
 	private float[] color = new float[12];
 	int[] colorBits = new int[4];
 	private boolean visible = true;
-	private float[] textureCoordinates;
+	//private float[] textureCoordinates;
 
 	// ------------------------------------------------------------------------------------------------------------
 	/**
@@ -238,6 +238,7 @@ public class GLES1Triangle extends GeneralTriangle implements
 
 	// ------------------------------------------------------------------------------------------------------------
 	public void drawGLES2(int vertexHandle, int colorHandle, int textureHandle) {
+
 		GLES20.glVertexAttribPointer(vertexHandle, vertices.length / 3,
 				GLES20.GL_FLOAT, false, 0, vertexBuffer);
 		GLES20.glEnableVertexAttribArray(vertexHandle);
@@ -247,11 +248,13 @@ public class GLES1Triangle extends GeneralTriangle implements
 		GLES20.glEnableVertexAttribArray(colorHandle);
 
 		if (textureHandle != -1) {
+            /*
 			textureBuffer.position(0);
 			GLES20.glVertexAttribPointer(textureHandle, 2, GLES20.GL_FLOAT,
 					false, 0, textureBuffer);
 
 			GLES20.glEnableVertexAttribArray(textureHandle);
+			*/
 		}
 
 		GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 3);
@@ -298,6 +301,7 @@ public class GLES1Triangle extends GeneralTriangle implements
 
 	@Override
 	public void setTextureCoordenates(float[] fs) {
+        /*
 		this.textureCoordinates = fs;
 
 		ByteBuffer byteBuf = ByteBuffer.allocateDirect(vertices.length * 4);
@@ -306,6 +310,7 @@ public class GLES1Triangle extends GeneralTriangle implements
 		textureBuffer = byteBuf.asFloatBuffer();
 		textureBuffer.put(textureCoordinates);
 		textureBuffer.position(0);
+		*/
 	}
 
 }

@@ -40,7 +40,7 @@ public class SceneView extends GLSurfaceView {
 		try {
 			String vertexShader = readFully(vertex, "utf8");
 			String fragmentShader = readFully(fragment, "utf8");
-			renderer = new GLESRenderer(1000, vertexShader, fragmentShader,
+			renderer = new GLESRenderer( 10000, vertexShader, fragmentShader,
 					this.getContext());
 
 			// GLES1Triangle trig = GLES1TriangleFactory.getInstance().makeTrig(
@@ -132,11 +132,13 @@ public class SceneView extends GLSurfaceView {
 	}
 
 
+    int polyCount = 0;
 
     private void loadGeometryFromScene(GroupSector sector) {
 
 		for (IndexedSetFace isf : sector.mesh.faces) {
-			renderer.addGeometryToScene(GLES1TriangleFactory.getInstance()
+            ++polyCount;
+            renderer.addToVA(GLES1TriangleFactory.getInstance()
 					.makeTrigFrom(isf));
 		}
 

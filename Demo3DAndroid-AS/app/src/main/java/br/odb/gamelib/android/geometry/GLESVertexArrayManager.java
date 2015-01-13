@@ -113,9 +113,10 @@ public class GLESVertexArrayManager extends VertexArrayManager {
 				currentVertexPosition += vertexData.length;
 				length += vertexData.length * 4;
 				
-				for ( int c = 0; c < ( vertexData.length / 3 ); ++c )
-					colorIntBuffer.put(colorData);
-				
+				for ( int c = 0; c < ( vertexData.length / 3 ); ++c ) {
+                    colorIntBuffer.put(colorData);
+                }
+
 				vertexBuffer.position( vertexIntBuffer.position() );
 				vertexByteBuffer.position( vertexIntBuffer.position() * 4 );
 				
@@ -140,10 +141,10 @@ public class GLESVertexArrayManager extends VertexArrayManager {
 				currentVertexPosition += vertexData.length;
 				length += vertexData.length * 4;
 				
-				for ( int c = 0; c < ( vertexData.length / 3 ); ++c )
-					colorBuffer.put(colorData);
-				
-				
+				//for ( int c = 0; c < ( vertexData.length / 3 ); ++c ) {
+                    colorBuffer.put(colorData);
+                //}
+
 				vertexIntBuffer.position( vertexBuffer.position() );
 				vertexByteBuffer.position( vertexBuffer.position() * 4 );
 				

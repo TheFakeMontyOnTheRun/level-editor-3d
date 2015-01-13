@@ -1,7 +1,7 @@
 precision mediump float;
 varying vec4 v_color;
-uniform sampler2D u_Texture;
-varying vec2 v_TexCoordinate;
+//uniform sampler2D u_Texture;
+//varying vec2 v_TexCoordinate;
 
 void main() {
 	//diffuse = diffuse * (1.0 / (1.0 + (0.10 * distance)));

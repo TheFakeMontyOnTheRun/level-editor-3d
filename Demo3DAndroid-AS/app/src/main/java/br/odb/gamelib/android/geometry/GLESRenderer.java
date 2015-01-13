@@ -50,7 +50,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 	private String vertexShaderCode;
 	private String fragmentShaderCode;
 //	int textureIndex;
-	private int mTextureCoordinateHandle = -1;
+	//private int mTextureCoordinateHandle = -1;
 	private int mTextureUniformHandle = -1;
 	private Context context;
 	private int muMVPMatrixHandle;
@@ -202,6 +202,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 		GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		GLES20.glClearDepthf(1.0f);
 		GLES20.glEnable(GLES10.GL_DEPTH_TEST);
+
 		GLES20.glDepthFunc(GLES10.GL_LEQUAL);
 		GLES20.glHint(GLES10.GL_PERSPECTIVE_CORRECTION_HINT, GLES10.GL_FASTEST);
 
@@ -295,8 +296,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
 		GLES20.glUseProgram(mProgram);
 
-		GLES20.glEnable(GL10.GL_DEPTH_TEST);
-		
+
 		if (shouldCheckForBailingOut) {
 			return;
 		}
@@ -312,7 +312,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 		}
 
 		for (GLESIndexedSetFace face : sceneGeometryToRender) {
-			face.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle );
+			face.drawGLES2(maPositionHandle, colorHandle, -1 ); //this.mTextureCoordinateHandle );
 		}
 
 		for (Mesh mesh : meshes) {

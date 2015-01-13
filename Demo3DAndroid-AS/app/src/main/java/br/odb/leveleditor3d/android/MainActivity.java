@@ -42,7 +42,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             view.init( vertexShader, fragmentShader);
 			view.renderer.angle = 180.0f;
-			InputStream fileInput = getAssets().open("notso.opt.xml");
+			InputStream fileInput = getAssets().open("prison.opt.xml");
 			World world = WorldLoader.build(fileInput);
 			// world.checkForHardLinks();
 			view.setScene(SceneTesselator.generateSubSectorQuadsForWorld(world));
@@ -89,8 +89,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						}
 					}
 				}
-			})
-                    ;//.start();
+			}).start();
 
 			for (index = size - 1; index >= 0; --index) {
 				if (srs.get(index) instanceof GroupSector) {

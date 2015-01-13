@@ -3,14 +3,14 @@ attribute vec4 vPosition;
 attribute vec4 a_color;
 varying vec4 v_color;
 
-attribute vec2 a_TexCoordinate;
-varying vec2 v_TexCoordinate;
+//attribute vec2 a_TexCoordinate;
+//varying vec2 v_TexCoordinate;
 
 void main() {
 
 	vec4 i_position = uMVPMatrix * vPosition;
 	gl_Position = i_position;
-	v_TexCoordinate = a_TexCoordinate;
+//	v_TexCoordinate = a_TexCoordinate;
  
 	float diffuse = 1.0;//max(dot( i_position, vec4( -0.5, -0.5, -0.5, 1) ), 0.1);
 	//v_color = vec4( 1.0, 1.0, 1.0, 1.0 );
