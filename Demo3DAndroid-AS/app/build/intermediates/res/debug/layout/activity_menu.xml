@@ -12,10 +12,10 @@
         android:layout_height="219dp"
         android:background="#FFF" />
 
-    <TextView
-        android:id="@+id/txtFilename"
+    <Spinner
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/spnLevels" />
 
     <Button
         android:id="@+id/btnViewIn3D"

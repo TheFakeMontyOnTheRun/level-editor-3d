@@ -58,6 +58,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 	private float[] mMMatrix = new float[16];
 	private float[] mVMatrix = new float[16];
 	private float[] mProjMatrix = new float[16];
+    public volatile boolean ready;
 
 	/**
 	 * 
@@ -231,8 +232,11 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 //	    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
 	 
 //	    GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureIndex);
-//	    GLES20.glUniform1i(mTextureUniformHandle, 0);		
-		renderSceneGLES20();
+//	    GLES20.glUniform1i(mTextureUniformHandle, 0);
+
+        if ( ready ) {
+            renderSceneGLES20();
+        }
 	}
 
 /**

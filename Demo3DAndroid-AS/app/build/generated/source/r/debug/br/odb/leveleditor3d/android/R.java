@@ -34,8 +34,8 @@ public final class R {
         public static final int button2=0x7f070009;
         public static final int gameView1=0x7f070004;
         public static final int gvMap=0x7f07000c;
+        public static final int spnLevels=0x7f070005;
         public static final int svScene=0x7f070000;
-        public static final int txtFilename=0x7f070005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
