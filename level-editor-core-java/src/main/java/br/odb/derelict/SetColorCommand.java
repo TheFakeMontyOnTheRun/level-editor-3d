@@ -3,7 +3,7 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libstrip.Material;
 import br.odb.utils.Color;
 import br.odb.utils.Direction;
 
@@ -27,7 +27,7 @@ public class SetColorCommand extends UserCommandLineAction {
 		Direction d;
 		parms = operands.split("[ ]+");
 
-		SpaceRegion target = null;
+		GroupSector target = null;
 		Color color;
 
 		d = Direction.getDirectionForPrettyName(parms[1]);
@@ -39,10 +39,23 @@ public class SetColorCommand extends UserCommandLineAction {
 
 		target = (GroupSector) editor.world.masterSector.getChild(parms[0]
 				.trim());
+		
+		while ( !( target instanceof GroupSector ) ) {
+			
+			if ( target.parent != null ) {				
+				target = (GroupSector) target.parent;
+			}
+		}
+		
+		if ( !( target instanceof GroupSector ) ) {
+			return;
+		}
+		
 		color = new Color(Float.parseFloat(parms[2]),
 				Float.parseFloat(parms[3]), Float.parseFloat(parms[4]));
 
-		target.colorForDirection.put(d, color);
+		Material m = new Material( color, null, null, null );
+		target.materials.put(d, m);
 
 	}
 

@@ -11,7 +11,6 @@ import br.odb.libscene.SpaceRegion;
 import br.odb.utils.Color;
 import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
-import br.odb.worldprocessing.Utils;
 
 public class GenerateSVGCommand extends UserCommandLineAction {
 
@@ -51,8 +50,8 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 				sb.append(" width = '" + sr.size.x + "' ");
 				sb.append(" height = '" + sr.size.z + "' ");
 
-				if (sr.colorForDirection.get(Direction.FLOOR) != null) {
-					c = sr.colorForDirection.get(Direction.FLOOR);
+				if (sr instanceof GroupSector && ((GroupSector)sr).materials.get(Direction.FLOOR) != null) {
+					c = ((GroupSector)sr).materials.get(Direction.FLOOR).mainColor;
 				} else {
 					c = new Color(64, 64, 64, 64);
 				}

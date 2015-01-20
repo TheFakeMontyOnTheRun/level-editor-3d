@@ -1,14 +1,11 @@
 package br.odb.derelict;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 
 import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-
-import java.util.ArrayList;
-
 import br.odb.libstrip.Mesh;
 
 public class WavefrontOBJImporter {
@@ -24,7 +21,7 @@ public class WavefrontOBJImporter {
 
 			if ( m.faces.size() > 0) {
 				System.out.println( "sector: " + m.name );
-				sector = (GroupSector) SpaceRegion.getConvexHull( 1, m );
+				sector = GroupSector.getConvexHull( 1, m );
 
 				if (!sector.isDegenerate()) {
 					master.addChild( sector );

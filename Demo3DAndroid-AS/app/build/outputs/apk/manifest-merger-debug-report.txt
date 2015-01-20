@@ -30,11 +30,11 @@ ADDED from AndroidManifest.xml:11:5
 	android:allowBackup
 		ADDED from AndroidManifest.xml:13:9
 	android:icon
-		ADDED from AndroidManifest.xml:15:9
+		ADDED from AndroidManifest.xml:14:9
 	android:theme
 		ADDED from AndroidManifest.xml:17:9
 	android:largeHeap
-		ADDED from AndroidManifest.xml:14:9
+		ADDED from AndroidManifest.xml:15:9
 	android:name
 		ADDED from AndroidManifest.xml:12:9
 activity#br.odb.leveleditor3d.android.MainActivity

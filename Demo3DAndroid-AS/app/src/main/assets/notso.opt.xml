@@ -16,13 +16,7 @@ root</id>
 Cube.005_Cube.003</id>
 <material>
 <direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
+U</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -34,19 +28,25 @@ E</direction>
 </material>
 <material>
 <direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
 S</direction>
 <color>
 #a3a3a3</color>
 </material>
 <material>
 <direction>
-N</direction>
+W</direction>
 <color>
 #a3a3a3</color>
 </material>
 <material>
 <direction>
-U</direction>
+N</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -74,11 +74,11 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 S</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -94,13 +94,13 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -116,11 +116,11 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -136,11 +136,11 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  
@@ -158,13 +158,13 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -180,11 +180,11 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  
@@ -202,13 +202,13 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
-N</connection>
- <connection>
 U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -224,17 +224,17 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -250,13 +250,13 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -274,13 +274,13 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -296,13 +296,13 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -318,13 +318,13 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -342,17 +342,17 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -368,15 +368,15 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -392,15 +392,15 @@ Cube.005_Cube.003</id>
 2.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -416,13 +416,13 @@ Cube.005_Cube.003</id>
 30.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
-N</connection>
- <connection>
 U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 </group>
@@ -430,13 +430,7 @@ U</connection>
 Cube.006_Cube.004</id>
 <material>
 <direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
+U</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -448,19 +442,25 @@ E</direction>
 </material>
 <material>
 <direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
 S</direction>
 <color>
 #a3a3a3</color>
 </material>
 <material>
 <direction>
-N</direction>
+W</direction>
 <color>
 #a3a3a3</color>
 </material>
 <material>
 <direction>
-U</direction>
+N</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -488,13 +488,13 @@ Cube.006_Cube.004</id>
 43.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -510,13 +510,13 @@ Cube.006_Cube.004</id>
 15.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -532,13 +532,13 @@ Cube.006_Cube.004</id>
 43.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -554,15 +554,15 @@ Cube.006_Cube.004</id>
 10.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -578,13 +578,13 @@ Cube.006_Cube.004</id>
 112.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -600,13 +600,13 @@ Cube.006_Cube.004</id>
 112.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -622,17 +622,17 @@ Cube.006_Cube.004</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -668,11 +668,11 @@ Cube.006_Cube.004</id>
 15.0
 </size>
 <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-S</connection>
  <connection>
 N</connection>
  
@@ -690,11 +690,11 @@ Cube.006_Cube.004</id>
 10.0
 </size>
 <connection>
+U</connection>
+ <connection>
 W</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -710,11 +710,11 @@ Cube.006_Cube.004</id>
 43.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
  <connection>
 N</connection>
  
@@ -732,17 +732,17 @@ Cube.006_Cube.004</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -758,17 +758,17 @@ Cube.006_Cube.004</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -784,17 +784,17 @@ Cube.006_Cube.004</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -810,17 +810,17 @@ Cube.006_Cube.004</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -836,11 +836,11 @@ Cube.006_Cube.004</id>
 112.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
  <connection>
 N</connection>
  
@@ -858,11 +858,11 @@ Cube.006_Cube.004</id>
 43.0
 </size>
 <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-S</connection>
  <connection>
 N</connection>
  
@@ -880,17 +880,17 @@ Cube.006_Cube.004</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -906,17 +906,17 @@ Cube.006_Cube.004</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -932,13 +932,13 @@ Cube.006_Cube.004</id>
 15.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -954,13 +954,13 @@ Cube.006_Cube.004</id>
 10.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -978,17 +978,17 @@ Cube.006_Cube.004</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1004,11 +1004,11 @@ Cube.006_Cube.004</id>
 15.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
  <connection>
 N</connection>
  
@@ -1026,27 +1026,21 @@ Cube.006_Cube.004</id>
 112.0
 </size>
 <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-S</connection>
  <connection>
 N</connection>
  
 </sector>
 </group>
 <group><id>
-Cube.003_Cube.001</id>
+Cube.001_Cube.039</id>
 <material>
 <direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
+U</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -1058,7 +1052,19 @@ E</direction>
 </material>
 <material>
 <direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
 S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -1068,9 +1074,3031 @@ N</direction>
 <color>
 #a3a3a3</color>
 </material>
+<position>
+-114.0
+-137.0
+-26.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+32.0
+</position>
+<size>
+34.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+17.0
+</position>
+<size>
+2.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+32.0
+</position>
+<size>
+37.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+17.0
+</position>
+<size>
+2.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+45.0
+</position>
+<size>
+2.0
+69.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+32.0
+</position>
+<size>
+37.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+42.0
+</position>
+<size>
+34.0
+4.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+32.0
+</position>
+<size>
+2.0
+4.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+45.0
+</position>
+<size>
+34.0
+69.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+45.0
+</position>
+<size>
+2.0
+4.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+42.0
+</position>
+<size>
+34.0
+69.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+32.0
+</position>
+<size>
+2.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+-26.0
+</position>
+<size>
+34.0
+4.0
+43.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+42.0
+</position>
+<size>
+37.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+17.0
+</position>
+<size>
+37.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+-26.0
+</position>
+<size>
+34.0
+69.0
+43.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+-26.0
+</position>
+<size>
+37.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+45.0
+</position>
+<size>
+37.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-133.0
+17.0
+</position>
+<size>
+34.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-137.0
+17.0
+</position>
+<size>
+37.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+17.0
+</position>
+<size>
+34.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+-26.0
+</position>
+<size>
+2.0
+4.0
+43.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+-26.0
+</position>
+<size>
+2.0
+69.0
+43.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+42.0
+</position>
+<size>
+37.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+-26.0
+</position>
+<size>
+37.0
+69.0
+43.0
+</size>
+<connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-137.0
+42.0
+</position>
+<size>
+2.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-114.0
+-133.0
+42.0
+</position>
+<size>
+2.0
+69.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+45.0
+</position>
+<size>
+34.0
+4.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-112.0
+-137.0
+32.0
+</position>
+<size>
+34.0
+4.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.001_Cube.039</id>
+<position>
+-78.0
+-133.0
+45.0
+</position>
+<size>
+37.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+</group>
+<group><id>
+Cube.002_Cube.000</id>
 <material>
 <direction>
 U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+141.0
+-137.0
+32.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+90.0
+</position>
+<size>
+18.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+45.0
+</position>
+<size>
+18.0
+4.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+32.0
+</position>
+<size>
+48.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+45.0
+</position>
+<size>
+48.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+47.0
+</position>
+<size>
+48.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+90.0
+</position>
+<size>
+7.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+90.0
+</position>
+<size>
+18.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+42.0
+</position>
+<size>
+48.0
+69.0
+3.0
+</size>
+<connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+77.0
+</position>
+<size>
+48.0
+4.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+77.0
+</position>
+<size>
+7.0
+69.0
+13.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+77.0
+</position>
+<size>
+48.0
+69.0
+13.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+45.0
+</position>
+<size>
+48.0
+69.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+42.0
+</position>
+<size>
+18.0
+4.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+32.0
+</position>
+<size>
+7.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+47.0
+</position>
+<size>
+7.0
+69.0
+30.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+90.0
+</position>
+<size>
+7.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+77.0
+</position>
+<size>
+7.0
+4.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+45.0
+</position>
+<size>
+18.0
+69.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+77.0
+</position>
+<size>
+18.0
+4.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+90.0
+</position>
+<size>
+48.0
+4.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+32.0
+</position>
+<size>
+48.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+47.0
+</position>
+<size>
+48.0
+69.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+47.0
+</position>
+<size>
+7.0
+4.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+45.0
+</position>
+<size>
+7.0
+69.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+32.0
+</position>
+<size>
+18.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+32.0
+</position>
+<size>
+7.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+47.0
+</position>
+<size>
+18.0
+4.0
+30.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+42.0
+</position>
+<size>
+18.0
+69.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-133.0
+90.0
+</position>
+<size>
+48.0
+69.0
+15.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+77.0
+</position>
+<size>
+18.0
+69.0
+13.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+166.0
+-137.0
+42.0
+</position>
+<size>
+48.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+42.0
+</position>
+<size>
+7.0
+4.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-137.0
+32.0
+</position>
+<size>
+18.0
+4.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+141.0
+-133.0
+47.0
+</position>
+<size>
+18.0
+69.0
+30.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-137.0
+45.0
+</position>
+<size>
+7.0
+4.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.002_Cube.000</id>
+<position>
+159.0
+-133.0
+42.0
+</position>
+<size>
+7.0
+69.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+</group>
+<group><id>
+Cube.004_Cube.002</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+-112.0
+-137.0
+-245.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-133.0
+-196.0
+</position>
+<size>
+37.0
+69.0
+24.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-137.0
+-245.0
+</position>
+<size>
+37.0
+4.0
+49.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-137.0
+-196.0
+</position>
+<size>
+37.0
+4.0
+24.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-133.0
+-196.0
+</position>
+<size>
+34.0
+69.0
+24.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-137.0
+-245.0
+</position>
+<size>
+34.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-133.0
+-196.0
+</position>
+<size>
+2.0
+69.0
+24.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-137.0
+-196.0
+</position>
+<size>
+2.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-78.0
+-133.0
+-245.0
+</position>
+<size>
+37.0
+69.0
+49.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-137.0
+-196.0
+</position>
+<size>
+34.0
+4.0
+24.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-133.0
+-245.0
+</position>
+<size>
+2.0
+69.0
+49.0
+</size>
+<connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-41.0
+-137.0
+-245.0
+</position>
+<size>
+2.0
+4.0
+49.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube.004_Cube.002</id>
+<position>
+-112.0
+-133.0
+-245.0
+</position>
+<size>
+34.0
+69.0
+49.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ 
+</sector>
+</group>
+<group><id>
+Cube_Cube.038</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
+<color>
+#a3a3a3</color>
+</material>
+<position>
+-78.0
+-133.0
+17.0
+</position>
+<size>
+73.0
+73.0
+73.0
+</size>
+
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+42.0
+</position>
+<size>
+2.0
+4.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+42.0
+</position>
+<size>
+37.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+45.0
+</position>
+<size>
+16.0
+4.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+47.0
+</position>
+<size>
+2.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+45.0
+</position>
+<size>
+2.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+32.0
+</position>
+<size>
+37.0
+4.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+77.0
+</position>
+<size>
+2.0
+69.0
+13.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+45.0
+</position>
+<size>
+37.0
+4.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+77.0
+</position>
+<size>
+2.0
+4.0
+13.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+42.0
+</position>
+<size>
+18.0
+4.0
+3.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+47.0
+</position>
+<size>
+16.0
+4.0
+30.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+32.0
+</position>
+<size>
+37.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+47.0
+</position>
+<size>
+16.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+32.0
+</position>
+<size>
+2.0
+4.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+77.0
+</position>
+<size>
+18.0
+4.0
+13.0
+</size>
+<connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+47.0
+</position>
+<size>
+18.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+17.0
+</position>
+<size>
+16.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+77.0
+</position>
+<size>
+37.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+47.0
+</position>
+<size>
+37.0
+69.0
+30.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+32.0
+</position>
+<size>
+18.0
+69.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+45.0
+</position>
+<size>
+18.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+17.0
+</position>
+<size>
+37.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+47.0
+</position>
+<size>
+37.0
+4.0
+30.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+17.0
+</position>
+<size>
+16.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+42.0
+</position>
+<size>
+18.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+45.0
+</position>
+<size>
+18.0
+4.0
+2.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+77.0
+</position>
+<size>
+16.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+17.0
+</position>
+<size>
+2.0
+4.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+32.0
+</position>
+<size>
+16.0
+4.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+32.0
+</position>
+<size>
+18.0
+4.0
+10.0
+</size>
+<connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+77.0
+</position>
+<size>
+37.0
+4.0
+13.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+45.0
+</position>
+<size>
+37.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+17.0
+</position>
+<size>
+2.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+32.0
+</position>
+<size>
+2.0
+69.0
+10.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+42.0
+</position>
+<size>
+16.0
+4.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+17.0
+</position>
+<size>
+18.0
+69.0
+15.0
+</size>
+<connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+45.0
+</position>
+<size>
+16.0
+69.0
+2.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+32.0
+</position>
+<size>
+16.0
+69.0
+10.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+17.0
+</position>
+<size>
+18.0
+4.0
+15.0
+</size>
+<connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-133.0
+42.0
+</position>
+<size>
+2.0
+69.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+47.0
+</position>
+<size>
+2.0
+4.0
+30.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-133.0
+77.0
+</position>
+<size>
+18.0
+69.0
+13.0
+</size>
+<connection>
+U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-133.0
+17.0
+</position>
+<size>
+37.0
+69.0
+15.0
+</size>
+<connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-23.0
+-64.0
+47.0
+</position>
+<size>
+18.0
+4.0
+30.0
+</size>
+<connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-78.0
+-64.0
+42.0
+</position>
+<size>
+37.0
+4.0
+3.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-133.0
+42.0
+</position>
+<size>
+16.0
+69.0
+3.0
+</size>
+<connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-41.0
+-64.0
+45.0
+</position>
+<size>
+2.0
+4.0
+2.0
+</size>
+<connection>
+E</connection>
+ <connection>
+S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+<sector><id>
+Cube_Cube.038</id>
+<position>
+-39.0
+-64.0
+77.0
+</position>
+<size>
+16.0
+4.0
+13.0
+</size>
+<connection>
+E</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
+ 
+</sector>
+</group>
+<group><id>
+Cube.003_Cube.001</id>
+<material>
+<direction>
+U</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+E</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+D</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+S</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+W</direction>
+<color>
+#a3a3a3</color>
+</material>
+<material>
+<direction>
+N</direction>
 <color>
 #a3a3a3</color>
 </material>
@@ -1098,17 +4126,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1124,9 +4152,9 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
@@ -1146,9 +4174,9 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  
@@ -1166,11 +4194,11 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  
@@ -1188,15 +4216,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1212,17 +4240,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1238,15 +4266,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1262,15 +4290,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1288,11 +4316,11 @@ Cube.003_Cube.001</id>
 <connection>
 E</connection>
  <connection>
+U</connection>
+ <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1308,11 +4336,11 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  
@@ -1330,15 +4358,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1354,13 +4382,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
-N</connection>
- <connection>
 U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1376,17 +4404,17 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1402,13 +4430,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1426,9 +4454,9 @@ Cube.003_Cube.001</id>
 <connection>
 D</connection>
  <connection>
-W</connection>
- <connection>
 S</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -1446,13 +4474,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1468,13 +4496,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -1490,13 +4518,13 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -1514,13 +4542,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
  
 </sector>
 <sector><id>
@@ -1536,17 +4564,17 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1562,17 +4590,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1588,17 +4616,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1614,17 +4642,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1640,15 +4668,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1664,15 +4692,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -1688,13 +4716,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -1710,17 +4738,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1736,17 +4764,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1762,15 +4790,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1786,15 +4814,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -1810,15 +4838,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1834,15 +4862,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
 E</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -1858,13 +4886,13 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -1882,17 +4910,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1908,17 +4936,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1934,11 +4962,11 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-S</connection>
  <connection>
 N</connection>
  
@@ -1956,15 +4984,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -1980,17 +5008,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2006,13 +5034,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2028,15 +5056,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2052,13 +5080,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2074,17 +5102,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2100,15 +5128,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-S</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -2124,15 +5152,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
-W</connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2148,15 +5176,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
-W</connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2172,13 +5200,13 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -2196,15 +5224,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -2220,17 +5248,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2246,17 +5274,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2272,17 +5300,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2298,15 +5326,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2322,11 +5350,11 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2342,15 +5370,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -2366,17 +5394,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2392,15 +5420,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2416,15 +5444,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2440,13 +5468,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2462,15 +5490,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2486,15 +5514,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2510,9 +5538,9 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+D</connection>
  <connection>
 N</connection>
  
@@ -2530,13 +5558,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2552,15 +5580,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2576,13 +5604,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
  <connection>
-S</connection>
- <connection>
 U</connection>
+ <connection>
+D</connection>
+ <connection>
+S</connection>
  
 </sector>
 <sector><id>
@@ -2598,11 +5626,11 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 S</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -2618,17 +5646,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2644,15 +5672,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -2668,13 +5696,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
-N</connection>
- <connection>
 U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2690,13 +5718,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2712,13 +5740,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2734,15 +5762,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2758,13 +5786,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
  
 </sector>
 <sector><id>
@@ -2780,13 +5808,13 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -2804,17 +5832,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -2830,15 +5858,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2854,11 +5882,11 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  
@@ -2876,17 +5904,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2902,17 +5930,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2928,17 +5956,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -2954,15 +5982,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -2998,13 +6026,13 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -3022,17 +6050,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3048,15 +6076,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3072,11 +6100,11 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  
@@ -3094,13 +6122,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3116,13 +6144,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3138,15 +6166,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
-W</connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3162,15 +6190,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3186,13 +6214,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
-N</connection>
- <connection>
 U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3208,13 +6236,13 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3230,11 +6258,11 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
  <connection>
 N</connection>
  
@@ -3252,15 +6280,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3276,15 +6304,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3300,17 +6328,17 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3326,15 +6354,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
-W</connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3350,15 +6378,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
-W</connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3374,17 +6402,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3400,15 +6428,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
+E</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3424,13 +6452,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3448,9 +6476,9 @@ Cube.003_Cube.001</id>
 <connection>
 D</connection>
  <connection>
-W</connection>
- <connection>
 S</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3466,13 +6494,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3488,13 +6516,13 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -3512,13 +6540,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3534,11 +6562,11 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
 E</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3554,13 +6582,13 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-W</connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3576,15 +6604,15 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3600,13 +6628,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
-N</connection>
- <connection>
 U</connection>
+ <connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3622,17 +6650,17 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+E</connection>
+ <connection>
+U</connection>
+ <connection>
+S</connection>
+ <connection>
 D</connection>
  <connection>
 W</connection>
  <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3648,13 +6676,13 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3670,17 +6698,17 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
+D</connection>
+ <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3696,13 +6724,13 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3718,13 +6746,13 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -3742,15 +6770,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3766,11 +6794,11 @@ Cube.003_Cube.001</id>
 34.0
 </size>
 <connection>
+U</connection>
+ <connection>
 W</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3786,13 +6814,13 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
+ <connection>
+D</connection>
+ <connection>
+W</connection>
  <connection>
 N</connection>
  
@@ -3810,15 +6838,15 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-W</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+W</connection>
  <connection>
-U</connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3834,17 +6862,17 @@ Cube.003_Cube.001</id>
 24.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-N</connection>
+D</connection>
  <connection>
-U</connection>
+W</connection>
+ <connection>
+N</connection>
  
 </sector>
 <sector><id>
@@ -3860,15 +6888,15 @@ Cube.003_Cube.001</id>
 32.0
 </size>
 <connection>
-D</connection>
- <connection>
-W</connection>
+U</connection>
  <connection>
 E</connection>
  <connection>
 S</connection>
  <connection>
-U</connection>
+D</connection>
+ <connection>
+W</connection>
  
 </sector>
 <sector><id>
@@ -3884,15 +6912,15 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-D</connection>
- <connection>
 E</connection>
+ <connection>
+U</connection>
+ <connection>
+D</connection>
  <connection>
 S</connection>
  <connection>
 N</connection>
- <connection>
-U</connection>
  
 </sector>
 <sector><id>
@@ -3908,3039 +6936,11 @@ Cube.003_Cube.001</id>
 49.0
 </size>
 <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-</group>
-<group><id>
-Cube.001_Cube.039</id>
-<material>
-<direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-E</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-S</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-N</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-U</direction>
-<color>
-#a3a3a3</color>
-</material>
-<position>
--114.0
--137.0
--26.0
-</position>
-<size>
-73.0
-73.0
-73.0
-</size>
-
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--133.0
-32.0
-</position>
-<size>
-34.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--133.0
-17.0
-</position>
-<size>
-2.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--137.0
-32.0
-</position>
-<size>
-37.0
-4.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--137.0
-17.0
-</position>
-<size>
-2.0
-4.0
-15.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--133.0
-45.0
-</position>
-<size>
-2.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--133.0
-32.0
-</position>
-<size>
-37.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--137.0
-42.0
-</position>
-<size>
-34.0
-4.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--137.0
-32.0
-</position>
-<size>
-2.0
-4.0
-10.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--133.0
-45.0
-</position>
-<size>
-34.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--137.0
-45.0
-</position>
-<size>
-2.0
-4.0
-2.0
-</size>
-<connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--133.0
-42.0
-</position>
-<size>
-34.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--133.0
-32.0
-</position>
-<size>
-2.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--137.0
--26.0
-</position>
-<size>
-34.0
-4.0
-43.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--137.0
-42.0
-</position>
-<size>
-37.0
-4.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--133.0
-17.0
-</position>
-<size>
-37.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--133.0
--26.0
-</position>
-<size>
-34.0
-69.0
-43.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--137.0
--26.0
-</position>
-<size>
-37.0
-4.0
-43.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--137.0
-45.0
-</position>
-<size>
-37.0
-4.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--133.0
-17.0
-</position>
-<size>
-34.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--137.0
-17.0
-</position>
-<size>
-37.0
-4.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--137.0
-17.0
-</position>
-<size>
-34.0
-4.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--137.0
--26.0
-</position>
-<size>
-2.0
-4.0
-43.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--133.0
--26.0
-</position>
-<size>
-2.0
-69.0
-43.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--133.0
-42.0
-</position>
-<size>
-37.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--133.0
--26.0
-</position>
-<size>
-37.0
-69.0
-43.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--137.0
-42.0
-</position>
-<size>
-2.0
-4.0
-3.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--114.0
--133.0
-42.0
-</position>
-<size>
-2.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--137.0
-45.0
-</position>
-<size>
-34.0
-4.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--112.0
--137.0
-32.0
-</position>
-<size>
-34.0
-4.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.001_Cube.039</id>
-<position>
--78.0
--133.0
-45.0
-</position>
-<size>
-37.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-</group>
-<group><id>
-Cube.002_Cube.000</id>
-<material>
-<direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-E</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-S</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-N</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-U</direction>
-<color>
-#a3a3a3</color>
-</material>
-<position>
-141.0
--137.0
-32.0
-</position>
-<size>
-73.0
-73.0
-73.0
-</size>
-
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--133.0
-90.0
-</position>
-<size>
-18.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--137.0
-45.0
-</position>
-<size>
-18.0
-4.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--137.0
-32.0
-</position>
-<size>
-48.0
-4.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--137.0
-45.0
-</position>
-<size>
-48.0
-4.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--137.0
-47.0
-</position>
-<size>
-48.0
-4.0
-30.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--137.0
-90.0
-</position>
-<size>
-7.0
-4.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--137.0
-90.0
-</position>
-<size>
-18.0
-4.0
-15.0
-</size>
-<connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--133.0
-42.0
-</position>
-<size>
-48.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--137.0
-77.0
-</position>
-<size>
-48.0
-4.0
-13.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--133.0
-77.0
-</position>
-<size>
-7.0
-69.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--133.0
-77.0
-</position>
-<size>
-48.0
-69.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--133.0
-45.0
-</position>
-<size>
-48.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--137.0
-42.0
-</position>
-<size>
-18.0
-4.0
-3.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--137.0
-32.0
-</position>
-<size>
-7.0
-4.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--133.0
-47.0
-</position>
-<size>
-7.0
-69.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--133.0
-90.0
-</position>
-<size>
-7.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--137.0
-77.0
-</position>
-<size>
-7.0
-4.0
-13.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--133.0
-45.0
-</position>
-<size>
-18.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--137.0
-77.0
-</position>
-<size>
-18.0
-4.0
-13.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--137.0
-90.0
-</position>
-<size>
-48.0
-4.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--133.0
-32.0
-</position>
-<size>
-48.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--133.0
-47.0
-</position>
-<size>
-48.0
-69.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--137.0
-47.0
-</position>
-<size>
-7.0
-4.0
-30.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--133.0
-45.0
-</position>
-<size>
-7.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--133.0
-32.0
-</position>
-<size>
-18.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--133.0
-32.0
-</position>
-<size>
-7.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--137.0
-47.0
-</position>
-<size>
-18.0
-4.0
-30.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--133.0
-42.0
-</position>
-<size>
-18.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--133.0
-90.0
-</position>
-<size>
-48.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--133.0
-77.0
-</position>
-<size>
-18.0
-69.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-166.0
--137.0
-42.0
-</position>
-<size>
-48.0
-4.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--137.0
-42.0
-</position>
-<size>
-7.0
-4.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--137.0
-32.0
-</position>
-<size>
-18.0
-4.0
-10.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-141.0
--133.0
-47.0
-</position>
-<size>
-18.0
-69.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--137.0
-45.0
-</position>
-<size>
-7.0
-4.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.002_Cube.000</id>
-<position>
-159.0
--133.0
-42.0
-</position>
-<size>
-7.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-</group>
-<group><id>
-Cube.004_Cube.002</id>
-<material>
-<direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-E</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-S</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-N</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-U</direction>
-<color>
-#a3a3a3</color>
-</material>
-<position>
--112.0
--137.0
--245.0
-</position>
-<size>
-73.0
-73.0
-73.0
-</size>
-
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--78.0
--133.0
--196.0
-</position>
-<size>
-37.0
-69.0
-24.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--78.0
--137.0
--245.0
-</position>
-<size>
-37.0
-4.0
-49.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--78.0
--137.0
--196.0
-</position>
-<size>
-37.0
-4.0
-24.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--112.0
--133.0
--196.0
-</position>
-<size>
-34.0
-69.0
-24.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--112.0
--137.0
--245.0
-</position>
-<size>
-34.0
-4.0
-49.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--41.0
--133.0
--196.0
-</position>
-<size>
-2.0
-69.0
-24.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--41.0
--137.0
--196.0
-</position>
-<size>
-2.0
-4.0
-24.0
-</size>
-<connection>
-W</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--78.0
--133.0
--245.0
-</position>
-<size>
-37.0
-69.0
-49.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--112.0
--137.0
--196.0
-</position>
-<size>
-34.0
-4.0
-24.0
-</size>
-<connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--41.0
--133.0
--245.0
-</position>
-<size>
-2.0
-69.0
-49.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--41.0
--137.0
--245.0
-</position>
-<size>
-2.0
-4.0
-49.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube.004_Cube.002</id>
-<position>
--112.0
--133.0
--245.0
-</position>
-<size>
-34.0
-69.0
-49.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-</group>
-<group><id>
-Cube_Cube.038</id>
-<material>
-<direction>
-D</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-W</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-E</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-S</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-N</direction>
-<color>
-#a3a3a3</color>
-</material>
-<material>
-<direction>
-U</direction>
-<color>
-#a3a3a3</color>
-</material>
-<position>
--78.0
--133.0
-17.0
-</position>
-<size>
-73.0
-73.0
-73.0
-</size>
-
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--64.0
-42.0
-</position>
-<size>
-2.0
-4.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--133.0
-42.0
-</position>
-<size>
-37.0
-69.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--64.0
-45.0
-</position>
-<size>
-16.0
-4.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--133.0
-47.0
-</position>
-<size>
-2.0
-69.0
-30.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--133.0
-45.0
-</position>
-<size>
-2.0
-69.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--64.0
-32.0
-</position>
-<size>
-37.0
-4.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--133.0
-77.0
-</position>
-<size>
-2.0
-69.0
-13.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--64.0
-45.0
-</position>
-<size>
-37.0
-4.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--64.0
-77.0
-</position>
-<size>
-2.0
-4.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--64.0
-42.0
-</position>
-<size>
-18.0
-4.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--64.0
-47.0
-</position>
-<size>
-16.0
-4.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--133.0
-32.0
-</position>
-<size>
-37.0
-69.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--133.0
-47.0
-</position>
-<size>
-16.0
-69.0
-30.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--64.0
-32.0
-</position>
-<size>
-2.0
-4.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--64.0
-77.0
-</position>
-<size>
-18.0
-4.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--133.0
-47.0
-</position>
-<size>
-18.0
-69.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--64.0
-17.0
-</position>
-<size>
-16.0
-4.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--133.0
-77.0
-</position>
-<size>
-37.0
-69.0
-13.0
-</size>
-<connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--133.0
-47.0
-</position>
-<size>
-37.0
-69.0
-30.0
-</size>
-<connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--133.0
-32.0
-</position>
-<size>
-18.0
-69.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--133.0
-45.0
-</position>
-<size>
-18.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--64.0
-17.0
-</position>
-<size>
-37.0
-4.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--64.0
-47.0
-</position>
-<size>
-37.0
-4.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--133.0
-17.0
-</position>
-<size>
-16.0
-69.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--133.0
-42.0
-</position>
-<size>
-18.0
-69.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--64.0
-45.0
-</position>
-<size>
-18.0
-4.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--133.0
-77.0
-</position>
-<size>
-16.0
-69.0
-13.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--64.0
-17.0
-</position>
-<size>
-2.0
-4.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--64.0
-32.0
-</position>
-<size>
-16.0
-4.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--64.0
-32.0
-</position>
-<size>
-18.0
-4.0
-10.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--64.0
-77.0
-</position>
-<size>
-37.0
-4.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--133.0
-45.0
-</position>
-<size>
-37.0
-69.0
-2.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--133.0
-17.0
-</position>
-<size>
-2.0
-69.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--133.0
-32.0
-</position>
-<size>
-2.0
-69.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--64.0
-42.0
-</position>
-<size>
-16.0
-4.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--133.0
-17.0
-</position>
-<size>
-18.0
-69.0
-15.0
-</size>
-<connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--133.0
-45.0
-</position>
-<size>
-16.0
-69.0
-2.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--133.0
-32.0
-</position>
-<size>
-16.0
-69.0
-10.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--64.0
-17.0
-</position>
-<size>
-18.0
-4.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--133.0
-42.0
-</position>
-<size>
-2.0
-69.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--64.0
-47.0
-</position>
-<size>
-2.0
-4.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--133.0
-77.0
-</position>
-<size>
-18.0
-69.0
-13.0
-</size>
-<connection>
-W</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--133.0
-17.0
-</position>
-<size>
-37.0
-69.0
-15.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
-U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--23.0
--64.0
-47.0
-</position>
-<size>
-18.0
-4.0
-30.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--78.0
--64.0
-42.0
-</position>
-<size>
-37.0
-4.0
-3.0
-</size>
-<connection>
-D</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--133.0
-42.0
-</position>
-<size>
-16.0
-69.0
-3.0
-</size>
-<connection>
-W</connection>
- <connection>
-E</connection>
- <connection>
-S</connection>
- <connection>
-N</connection>
- <connection>
 U</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--41.0
--64.0
-45.0
-</position>
-<size>
-2.0
-4.0
-2.0
-</size>
-<connection>
-D</connection>
  <connection>
-W</connection>
- <connection>
 E</connection>
  <connection>
 S</connection>
- <connection>
-N</connection>
- 
-</sector>
-<sector><id>
-Cube_Cube.038</id>
-<position>
--39.0
--64.0
-77.0
-</position>
-<size>
-16.0
-4.0
-13.0
-</size>
-<connection>
-D</connection>
- <connection>
-W</connection>
- <connection>
-E</connection>
  <connection>
 N</connection>
  

@@ -2,7 +2,6 @@ package br.odb.derelict;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.libscene.GroupSector;
 
 public class SetDescriptionCommand extends UserCommandLineAction {
 

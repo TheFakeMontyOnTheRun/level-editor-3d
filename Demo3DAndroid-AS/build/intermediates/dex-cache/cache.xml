@@ -33,21 +33,21 @@
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/libscene-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="0e2ae9dcf8ac5eb3a7efcc2c4b9a35b60c4c7b2d">
+        sha1="17ce6f8d95ba9bc8943cfe009f962f442841b597">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libscene-1.0-SNAPSHOT-6494a2632537ae3b0b9a7accbd7df6f73b694ff8.jar" />
     </item>
     <item
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/libworldproc-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="1c84edf3ff012f1a1f514baebaeeba1d120ffe0b">
+        sha1="403508026648f7ac7d18226f40e376436d90a5a0">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libworldproc-1.0-SNAPSHOT-c85fa8c63b51b995e2407d10cf36ff4a0ff66553.jar" />
     </item>
     <item
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/gameutils-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="20f4a2c2bcc831d0614f16bcb05ab1fd47215f77">
+        sha1="ff981de10cbfd67a2de9f038d866def566b9c833">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gameutils-1.0-SNAPSHOT-973a63e7f377fcee4475db55da09fa90aa36d036.jar" />
     </item>
     <item
