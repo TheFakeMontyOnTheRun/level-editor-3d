@@ -9,8 +9,11 @@ import android.view.View;
 
 import org.xml.sax.SAXException;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -40,17 +43,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
         protected Void doInBackground(Void... voids) {
             try {
 
+/*
+                InputStream buffer = new BufferedInputStream( fileInput );
+                ObjectInput input = new ObjectInputStream(buffer);
+                world = (World) input.readObject();
+*/
+
                 world = WorldLoader.build(fileInput);
                 SceneTesselator.generateSubSectorQuadsForWorld(world);
                 view.setScene(world);
-
-
+/*
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+*/
             } catch (IOException e) {
                 e.printStackTrace();
+
             } catch (SAXException e) {
                 e.printStackTrace();
             } catch (ParserConfigurationException e) {
                 e.printStackTrace();
+
             }
 
             return null;
@@ -90,7 +103,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             sr = srs.get(c);
 
                             if (sr instanceof Sector) {
-                                if (sr.contains(view.renderer.camera)) {
+                                if (sr.isInside(view.renderer.camera)) {
                                     System.out.println("got inside " + c);
                                     lastValidPosition.set(view.renderer.camera);
                                     inside = true;
