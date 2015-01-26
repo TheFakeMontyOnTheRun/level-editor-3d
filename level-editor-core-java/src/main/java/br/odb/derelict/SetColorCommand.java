@@ -16,7 +16,7 @@ public class SetColorCommand extends UserCommandLineAction {
 
 	@Override
 	public int requiredOperands() {
-		return 4;
+		return 3;
 	}
 
 	@Override
@@ -24,18 +24,10 @@ public class SetColorCommand extends UserCommandLineAction {
 		LevelEditor editor = (LevelEditor) app;
 
 		String[] parms;
-		Direction d;
 		parms = operands.split("[ ]+");
 
 		GroupSector target = null;
 		Color color;
-
-		d = Direction.getDirectionForPrettyName(parms[1]);
-
-		if (d == null) {
-
-			d = Direction.getDirectionForSimpleName(parms[1]);
-		}
 
 		target = (GroupSector) editor.world.masterSector.getChild(parms[0]
 				.trim());
@@ -51,11 +43,11 @@ public class SetColorCommand extends UserCommandLineAction {
 			return;
 		}
 		
-		color = new Color(Float.parseFloat(parms[2]),
-				Float.parseFloat(parms[3]), Float.parseFloat(parms[4]));
+		color = new Color(Float.parseFloat(parms[1]),
+				Float.parseFloat(parms[2]), Float.parseFloat(parms[3]));
 
 		Material m = new Material( color, null, null, null );
-		target.materials.put(d, m);
+		target.material = m;
 
 	}
 

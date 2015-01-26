@@ -9,7 +9,6 @@ import br.odb.libscene.SceneTesselator;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.utils.Color;
-import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 public class GenerateSVGCommand extends UserCommandLineAction {
@@ -50,8 +49,8 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 				sb.append(" width = '" + sr.size.x + "' ");
 				sb.append(" height = '" + sr.size.z + "' ");
 
-				if (sr instanceof GroupSector && ((GroupSector)sr).materials.get(Direction.FLOOR) != null) {
-					c = ((GroupSector)sr).materials.get(Direction.FLOOR).mainColor;
+				if (sr instanceof GroupSector && ((GroupSector)sr).material != null) {
+					c = ((GroupSector)sr).material.mainColor;
 				} else {
 					c = new Color(64, 64, 64, 64);
 				}
