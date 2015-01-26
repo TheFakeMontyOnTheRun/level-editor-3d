@@ -7,9 +7,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.StatusLine;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.xml.sax.SAXException;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
@@ -35,6 +42,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     volatile InputStream vertexShader;
     volatile InputStream fragmentShader;
     volatile InputStream fileInput;
+    volatile int gameId;
+    volatile int playerId;
 
     private class LevelLoader extends AsyncTask< Void, Void, Void > {
 
@@ -43,6 +52,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         protected Void doInBackground(Void... voids) {
             try {
 
+
+
 /*
                 InputStream buffer = new BufferedInputStream( fileInput );
                 ObjectInput input = new ObjectInputStream(buffer);
@@ -50,8 +61,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 */
 
                 world = WorldLoader.build(fileInput);
+
+
+
                 SceneTesselator.generateSubSectorQuadsForWorld(world);
                 view.setScene(world);
+
+//                startNetGame();
 /*
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -117,7 +133,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         }
                     }
                 }
-            }).start();
+            })
+            //        .start()
+            ;
 
             progressDialog.cancel();
             view.renderer.ready = true;
@@ -132,8 +150,38 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
+    void startNetGame() {
+        String response = makeRequest("http://localhost:8080/multiplayer-server/GetGameId?gameType=1");
+        gameId = Integer.parseInt( response );
+    }
 
-    @Override
+    public static String makeRequest( String url ) {
+
+        try {
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpResponse response = httpclient.execute(new HttpGet(url));
+            StatusLine statusLine = response.getStatusLine();
+
+            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                response.getEntity().writeTo(out);
+                String responseString = out.toString();
+                out.close();
+
+
+                return responseString;
+
+            } else {
+                //Closes the connection.
+                response.getEntity().getContent().close();
+                return null;
+            }
+        } catch ( Exception  e ) {
+            return null;
+        }
+    }
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
