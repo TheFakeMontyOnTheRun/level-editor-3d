@@ -111,7 +111,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		Vec3 v;
 		Color c;
 		
-		//drawGridLines( gl );
+		drawGridLines( gl );
 
 		
 		gl.glBegin(GL_TRIANGLES);

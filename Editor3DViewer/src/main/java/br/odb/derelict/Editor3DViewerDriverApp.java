@@ -70,7 +70,7 @@ public class Editor3DViewerDriverApp {
 			
 
 				canvas.setScene( world );
-
+				System.out.println( "loaded " + canvas.polysToRender.size() + " polys" );
 				canvas.setPreferredSize(new Dimension(CANVAS_WIDTH,
 						CANVAS_HEIGHT));
 
