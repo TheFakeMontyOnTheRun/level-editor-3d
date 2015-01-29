@@ -28,7 +28,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 		OutputStream os;
 		LevelEditor editor = (LevelEditor) app;
 		os = editor.openAsOutputStream("/Users/monty/view.svg");
-		os.write( SVGRenderer.renderXZ( SceneTesselator.generateSubSectorQuadsForWorld( editor.world ) ).getBytes() );
+		os.write( SVGRenderer.renderXZ( editor.world ).getBytes() );
 		
 		os = editor.openAsOutputStream("/Users/monty/view.opt.svg");
 		StringBuilder sb = new StringBuilder(
@@ -48,12 +48,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 				sb.append(" y = '" + v.z + "' ");
 				sb.append(" width = '" + sr.size.x + "' ");
 				sb.append(" height = '" + sr.size.z + "' ");
-
-				if (sr instanceof GroupSector && ((GroupSector)sr).material != null) {
-					c = ((GroupSector)sr).material.mainColor;
-				} else {
-					c = new Color(64, 64, 64, 64);
-				}
+				c = SceneTesselator.getColorForFace( sr );
 
 				sb.append(" style = 'fill: " + c.getHTMLColor() + ";' ");
 

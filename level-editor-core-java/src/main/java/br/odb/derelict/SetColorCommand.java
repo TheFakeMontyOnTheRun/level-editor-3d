@@ -5,7 +5,6 @@ import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
-import br.odb.utils.Direction;
 
 public class SetColorCommand extends UserCommandLineAction {
 
@@ -47,7 +46,7 @@ public class SetColorCommand extends UserCommandLineAction {
 				Float.parseFloat(parms[2]), Float.parseFloat(parms[3]));
 
 		Material m = new Material( color, null, null, null );
-		target.material = m;
+		target.mesh.material = m;
 
 	}
 

@@ -8,9 +8,9 @@ import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.utils.Direction;
 
-public class ClearLinksCommand extends UserCommandLineAction {
+public class ResetLeafIdsCommand extends UserCommandLineAction {
 
-	public ClearLinksCommand() {
+	public ResetLeafIdsCommand() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -34,24 +34,24 @@ public class ClearLinksCommand extends UserCommandLineAction {
 	}
 
 	private void clearMesh(ApplicationClient client, GroupSector sector) {
+		
+		int counter = 0;
+		
 		for ( SpaceRegion sr : sector.getSons() ) {
 			if ( sr instanceof GroupSector ) {
 				clearMesh( client, (GroupSector) sr );
 			} else if ( sr instanceof Sector ) {
-				
-				for ( int c = 0; c < Direction.values().length; ++c ) {
-					((Sector) sr ).links[ c ] = null;	
-				}				
+				sr.id = "" + counter++;
 			}
 		}		
 		
-		client.alert( "removing links from sector " + sector.id + " sons." );
+		client.alert( "resetting Ids from sector " + sector.id + " sons." );
 
 	}
 
 	@Override
 	public String toString() {
-		return "clear-links";
+		return "reset-leaf-ids";
 	}
 
 }
