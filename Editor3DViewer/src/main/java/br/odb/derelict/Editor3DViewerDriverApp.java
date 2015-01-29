@@ -17,11 +17,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 import br.odb.libscene.SceneTesselator;
-import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.WorldLoader;
-import br.odb.utils.math.Vec3;
 
 import com.jogamp.opengl.util.FPSAnimator;
 
@@ -48,6 +46,7 @@ public class Editor3DViewerDriverApp {
 					FileInputStream fis = new FileInputStream(
 							System.getProperty( "user.home" ) + "/prison.opt.xml");
 					world = WorldLoader.build(fis);
+					//world.checkForHardLinks_new();
 					SceneTesselator.generateSubSectorQuadsForWorld(world);
 
 				} catch (FileNotFoundException e1) {

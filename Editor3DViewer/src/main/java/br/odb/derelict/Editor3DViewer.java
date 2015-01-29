@@ -111,8 +111,31 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		Vec3 v;
 		Color c;
 		
-		drawGridLines( gl );
+		//drawGridLines( gl );
 
+//		gl.glBegin( GL2.GL_LINES );
+//			Vec3 pos;
+//			Vec3 center;
+//			
+//			for ( SpaceRegion sr : this.sectorsToDisplay ) {
+//
+//				pos = sr.getAbsolutePosition();
+//				center = sr.getAbsoluteCenter();
+//				
+//				gl.glColor3f( 0.0f, 0.0f, 0.0f );
+//				
+//				gl.glVertex3f( pos.x, pos.y, pos.z );
+//				gl.glVertex3f( pos.x + sr.size.x, pos.y, pos.z);
+//
+//				gl.glVertex3f( pos.x, pos.y, pos.z );
+//				gl.glVertex3f( pos.x, pos.y + sr.size.y, pos.z);
+//
+//				gl.glVertex3f( pos.x, pos.y, pos.z );
+//				gl.glVertex3f( pos.x, pos.y, pos.z + sr.size.z );
+//				
+//			}		
+//		gl.glEnd();
+		
 		
 		gl.glBegin(GL_TRIANGLES);
 
@@ -120,7 +143,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			
 			c = poly.color;
 
-			gl.glColor3f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f );
+			gl.glColor4f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, 0.5f );
 			
 			v = poly.getVertex(0);
 			gl.glVertex3f(v.x, v.y, v.z);
@@ -222,10 +245,13 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	}
 
 
-
+	List< SpaceRegion > sectorsToDisplay = new ArrayList< SpaceRegion >();
+	
 	public void setScene(World world) {
 		this.polysToRender.clear();
 		this.loadGeometryFromScene( world.masterSector );
 		
+		
+		sectorsToDisplay.addAll( world.getAllRegionsAsList() );
 	}
 }
