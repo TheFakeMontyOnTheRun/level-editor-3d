@@ -29,18 +29,21 @@ public class ResetLeafIdsCommand extends UserCommandLineAction {
 	@Override
 	public void run(ConsoleApplication app, String arg1) throws Exception {
 		LevelEditor editor = (LevelEditor) app; 
-		clearMesh( app.getClient(), editor.world.masterSector );
+		resetIds( app.getClient(), editor.world.masterSector, ( "parents".equalsIgnoreCase( arg1 ) ) );
 
 	}
 
-	private void clearMesh(ApplicationClient client, GroupSector sector) {
+	private void resetIds(ApplicationClient client, GroupSector sector, boolean parentsToo ) {
 		
 		int counter = 0;
 		
 		for ( SpaceRegion sr : sector.getSons() ) {
+			
 			if ( sr instanceof GroupSector ) {
-				clearMesh( client, (GroupSector) sr );
-			} else if ( sr instanceof Sector ) {
+				resetIds( client, (GroupSector) sr, parentsToo );
+			} 
+			
+			if ( sr instanceof Sector || parentsToo ) {
 				sr.id = "" + counter++;
 			}
 		}		
