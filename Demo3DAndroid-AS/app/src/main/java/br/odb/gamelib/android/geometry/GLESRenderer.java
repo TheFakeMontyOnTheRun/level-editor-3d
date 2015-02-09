@@ -19,6 +19,8 @@ import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.util.Log;
+
+import br.odb.leveleditor3d.android.LightSource;
 import br.odb.leveleditor3d.android.R;
 import br.odb.libstrip.IndexedSetFace;
 import br.odb.libstrip.Mesh;
@@ -245,8 +247,8 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
  */
 	private void drawMeshGLES2(Mesh mesh) {
 
-		if (!mesh.visible )
-			return;
+//		if (!mesh.visible )
+//			return;
 
 //		if (mesh.manager != null) {
 //			mesh.manager.flush();

@@ -8,6 +8,7 @@ import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneTesselator;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
+import br.odb.libstrip.GeneralTriangleFactory;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
@@ -29,7 +30,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 		LevelEditor editor = (LevelEditor) app;
 		os = editor.openAsOutputStream("/Users/monty/view.svg");
 		os.write( SVGRenderer.renderXZ( editor.world ).getBytes() );
-		
+		SceneTesselator tesselator = new SceneTesselator( new GeneralTriangleFactory() );
 		os = editor.openAsOutputStream("/Users/monty/view.opt.svg");
 		StringBuilder sb = new StringBuilder(
 				"<?xml version='1.0' encoding='UTF-8' standalone='no'?>\n<svg xmlns='http://www.w3.org/2000/svg'>\n");
@@ -48,7 +49,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 				sb.append(" y = '" + v.z + "' ");
 				sb.append(" width = '" + sr.size.x + "' ");
 				sb.append(" height = '" + sr.size.z + "' ");
-				c = SceneTesselator.getColorForFace( sr );
+				c = tesselator.getColorForFace( sr );
 
 				sb.append(" style = 'fill: " + c.getHTMLColor() + ";' ");
 

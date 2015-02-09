@@ -1,11 +1,9 @@
 package br.odb.derelict;
 
-import br.odb.gameapp.ApplicationClient;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneTesselator;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libstrip.GeneralTriangleFactory;
 
 public class TesselateCommand extends UserCommandLineAction {
 
@@ -28,7 +26,7 @@ public class TesselateCommand extends UserCommandLineAction {
 	@Override
 	public void run(ConsoleApplication app, String arg1) throws Exception {
 		LevelEditor editor = (LevelEditor) app; 
-		SceneTesselator.generateSubSectorQuadsForWorld( editor.world );
+		new SceneTesselator( new GeneralTriangleFactory() ).generateSubSectorQuadsForWorld( editor.world );
 	}
 
 	@Override

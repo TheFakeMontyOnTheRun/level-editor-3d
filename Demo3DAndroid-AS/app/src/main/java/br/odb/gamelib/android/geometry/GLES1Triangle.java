@@ -23,7 +23,7 @@ import br.odb.utils.math.Vec3;
  * 
  */
 public class GLES1Triangle extends GeneralTriangle implements
-		GLESIndexedSetFace, AbstractTriangle {
+		GLESIndexedSetFace {
 
 	//private FloatBuffer textureBuffer;
 	private FloatBuffer colorBuffer;
@@ -33,6 +33,7 @@ public class GLES1Triangle extends GeneralTriangle implements
 	private float[] color = new float[12];
 	int[] colorBits = new int[4];
 	private boolean visible = true;
+    public int light = 0;
 	//private float[] textureCoordinates;
 
 	// ------------------------------------------------------------------------------------------------------------

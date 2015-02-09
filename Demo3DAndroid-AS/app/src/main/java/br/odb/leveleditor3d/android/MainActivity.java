@@ -21,16 +21,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import br.odb.gamelib.android.geometry.GLES1Triangle;
+import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneTesselator;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.WorldLoader;
+import br.odb.libstrip.IndexedSetFace;
 import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -48,30 +52,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private class LevelLoader extends AsyncTask< Void, Void, Void > {
 
 
+
         @Override
         protected Void doInBackground(Void... voids) {
             try {
 
-
-
-/*
-                InputStream buffer = new BufferedInputStream( fileInput );
-                ObjectInput input = new ObjectInputStream(buffer);
-                world = (World) input.readObject();
-*/
-
                 world = WorldLoader.build(fileInput);
-
-
-
-                SceneTesselator.generateSubSectorQuadsForWorld(world);
+                new SceneTesselator( new GLES1TriangleFactory() ).generateSubSectorQuadsForWorld(world);
                 view.setScene(world);
-
-//                startNetGame();
-/*
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-*/
             } catch (IOException e) {
                 e.printStackTrace();
 
@@ -123,6 +111,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                                     System.out.println("got inside " + c);
                                     lastValidPosition.set(view.renderer.camera);
                                     inside = true;
+                                    view.lit((GroupSector) sr.parent, view.light0);
                                 }
                             }
 
@@ -134,7 +123,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     }
                 }
             })
-            //        .start()
+            .start()
             ;
 
             progressDialog.cancel();

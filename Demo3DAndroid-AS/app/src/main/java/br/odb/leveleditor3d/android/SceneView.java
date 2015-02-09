@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.Key;
+import java.util.ArrayList;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
@@ -20,10 +21,22 @@ import br.odb.libscene.GroupSector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libstrip.IndexedSetFace;
+import br.odb.utils.math.Vec3;
 
 public class SceneView extends GLSurfaceView {
 
-	GLESRenderer renderer;
+    final public ArrayList<LightSource> lightSources = new ArrayList<LightSource>();
+    LightSource light0 = new LightSource( new Vec3(), 128);
+
+    public void lit( GroupSector s, LightSource ls ) {
+
+        for ( IndexedSetFace isf : s.mesh.faces ) {
+   //         ( (GLES1Triangle ) isf ).light = ls.intensity;
+        }
+    }
+
+
+    GLESRenderer renderer;
 
     public SceneView( Context context ) {
         super( context );
@@ -136,10 +149,12 @@ public class SceneView extends GLSurfaceView {
 
     private void loadGeometryFromScene(GroupSector sector) {
 
+        GLES1TriangleFactory factory = GLES1TriangleFactory.getInstance();
+        GLES1Triangle trig;
 		for (IndexedSetFace isf : sector.mesh.faces) {
             ++polyCount;
-            renderer.addToVA(GLES1TriangleFactory.getInstance()
-					.makeTrigFrom(isf));
+            renderer.addGeometryToScene((br.odb.gamelib.android.geometry.GLESIndexedSetFace) isf);
+            //renderer.addToVA(GLES1TriangleFactory.getInstance().makeTrigFrom(isf));
 		}
 
 		for (SpaceRegion sr : sector.getSons()) {

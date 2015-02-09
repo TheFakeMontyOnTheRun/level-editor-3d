@@ -1,11 +1,13 @@
 package br.odb.gamelib.android.geometry;
  
 import br.odb.libstrip.AbstractTriangleFactory;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleFactory;
 import br.odb.libstrip.IndexedSetFace;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
-public class GLES1TriangleFactory implements AbstractTriangleFactory {
+public class GLES1TriangleFactory extends GeneralTriangleFactory {
 
 	private static GLES1TriangleFactory instance;
 
@@ -33,7 +35,9 @@ public class GLES1TriangleFactory implements AbstractTriangleFactory {
 		toReturn.z2 = z2;
 		Color c = new Color(color);
 
-		float lightFactor = 1;
+		float lightFactor = 1.0f;
+
+        lightDirection = new Vec3( 1.0f, 1.0f, 1.0f );
 		
 		if ( lightDirection != null ) {
 			
@@ -51,11 +55,15 @@ public class GLES1TriangleFactory implements AbstractTriangleFactory {
 	}
 
 	public GLESIndexedSetFace makeTrigFrom(IndexedSetFace isf) {
+        if ( isf instanceof GeneralTriangle) {
+            GeneralTriangle gt = (GeneralTriangle) isf;
+            return makeTrig( gt.x0, gt.y0, gt.z0, gt.x1, gt.y1, gt.z1, gt.x2, gt.y2, gt.z2, new Color( gt.r, gt.g, gt.b, gt.a ).getARGBColor(), null);
+        } else {
+            Vec3 v0 = isf.getVertex(0);
+            Vec3 v1 = isf.getVertex(1);
+            Vec3 v2 = isf.getVertex(2);
 
-		Vec3 v0 = isf.getVertex( 0 );
-		Vec3 v1 = isf.getVertex( 1 );
-		Vec3 v2 = isf.getVertex( 2 );
-		
-		return makeTrig( v0.x, v0.y, v0.z, v1.x, v1.y, v1.z, v2.x, v2.y, v2.z, isf.getColor().getARGBColor(), null );
+            return makeTrig(v0.x, v0.y, v0.z, v1.x, v1.y, v1.z, v2.x, v2.y, v2.z, isf.getColor().getARGBColor(), null);
+        }
 	}
 }
