@@ -33,7 +33,7 @@
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/libscene-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="ea4775d57960c79426c79dae4cd1769a884e86a4">
+        sha1="8ca6ef583c4d10926f172a1ee16f9057b2205257">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libscene-1.0-SNAPSHOT-6494a2632537ae3b0b9a7accbd7df6f73b694ff8.jar" />
     </item>
     <item
@@ -75,7 +75,7 @@
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/libstrip-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="24177172049750e8963d0b3e88b2e54165f95a0c">
+        sha1="a7775526b56a115f92e6277530484babe32ad154">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libstrip-1.0-SNAPSHOT-64edf5da8ad4ca223c27b0a74572404a2d534917.jar" />
     </item>
 

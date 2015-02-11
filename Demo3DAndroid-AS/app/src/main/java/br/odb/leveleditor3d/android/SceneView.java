@@ -6,12 +6,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.Key;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.widget.Space;
+
 import br.odb.gamelib.android.geometry.GLES1Square;
 import br.odb.gamelib.android.geometry.GLES1SquareFactory;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
@@ -26,12 +30,31 @@ import br.odb.utils.math.Vec3;
 public class SceneView extends GLSurfaceView {
 
     final public ArrayList<LightSource> lightSources = new ArrayList<LightSource>();
+    final public Map< LightSource, GroupSector > lightsForPlace = new HashMap< LightSource, GroupSector>();
+
     LightSource light0 = new LightSource( new Vec3(), 128);
 
     public void lit( GroupSector s, LightSource ls ) {
 
         for ( IndexedSetFace isf : s.mesh.faces ) {
    //         ( (GLES1Triangle ) isf ).light = ls.intensity;
+        }
+    }
+
+    public void findPlaceForLightSource( LightSource ls, World world ) {
+        for (SpaceRegion sr : world.getAllRegionsAsList() ) {
+            if ( sr instanceof GroupSector ) {
+                if ( sr.isInside( ls.position ) ) {
+                    lightsForPlace.put( ls, (GroupSector)sr );
+                    return;
+                }
+            }
+        }
+    }
+
+    public void processLights( World world ) {
+        for ( LightSource ls : lightSources ) {
+            findPlaceForLightSource( ls, world );
         }
     }
 
@@ -56,14 +79,7 @@ public class SceneView extends GLSurfaceView {
 			renderer = new GLESRenderer( 10000, vertexShader, fragmentShader,
 					this.getContext());
 
-			// GLES1Triangle trig = GLES1TriangleFactory.getInstance().makeTrig(
-			// -1.0f, 1.0f, -5.0f, 1.0f, 1.0f, -5.0f, 0.0f, -1.0f, -5.0f,
-			// 0xFFFFFF00, null);
-			// trig.flushToGLES();
-			// trig.setTextureCoordenates(new float[] { 0.0f, 0.0f, 0.0f, 1.0f,
-			// 1.0f, 0.0f });
-			//
-			// renderer.addGeometryToScene(trig);
+
 			setFocusable(true);
 			setClickable(true);
 			setLongClickable(true);
@@ -145,6 +161,42 @@ public class SceneView extends GLSurfaceView {
 	}
 
 
+    public void changeHue( GLES1Triangle trig ) {
+        switch ( trig.hint ) {
+            case W:
+                trig.r *= 0.8;
+                trig.g *= 0.8;
+                trig.b *= 0.8;
+                break;
+            case E:
+                trig.r *= 0.6;
+                trig.g *= 0.6;
+                trig.b *= 0.6;
+                break;
+            case N:
+                trig.r *= 0.4;
+                trig.g *= 0.4;
+                trig.b *= 0.4;
+                break;
+            case S:
+                trig.r *= 0.2;
+                trig.g *= 0.2;
+                trig.b *= 0.2;
+                break;
+            case FLOOR:
+                trig.r *= 0.9;
+                trig.g *= 0.9;
+                trig.b *= 0.9;
+                break;
+            case CEILING:
+                trig.r *= 0.1;
+                trig.g *= 0.1;
+                trig.b *= 0.1;
+                break;
+
+        }
+    }
+
     int polyCount = 0;
 
     private void loadGeometryFromScene(GroupSector sector) {
@@ -153,8 +205,10 @@ public class SceneView extends GLSurfaceView {
         GLES1Triangle trig;
 		for (IndexedSetFace isf : sector.mesh.faces) {
             ++polyCount;
-            renderer.addGeometryToScene((br.odb.gamelib.android.geometry.GLESIndexedSetFace) isf);
-            //renderer.addToVA(GLES1TriangleFactory.getInstance().makeTrigFrom(isf));
+            changeHue( (GLES1Triangle) isf );
+            ((GLES1Triangle) isf).flushToGLES();
+            renderer.addGeometryToScene((GLES1Triangle) isf);
+            //renderer.addToVA((br.odb.gamelib.android.geometry.GLESIndexedSetFace) isf);
 		}
 
 		for (SpaceRegion sr : sector.getSons()) {
@@ -167,6 +221,25 @@ public class SceneView extends GLSurfaceView {
 	public void setScene(World scene) {
 		renderer.clearScreenGeometry();
 		loadGeometryFromScene(scene.masterSector);
+
+        int lightsLeft = 20;
+        int skip = 2;
+        for (SpaceRegion sr : scene.getAllRegionsAsList() ) {
+            if ( sr instanceof GroupSector && lightsLeft > 0 ) {
+
+                skip--;
+
+                if ( skip == 0 ) {
+                    skip = 2;
+                    lightsLeft--;
+
+                    lightSources.add( new LightSource( sr.getAbsoluteCenter(), 128 ) );
+                }
+            }
+        }
+
+
+        processLights( scene );
 	}
 
 	public String readFully(InputStream inputStream, String encoding)
