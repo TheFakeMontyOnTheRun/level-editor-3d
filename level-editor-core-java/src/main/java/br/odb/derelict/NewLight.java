@@ -2,10 +2,9 @@ package br.odb.derelict;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.libscene.GroupSector;
-import br.odb.libscene.builders.GroupSectorBuilder;
+import br.odb.libscene.LightNode;
 
-public class InfoCommand extends UserCommandLineAction {
+public class NewLight extends UserCommandLineAction {
 
 	@Override
 	public String getHelp() {
@@ -20,13 +19,11 @@ public class InfoCommand extends UserCommandLineAction {
 	@Override
 	public void run(ConsoleApplication app, String operand) throws Exception {
 		LevelEditor editor = (LevelEditor) app;
-		
-
-		app.getClient().printNormal( GroupSectorBuilder.gsb.toXML( (GroupSector)editor.world.masterSector.getChild( operand ) ) );
+		editor.world.masterSector.addChild( new LightNode( operand.trim() ) );
 	}
 
 	@Override
 	public String toString() {
-		return "info";
+		return "new-light";
 	}
 }

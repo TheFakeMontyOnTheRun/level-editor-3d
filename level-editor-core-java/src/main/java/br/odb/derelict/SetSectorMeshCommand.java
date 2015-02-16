@@ -6,7 +6,7 @@ import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 
 public class SetSectorMeshCommand extends UserCommandLineAction {
 
@@ -24,7 +24,7 @@ public class SetSectorMeshCommand extends UserCommandLineAction {
 	public void run(ConsoleApplication app, String operand) throws Exception {
 		LevelEditor editor = (LevelEditor) app;
 		String [] operands = operand.split( "[ ]+" );
-		SpaceRegion sr = editor.world.masterSector.getChild( operands[ 0 ] );
+		SceneNode sr = editor.world.masterSector.getChild( operands[ 0 ] );
 
 		if ( sr instanceof GroupSector ) {
 			

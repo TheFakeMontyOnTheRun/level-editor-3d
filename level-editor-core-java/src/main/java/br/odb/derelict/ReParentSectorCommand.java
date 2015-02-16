@@ -3,13 +3,12 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 
 public class ReParentSectorCommand extends UserCommandLineAction {
 
 	@Override
 	public String getHelp() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -24,8 +23,12 @@ public class ReParentSectorCommand extends UserCommandLineAction {
 		String[] operands;
 		
 		operands = operand.split( "[ ]+" );
-		SpaceRegion subject = editor.world.masterSector.getChild( operands[ 0 ] );
-		SpaceRegion newParent = editor.world.masterSector.getChild( operands[ 1 ] );
+		SceneNode subject = editor.world.masterSector.getChild( operands[ 0 ] );
+		SceneNode newParent = editor.world.masterSector.getChild( operands[ 1 ] );
+		
+		if ( subject == null || newParent == null ) {
+			app.getClient().alert( "invalid operands" );
+		}
 		
 		if ( newParent instanceof GroupSector ) {
 			( ( GroupSector) newParent ).addChild( subject );

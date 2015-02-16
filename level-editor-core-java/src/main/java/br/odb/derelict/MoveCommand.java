@@ -3,6 +3,7 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.SpaceRegion;
 import br.odb.utils.math.Vec3;
 
@@ -26,12 +27,12 @@ public class MoveCommand extends UserCommandLineAction {
 		
 		parms = operands.split( "[ ]+" );
 		
-		SpaceRegion target = null;
+		SceneNode target = null;
 		Vec3 pos;
 		
 		if ( parms.length >= 4 ) {
 			
-			target = (GroupSector) editor.world.masterSector.getChild( parms[ 0 ].trim() );
+			target = editor.world.masterSector.getChild( parms[ 0 ].trim() );
 			pos = new Vec3( Float.parseFloat( parms[ 1 ]), Float.parseFloat( parms[ 2 ]), Float.parseFloat( parms[ 3 ]) );
 			
 			if ( target != null && pos != null ) {

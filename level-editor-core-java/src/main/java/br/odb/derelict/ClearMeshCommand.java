@@ -4,13 +4,9 @@ import br.odb.gameapp.ApplicationClient;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 
 public class ClearMeshCommand extends UserCommandLineAction {
-
-	public ClearMeshCommand() {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public String getHelp() {
@@ -20,7 +16,6 @@ public class ClearMeshCommand extends UserCommandLineAction {
 
 	@Override
 	public int requiredOperands() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
@@ -32,7 +27,7 @@ public class ClearMeshCommand extends UserCommandLineAction {
 	}
 
 	private void clearMesh(ApplicationClient client, GroupSector sector) {
-		for ( SpaceRegion sr : sector.getSons() ) {
+		for ( SceneNode sr : sector.getSons() ) {
 			if ( sr instanceof GroupSector ) {
 				clearMesh( client, (GroupSector) sr );
 			}

@@ -14,13 +14,11 @@ public class ResizeCommand extends UserMetaCommandLineAction {
 
 	@Override
 	public String getHelp() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public int requiredOperands() {
-		// TODO Auto-generated method stub
 		return 4;
 	}
 
@@ -43,7 +41,6 @@ public class ResizeCommand extends UserMetaCommandLineAction {
 				target.size.set( pos );
 			}
 		}
-
 	}
 
 	@Override

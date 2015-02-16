@@ -24,7 +24,12 @@ public class NewSectorCommand extends UserCommandLineAction {
 	public void run(ConsoleApplication app, String operand ) throws Exception {
 		
 		LevelEditor editor = (LevelEditor) app;
-		editor.world.masterSector.addChild( new GroupSector( operand.trim() ) );
+		if ( operand.trim().length() > 0 ) {
+			editor.world.masterSector.addChild( new GroupSector( operand.trim() ) );	
+		} else {
+			app.getClient().alert( "Provide a id" );
+		}
+		
 	}
 
 	@Override

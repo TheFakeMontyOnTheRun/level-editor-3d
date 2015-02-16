@@ -1,16 +1,15 @@
 package br.odb.derelict;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
-import br.odb.utils.Direction;
+import br.odb.libscene.SceneNode;
 
 public class SetSectorTextureForFace extends UserCommandLineAction {
 
 	@Override
 	public String getHelp() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -22,15 +21,13 @@ public class SetSectorTextureForFace extends UserCommandLineAction {
 	@Override
 	public void run(ConsoleApplication app, String args) throws Exception {
 		String[] arg;
-		GroupSector gs;
-		SpaceRegion sr;
-		Direction d;
+		SceneNode sr;
 		LevelEditor editor = (LevelEditor) app;
 		arg = args.split( "[ ]+" );
 		
 		sr = editor.world.masterSector.getChild( arg[ 0 ] );
 		if ( sr instanceof GroupSector ) {
-		
+			throw new NotImplementedException();
 		} else {
 			app.getClient().alert( "Not a GroupSector" );
 		}

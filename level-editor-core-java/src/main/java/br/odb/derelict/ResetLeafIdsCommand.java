@@ -4,15 +4,10 @@ import br.odb.gameapp.ApplicationClient;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
-import br.odb.libscene.SpaceRegion;
-import br.odb.utils.Direction;
 
 public class ResetLeafIdsCommand extends UserCommandLineAction {
-
-	public ResetLeafIdsCommand() {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public String getHelp() {
@@ -22,7 +17,6 @@ public class ResetLeafIdsCommand extends UserCommandLineAction {
 
 	@Override
 	public int requiredOperands() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
@@ -37,7 +31,7 @@ public class ResetLeafIdsCommand extends UserCommandLineAction {
 		
 		int counter = 0;
 		
-		for ( SpaceRegion sr : sector.getSons() ) {
+		for ( SceneNode sr : sector.getSons() ) {
 			
 			if ( sr instanceof GroupSector ) {
 				resetIds( client, (GroupSector) sr, parentsToo );
@@ -56,5 +50,4 @@ public class ResetLeafIdsCommand extends UserCommandLineAction {
 	public String toString() {
 		return "reset-leaf-ids";
 	}
-
 }

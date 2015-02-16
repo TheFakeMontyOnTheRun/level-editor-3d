@@ -14,13 +14,6 @@ import br.odb.worldprocessing.GeometryCompiler;
  */
 public class GenerateSubSectorsCommand extends UserCommandLineAction {
 
-	/**
-	 * 
-	 */
-	public GenerateSubSectorsCommand() {
-		// TODO Auto-generated constructor stub
-	}
-
 	/* (non-Javadoc)
 	 * @see br.odb.gameapp.UserCommandLineAction#getHelp()
 	 */
@@ -56,8 +49,6 @@ public class GenerateSubSectorsCommand extends UserCommandLineAction {
 	 */
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "compile";
 	}
-
 }

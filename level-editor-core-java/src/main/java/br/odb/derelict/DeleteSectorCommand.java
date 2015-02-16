@@ -3,7 +3,7 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 
 public class DeleteSectorCommand extends UserCommandLineAction {
 
@@ -21,7 +21,7 @@ public class DeleteSectorCommand extends UserCommandLineAction {
 	public void run(ConsoleApplication app, String operand) throws Exception {
 		LevelEditor editor = (LevelEditor) app;
 		GroupSector masterSector = editor.world.masterSector;
-		SpaceRegion subject = masterSector.getChild( operand );
+		SceneNode subject = masterSector.getChild( operand );
 		
 		if ( subject.parent  instanceof GroupSector ) {
 			( ( GroupSector ) subject.parent ).removeChild( subject );

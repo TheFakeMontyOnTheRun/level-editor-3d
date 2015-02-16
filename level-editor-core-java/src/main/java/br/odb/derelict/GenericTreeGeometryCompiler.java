@@ -8,7 +8,6 @@ import br.odb.worldprocessing.RemoveLeafSectors;
 import br.odb.worldprocessing.SectorLinker;
 import br.odb.worldprocessing.SectorSnapper;
 import br.odb.worldprocessing.WorldGlobalPartitioner;
-import br.odb.worldprocessing.WorldLocalPartitioner;
 
 public class GenericTreeGeometryCompiler extends GeometryCompiler {
 

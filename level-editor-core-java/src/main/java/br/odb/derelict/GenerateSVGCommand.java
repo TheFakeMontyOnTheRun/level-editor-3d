@@ -4,10 +4,9 @@ import java.io.OutputStream;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.libscene.GroupSector;
-import br.odb.libscene.SceneTesselator;
-import br.odb.libscene.Sector;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.GeneralTriangleFactory;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
@@ -37,9 +36,9 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 		Color c;
 		Vec3 v;
 		
-		for (SpaceRegion sr : editor.world.getAllRegionsAsList()) {
+		for (SceneNode sr : editor.world.getAllRegionsAsList()) {
 
-			if (sr instanceof Sector || sr instanceof GroupSector ) {
+			if (sr instanceof SpaceRegion ) {
 				
 				v = sr.getAbsolutePosition();
 				
@@ -47,9 +46,9 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 				sb.append(" id = '" + sr.id + "_" + System.currentTimeMillis() + "' ");
 				sb.append(" x = '" + v.x + "' ");
 				sb.append(" y = '" + v.z + "' ");
-				sb.append(" width = '" + sr.size.x + "' ");
-				sb.append(" height = '" + sr.size.z + "' ");
-				c = tesselator.getColorForFace( sr );
+				sb.append(" width = '" + ((SpaceRegion)sr).size.x + "' ");
+				sb.append(" height = '" + ((SpaceRegion)sr).size.z + "' ");
+				c = tesselator.getColorForFace( ((SpaceRegion)sr) );
 
 				sb.append(" style = 'fill: " + c.getHTMLColor() + ";' ");
 

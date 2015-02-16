@@ -3,7 +3,7 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.World;
-import br.odb.libscene.WorldLoader;
+import br.odb.libscene.builders.WorldLoader;
 
 public class LoadFileCommand extends UserCommandLineAction {
 

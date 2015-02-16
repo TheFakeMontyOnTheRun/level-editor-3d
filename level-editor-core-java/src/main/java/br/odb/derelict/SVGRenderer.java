@@ -1,7 +1,7 @@
 package br.odb.derelict;
 
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libstrip.GeneralPolygon;
 import br.odb.libstrip.IndexedSetFace;
@@ -29,7 +29,7 @@ public class SVGRenderer {
 			sb.append( " />\n" );
 		}
 		
-		for ( SpaceRegion sr : sector.getSons() ) {
+		for ( SceneNode sr : sector.getSons() ) {
 			if ( sr instanceof GroupSector ) {
 				sb.append( generateSVGForSector( (GroupSector) sr ) );
 			}
