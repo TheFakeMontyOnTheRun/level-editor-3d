@@ -22,6 +22,7 @@ import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.gamelib.android.geometry.GLESRenderer;
 import br.odb.libscene.GroupSector;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libstrip.IndexedSetFace;
@@ -42,9 +43,9 @@ public class SceneView extends GLSurfaceView {
     }
 
     public void findPlaceForLightSource( LightSource ls, World world ) {
-        for (SpaceRegion sr : world.getAllRegionsAsList() ) {
+        for (SceneNode sr : world.getAllRegionsAsList() ) {
             if ( sr instanceof GroupSector ) {
-                if ( sr.isInside( ls.position ) ) {
+                if ( ((GroupSector)sr).isInside( ls.position ) ) {
                     lightsForPlace.put( ls, (GroupSector)sr );
                     return;
                 }
@@ -211,7 +212,7 @@ public class SceneView extends GLSurfaceView {
             //renderer.addToVA((br.odb.gamelib.android.geometry.GLESIndexedSetFace) isf);
 		}
 
-		for (SpaceRegion sr : sector.getSons()) {
+		for (SceneNode sr : sector.getSons()) {
 			if (sr instanceof GroupSector) {
 				loadGeometryFromScene((GroupSector) sr);
 			}
@@ -224,7 +225,7 @@ public class SceneView extends GLSurfaceView {
 
         int lightsLeft = 20;
         int skip = 2;
-        for (SpaceRegion sr : scene.getAllRegionsAsList() ) {
+        for ( SceneNode sr : scene.getAllRegionsAsList() ) {
             if ( sr instanceof GroupSector && lightsLeft > 0 ) {
 
                 skip--;
@@ -233,7 +234,7 @@ public class SceneView extends GLSurfaceView {
                     skip = 2;
                     lightsLeft--;
 
-                    lightSources.add( new LightSource( sr.getAbsoluteCenter(), 128 ) );
+                    lightSources.add( new LightSource( ((GroupSector)sr).getAbsoluteCenter(), 128 ) );
                 }
             }
         }

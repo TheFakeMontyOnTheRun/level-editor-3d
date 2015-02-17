@@ -29,11 +29,12 @@ import javax.xml.parsers.ParserConfigurationException;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SceneTesselator;
+import br.odb.libscene.SceneNode;
+import br.odb.libscene.util.SceneTesselator;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-import br.odb.libscene.WorldLoader;
+import br.odb.libscene.builders.WorldLoader;
 import br.odb.libstrip.IndexedSetFace;
 import br.odb.utils.math.Vec3;
 
@@ -80,7 +81,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             view.renderer.angle = 180.0f;
 
-            final List<SpaceRegion> srs = world.getAllRegionsAsList();
+            final List<SceneNode> srs = world.getAllRegionsAsList();
             int size = srs.size();
             int index = 0;
 
@@ -98,7 +99,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
-                        SpaceRegion sr;
+                        SceneNode sr;
 
                         inside = false;
 
@@ -107,7 +108,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             sr = srs.get(c);
 
                             if (sr instanceof Sector) {
-                                if (sr.isInside(view.renderer.camera)) {
+                                if ( ((Sector)sr).isInside(view.renderer.camera)) {
                                     System.out.println("got inside " + c);
                                     lastValidPosition.set(view.renderer.camera);
                                     inside = true;
@@ -132,7 +133,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             for (index = size - 1; index >= 0; --index) {
                 if (srs.get(index) instanceof GroupSector) {
                     view.renderer.camera
-                            .set(srs.get(index).getAbsoluteCenter());
+                            .set( ((GroupSector)srs.get(index)).getAbsoluteCenter());
                     return;
                 }
             }

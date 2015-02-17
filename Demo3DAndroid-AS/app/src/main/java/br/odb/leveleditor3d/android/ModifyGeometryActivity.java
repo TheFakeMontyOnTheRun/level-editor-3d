@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import br.odb.derelict.LevelEditor;
 import br.odb.gameapp.ApplicationClient;
 import br.odb.gamelib.android.GameView;
-import br.odb.libscene.SceneTesselator;
+import br.odb.libscene.util.SceneTesselator;
 import br.odb.libsvg.ColoredPolygon;
 import br.odb.utils.FileServerDelegate;
 
