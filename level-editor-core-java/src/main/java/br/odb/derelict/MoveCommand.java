@@ -2,9 +2,7 @@ package br.odb.derelict;
 
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
-import br.odb.libscene.SpaceRegion;
 import br.odb.utils.math.Vec3;
 
 public class MoveCommand extends UserCommandLineAction {

@@ -3,8 +3,7 @@ package br.odb.derelict;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
-import br.odb.libstrip.GeneralPolygon;
-import br.odb.libstrip.IndexedSetFace;
+import br.odb.libstrip.GeneralTriangle;
 
 public class SVGRenderer {
 
@@ -12,19 +11,15 @@ public class SVGRenderer {
 		
 		StringBuilder sb = new StringBuilder( "<g id='" + sector.id + "' >" );
 				
-		for ( IndexedSetFace isf : sector.mesh.faces ) {
+		for ( GeneralTriangle isf : sector.mesh.faces ) {
 			sb.append( "<rect " );
-			
-			if ( isf instanceof GeneralPolygon ) {
-				sb.append( " id='" + (( GeneralPolygon) isf ).id + "' " );
-			}
 			
 			sb.append( " x = '" + isf.getVertex( 0 ).x + "' " );
 			sb.append( " y = '" + isf.getVertex( 0 ).z + "' " );
 			sb.append( " width = '" + ( isf.getVertex( 2 ).x - isf.getVertex( 0 ).x ) + "' " );
 			sb.append( " height = '" + ( isf.getVertex( 2 ).z - isf.getVertex( 0 ).z ) + "' " );
 			
-			sb.append( " style = 'fill: " + isf.getColor().getHTMLColor() + ";' " );
+			sb.append( " style = 'fill: " + isf.material.mainColor.getHTMLColor() + ";' " );
 			
 			sb.append( " />\n" );
 		}

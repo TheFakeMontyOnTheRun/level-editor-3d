@@ -3,7 +3,7 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.util.SceneTesselator;
-import br.odb.libstrip.GeneralTriangleFactory;
+import br.odb.libstrip.builders.GeneralTriangleFactory;
 
 public class TesselateCommand extends UserCommandLineAction {
 
