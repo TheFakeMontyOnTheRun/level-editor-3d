@@ -11,9 +11,7 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLES20;
-import br.odb.libstrip.AbstractTriangle;
 import br.odb.libstrip.GeneralTriangle;
-import br.odb.libstrip.IndexedSetFace;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
@@ -22,17 +20,14 @@ import br.odb.utils.math.Vec3;
  * @author monty
  * 
  */
-public class GLES1Triangle extends GeneralTriangle implements
-		GLESIndexedSetFace {
+public class GLES1Triangle extends GeneralTriangle {
 
 	//private FloatBuffer textureBuffer;
 	private FloatBuffer colorBuffer;
 	private FloatBuffer vertexBuffer;
-	private float[] vertices = new float[9];
 	int[] verticesBits = new int[9];
 	private float[] color = new float[12];
 	int[] colorBits = new int[4];
-	private boolean visible = true;
     public int light = 0;
 	//private float[] textureCoordinates;
 
@@ -40,64 +35,45 @@ public class GLES1Triangle extends GeneralTriangle implements
 	/**
 	 * 
 	 */
-	@Override
 	public void draw(GL10 gl) {
-
-		if (visible) {
 
 			gl.glColorPointer(4, GL10.GL_FLOAT, 0, colorBuffer);
 			gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
-			gl.glDrawArrays(GL10.GL_TRIANGLES, 0, vertices.length / 3);
-		}
+			gl.glDrawArrays(GL10.GL_TRIANGLES, 0, getVertexData().length / 3);
+
 	}
 
 	// ------------------------------------------------------------------------------------------------------------
 	/**
 	 * 
 	 */
-	@Override
 	public void draw() {
-
-		if (visible) {
 
 			glColorPointer(4, GL10.GL_FLOAT, 0, colorBuffer);
 			glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
-			glDrawArrays(GL10.GL_TRIANGLES, 0, vertices.length / 3);
-		}
+			glDrawArrays(GL10.GL_TRIANGLES, 0, getVertexData().length / 3);
 	}
 
 	// ------------------------------------------------------------------------------------------------------------
 	/**
 	 * 
 	 */
-	public void flushToGLES() {
+	public void flush() {
 
-		vertices[0] = x0;
-		vertices[1] = y0;
-		vertices[2] = z0;
+        float[] vertices = getVertexData();
+        float[] oneColor;
 
-		vertices[3] = x1;
-		vertices[4] = y1;
-		vertices[5] = z1;
+        if ( material != null ) {
+            oneColor = material.mainColor.getFloatData();
+        } else {
+            oneColor = new Color( 0xFFFFFFFF ).getFloatData();
+        }
 
-		vertices[6] = x2;
-		vertices[7] = y2;
-		vertices[8] = z2;
-
-		color[0] = r / 255.0f;
-		color[1] = g / 255.0f;
-		color[2] = b / 255.0f;
-		color[3] = a / 255.0f;
-
-		color[4] = r / 255.0f;
-		color[5] = g / 255.0f;
-		color[6] = b / 255.0f;
-		color[7] = a / 255.0f;
-
-		color[8] = r / 255.0f;
-		color[9] = g / 255.0f;
-		color[10] = b / 255.0f;
-		color[11] = a / 255.0f;
+        for ( int c = 0; c < 3; ++c ) {
+            for ( int d = 0; d < 4; ++d ) {
+                color[ ( c * 4 ) + ( d ) ] = oneColor[ d ];
+            }
+        }
 
 		for (int c = 0; c < vertices.length; ++c) {
 			verticesBits[c] = Float.floatToRawIntBits(vertices[c]);
@@ -120,90 +96,13 @@ public class GLES1Triangle extends GeneralTriangle implements
 		colorBuffer.position(0);
 
 	}
-
-	// ------------------------------------------------------------------------------------------------------------
 	/**
 	 * 
 	 */
 	@Override
-	public Color getColor() {
-
-		return new Color(color[0], color[1], color[2], color[3]);
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public float getColor(int i) {
-		return color[i];
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public float[] getColorData() {
-		return color;
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public int getTotalIndexes() {
-
-		return 3;
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public Vec3 getVertex(int c) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public float[] getVertexData() {
-		return vertices;
-	}
-
-	public float[] singleColorData() {
-
-		float[] colorData = new float[4];
-		colorData[0] = this.color[0];
-		colorData[1] = this.color[1];
-		colorData[2] = this.color[2];
-		colorData[3] = this.color[3];
-		return colorData;
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
-
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public IndexedSetFace makeCopy() {
+	public GLES1Triangle makeCopy() {
 		GLES1Triangle t = new GLES1Triangle();
-		t.a = a;
-		t.b = b;
-		t.g = g;
-		t.r = r;
-
-		t.visible = visible;
+        t.material = material;
 		t.x0 = x0;
 		t.x1 = x1;
 		t.x2 = x2;
@@ -216,29 +115,13 @@ public class GLES1Triangle extends GeneralTriangle implements
 		t.z1 = z1;
 		t.z2 = z2;
 
-		t.flushToGLES();
+		t.flush();
 
 		return t;
 	}
-
-	// ------------------------------------------------------------------------------------------------------------
-	/**
-	 * 
-	 */
-	@Override
-	public void setColor(Color c) {
-		this.color[0] = c.a;
-		this.color[1] = c.r;
-		this.color[2] = c.g;
-		this.color[3] = c.b;
-
-		for (int d = 0; d < colorBits.length; ++d) {
-			colorBits[d] = Float.floatToRawIntBits(color[d]);
-		}
-	}
-
-	// ------------------------------------------------------------------------------------------------------------
 	public void drawGLES2(int vertexHandle, int colorHandle, int textureHandle) {
+
+        float[] vertices = getVertexData();
 
 		GLES20.glVertexAttribPointer(vertexHandle, vertices.length / 3,
 				GLES20.GL_FLOAT, false, 0, vertexBuffer);
@@ -300,7 +183,6 @@ public class GLES1Triangle extends GeneralTriangle implements
 		}
 	}
 
-	@Override
 	public void setTextureCoordenates(float[] fs) {
         /*
 		this.textureCoordinates = fs;

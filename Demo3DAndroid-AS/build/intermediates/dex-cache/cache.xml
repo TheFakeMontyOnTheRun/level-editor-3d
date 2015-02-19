@@ -33,7 +33,7 @@
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/libscene-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="95f046db0034d17c2b9b8656584f20202b2e2fac">
+        sha1="59ed88f45ba6eab6efd6b7d727b45f4ccdb094cc">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libscene-1.0-SNAPSHOT-6494a2632537ae3b0b9a7accbd7df6f73b694ff8.jar" />
     </item>
     <item
@@ -47,14 +47,14 @@
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/gameutils-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="c1d0dc335a1d19ee37475083064d855ecf73d026">
+        sha1="cd644bf2ec6b4780e99e9bb7e470b65bed645073">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gameutils-1.0-SNAPSHOT-973a63e7f377fcee4475db55da09fa90aa36d036.jar" />
     </item>
     <item
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/liboldfart-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="487c7967dc7f00f65b2b72add9b3cf9574e3c714">
+        sha1="759b873a865df845ecfa63324af278dcb861f6d8">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/liboldfart-1.0-SNAPSHOT-7e6f900e90872a8ab807e640d79866dd8b4f66c0.jar" />
     </item>
     <item
@@ -75,7 +75,7 @@
         jar="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/libs/libstrip-1.0-SNAPSHOT.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="a7775526b56a115f92e6277530484babe32ad154">
+        sha1="0f9b91fe4e67ca50ec4fde6819329d76c98daece">
         <dex dex="/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libstrip-1.0-SNAPSHOT-64edf5da8ad4ca223c27b0a74572404a2d534917.jar" />
     </item>
 

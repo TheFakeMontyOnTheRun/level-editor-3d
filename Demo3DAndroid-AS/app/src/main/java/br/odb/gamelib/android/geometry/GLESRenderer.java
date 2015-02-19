@@ -22,8 +22,8 @@ import android.util.Log;
 
 import br.odb.leveleditor3d.android.LightSource;
 import br.odb.leveleditor3d.android.R;
-import br.odb.libstrip.IndexedSetFace;
-import br.odb.libstrip.Mesh;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.utils.math.Vec3;
 
 /*
@@ -39,10 +39,10 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 	public float angle;
 	private GLESVertexArrayManager fixedGeometryManager;
 	final GLESVertexArrayManager manager = new GLESVertexArrayManager();
-	final private ArrayList<GLESIndexedSetFace> sceneGeometryToRender;
-	final public ArrayList<GLESIndexedSetFace> fixedScreenShapesToRender;
-	final public ArrayList<GLESIndexedSetFace> screenShapesToRender;
-	final private ArrayList<Mesh> meshes = new ArrayList<Mesh>();
+	final private ArrayList<GLES1Triangle> sceneGeometryToRender;
+	final public ArrayList<GLES1Triangle> fixedScreenShapesToRender;
+	final public ArrayList<GLES1Triangle> screenShapesToRender;
+	final private ArrayList<GeneralTriangleMesh> meshes = new ArrayList<GeneralTriangleMesh>();
 	private boolean shouldCheckForBailingOut;
 
 	//GLES2 stuff
@@ -91,9 +91,9 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 		this.vertexShaderCode = vertexShader;
 		this.fragmentShaderCode = fragmentShader;
 
-		sceneGeometryToRender = new ArrayList<GLESIndexedSetFace>();
-		screenShapesToRender = new ArrayList<GLESIndexedSetFace>();
-		fixedScreenShapesToRender = new ArrayList<GLESIndexedSetFace>();
+		sceneGeometryToRender = new ArrayList<GLES1Triangle>();
+		screenShapesToRender = new ArrayList<GLES1Triangle>();
+		fixedScreenShapesToRender = new ArrayList<GLES1Triangle>();
 
 		manager.init(maxVisiblePolys);
 		manager.flush();
@@ -140,7 +140,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
  * 
  * @param isf
  */
-	public void addGeometryToScene(GLESIndexedSetFace isf) {
+	public void addGeometryToScene(GLES1Triangle isf) {
 //		isf.setTextureCoordenates( new float[] {
 //				0.0f, 0.0f,
 //		        0.0f, 1.0f,
@@ -155,7 +155,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
  * 
  * @param s
  */
-	public void addGeometryToScreen(GLESIndexedSetFace s) {
+	public void addGeometryToScreen(GLES1Triangle s) {
 		screenShapesToRender.add(s);
 
 	}
@@ -245,7 +245,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
  * 
  * @param mesh
  */
-	private void drawMeshGLES2(Mesh mesh) {
+	private void drawMeshGLES2( GeneralTriangleMesh mesh) {
 
 //		if (!mesh.visible )
 //			return;
@@ -255,8 +255,8 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 //			((GLESVertexArrayManager) mesh.manager).drawGLES2(maPositionHandle,
 //					colorHandle);
 //		} else {
-			for (IndexedSetFace face : mesh.faces) {
-				((GLESIndexedSetFace) face).draw();
+			for (GeneralTriangle face : mesh.faces) {
+				((GLES1Triangle) face).draw();
 			}
 //		}
 	}
@@ -317,11 +317,11 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 			fixedGeometryManager.drawGLES2(maPositionHandle, colorHandle);
 		}
 
-		for (GLESIndexedSetFace face : sceneGeometryToRender) {
+		for (GLES1Triangle face : sceneGeometryToRender) {
 			face.drawGLES2(maPositionHandle, colorHandle, -1 ); //this.mTextureCoordinateHandle );
 		}
 
-		for (Mesh mesh : meshes) {
+		for (GeneralTriangleMesh mesh : meshes) {
 			drawMeshGLES2(mesh);
 		}
 
@@ -332,8 +332,8 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
  * 
  * @param face
  */
-	public void addToVA(GLESIndexedSetFace face) {
-		manager.pushIntoFrameAsStatic(face.getVertexData(), face.getColorData());
+	public void addToVA(GLES1Triangle face) {
+		manager.pushIntoFrameAsStatic(face.getVertexData(), face.material.mainColor.getFloatData());
 	}
 /**
  * 
@@ -350,7 +350,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 		for (int c = 0; c < graphic.length; ++c) {
 
 			graphic[c].flatten(-1.0f);
-			graphic[c].flushToGLES();
+			graphic[c].flush();
 			this.fixedScreenShapesToRender.add(graphic[c]);
 		}
 	}
@@ -391,7 +391,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 		for (int c = 0; c < graphic.length; ++c) {
 
 			graphic[c].flatten(-1.0f);
-			graphic[c].flushToGLES();
+			graphic[c].flush();
 			this.addGeometryToScreen(graphic[c]);
 		}
 	}

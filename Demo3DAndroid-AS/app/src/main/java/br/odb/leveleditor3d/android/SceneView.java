@@ -4,7 +4,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.security.Key;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,20 +11,17 @@ import java.util.Map;
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.widget.Space;
 
-import br.odb.gamelib.android.geometry.GLES1Square;
-import br.odb.gamelib.android.geometry.GLES1SquareFactory;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.gamelib.android.geometry.GLESRenderer;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
-import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-import br.odb.libstrip.IndexedSetFace;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.Material;
+import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
 public class SceneView extends GLSurfaceView {
@@ -37,7 +33,7 @@ public class SceneView extends GLSurfaceView {
 
     public void lit( GroupSector s, LightSource ls ) {
 
-        for ( IndexedSetFace isf : s.mesh.faces ) {
+        for ( GeneralTriangle isf : s.mesh.faces ) {
    //         ( (GLES1Triangle ) isf ).light = ls.intensity;
         }
     }
@@ -163,38 +159,27 @@ public class SceneView extends GLSurfaceView {
 
 
     public void changeHue( GLES1Triangle trig ) {
+        trig.material = new Material( null, new Color( trig.material.mainColor ), null, null, null );
+
         switch ( trig.hint ) {
             case W:
-                trig.r *= 0.8;
-                trig.g *= 0.8;
-                trig.b *= 0.8;
+                trig.material.mainColor.multiply( 0.8f );
                 break;
             case E:
-                trig.r *= 0.6;
-                trig.g *= 0.6;
-                trig.b *= 0.6;
+                trig.material.mainColor.multiply( 0.6f );
                 break;
             case N:
-                trig.r *= 0.4;
-                trig.g *= 0.4;
-                trig.b *= 0.4;
+                trig.material.mainColor.multiply( 0.4f );
                 break;
             case S:
-                trig.r *= 0.2;
-                trig.g *= 0.2;
-                trig.b *= 0.2;
+                trig.material.mainColor.multiply( 0.2f );
                 break;
             case FLOOR:
-                trig.r *= 0.9;
-                trig.g *= 0.9;
-                trig.b *= 0.9;
+                trig.material.mainColor.multiply( 0.9f );
                 break;
             case CEILING:
-                trig.r *= 0.1;
-                trig.g *= 0.1;
-                trig.b *= 0.1;
+                trig.material.mainColor.multiply( 0.1f );
                 break;
-
         }
     }
 
@@ -204,10 +189,10 @@ public class SceneView extends GLSurfaceView {
 
         GLES1TriangleFactory factory = GLES1TriangleFactory.getInstance();
         GLES1Triangle trig;
-		for (IndexedSetFace isf : sector.mesh.faces) {
+		for ( GeneralTriangle isf : sector.mesh.faces) {
             ++polyCount;
             changeHue( (GLES1Triangle) isf );
-            ((GLES1Triangle) isf).flushToGLES();
+            ((GLES1Triangle) isf).flush();
             renderer.addGeometryToScene((GLES1Triangle) isf);
             //renderer.addToVA((br.odb.gamelib.android.geometry.GLESIndexedSetFace) isf);
 		}

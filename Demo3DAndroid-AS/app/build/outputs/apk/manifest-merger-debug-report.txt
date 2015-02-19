@@ -30,42 +30,40 @@ ADDED from AndroidManifest.xml:11:5
 application
 ADDED from AndroidManifest.xml:13:5
 	android:label
-		ADDED from AndroidManifest.xml:18:9
+		ADDED from AndroidManifest.xml:17:9
 	android:allowBackup
 		ADDED from AndroidManifest.xml:15:9
 	android:icon
-		ADDED from AndroidManifest.xml:17:9
-	android:theme
-		ADDED from AndroidManifest.xml:19:9
-	android:largeHeap
 		ADDED from AndroidManifest.xml:16:9
+	android:theme
+		ADDED from AndroidManifest.xml:18:9
 	android:name
 		ADDED from AndroidManifest.xml:14:9
 activity#br.odb.leveleditor3d.android.MainActivity
-ADDED from AndroidManifest.xml:20:9
+ADDED from AndroidManifest.xml:19:9
 	android:label
-		ADDED from AndroidManifest.xml:22:13
-	android:name
 		ADDED from AndroidManifest.xml:21:13
+	android:name
+		ADDED from AndroidManifest.xml:20:13
 activity#br.odb.leveleditor3d.android.MenuActivity
-ADDED from AndroidManifest.xml:24:9
+ADDED from AndroidManifest.xml:23:9
 	android:label
-		ADDED from AndroidManifest.xml:26:13
-	android:name
 		ADDED from AndroidManifest.xml:25:13
+	android:name
+		ADDED from AndroidManifest.xml:24:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:27:13
+ADDED from AndroidManifest.xml:26:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:28:17
+ADDED from AndroidManifest.xml:27:17
 	android:name
-		ADDED from AndroidManifest.xml:28:25
+		ADDED from AndroidManifest.xml:27:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:30:17
+ADDED from AndroidManifest.xml:29:17
 	android:name
-		ADDED from AndroidManifest.xml:30:27
+		ADDED from AndroidManifest.xml:29:27
 activity#br.odb.leveleditor3d.android.ModifyGeometryActivity
-ADDED from AndroidManifest.xml:33:9
+ADDED from AndroidManifest.xml:32:9
 	android:label
-		ADDED from AndroidManifest.xml:35:13
-	android:name
 		ADDED from AndroidManifest.xml:34:13
+	android:name
+		ADDED from AndroidManifest.xml:33:13

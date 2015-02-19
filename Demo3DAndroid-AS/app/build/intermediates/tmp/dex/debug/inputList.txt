@@ -4,9 +4,9 @@
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libstrip-1.0-SNAPSHOT-64edf5da8ad4ca223c27b0a74572404a2d534917.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libworldproc-1.0-SNAPSHOT-c85fa8c63b51b995e2407d10cf36ff4a0ff66553.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gameapp-1.0-SNAPSHOT-5e70a7705ed1162a03a68128c8c2f2a8873e7148.jar
+/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gameutils-1.0-SNAPSHOT-973a63e7f377fcee4475db55da09fa90aa36d036.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gamerendering-1.0-SNAPSHOT-6bfc46c1856feaccccb1c4cb5541eda5c9e1f985.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/level-editor-core-java-1.0-SNAPSHOT-c274231b3f17659ec7880bb02ce3561d0f2a3f2e.jar
-/Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gameutils-1.0-SNAPSHOT-973a63e7f377fcee4475db55da09fa90aa36d036.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/gameworld-1.0-SNAPSHOT-2b79ee4b14adf1a4dc22d0a5bdfc28d732526cdc.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libsvg-1.0-SNAPSHOT-4aab39b4e23a571151827e09d3f932355581dcb7.jar
 /Users/monty/gitcenter/level-editor-3d/Demo3DAndroid-AS/app/build/intermediates/pre-dexed/debug/libscene-1.0-SNAPSHOT-6494a2632537ae3b0b9a7accbd7df6f73b694ff8.jar

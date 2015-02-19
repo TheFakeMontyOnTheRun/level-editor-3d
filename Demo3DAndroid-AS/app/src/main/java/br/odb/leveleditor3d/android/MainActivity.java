@@ -35,7 +35,6 @@ import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
-import br.odb.libstrip.IndexedSetFace;
 import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -58,15 +57,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
         protected Void doInBackground(Void... voids) {
             try {
 
-                world = WorldLoader.build(fileInput);
+                //world = WorldLoader.build(fileInput);
+
+                world =  (World) new ObjectInputStream( fileInput ).readObject();
+
+
                 new SceneTesselator( new GLES1TriangleFactory() ).generateSubSectorQuadsForWorld(world);
                 view.setScene(world);
-            } catch (IOException e) {
-                e.printStackTrace();
 
-            } catch (SAXException e) {
-                e.printStackTrace();
-            } catch (ParserConfigurationException e) {
+            } catch ( Exception e) {
                 e.printStackTrace();
 
             }

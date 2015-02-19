@@ -12,11 +12,10 @@ import java.nio.IntBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
-import br.odb.libstrip.VertexArrayManager;
 import android.opengl.GLES20;
 import android.util.Log;
 
-public class GLESVertexArrayManager extends VertexArrayManager {
+public class GLESVertexArrayManager  {
 
 
 	int capacity;

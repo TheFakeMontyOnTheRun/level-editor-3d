@@ -1,15 +1,15 @@
 package br.odb.gamelib.android.geometry;
  
-import br.odb.libstrip.IndexedSetFace;
-import br.odb.libstrip.Mesh;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleMesh;
 
-public class GLESMesh extends Mesh {
+public class GLESMesh extends GeneralTriangleMesh {
 	
-	public GLESMesh( String name, Mesh other) {
+	public GLESMesh( String name, GeneralTriangleMesh other) {
 		super( name, other );
 		
-		for ( IndexedSetFace face : this.faces ) {
-			addFace(face.makeCopy());
+		for ( GeneralTriangle face : this.faces ) {
+			faces.add(face.makeCopy());
 		}
 	}
 
