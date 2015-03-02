@@ -23,10 +23,10 @@ import javax.media.opengl.awt.GLCanvas;
 import javax.media.opengl.glu.GLU;
 
 import br.odb.libscene.GroupSector;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
-import br.odb.libstrip.GeneralPolygon;
-import br.odb.libstrip.IndexedSetFace;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.Material;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 // GL2 constants
@@ -39,7 +39,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	 */
 	private static final long serialVersionUID = 3207880799571393702L;
 
-	final List<GeneralPolygon> polysToRender = new ArrayList<GeneralPolygon>();
+	final List<GeneralTriangle> polysToRender = new ArrayList<>();
 	public final Vec3 cameraPosition = new Vec3();
 	float angle = 0.0f;
 	private GLU glu;
@@ -49,15 +49,41 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		this.addKeyListener(this);
 	}
 	
+    public void changeHue( GeneralTriangle trig ) {
+        trig.material = new Material( null, new Color( trig.material.mainColor ), null, null, null );
+
+        switch ( trig.hint ) {
+            case W:
+                trig.material.mainColor.multiply( 0.8f );
+                break;
+            case E:
+                trig.material.mainColor.multiply( 0.6f );
+                break;
+            case N:
+                trig.material.mainColor.multiply( 0.4f );
+                break;
+            case S:
+                trig.material.mainColor.multiply( 0.2f );
+                break;
+            case FLOOR:
+                trig.material.mainColor.multiply( 0.9f );
+                break;
+            case CEILING:
+                trig.material.mainColor.multiply( 0.1f );
+                break;
+        }
+    }
 
 
 	public void loadGeometryFromScene(GroupSector sector) {
 
-		for (IndexedSetFace isf : sector.mesh.faces) {
-			polysToRender.add((GeneralPolygon) isf);
+		for (GeneralTriangle isf : sector.mesh.faces) {
+			
+			changeHue( isf );
+			polysToRender.add( isf );
 		}
 
-		for (SpaceRegion sr : sector.getSons()) {
+		for (SceneNode sr : sector.getSons()) {
 			if (sr instanceof GroupSector) {
 				loadGeometryFromScene((GroupSector) sr);
 			}
@@ -108,7 +134,6 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glRotatef(angle, 0.0f, 1.0f, 0.0f);
 		gl.glTranslatef( -cameraPosition.x, -cameraPosition.y, -cameraPosition.z); 
 
-		Vec3 v;
 		Color c;
 		
 		//drawGridLines( gl );
@@ -139,20 +164,15 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		
 		gl.glBegin(GL_TRIANGLES);
 
-		for (GeneralPolygon poly : this.polysToRender) {
+		for (GeneralTriangle poly : this.polysToRender) {
 			
-			c = poly.color;
+			c = poly.material.mainColor;
 
 			gl.glColor4f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, 0.5f );
 			
-			v = poly.getVertex(0);
-			gl.glVertex3f(v.x, v.y, v.z);
-			
-			v = poly.getVertex(1);
-			gl.glVertex3f(v.x, v.y, v.z);
-			
-			v = poly.getVertex(2);
-			gl.glVertex3f(v.x, v.y, v.z);
+			gl.glVertex3f( poly.x0, poly.y0, poly.z0);
+			gl.glVertex3f( poly.x1, poly.y1, poly.z1);
+			gl.glVertex3f( poly.x2, poly.y2, poly.z2);
 			
 		}
 
@@ -160,30 +180,30 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	}
 
 
-	private void drawGridLines(GL2 gl) {
-
-		gl.glBegin( GL2.GL_LINES );
-		
-			for ( int x = 0; x < 255; x += 10 ) {
-				
-				gl.glVertex3f( (float)x, 0.0f, 0.0f);
-				gl.glVertex3f( (float)x, 0.0f, 255.0f);
-			}
-			
-			for ( int y = 0; y < 255; y += 10 ) {
-				
-				gl.glVertex3f( 0.0f, y, 255.0f);
-				gl.glVertex3f( 255.0f, y, 255.0f);
-				
-			}
-			
-			for ( int z = 0; z < 255; z += 10 ) {
-				
-				gl.glVertex3f( 0.0f, 0.0f,  z);
-				gl.glVertex3f( 0.0f, 255.0f, z);
-			}
-		gl.glEnd();		
-	}
+//	private void drawGridLines(GL2 gl) {
+//
+//		gl.glBegin( GL2.GL_LINES );
+//		
+//			for ( int x = 0; x < 255; x += 10 ) {
+//				
+//				gl.glVertex3f( (float)x, 0.0f, 0.0f);
+//				gl.glVertex3f( (float)x, 0.0f, 255.0f);
+//			}
+//			
+//			for ( int y = 0; y < 255; y += 10 ) {
+//				
+//				gl.glVertex3f( 0.0f, y, 255.0f);
+//				gl.glVertex3f( 255.0f, y, 255.0f);
+//				
+//			}
+//			
+//			for ( int z = 0; z < 255; z += 10 ) {
+//				
+//				gl.glVertex3f( 0.0f, 0.0f,  z);
+//				gl.glVertex3f( 0.0f, 255.0f, z);
+//			}
+//		gl.glEnd();		
+//	}
 
 
 
@@ -245,7 +265,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	}
 
 
-	List< SpaceRegion > sectorsToDisplay = new ArrayList< SpaceRegion >();
+	List< SceneNode > sectorsToDisplay = new ArrayList<>();
 	
 	public void setScene(World world) {
 		this.polysToRender.clear();

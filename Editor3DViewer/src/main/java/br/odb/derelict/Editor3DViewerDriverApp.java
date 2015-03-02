@@ -16,10 +16,11 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import br.odb.libscene.SceneTesselator;
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
-import br.odb.libscene.WorldLoader;
+import br.odb.libscene.builders.WorldLoader;
+import br.odb.libscene.util.SceneTesselator;
+import br.odb.libstrip.builders.GeneralTriangleFactory;
 
 import com.jogamp.opengl.util.FPSAnimator;
 
@@ -47,7 +48,7 @@ public class Editor3DViewerDriverApp {
 							System.getProperty( "user.home" ) + "/prison.opt.xml");
 					world = WorldLoader.build(fis);
 					//world.checkForHardLinks_new();
-					SceneTesselator.generateSubSectorQuadsForWorld(world);
+					new SceneTesselator( new GeneralTriangleFactory() ).generateSubSectorQuadsForWorld(world);
 
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
@@ -64,7 +65,7 @@ public class Editor3DViewerDriverApp {
 				}
 
 				
-				final List<SpaceRegion> srs = world.getAllRegionsAsList();
+				final List<SceneNode> srs = world.getAllRegionsAsList();
 				canvas.cameraPosition.set( srs.get( srs.size() - 1 ).getAbsolutePosition() );
 			
 
