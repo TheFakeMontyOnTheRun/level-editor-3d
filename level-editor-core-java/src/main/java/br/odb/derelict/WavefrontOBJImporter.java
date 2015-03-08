@@ -15,7 +15,8 @@ public class WavefrontOBJImporter {
 
 	public static World build(InputStream meshData, InputStream materialData) {
 		WavefrontOBJLoader loader = new WavefrontOBJLoader( new GeneralTriangleFactory() );
-		List< Material > materials = WavefrontMaterialLoader.parseMaterials( materialData );
+		WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+		List< Material > materials = matLoader.parseMaterials( materialData );
 		World world;
 		GroupSector sector;
 		GroupSector master = new GroupSector("root");
@@ -25,7 +26,7 @@ public class WavefrontOBJImporter {
 
 			if ( m.faces.size() > 0) {
 				System.out.println( "sector: " + m.name );
-				sector = GroupSector.getConvexHull( 1, m );
+				sector = GroupSector.getConvexHull( m );
 
 				if (!sector.isDegenerate()) {
 					master.addChild( sector );

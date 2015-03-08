@@ -34,7 +34,8 @@ public class SetSectorMeshCommand extends UserCommandLineAction {
 			WavefrontOBJLoader loader = new WavefrontOBJLoader( new GeneralTriangleFactory() );
 			InputStream meshData	 = app.openAsInputStream( operands[ 1 ] );
 			InputStream materialData = app.openAsInputStream( operands[ 2 ] );
-			List< Material > materials = WavefrontMaterialLoader.parseMaterials( materialData );
+			WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+			List< Material > materials = matLoader.parseMaterials( materialData );
 			
 			(( GroupSector) sr ).mesh.clear();
 			(( GroupSector) sr ).mesh.faces.addAll( loader.loadMeshes( meshData, materials ).get( 0 ).faces );

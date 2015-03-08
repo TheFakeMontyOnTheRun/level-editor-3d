@@ -22,19 +22,7 @@ public class ClearMeshCommand extends UserCommandLineAction {
 	@Override
 	public void run(ConsoleApplication app, String arg1) throws Exception {
 		LevelEditor editor = (LevelEditor) app; 
-		clearMesh( app.getClient(), editor.world.masterSector );
-
-	}
-
-	private void clearMesh(ApplicationClient client, GroupSector sector) {
-		for ( SceneNode sr : sector.getSons() ) {
-			if ( sr instanceof GroupSector ) {
-				clearMesh( client, (GroupSector) sr );
-			}
-		}		
-		
-		client.alert( "removing meshes from sector " + sector.id );
-		sector.mesh.clear();
+		editor.world.masterSector.clearMeshes();
 	}
 
 	@Override

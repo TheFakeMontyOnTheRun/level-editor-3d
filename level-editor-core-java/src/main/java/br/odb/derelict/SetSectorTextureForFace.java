@@ -27,7 +27,7 @@ public class SetSectorTextureForFace extends UserCommandLineAction {
 		
 		sr = editor.world.masterSector.getChild( arg[ 0 ] );
 		if ( sr instanceof GroupSector ) {
-			throw new NotImplementedException();
+			throw new Exception( "Fat ass has not tried his fat fingers into this functionality");
 		} else {
 			app.getClient().alert( "Not a GroupSector" );
 		}
