@@ -16,6 +16,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.media.opengl.GL;
 import javax.media.opengl.GL2;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
@@ -24,9 +25,13 @@ import javax.media.opengl.glu.GLU;
 
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
+import br.odb.libscene.Sector;
+import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
+import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.Material;
+import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 // GL2 constants
@@ -44,9 +49,15 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	float angle = 0.0f;
 	private GLU glu;
 
+	private SpaceRegion currentSector;
+
+	SceneTesselator tesselator;
+
 	public Editor3DViewer() {
 		this.addGLEventListener(this);
 		this.addKeyListener(this);
+		
+		tesselator = new SceneTesselator( new GeneralTriangleFactory() );
 	}
 	
     public void changeHue( GeneralTriangle trig ) {
@@ -60,16 +71,16 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
                 trig.material.mainColor.multiply( 0.6f );
                 break;
             case N:
-                trig.material.mainColor.multiply( 0.4f );
+                trig.material.mainColor.multiply( 0.5f );
                 break;
             case S:
-                trig.material.mainColor.multiply( 0.2f );
+                trig.material.mainColor.multiply( 0.6f );
                 break;
             case FLOOR:
                 trig.material.mainColor.multiply( 0.9f );
                 break;
             case CEILING:
-                trig.material.mainColor.multiply( 0.1f );
+                trig.material.mainColor.multiply( 0.7f );
                 break;
         }
     }
@@ -100,6 +111,8 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glDepthFunc(GL_LEQUAL);
 		gl.glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 		gl.glShadeModel(GL_SMOOTH);
+		gl.glEnable( GL.GL_BLEND );
+		gl.glBlendFunc( GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
 	}
 
 	@Override
@@ -168,7 +181,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			
 			c = poly.material.mainColor;
 
-			gl.glColor4f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, 0.5f );
+			gl.glColor4f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, 1.0f );
 			
 			gl.glVertex3f( poly.x0, poly.y0, poly.z0);
 			gl.glVertex3f( poly.x1, poly.y1, poly.z1);
@@ -225,7 +238,9 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		int keyCode = e.getKeyCode();
 
 		switch (keyCode) {
-
+		case KeyEvent.VK_R:
+			recalculateVisibility();
+			break;
 		case KeyEvent.VK_A:
 			cameraPosition.y += 10.0f;
 			break;
@@ -265,13 +280,39 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	}
 
 
-	List< SceneNode > sectorsToDisplay = new ArrayList<>();
+	private void recalculateVisibility() {
+		currentSector = world.masterSector.pick( this.cameraPosition );
+		
+		
+		
+		if ( currentSector != null ) {
+			
+			Sector visitingSon = (Sector) currentSector;
+			GroupSector visitingParent = (GroupSector) visitingSon.parent;
+			this.polysToRender.clear();
+			this.world.masterSector.clearMeshes();
+			
+			while( visitingSon != null ) {
+				
+				if ( visitingSon.parent != visitingParent ) {
+					visitingParent = (GroupSector) visitingSon.parent;
+					tesselator.generateSubSectorMeshForSector( visitingParent );
+				}
+				
+				visitingSon = (Sector) world.masterSector.getChild( visitingSon.links[ 0 ] );
+			}
+			
+			this.loadGeometryFromScene( world.masterSector );
+		}
+	}
+
+
+	private World world;
 	
 	public void setScene(World world) {
 		this.polysToRender.clear();
+		this.world = world;
+		world.masterSector.size.set( 1024.0f, 1024.0f, 1024.0f );
 		this.loadGeometryFromScene( world.masterSector );
-		
-		
-		sectorsToDisplay.addAll( world.getAllRegionsAsList() );
 	}
 }

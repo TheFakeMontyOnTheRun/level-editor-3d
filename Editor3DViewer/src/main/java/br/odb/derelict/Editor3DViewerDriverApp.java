@@ -45,10 +45,10 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/prison.opt.xml");
+							System.getProperty( "user.home" ) + "/floor1.opt.xml");
 					world = WorldLoader.build(fis);
 					//world.checkForHardLinks_new();
-					new SceneTesselator( new GeneralTriangleFactory() ).generateSubSectorQuadsForWorld(world);
+					canvas.tesselator.generateSubSectorQuadsForWorld(world);
 
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
