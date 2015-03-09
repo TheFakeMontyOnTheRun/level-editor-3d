@@ -20,7 +20,11 @@ import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
 import br.odb.libscene.util.SceneTesselator;
+import br.odb.libstrip.Decal;
+import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
+import br.odb.libsvg.SVGGraphic;
+import br.odb.libsvg.SVGParsingUtils;
 
 import com.jogamp.opengl.util.FPSAnimator;
 
@@ -37,6 +41,8 @@ public class Editor3DViewerDriverApp {
 	public static void main(String[] args) {
 		new Thread(new Runnable() {
 			private World world;
+			private SVGGraphic graphic;
+			private GeneralTriangle[] decal;
 
 			@Override
 			public void run() {
@@ -45,7 +51,14 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/floor1.opt.xml");
+							System.getProperty( "user.home" ) + "/Dropbox/floor1.opt.xml");
+					
+					
+					FileInputStream filePath = new FileInputStream(
+							System.getProperty( "user.home" ) + "/title.bin");
+					
+					decal = Decal.loadGraphic( filePath, 800, 480 );
+					 
 					world = WorldLoader.build(fis);
 					//world.checkForHardLinks_new();
 					canvas.tesselator.generateSubSectorQuadsForWorld(world);
@@ -68,8 +81,24 @@ public class Editor3DViewerDriverApp {
 				final List<SceneNode> srs = world.getAllRegionsAsList();
 				canvas.cameraPosition.set( srs.get( srs.size() - 1 ).getAbsolutePosition() );
 			
-
 				canvas.setScene( world );
+				
+				for ( GeneralTriangle gt : decal ) {
+					gt.x0 += canvas.cameraPosition.x;
+					gt.x1 += canvas.cameraPosition.x;
+					gt.x2 += canvas.cameraPosition.x;
+
+					gt.y0 += canvas.cameraPosition.y;
+					gt.y1 += canvas.cameraPosition.y;
+					gt.y2 += canvas.cameraPosition.y;
+					
+					gt.z0 += canvas.cameraPosition.z;
+					gt.z1 += canvas.cameraPosition.z;
+					gt.z2 += canvas.cameraPosition.z;
+					
+					canvas.polysToRender.add( gt );
+				}				
+				
 				System.out.println( "loaded " + canvas.polysToRender.size() + " polys" );
 				canvas.setPreferredSize(new Dimension(CANVAS_WIDTH,
 						CANVAS_HEIGHT));

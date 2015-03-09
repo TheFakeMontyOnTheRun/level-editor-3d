@@ -65,13 +65,13 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 
         switch ( trig.hint ) {
             case W:
-                trig.material.mainColor.multiply( 0.8f );
+                trig.material.mainColor.multiply( 0.1f );
                 break;
             case E:
                 trig.material.mainColor.multiply( 0.6f );
                 break;
             case N:
-                trig.material.mainColor.multiply( 0.5f );
+                trig.material.mainColor.multiply( 0.2f );
                 break;
             case S:
                 trig.material.mainColor.multiply( 0.6f );
@@ -80,9 +80,12 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
                 trig.material.mainColor.multiply( 0.9f );
                 break;
             case CEILING:
-                trig.material.mainColor.multiply( 0.7f );
+                trig.material.mainColor.multiply( 0.3f );
                 break;
         }
+        
+        trig.material.mainColor.a = 255;
+
     }
 
 
@@ -181,7 +184,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			
 			c = poly.material.mainColor;
 
-			gl.glColor4f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, 1.0f );
+			gl.glColor4f(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, c.a / 255.0f );
 			
 			gl.glVertex3f( poly.x0, poly.y0, poly.z0);
 			gl.glVertex3f( poly.x1, poly.y1, poly.z1);
@@ -237,15 +240,17 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	public void keyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
 
+		float scale = 10.0f;
+		
 		switch (keyCode) {
 		case KeyEvent.VK_R:
 			recalculateVisibility();
 			break;
 		case KeyEvent.VK_A:
-			cameraPosition.y += 10.0f;
+			cameraPosition.y += scale;
 			break;
 		case KeyEvent.VK_Z:
-			cameraPosition.y -= 10.0f;
+			cameraPosition.y -= scale;
 			break;
 
 		case KeyEvent.VK_LEFT:
@@ -255,20 +260,20 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			angle += 10.0f;
 			break;
 		case KeyEvent.VK_UP:
-			cameraPosition.x += 10 * Math.sin(angle * (Math.PI / 180.0f));
-			cameraPosition.z -= 10 * Math.cos(angle * (Math.PI / 180.0f));
+			cameraPosition.x += scale * Math.sin(angle * (Math.PI / 180.0f));
+			cameraPosition.z -= scale * Math.cos(angle * (Math.PI / 180.0f));
 			break;
 		case KeyEvent.VK_DOWN:
-			cameraPosition.x -= 10 * Math.sin(angle * (Math.PI / 180.0f));
-			cameraPosition.z += 10 * Math.cos(angle * (Math.PI / 180.0f));
+			cameraPosition.x -= scale * Math.sin(angle * (Math.PI / 180.0f));
+			cameraPosition.z += scale * Math.cos(angle * (Math.PI / 180.0f));
 			break;
 		case KeyEvent.VK_COMMA:
-			cameraPosition.x += 10 * Math.sin(( angle - 90.0f ) * (Math.PI / 180.0f));
-			cameraPosition.z -= 10 * Math.cos(( angle - 90.0f )* (Math.PI / 180.0f));
+			cameraPosition.x += scale * Math.sin(( angle - 90.0f ) * (Math.PI / 180.0f));
+			cameraPosition.z -= scale * Math.cos(( angle - 90.0f )* (Math.PI / 180.0f));
 			break;
 		case KeyEvent.VK_PERIOD:
-			cameraPosition.x += 10 * Math.sin( (angle + 90.0f ) * (Math.PI / 180.0f));
-			cameraPosition.z -= 10 * Math.cos( (angle + 90.0f ) * (Math.PI / 180.0f));
+			cameraPosition.x += scale * Math.sin( (angle + 90.0f ) * (Math.PI / 180.0f));
+			cameraPosition.z -= scale * Math.cos( (angle + 90.0f ) * (Math.PI / 180.0f));
 			break;
 
 		case KeyEvent.VK_ESCAPE:
