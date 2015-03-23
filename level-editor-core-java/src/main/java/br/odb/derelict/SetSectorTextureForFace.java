@@ -1,6 +1,5 @@
 package br.odb.derelict;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;

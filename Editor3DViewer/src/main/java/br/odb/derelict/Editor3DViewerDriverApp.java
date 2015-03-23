@@ -55,7 +55,7 @@ public class Editor3DViewerDriverApp {
 					
 					
 					FileInputStream filePath = new FileInputStream(
-							System.getProperty( "user.home" ) + "/title.bin");
+							System.getProperty( "user.home" ) + "/door1.bin");
 					
 					decal = Decal.loadGraphic( filePath, 800, 480 );
 					 

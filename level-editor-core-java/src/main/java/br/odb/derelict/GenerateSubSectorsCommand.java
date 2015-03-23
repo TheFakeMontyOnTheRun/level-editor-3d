@@ -6,7 +6,6 @@ package br.odb.derelict;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.World;
-import br.odb.worldprocessing.GeometryCompiler;
 
 /**
  * @author monty
@@ -39,8 +38,7 @@ public class GenerateSubSectorsCommand extends UserCommandLineAction {
 	public void run(ConsoleApplication app, String arg1) throws Exception {
 		LevelEditor editor = (LevelEditor) app;
 		World world = editor.world;
-		GeometryCompiler compiler = new GenericTreeGeometryCompiler( world );
-		compiler.setClient( editor.getClient() );
+		GeometryCompiler compiler = new GenericTreeGeometryCompiler( editor.getClient(), world );
 		compiler.run();
 	}
 

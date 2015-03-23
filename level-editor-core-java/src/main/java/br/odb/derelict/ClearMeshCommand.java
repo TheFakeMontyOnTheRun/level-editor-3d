@@ -1,10 +1,7 @@
 package br.odb.derelict;
 
-import br.odb.gameapp.ApplicationClient;
 import br.odb.gameapp.ConsoleApplication;
 import br.odb.gameapp.UserCommandLineAction;
-import br.odb.libscene.GroupSector;
-import br.odb.libscene.SceneNode;
 
 public class ClearMeshCommand extends UserCommandLineAction {
 
