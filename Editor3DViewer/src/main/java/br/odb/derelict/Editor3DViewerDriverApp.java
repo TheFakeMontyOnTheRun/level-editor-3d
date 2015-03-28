@@ -19,12 +19,8 @@ import org.xml.sax.SAXException;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
-import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.Decal;
 import br.odb.libstrip.GeneralTriangle;
-import br.odb.libstrip.builders.GeneralTriangleFactory;
-import br.odb.libsvg.SVGGraphic;
-import br.odb.libsvg.SVGParsingUtils;
 
 import com.jogamp.opengl.util.FPSAnimator;
 
@@ -41,7 +37,7 @@ public class Editor3DViewerDriverApp {
 	public static void main(String[] args) {
 		new Thread(new Runnable() {
 			private World world;
-			private SVGGraphic graphic;
+			//private SVGGraphic graphic;
 			private GeneralTriangle[] decal;
 
 			@Override
@@ -51,7 +47,7 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/Dropbox/floor1.opt.xml");
+							System.getProperty( "user.home" ) + "/prison2.opt.xml");
 					
 					
 					FileInputStream filePath = new FileInputStream(
