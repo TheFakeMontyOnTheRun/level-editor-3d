@@ -47,11 +47,11 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/prison3.opt.xml");
+							System.getProperty( "user.home" ) + "/prison.opt.xml");
 					
 					
 					FileInputStream filePath = new FileInputStream(
-							System.getProperty( "user.home" ) + "/door1.bin");
+							System.getProperty( "user.home" ) + "/title.bin");
 					
 					decal = Decal.loadGraphic( filePath, 800, 480 );
 					 

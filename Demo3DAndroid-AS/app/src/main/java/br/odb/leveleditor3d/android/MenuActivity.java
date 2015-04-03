@@ -21,7 +21,7 @@ public class MenuActivity extends Activity implements OnClickListener {
 
         spnLevels = (Spinner)findViewById( R.id.spnLevels );
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, new String[] { "newprison.ser", "level.opt.xml", "prison.opt.xml", "newprison.opt.xml" } );
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, new String[] { "prison.opt.ser", "prison.opt.xml" } );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnLevels.setAdapter(adapter);
 
