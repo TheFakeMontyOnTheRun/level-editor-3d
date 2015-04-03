@@ -13,6 +13,16 @@ import static javax.media.opengl.fixedfunc.GLMatrixFunc.GL_PROJECTION;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,18 +43,23 @@ import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.Material;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
+import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 // GL2 constants
 
 
 public class Editor3DViewer extends GLCanvas implements GLEventListener,
-		KeyListener {
+		KeyListener, Runnable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 3207880799571393702L;
 
 	final List<GeneralTriangle> polysToRender = new ArrayList<>();
+	final List<GeneralTriangle> cube = new ArrayList<>();
+	
+	final List<Vec3> actors = new ArrayList<>();
+	
 	public final Vec3 cameraPosition = new Vec3();
 	float angle = 0.0f;
 	private GLU glu;
@@ -58,8 +73,17 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		this.addKeyListener(this);
 		
 		tesselator = new SceneTesselator( new GeneralTriangleFactory() );
+		SpaceRegion sr = new SpaceRegion( "dummy" );
+		sr.size.scale( 10 );
+		for ( Direction d : Direction.values() ) {
+			for ( GeneralTriangle trig : tesselator.generateQuadFor( d, sr ) ) {
+				cube.add( trig );
+			}
+		}
+		
+		new Thread( this ).start();
 	}
-	
+		
     public void changeHue( GeneralTriangle trig ) {
         trig.material = new Material( null, new Color( trig.material.mainColor ), null, null, null );
 
@@ -180,6 +204,11 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		
 		gl.glBegin(GL_TRIANGLES);
 
+		
+		for ( Vec3 p : actors ) {
+			drawCube( gl, p );
+		}
+		
 		for (GeneralTriangle poly : this.polysToRender) {
 			
 			c = poly.material.mainColor;
@@ -195,6 +224,18 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glEnd();
 	}
 
+
+	private void drawCube( GL2 gl, Vec3 p) {
+		for (GeneralTriangle poly : this.cube) {
+			
+			gl.glColor4f( 0.5f, 0.5f, 0.5f, 1.0f );
+			
+			gl.glVertex3f( poly.x0 + p.x, poly.y0 + p.y, poly.z0 + p.z );
+			gl.glVertex3f( poly.x1 + p.x, poly.y1 + p.y, poly.z1 + p.z );
+			gl.glVertex3f( poly.x2 + p.x, poly.y2 + p.y, poly.z2 + p.z );
+			
+		}		
+	}
 
 //	private void drawGridLines(GL2 gl) {
 //
@@ -253,6 +294,12 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			cameraPosition.y -= scale;
 			break;
 
+		case KeyEvent.VK_P:
+			
+			
+			actors.add( new Vec3( cameraPosition ) );
+			this.repaint();
+			break;
 		case KeyEvent.VK_LEFT:
 			angle -= 10.0f;
 			break;
@@ -319,5 +366,92 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		this.world = world;
 		world.masterSector.size.set( 1024.0f, 1024.0f, 1024.0f );
 		this.loadGeometryFromScene( world.masterSector );
+	}
+
+	void sendPosition( int id ) throws IOException {
+		
+		String query = String.format("id=%s&x=%s&y=%s&z=%s",
+				URLEncoder.encode( "" + id, "UTF8"),
+			     URLEncoder.encode( "" + cameraPosition.x, "UTF8"), 
+			     URLEncoder.encode( "" + cameraPosition.y, "UTF8"),
+			     URLEncoder.encode( "" + cameraPosition.z, "UTF8")
+			     );
+		
+		
+		String received = blockSendHTTPGet( "http://127.0.0.1:8080/MServerTest/Server?" + query );
+		String[] positions = received.split( ";" );
+		
+		for ( String pos : positions ) {
+			System.out.println( pos );
+		}
+	}
+	
+	String blockSendHTTPGet(final String url) {
+			String msg = "";
+			try {
+				URL urlObj = new URL( url );
+				URLConnection connection;
+				connection = urlObj.openConnection();
+				HttpURLConnection httpConnection = (HttpURLConnection) connection;
+				
+				int responseCode = httpConnection.getResponseCode();
+				
+				if ( responseCode == HttpURLConnection.HTTP_OK ) {
+					InputStream in = httpConnection.getInputStream();
+					
+					InputStreamReader i=new InputStreamReader( in);
+					BufferedReader str=new BufferedReader(i);
+					StringBuilder sb = new StringBuilder();
+				    String line;
+	                while ((line=str.readLine())!=null)
+	                {
+	                   sb.append(line);
+	                }
+					
+					msg=sb.toString();
+					
+					
+				} else {
+					System.out.println( "Error code: " + responseCode );
+				}
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			return msg;
+	}
+	
+	@Override
+	public void run() {
+		
+		String data = "" + blockSendHTTPGet( "http://localhost:8080/MServerTest/GetId" ).trim().charAt( 0 );
+		
+		if( data == null || data.length() == 0 ) {
+			return;
+		}
+		
+		int id = Integer.parseInt( data );
+		
+		System.out.println( "Player Id:" + id );
+		
+		while( true ) {
+		
+			try {
+				sendPosition( id );
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				Thread.sleep( 50 );
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 }

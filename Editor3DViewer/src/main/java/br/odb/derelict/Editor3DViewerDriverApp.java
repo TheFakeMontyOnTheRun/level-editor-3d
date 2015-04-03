@@ -47,7 +47,7 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/prison2.opt.xml");
+							System.getProperty( "user.home" ) + "/prison3.opt.xml");
 					
 					
 					FileInputStream filePath = new FileInputStream(
@@ -56,7 +56,6 @@ public class Editor3DViewerDriverApp {
 					decal = Decal.loadGraphic( filePath, 800, 480 );
 					 
 					world = WorldLoader.build(fis);
-					//world.checkForHardLinks_new();
 					canvas.tesselator.generateSubSectorQuadsForWorld(world);
 
 				} catch (FileNotFoundException e1) {
