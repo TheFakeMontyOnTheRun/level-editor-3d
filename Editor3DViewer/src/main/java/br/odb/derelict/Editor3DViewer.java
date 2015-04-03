@@ -204,9 +204,10 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		
 		gl.glBegin(GL_TRIANGLES);
 
-		
-		for ( Vec3 p : actors ) {
-			drawCube( gl, p );
+		synchronized( actors ) {
+			for ( Vec3 p : actors ) {
+				drawCube( gl, p );
+			}
 		}
 		
 		for (GeneralTriangle poly : this.polysToRender) {
@@ -381,8 +382,23 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		String received = blockSendHTTPGet( "http://127.0.0.1:8080/MServerTest/Server?" + query );
 		String[] positions = received.split( ";" );
 		
-		for ( String pos : positions ) {
-			System.out.println( pos );
+		String[] coords;
+		Vec3 v;
+		
+		synchronized( actors ) {
+			
+			actors.clear();
+			
+			for ( String pos : positions ) {
+				coords = pos.split( "[ ]+");
+				v = new Vec3();
+				
+				v.x = Float.parseFloat( coords[ 0 ] );
+				v.y = Float.parseFloat( coords[ 1 ] );
+				v.z = Float.parseFloat( coords[ 2 ] );
+				
+				actors.add( v );
+			}
 		}
 	}
 	

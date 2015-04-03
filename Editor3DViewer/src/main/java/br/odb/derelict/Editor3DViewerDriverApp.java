@@ -38,7 +38,7 @@ public class Editor3DViewerDriverApp {
 		new Thread(new Runnable() {
 			private World world;
 			//private SVGGraphic graphic;
-			private GeneralTriangle[] decal;
+			//private GeneralTriangle[] decal;
 
 			@Override
 			public void run() {
@@ -47,17 +47,15 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/prison.opt.xml");
-					
-					
-					FileInputStream filePath = new FileInputStream(
-							System.getProperty( "user.home" ) + "/title.bin");
-					
-					decal = Decal.loadGraphic( filePath, 800, 480 );
+							System.getProperty( "user.home" ) + "/prison3.opt.xml");
 					 
 					world = WorldLoader.build(fis);
 					canvas.tesselator.generateSubSectorQuadsForWorld(world);
-
+					
+//					FileInputStream filePath = new FileInputStream(
+//							System.getProperty( "user.home" ) + "/title.bin");
+					
+					//decal = Decal.loadGraphic( filePath, 800, 480 );
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -78,21 +76,21 @@ public class Editor3DViewerDriverApp {
 			
 				canvas.setScene( world );
 				
-				for ( GeneralTriangle gt : decal ) {
-					gt.x0 += canvas.cameraPosition.x;
-					gt.x1 += canvas.cameraPosition.x;
-					gt.x2 += canvas.cameraPosition.x;
-
-					gt.y0 += canvas.cameraPosition.y;
-					gt.y1 += canvas.cameraPosition.y;
-					gt.y2 += canvas.cameraPosition.y;
-					
-					gt.z0 += canvas.cameraPosition.z;
-					gt.z1 += canvas.cameraPosition.z;
-					gt.z2 += canvas.cameraPosition.z;
-					
-					canvas.polysToRender.add( gt );
-				}				
+//				for ( GeneralTriangle gt : decal ) {
+//					gt.x0 += canvas.cameraPosition.x;
+//					gt.x1 += canvas.cameraPosition.x;
+//					gt.x2 += canvas.cameraPosition.x;
+//
+//					gt.y0 += canvas.cameraPosition.y;
+//					gt.y1 += canvas.cameraPosition.y;
+//					gt.y2 += canvas.cameraPosition.y;
+//					
+//					gt.z0 += canvas.cameraPosition.z;
+//					gt.z1 += canvas.cameraPosition.z;
+//					gt.z2 += canvas.cameraPosition.z;
+//					
+//					canvas.polysToRender.add( gt );
+//				}				
 				
 				System.out.println( "loaded " + canvas.polysToRender.size() + " polys" );
 				canvas.setPreferredSize(new Dimension(CANVAS_WIDTH,
