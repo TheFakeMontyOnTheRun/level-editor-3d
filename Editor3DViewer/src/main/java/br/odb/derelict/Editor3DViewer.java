@@ -50,6 +50,8 @@ import br.odb.utils.math.Vec3;
 
 public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		KeyListener, Runnable {
+	
+	public static final String SERVER = "http://192.241.246.87:8080/MServerTest";
 	/**
 	 * 
 	 */
@@ -379,7 +381,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			     );
 		
 		
-		String received = blockSendHTTPGet( "http://127.0.0.1:8080/MServerTest/Server?" + query );
+		String received = blockSendHTTPGet( SERVER + "/Server?" + query );
 		String[] positions = received.split( ";" );
 		
 		String[] coords;
@@ -444,7 +446,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	@Override
 	public void run() {
 		
-		String data = "" + blockSendHTTPGet( "http://localhost:8080/MServerTest/GetId" ).trim().charAt( 0 );
+		String data = "" + blockSendHTTPGet( SERVER + "/GetId" ).trim().charAt( 0 );
 		
 		if( data == null || data.length() == 0 ) {
 			return;

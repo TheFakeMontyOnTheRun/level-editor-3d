@@ -1,22 +1,31 @@
 package br.odb.gamelib.android.geometry;
- 
+
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
+import br.odb.utils.math.Vec3;
 
 public class GLESMesh extends GeneralTriangleMesh {
-	
-	public GLESMesh( String name, GeneralTriangleMesh other) {
-		super( name, other );
-		
-		for ( GeneralTriangle face : this.faces ) {
-			faces.add(face.makeCopy());
-		}
-	}
 
+    public GLESMesh(String name, GeneralTriangleMesh other) {
+        super(name, other);
 
-	public GLESMesh(String name) {
-		super( name );
-	}
+        for (GeneralTriangle face : this.faces) {
+            faces.add(face.makeCopy());
+        }
+    }
+
+    @Override
+    public void translate(Vec3 v) {
+        super.translate(v);
+
+        for (GeneralTriangle t : faces) {
+            ((GLES1Triangle) t).flush();
+        }
+    }
+
+    public GLESMesh(String name) {
+        super(name);
+    }
 
 //	public void preBuffer() {
 //		

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import org.apache.http.HttpResponse;
@@ -13,28 +12,23 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.xml.sax.SAXException;
 
-import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.ObjectInput;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
-import br.odb.libscene.util.SceneTesselator;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-import br.odb.libscene.builders.WorldLoader;
+import br.odb.libscene.util.SceneTesselator;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -49,8 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     volatile int gameId;
     volatile int playerId;
 
-    private class LevelLoader extends AsyncTask< Void, Void, Void > {
-
+    private class LevelLoader extends AsyncTask<Void, Void, Void> {
 
 
         @Override
@@ -59,13 +52,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 //world = WorldLoader.build(fileInput);
 
-                world =  (World) new ObjectInputStream( fileInput ).readObject();
+                world = (World) new ObjectInputStream(fileInput).readObject();
 
 
-                new SceneTesselator( new GLES1TriangleFactory() ).generateSubSectorQuadsForWorld(world);
+                SceneTesselator tesselator = new SceneTesselator(new GLES1TriangleFactory());
+
+                tesselator.generateSubSectorQuadsForWorld(world);
+
                 view.setScene(world);
 
-            } catch ( Exception e) {
+
+                SpaceRegion sr = new SpaceRegion("dummy");
+
+                sr.size.scale(10);
+
+                for (Direction d : Direction.values()) {
+                    for (GeneralTriangle trig : tesselator.generateQuadFor(d, sr)) {
+
+                        view.changeHue((GLES1Triangle) trig);
+                        view.renderer.cube.add((GLES1Triangle) trig);
+                    }
+                }
+
+            } catch (Exception e) {
                 e.printStackTrace();
 
             }
@@ -89,6 +98,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 @Override
                 public void run() {
 
+                    new Thread(view).start();
+
                     Vec3 lastValidPosition = new Vec3();
                     boolean inside;
                     while (true) {
@@ -107,7 +118,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             sr = srs.get(c);
 
                             if (sr instanceof Sector) {
-                                if ( ((Sector)sr).isInside(view.renderer.camera)) {
+                                if (((Sector) sr).isInside(view.renderer.camera)) {
                                     System.out.println("got inside " + c);
                                     lastValidPosition.set(view.renderer.camera);
                                     inside = true;
@@ -123,7 +134,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     }
                 }
             })
-            .start()
+                    .start()
             ;
 
             progressDialog.cancel();
@@ -132,7 +143,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             for (index = size - 1; index >= 0; --index) {
                 if (srs.get(index) instanceof GroupSector) {
                     view.renderer.camera
-                            .set( ((GroupSector)srs.get(index)).getAbsoluteCenter());
+                            .set(((GroupSector) srs.get(index)).getAbsoluteCenter());
                     return;
                 }
             }
@@ -141,10 +152,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     void startNetGame() {
         String response = makeRequest("http://localhost:8080/multiplayer-server/GetGameId?gameType=1");
-        gameId = Integer.parseInt( response );
+        gameId = Integer.parseInt(response);
     }
 
-    public static String makeRequest( String url ) {
+    public static String makeRequest(String url) {
 
         try {
             HttpClient httpclient = new DefaultHttpClient();
@@ -165,7 +176,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 response.getEntity().getContent().close();
                 return null;
             }
-        } catch ( Exception  e ) {
+        } catch (Exception e) {
             return null;
         }
     }
@@ -184,12 +195,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             vertexShader = getAssets().open("vertex.glsl");
             fragmentShader = getAssets().open("fragment.glsl");
             filename = getIntent().getStringExtra("level");
-            fileInput = getAssets().open( filename );
+            fileInput = getAssets().open(filename);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
 
         view = (SceneView) this.findViewById(R.id.svScene);
@@ -197,7 +207,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         LevelLoader loader = new LevelLoader();
 
-        progressDialog = ProgressDialog.show( this, "Loading", "Please wait...");
+        progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
         loader.execute();
 
     }
