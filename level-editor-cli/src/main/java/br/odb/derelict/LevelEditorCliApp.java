@@ -12,6 +12,6 @@ public class LevelEditorCliApp {
         .setAuthorName("Daniel 'MontyOnTheRun' Monteiro")
         .setLicenseName("3-Clause BSD").setReleaseYear(2014);
 		levelEditor.createDefaultClient();
-		levelEditor.start();
+		new Thread( levelEditor ).start();
 	}
 }
