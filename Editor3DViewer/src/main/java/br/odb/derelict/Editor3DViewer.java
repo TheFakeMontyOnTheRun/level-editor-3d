@@ -51,7 +51,8 @@ import br.odb.utils.math.Vec3;
 public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		KeyListener, Runnable {
 	
-	public static final String SERVER = "http://192.241.246.87:8080/MServerTest";
+//	public static final String SERVER = "http://192.241.246.87:8080/MServerTest";
+	public static final String SERVER = "http://127.0.0.1:8080/MServerTest";
 	/**
 	 * 
 	 */
@@ -79,14 +80,14 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		sr.size.scale( 10 );
 		for ( Direction d : Direction.values() ) {
 			for ( GeneralTriangle trig : tesselator.generateQuadFor( d, sr ) ) {
-				cube.add( trig );
+				cube.add( changeHue( trig ) );
 			}
 		}
 		
 		new Thread( this ).start();
 	}
 		
-    public void changeHue( GeneralTriangle trig ) {
+    public GeneralTriangle changeHue( GeneralTriangle trig ) {
         trig.material = new Material( null, new Color( trig.material.mainColor ), null, null, null );
 
         switch ( trig.hint ) {
@@ -94,7 +95,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
                 trig.material.mainColor.multiply( 0.1f );
                 break;
             case E:
-                trig.material.mainColor.multiply( 0.6f );
+                trig.material.mainColor.multiply( 0.4f );
                 break;
             case N:
                 trig.material.mainColor.multiply( 0.2f );
@@ -111,6 +112,8 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
         }
         
         trig.material.mainColor.a = 255;
+        
+        return trig;
 
     }
 
@@ -291,10 +294,10 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			recalculateVisibility();
 			break;
 		case KeyEvent.VK_A:
-			cameraPosition.y += scale;
+			cameraPosition.y += scale / 2.0f;
 			break;
 		case KeyEvent.VK_Z:
-			cameraPosition.y -= scale;
+			cameraPosition.y -= scale / 2.0f;
 			break;
 
 		case KeyEvent.VK_P:

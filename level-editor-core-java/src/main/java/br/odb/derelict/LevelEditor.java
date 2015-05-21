@@ -59,7 +59,7 @@ public class LevelEditor extends ConsoleApplication {
         continueRunning = true;
 
         for (UserCommandLineAction cmd : new UserCommandLineAction[]{
-            new QuitCommand(this), new NewLight(), new NewCamera(), new SetCamera(), new SetLight(), new RebuildLinksCommand(), new ReParentSectorCommand(), new TesselateCommand(), new ResetLeafIdsCommand(), new SerializeWorldCommand(), new DeserializeWorldCommand() , new ClearLinksCommand(), new ClearMeshCommand(),  new GenerateSubSectorsCommand(), new PickCommand(), new InfoCommand(), new SetDescriptionCommand(), new SetColorCommand(), new DeleteSectorCommand(), new SetSectorMeshCommand(), new LoadFileCommand( ), new NewFileCommand( this ), new NewSectorCommand( this ), new MoveCommand(), new SaveCommand(this), new ImportOBJCommand(), new GenerateSVGCommand(), new ResizeCommand( this ),
+            new QuitCommand(this), new NewLight(), new ImportGEOCommand(), new NewCamera(), new SetCamera(), new SetLight(), new RebuildLinksCommand(), new ReParentSectorCommand(), new TesselateCommand(), new ResetLeafIdsCommand(), new SerializeWorldCommand(), new DeserializeWorldCommand() , new ClearLinksCommand(), new ClearMeshCommand(),  new GenerateSubSectorsCommand(), new PickCommand(), new InfoCommand(), new SetDescriptionCommand(), new SetColorCommand(), new DeleteSectorCommand(), new SetSectorMeshCommand(), new LoadFileCommand( ), new NewFileCommand( this ), new NewSectorCommand( this ), new MoveCommand(), new SaveCommand(this), new ImportOBJCommand(), new GenerateSVGCommand(), new ResizeCommand( this ),
             new StatusCommand(this)}) {
 
             this.registerCommand(cmd);
