@@ -337,6 +337,10 @@ public class SceneView extends GLSurfaceView implements Runnable {
     @Override
     public void run() {
 
+        if ( true ) {
+            return;
+        }
+
         String data = "" + blockSendHTTPGet(SERVER + "/GetId").trim().charAt(0);
 
         if (data == null || data.length() == 0) {

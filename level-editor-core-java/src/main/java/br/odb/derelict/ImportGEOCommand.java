@@ -12,6 +12,7 @@ import br.odb.libscene.GroupSector;
 import br.odb.libscene.World;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
+import br.odb.utils.Direction;
 
 /**
  * @author monty
@@ -54,6 +55,7 @@ public class ImportGEOCommand extends UserCommandLineAction {
 		DataInputStream dis = new DataInputStream( openFile );
 		String line;
 		GroupSector gs = null;
+		GroupSector wall = null;
 		int id = 0;
 		String[] parms;
 		Color c;
@@ -63,7 +65,7 @@ public class ImportGEOCommand extends UserCommandLineAction {
 
 				if ( gs != null ) {
 					if ( gs.material == null ) {
-						gs.material = new Material( "mat" + id, new Color( 128, 128, 128 ), null, null, null );
+					//	gs.material = new Material( "mat" + id, new Color( 128, 128, 128 ), null, null, null );
 					}
 					master.addChild( gs );
 				}
@@ -76,13 +78,54 @@ public class ImportGEOCommand extends UserCommandLineAction {
 				
 			} else if ( line.charAt( 0 ) == 'c' ) {
 				parms = line.split( "[ ]+" );
+				Direction index = Direction.values()[ Integer.parseInt( parms[ 1 ] ) ];
 				c = new Color( Integer.parseInt( parms[ 2 ]), Integer.parseInt( parms[ 3 ] ), Integer.parseInt( parms[ 4 ] ) );
-				gs.material = new Material( "mat" + id, c, null, null, null );
+				wall = extractWallSector( gs, index, "wall_" + index + "_" + id );
+				wall.material = new Material( "mat" + id, c, null, null, null );
+				master.addChild( wall );
 			}
 		}
 		
 		((LevelEditor)app).world = new World( master );
 
+	}
+
+	private GroupSector extractWallSector(GroupSector original, Direction index,
+			String id) {
+		
+		GroupSector gs = new GroupSector( id );
+
+		switch( index ) {
+		case N:
+			gs.localPosition.set( original.localPosition );
+			gs.size.set(original.size.x, original.size.y, 0.1f );
+			break;
+		case S:
+			gs.localPosition.set( original.localPosition );
+			gs.localPosition.z += original.size.z;
+			gs.size.set(original.size.x, original.size.y, 0.1f );			
+			break;
+		case W:
+			gs.localPosition.set( original.localPosition );
+			gs.size.set( 0.1f, original.size.y, original.size.z );			
+			break;
+		case E:
+			gs.localPosition.set( original.localPosition );
+			gs.localPosition.x += original.size.x;			
+			gs.size.set( 0.1f, original.size.y, original.size.z );			
+			break;
+		case FLOOR:
+			gs.localPosition.set( original.localPosition );
+			gs.size.set(original.size.x, 0.1f, original.size.z );			
+			break;
+		case CEILING:
+			gs.localPosition.set( original.localPosition );
+			gs.localPosition.y += original.size.y;			
+			gs.size.set(original.size.x, 0.1f, original.size.z );			
+			break;
+		}
+		
+		return gs;
 	}
 
 	/* (non-Javadoc)

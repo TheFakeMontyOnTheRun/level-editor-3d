@@ -47,7 +47,7 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/prison.opt.xml");
+							System.getProperty( "user.home" ) + "/ang2l1.opt.xml");
 					 
 					world = WorldLoader.build(fis);
 					canvas.tesselator.generateSubSectorQuadsForWorld(world);
