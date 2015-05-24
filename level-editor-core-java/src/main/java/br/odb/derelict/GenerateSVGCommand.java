@@ -9,6 +9,7 @@ import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
+import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 public class GenerateSVGCommand extends UserCommandLineAction {
@@ -48,7 +49,7 @@ public class GenerateSVGCommand extends UserCommandLineAction {
 				sb.append(" y = '" + v.z + "' ");
 				sb.append(" width = '" + ((SpaceRegion)sr).size.x + "' ");
 				sb.append(" height = '" + ((SpaceRegion)sr).size.z + "' ");
-				c = tesselator.getColorForFace( ((SpaceRegion)sr) ).mainColor;
+				c = tesselator.getColorForFace( Direction.FLOOR, ((SpaceRegion)sr) ).mainColor;
 
 				sb.append(" style = 'fill: " + c.getHTMLColor() + ";' ");
 
