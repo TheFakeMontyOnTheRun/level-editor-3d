@@ -14,6 +14,7 @@ import android.opengl.GLUtils;
 import android.opengl.Matrix;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -21,6 +22,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
+import br.odb.libstrip.Material;
 import br.odb.utils.math.Vec3;
 
 /*
@@ -33,9 +35,13 @@ import br.odb.utils.math.Vec3;
 public class GLESRenderer implements GLSurfaceView.Renderer {
 
     public final Vec3 camera = new Vec3();
+    private final int polycount;
     public float angle;
     private GLESVertexArrayManager fixedGeometryManager;
-    final GLESVertexArrayManager manager = new GLESVertexArrayManager();
+    //final GLESVertexArrayManager manager = new GLESVertexArrayManager();
+
+
+    final HashMap<Material, GLESVertexArrayManager > managers = new HashMap<Material, GLESVertexArrayManager >();
     final private ArrayList<GLES1Triangle> sceneGeometryToRender;
     final public ArrayList<GLES1Triangle> fixedScreenShapesToRender;
     final public ArrayList<GLES1Triangle> screenShapesToRender;
@@ -88,16 +94,24 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
                         String fragmentShader, Context context) {
         super();
 
+        this.polycount = maxVisiblePolys;
         this.vertexShaderCode = vertexShader;
         this.fragmentShaderCode = fragmentShader;
 
         sceneGeometryToRender = new ArrayList<GLES1Triangle>();
         screenShapesToRender = new ArrayList<GLES1Triangle>();
         fixedScreenShapesToRender = new ArrayList<GLES1Triangle>();
-
-        manager.init(maxVisiblePolys);
-        manager.flush();
         this.context = context;
+    }
+
+    void initManagerForMaterial( Material mat, int polys ) {
+
+        GLESVertexArrayManager manager = new GLESVertexArrayManager();
+
+        manager.init(polys);
+        manager.flush();
+
+        managers.put( mat, manager );
     }
 
     /**
@@ -327,14 +341,28 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
             }
         }
 
-        manager.flush();
-        manager.drawGLES2(maPositionHandle, colorHandle);
+
+        GLESVertexArrayManager manager;
+
+        for ( Material mat : managers.keySet() ) {
+
+            manager = managers.get( mat );
+            manager.flush();
+            manager.drawGLES2(maPositionHandle, colorHandle);
+        }
     }
 
     /**
      * @param face
      */
     public void addToVA(GLES1Triangle face) {
+
+        GLESVertexArrayManager manager;
+
+        if ( !managers.containsKey( face.material ) ) {
+            initManagerForMaterial( face.material, polycount / 10 );
+        }
+        manager = managers.get(face.material );
         manager.pushIntoFrameAsStatic(face.getVertexData(), face.material.mainColor.getFloatData());
     }
 
@@ -379,7 +407,11 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
             fixedGeometryManager.reinit();
 
         angle = 0;
-        manager.reinit();
+
+        for ( GLESVertexArrayManager manager : managers.values() ) {
+            manager.reinit();
+        }
+
         sceneGeometryToRender.clear();
         screenShapesToRender.clear();
         meshes.clear();
@@ -391,7 +423,10 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      */
     public void clearScreenGeometry() {
         screenShapesToRender.clear();
-        manager.clear();
+
+        for ( GLESVertexArrayManager manager : managers.values() ) {
+            manager.clear();
+        }
     }
 
     /**
