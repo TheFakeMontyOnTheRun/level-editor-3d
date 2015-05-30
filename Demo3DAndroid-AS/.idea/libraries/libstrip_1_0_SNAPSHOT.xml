@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libstrip-1.0-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/libstrip-1.0-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

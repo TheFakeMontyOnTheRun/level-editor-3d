@@ -40,7 +40,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     private GLESVertexArrayManager fixedGeometryManager;
     //final GLESVertexArrayManager manager = new GLESVertexArrayManager();
 
-
+    final HashMap<Material, ArrayList< GLES1Triangle> > staticGeometryToAdd= new HashMap<Material, ArrayList<GLES1Triangle>>();
     final HashMap<Material, GLESVertexArrayManager > managers = new HashMap<Material, GLESVertexArrayManager >();
     final private ArrayList<GLES1Triangle> sceneGeometryToRender;
     final public ArrayList<GLES1Triangle> fixedScreenShapesToRender;
@@ -219,7 +219,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         GLES20.glEnable(GLES10.GL_DEPTH_TEST);
 
         GLES20.glDepthFunc(GLES10.GL_LEQUAL);
-        GLES20.glHint(GLES10.GL_PERSPECTIVE_CORRECTION_HINT, GLES10.GL_FASTEST);
 
         int vertexShader = loadShader(GLES20.GL_VERTEX_SHADER, vertexShaderCode);
         int fragmentShader = loadShader(GLES20.GL_FRAGMENT_SHADER,
@@ -357,6 +356,15 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      */
     public void addToVA(GLES1Triangle face) {
 
+        if ( !staticGeometryToAdd.containsKey( face.material ) ) {
+            staticGeometryToAdd.put( face.material, new ArrayList() );
+        }
+
+        staticGeometryToAdd.get( face.material ).add( face );
+    }
+
+    private void addToVAForReal(GLES1Triangle face) {
+
         GLESVertexArrayManager manager;
 
         if ( !managers.containsKey( face.material ) ) {
@@ -440,5 +448,18 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
             graphic[c].flush();
             this.addGeometryToScreen(graphic[c]);
         }
+    }
+
+    public void flush() {
+
+        for ( Material m : staticGeometryToAdd.keySet() ) {
+            initManagerForMaterial( m, staticGeometryToAdd.get( m ).size() );
+            for ( GLES1Triangle t : staticGeometryToAdd.get( m ) ) {
+                addToVAForReal( t );
+            }
+            staticGeometryToAdd.get( m ).clear();
+        }
+
+        staticGeometryToAdd.clear();
     }
 }

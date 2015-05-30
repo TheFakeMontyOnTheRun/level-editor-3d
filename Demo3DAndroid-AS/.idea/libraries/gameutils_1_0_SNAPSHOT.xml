@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="gameutils-1.0-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/gameutils-1.0-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

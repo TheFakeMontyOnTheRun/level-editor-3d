@@ -199,6 +199,7 @@ public class SceneView extends GLSurfaceView implements Runnable {
 
         GLES1TriangleFactory factory = GLES1TriangleFactory.getInstance();
         GLES1Triangle trig;
+
         for (GeneralTriangle isf : sector.mesh.faces) {
             ++polyCount;
             changeHue((GLES1Triangle) isf);
@@ -217,7 +218,7 @@ public class SceneView extends GLSurfaceView implements Runnable {
     public void setScene(World scene) {
         renderer.clearScreenGeometry();
         loadGeometryFromScene(scene.masterSector);
-
+        renderer.flush();
         int lightsLeft = 20;
         int skip = 2;
         for (SceneNode sr : scene.getAllRegionsAsList()) {
