@@ -16,6 +16,7 @@ import br.odb.libscene.LightNode;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
 import br.odb.libscene.World;
+import br.odb.libstrip.Material;
 import br.odb.utils.Color;
 import br.odb.utils.Direction;
 
@@ -83,7 +84,7 @@ public class ImportGEOCommand extends UserCommandLineAction {
 				parms = line.split( "[ ]+" );
 				Direction index = Direction.values()[ Integer.parseInt( parms[ 1 ] ) ];
 				c = new Color( Integer.parseInt( parms[ 2 ]), Integer.parseInt( parms[ 3 ] ), Integer.parseInt( parms[ 4 ] ) );
-				gs.shades.put( index, c );
+				gs.shades.put( index, new Material( c.getHTMLColor(), c, null, null, null ) );
 			} else if ( line.charAt( 0 ) == 'a' ) {
 				parms = line.split( "[ ]+" );
 				int sector = Integer.parseInt( parms[ 1 ] );
