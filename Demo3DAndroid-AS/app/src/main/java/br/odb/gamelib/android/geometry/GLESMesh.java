@@ -19,7 +19,7 @@ public class GLESMesh extends GeneralTriangleMesh {
         super.translate(v);
 
         for (GeneralTriangle t : faces) {
-            ((GLES1Triangle) t).flush();
+            t.flush();
         }
     }
 

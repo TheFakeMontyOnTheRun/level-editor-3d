@@ -88,8 +88,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             super.onPostExecute(aVoid);
 
             view.renderer.angle = 180.0f;
-
+            final MapView map = (MapView) findViewById( R.id.map );
             final List<SceneNode> srs = world.getAllRegionsAsList();
+
+            for ( SceneNode sn : srs ) {
+                if ( sn instanceof GroupSector ) {
+                    map.sectors.add((GroupSector) sn);
+                }
+            }
+
             int size = srs.size();
             int index = 0;
 
@@ -131,6 +138,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         if (!inside) {
                             view.renderer.camera.set(lastValidPosition);
                         }
+
+                        map.position.set( view.renderer.camera );
                     }
                 }
             })

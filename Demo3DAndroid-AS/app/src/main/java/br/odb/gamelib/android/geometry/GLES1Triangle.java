@@ -21,14 +21,14 @@ import static android.opengl.GLES10.glVertexPointer;
  */
 public class GLES1Triangle extends GeneralTriangle {
 
-    //private FloatBuffer textureBuffer;
+    private FloatBuffer textureBuffer;
     private FloatBuffer colorBuffer;
     private FloatBuffer vertexBuffer;
     int[] verticesBits = new int[9];
     private float[] color = new float[12];
     int[] colorBits = new int[4];
     public int light = 0;
-    //private float[] textureCoordinates;
+    private float[] textureCoordinates;
 
     // ------------------------------------------------------------------------------------------------------------
 
@@ -139,13 +139,13 @@ public class GLES1Triangle extends GeneralTriangle {
         GLES20.glEnableVertexAttribArray(colorHandle);
 
         if (textureHandle != -1) {
-            /*
+
             textureBuffer.position(0);
 			GLES20.glVertexAttribPointer(textureHandle, 2, GLES20.GL_FLOAT,
 					false, 0, textureBuffer);
 
 			GLES20.glEnableVertexAttribArray(textureHandle);
-			*/
+
         }
 
         GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 3);
@@ -192,16 +192,16 @@ public class GLES1Triangle extends GeneralTriangle {
     }
 
     public void setTextureCoordenates(float[] fs) {
-        /*
+
 		this.textureCoordinates = fs;
 
-		ByteBuffer byteBuf = ByteBuffer.allocateDirect(vertices.length * 4);
+		ByteBuffer byteBuf = ByteBuffer.allocateDirect( getVertexData().length * 4);
 		byteBuf = ByteBuffer.allocateDirect(color.length * 4);
 		byteBuf.order(ByteOrder.nativeOrder());
 		textureBuffer = byteBuf.asFloatBuffer();
 		textureBuffer.put(textureCoordinates);
 		textureBuffer.position(0);
-		*/
+
     }
 
 }

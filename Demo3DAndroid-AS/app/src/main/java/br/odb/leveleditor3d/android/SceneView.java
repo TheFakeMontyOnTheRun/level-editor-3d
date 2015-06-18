@@ -203,7 +203,7 @@ public class SceneView extends GLSurfaceView implements Runnable {
         for (GeneralTriangle isf : sector.mesh.faces) {
             ++polyCount;
             changeHue((GLES1Triangle) isf);
-            ((GLES1Triangle) isf).flush();
+            isf.flush();
             //renderer.addGeometryToScene((GLES1Triangle) isf);
             renderer.addToVA((GLES1Triangle) isf);
         }

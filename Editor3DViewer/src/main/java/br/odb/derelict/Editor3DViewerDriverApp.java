@@ -19,8 +19,6 @@ import org.xml.sax.SAXException;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
-import br.odb.libstrip.Decal;
-import br.odb.libstrip.GeneralTriangle;
 
 import com.jogamp.opengl.util.FPSAnimator;
 

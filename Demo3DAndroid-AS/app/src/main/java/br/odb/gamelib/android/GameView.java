@@ -65,8 +65,6 @@ public class GameView extends View implements Updatable {
 	volatile private DisplayList renderingNode;
 	private long renderingBudget;
 	private RenderingNode defaultRenderingNode;
-
-	private Thread updateThread;
 	public Updater updater;
 
 	public void update(long ms) {
@@ -117,6 +115,7 @@ public class GameView extends View implements Updatable {
 
 		updater = new Updater(this);
 		updater.setRunning(true);
+		Thread updateThread;
 		updateThread = new Thread(updater);
 		updateThread.start();
 

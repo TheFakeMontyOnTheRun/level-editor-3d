@@ -19,22 +19,23 @@ public final class R {
         public static final int tex=0x7f020001;
     }
     public static final class id {
-        public static final int btnCompile=0x7f07000b;
-        public static final int btnCreateSector=0x7f07000d;
-        public static final int btnDelete=0x7f07000e;
-        public static final int btnLeft=0x7f070001;
-        public static final int btnModifyGeometry=0x7f07000a;
-        public static final int btnMove=0x7f07000f;
-        public static final int btnNewProject=0x7f070007;
-        public static final int btnResize=0x7f070010;
-        public static final int btnRight=0x7f070003;
-        public static final int btnViewIn3D=0x7f070006;
-        public static final int btnWalk=0x7f070002;
-        public static final int button1=0x7f070008;
-        public static final int button2=0x7f070009;
-        public static final int gameView1=0x7f070004;
-        public static final int gvMap=0x7f07000c;
-        public static final int spnLevels=0x7f070005;
+        public static final int btnCompile=0x7f07000c;
+        public static final int btnCreateSector=0x7f07000e;
+        public static final int btnDelete=0x7f07000f;
+        public static final int btnLeft=0x7f070002;
+        public static final int btnModifyGeometry=0x7f07000b;
+        public static final int btnMove=0x7f070010;
+        public static final int btnNewProject=0x7f070008;
+        public static final int btnResize=0x7f070011;
+        public static final int btnRight=0x7f070004;
+        public static final int btnViewIn3D=0x7f070007;
+        public static final int btnWalk=0x7f070003;
+        public static final int button1=0x7f070009;
+        public static final int button2=0x7f07000a;
+        public static final int gameView1=0x7f070005;
+        public static final int gvMap=0x7f07000d;
+        public static final int map=0x7f070001;
+        public static final int spnLevels=0x7f070006;
         public static final int svScene=0x7f070000;
     }
     public static final class layout {

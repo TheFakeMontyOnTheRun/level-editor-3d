@@ -61,7 +61,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     //	int textureIndex;
     //private int mTextureCoordinateHandle = -1;
     private int mTextureUniformHandle = -1;
-    private Context context;
     private int muMVPMatrixHandle;
     private float[] mMVPMatrix = new float[16];
     private float[] mMMatrix = new float[16];
@@ -101,7 +100,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         sceneGeometryToRender = new ArrayList<GLES1Triangle>();
         screenShapesToRender = new ArrayList<GLES1Triangle>();
         fixedScreenShapesToRender = new ArrayList<GLES1Triangle>();
-        this.context = context;
     }
 
     void initManagerForMaterial( Material mat, int polys ) {
@@ -357,10 +355,10 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public void addToVA(GLES1Triangle face) {
 
         if ( !staticGeometryToAdd.containsKey( face.material ) ) {
-            staticGeometryToAdd.put( face.material, new ArrayList() );
+            staticGeometryToAdd.put(face.material, new ArrayList<GLES1Triangle>());
         }
 
-        staticGeometryToAdd.get( face.material ).add( face );
+        staticGeometryToAdd.get( face.material ).add(face);
     }
 
     private void addToVAForReal(GLES1Triangle face) {
@@ -392,11 +390,11 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      * @param graphic
      */
     public void addToFixedGeometryToScreen(GLES1Triangle[] graphic) {
-        for (int c = 0; c < graphic.length; ++c) {
 
-            graphic[c].flatten(-1.0f);
-            graphic[c].flush();
-            this.fixedScreenShapesToRender.add(graphic[c]);
+        for ( GLES1Triangle t : graphic ) {
+            t.flatten(-1.0f);
+            t.flush();
+            this.fixedScreenShapesToRender.add(t);
         }
     }
 
@@ -442,11 +440,10 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      */
     public void addToMovingGeometryToScreen(GLES1Triangle[] graphic) {
 
-        for (int c = 0; c < graphic.length; ++c) {
-
-            graphic[c].flatten(-1.0f);
-            graphic[c].flush();
-            this.addGeometryToScreen(graphic[c]);
+        for ( GLES1Triangle t : graphic ) {
+            t.flatten(-1.0f);
+            t.flush();
+            this.addGeometryToScreen(t);
         }
     }
 

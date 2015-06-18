@@ -95,9 +95,9 @@ public class AndroidCanvasRenderingContext extends RenderingContext {
 
 		for (int c = 0; c < pol.npoints; ++c) {
 
-			if (((Vec2) pol.controlPoints.get(c)).isValid()) {
+			if ((pol.controlPoints.get(c)).isValid()) {
 
-				Vec2 control = (Vec2) pol.controlPoints.get(c);
+				Vec2 control = pol.controlPoints.get(c);
 
 				path.cubicTo(origin.x + (pol.xpoints[c]) - diffX, origin.y
 						+ pol.ypoints[c] - diffY, origin.x + control.x,
@@ -165,7 +165,7 @@ public class AndroidCanvasRenderingContext extends RenderingContext {
 				}
 
 				lg = new LinearGradient(g0.x1, g0.y1, g0.x2, g0.y2,
-						(int) color1.getARGBColor(), (int) color2.getARGBColor(),
+						color1.getARGBColor(), color2.getARGBColor(),
 						Shader.TileMode.CLAMP);
 				
 				gradientsCache.put( g0, lg );
