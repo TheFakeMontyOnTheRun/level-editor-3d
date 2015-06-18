@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "br.odb.leveleditor3d.android"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 18
     }
 
     buildTypes {
@@ -30,4 +30,9 @@ dependencies {
     compile files('libs/libstrip-1.0-SNAPSHOT.jar')
     compile files('libs/libsvg-1.0-SNAPSHOT.jar')
     compile files('libs/libworldproc-1.0-SNAPSHOT.jar')
+    compile "com.android.support:appcompat-v7:18.0.+"
+
+    compile 'com.google.android.gms:play-services:7.5.0'
+
 }
+
