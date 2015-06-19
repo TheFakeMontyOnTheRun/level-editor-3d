@@ -1,10 +1,18 @@
 package br.odb.leveleditor3d.android;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.Presentation;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.res.Resources;
+import android.media.MediaRouter;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
+import android.view.ViewManager;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -19,6 +27,7 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.List;
 
+import br.odb.gamelib.android.GameView;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.libscene.GroupSector;
@@ -42,6 +51,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     volatile InputStream fileInput;
     volatile int gameId;
     volatile int playerId;
+    private MediaRouter mMediaRouter;
+    private MediaRouter.RouteInfo mRouteInfo;
 
     private class LevelLoader extends AsyncTask<Void, Void, Void> {
 
@@ -219,6 +230,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
         progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
         loader.execute();
 
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            mMediaRouter = (MediaRouter)getSystemService(Context.MEDIA_ROUTER_SERVICE);
+
+            mRouteInfo = mMediaRouter.getSelectedRoute( MediaRouter.ROUTE_TYPE_LIVE_VIDEO );
+
+            if ( mRouteInfo != null ) {
+
+                Display presentationDisplay = mRouteInfo.getPresentationDisplay();
+
+                if ( presentationDisplay != null ) {
+                    ((ViewManager) view.getParent()).removeView( view );
+                    Presentation presentation = new GamePresentation( this, presentationDisplay, view );
+                    presentation.show();
+                }
+            }
+        }
+
     }
 
     @Override
@@ -237,6 +267,32 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 this.view.onWalkForward();
                 break;
 
+        }
+    }
+
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    private final static class GamePresentation extends Presentation {
+
+        final SceneView canvas;
+
+        public GamePresentation(Context context, Display display, SceneView gameView ) {
+            super(context, display);
+
+            this.canvas = gameView;
+        }
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            // Be sure to call the super class.
+            super.onCreate(savedInstanceState);
+
+            // Get the resources for the context of the presentation.
+            // Notice that we are getting the resources from the context of the presentation.
+            Resources r = getContext().getResources();
+
+            // Inflate the layout.
+            setContentView(canvas );
         }
     }
 }
