@@ -12,15 +12,25 @@
         android:layout_weight="0.99"
         android:layout_height="match_parent">
 
-        <view
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            class="br.odb.leveleditor3d.android.SceneView"
-            android:id="@+id/svScene"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_weight="7" />
+            android:layout_weight="7">
+
+            <view
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                class="br.odb.leveleditor3d.android.SceneView"
+                android:id="@+id/svScene"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <br.odb.gamelib.android.GameView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view" />
+        </RelativeLayout>
 
         <view
             android:layout_width="0dp"

@@ -42,6 +42,41 @@ import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
+
+    //    volatile int gameId;
+//    volatile int playerId;
+
+//    void startNetGame() {
+//        String response = makeRequest("http://localhost:8080/multiplayer-server/GetGameId?gameType=1");
+//        gameId = Integer.parseInt(response);
+//    }
+//
+//    public static String makeRequest(String url) {
+//
+//        try {
+//            HttpClient httpclient = new DefaultHttpClient();
+//            HttpResponse response = httpclient.execute(new HttpGet(url));
+//            StatusLine statusLine = response.getStatusLine();
+//
+//            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+//                ByteArrayOutputStream out = new ByteArrayOutputStream();
+//                response.getEntity().writeTo(out);
+//                String responseString = out.toString();
+//                out.close();
+//
+//
+//                return responseString;
+//
+//            } else {
+//                //Closes the connection.
+//                response.getEntity().getContent().close();
+//                return null;
+//            }
+//        } catch (Exception e) {
+//            return null;
+//        }
+//    }
+
     volatile ProgressDialog progressDialog;
     volatile String filename;
     volatile SceneView view;
@@ -49,8 +84,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     volatile InputStream vertexShader;
     volatile InputStream fragmentShader;
     volatile InputStream fileInput;
-    volatile int gameId;
-    volatile int playerId;
     private MediaRouter mMediaRouter;
     private MediaRouter.RouteInfo mRouteInfo;
 
@@ -62,9 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             try {
 
                 //world = WorldLoader.build(fileInput);
-
                 world = (World) new ObjectInputStream(fileInput).readObject();
-
 
                 SceneTesselator tesselator = new SceneTesselator(new GLES1TriangleFactory());
 
@@ -116,8 +147,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 @Override
                 public void run() {
 
-                    new Thread(view).start();
-
                     Vec3 lastValidPosition = new Vec3();
                     boolean inside;
                     while (true) {
@@ -140,7 +169,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                                     System.out.println("got inside " + c);
                                     lastValidPosition.set(view.renderer.camera);
                                     inside = true;
-                                    view.lit((GroupSector) sr.parent, view.light0);
                                 }
                             }
 
@@ -153,9 +181,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         map.position.set( view.renderer.camera );
                     }
                 }
-            })
-                    .start()
-            ;
+            }).start();
 
             progressDialog.cancel();
             view.renderer.ready = true;
@@ -170,36 +196,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    void startNetGame() {
-        String response = makeRequest("http://localhost:8080/multiplayer-server/GetGameId?gameType=1");
-        gameId = Integer.parseInt(response);
-    }
 
-    public static String makeRequest(String url) {
-
-        try {
-            HttpClient httpclient = new DefaultHttpClient();
-            HttpResponse response = httpclient.execute(new HttpGet(url));
-            StatusLine statusLine = response.getStatusLine();
-
-            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
-                ByteArrayOutputStream out = new ByteArrayOutputStream();
-                response.getEntity().writeTo(out);
-                String responseString = out.toString();
-                out.close();
-
-
-                return responseString;
-
-            } else {
-                //Closes the connection.
-                response.getEntity().getContent().close();
-                return null;
-            }
-        } catch (Exception e) {
-            return null;
-        }
-    }
 
 
     protected void onCreate(Bundle savedInstanceState) {

@@ -20,6 +20,7 @@ import java.util.List;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import br.odb.leveleditor3d.android.R;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
@@ -36,6 +37,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
     public final Vec3 camera = new Vec3();
     private final int polycount;
+    private final Context context;
     public float angle;
     private GLESVertexArrayManager fixedGeometryManager;
     //final GLESVertexArrayManager manager = new GLESVertexArrayManager();
@@ -58,8 +60,8 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     private int colorHandle;
     private String vertexShaderCode;
     private String fragmentShaderCode;
-    //	int textureIndex;
-    //private int mTextureCoordinateHandle = -1;
+    	int textureIndex;
+    private int mTextureCoordinateHandle = -1;
     private int mTextureUniformHandle = -1;
     private int muMVPMatrixHandle;
     private float[] mMVPMatrix = new float[16];
@@ -80,6 +82,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         GLES20.glShaderSource(shader, shaderCode);
         GLES20.glCompileShader(shader);
 
+
         return shader;
     }
 
@@ -92,7 +95,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public GLESRenderer(int maxVisiblePolys, String vertexShader,
                         String fragmentShader, Context context) {
         super();
-
+        this.context = context;
         this.polycount = maxVisiblePolys;
         this.vertexShaderCode = vertexShader;
         this.fragmentShaderCode = fragmentShader;
@@ -108,6 +111,16 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
         manager.init(polys);
         manager.flush();
+
+        if ( this.textureIndex != -1 ) {
+            manager.setTextureCoordenates( new float[] {
+                            0.0f, 0.0f,
+                            0.0f, 1.0f,
+                            1.0f, 0.0f
+                    }
+
+            );
+        }
 
         managers.put( mat, manager );
     }
@@ -149,13 +162,13 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      * @param isf
      */
     public void addGeometryToScene(GLES1Triangle isf) {
-//		isf.setTextureCoordenates( new float[] {
-//				0.0f, 0.0f,
-//		        0.0f, 1.0f,
-//		        1.0f, 0.0f				
-//				}
-//				
-//				);
+		isf.setTextureCoordenates( new float[] {
+				0.0f, 0.0f,
+		        0.0f, 1.0f,
+		        1.0f, 0.0f
+				}
+
+				);
 
         sceneGeometryToRender.add(isf);
     }
@@ -210,7 +223,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public void onSurfaceCreatedGLES20(EGLConfig config) {
 
 
-//		textureIndex = loadTexture( context , R.drawable.tex );
+		textureIndex = -1;//loadTexture( context , R.drawable.tex );
 
         GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         GLES20.glClearDepthf(1.0f);
@@ -238,13 +251,17 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     @Override
     public void onDrawFrame(GL10 gl) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-//		mTextureUniformHandle = GLES20.glGetUniformLocation(mProgram, "u_Texture");
-//	    mTextureCoordinateHandle = GLES20.glGetAttribLocation(mProgram, "a_TexCoordinate");
-//	 
-//	    GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
 
-//	    GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureIndex);
-//	    GLES20.glUniform1i(mTextureUniformHandle, 0);
+        if ( this.textureIndex != -1 ) {
+            mTextureUniformHandle = GLES20.glGetUniformLocation(mProgram, "u_Texture");
+            mTextureCoordinateHandle = GLES20.glGetAttribLocation(mProgram, "a_TexCoordinate");
+            GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+            GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureIndex);
+            GLES20.glUniform1i(mTextureUniformHandle, 0);
+        }
+
+
+
 
         if (ready) {
             renderSceneGLES20();
@@ -256,18 +273,9 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      */
     private void drawMeshGLES2(GeneralTriangleMesh mesh) {
 
-//		if (!mesh.visible )
-//			return;
-
-//		if (mesh.manager != null) {
-//			mesh.manager.flush();
-//			((GLESVertexArrayManager) mesh.manager).drawGLES2(maPositionHandle,
-//					colorHandle);
-//		} else {
         for (GeneralTriangle face : mesh.faces) {
-            ((GLES1Triangle) face).drawGLES2(maPositionHandle, colorHandle, -1);
+            ((GLES1Triangle) face).drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
         }
-//		}
     }
 
     /**
@@ -284,11 +292,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     private void setCamera() {
         mVMatrix = new float[]{1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,
                 1,};
-
-        // Matrix.rotateM(mVMatrix, 0, -7.5f + accelerometerOffset.x, 1.0f, 0,
-        // 0);
-        // Matrix.rotateM(mVMatrix, 0, 0.125f + accelerometerOffset.y, 0, 1.0f,
-        // 0);
 
         Matrix.rotateM(mVMatrix, 0, angle, 0, 1.0f, 0);
 
@@ -325,11 +328,11 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
         if (fixedGeometryManager != null) {
             fixedGeometryManager.flush();
-            fixedGeometryManager.drawGLES2(maPositionHandle, colorHandle);
+            fixedGeometryManager.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
         }
 
         for (GLES1Triangle face : sceneGeometryToRender) {
-            face.drawGLES2(maPositionHandle, colorHandle, -1); //this.mTextureCoordinateHandle );
+            face.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle );
         }
 
         synchronized (meshes) {
@@ -345,7 +348,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
             manager = managers.get( mat );
             manager.flush();
-            manager.drawGLES2(maPositionHandle, colorHandle);
+            manager.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
         }
     }
 
@@ -356,6 +359,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
         if ( !staticGeometryToAdd.containsKey( face.material ) ) {
             staticGeometryToAdd.put(face.material, new ArrayList<GLES1Triangle>());
+
         }
 
         staticGeometryToAdd.get( face.material ).add(face);

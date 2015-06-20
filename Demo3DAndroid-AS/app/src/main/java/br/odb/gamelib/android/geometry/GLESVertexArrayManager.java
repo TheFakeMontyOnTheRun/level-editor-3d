@@ -22,12 +22,14 @@ public class GLESVertexArrayManager {
     private boolean init;
     private int length;
     private int currentVertexPosition;
+    private FloatBuffer textureBuffer;
     private FloatBuffer colorBuffer;
     private FloatBuffer vertexBuffer;
     private IntBuffer colorIntBuffer;
     private IntBuffer vertexIntBuffer;
     private ByteBuffer colorByteBuffer;
     private ByteBuffer vertexByteBuffer;
+    private float[] textureCoordinates;
     private int numFaces;
 
 
@@ -35,13 +37,23 @@ public class GLESVertexArrayManager {
         super();
     }
 
-    final public void drawGLES2(int vertexHandle, int colorHandle) {
+    final public void drawGLES2(int vertexHandle, int colorHandle, int textureHandle ) {
 
         GLES20.glVertexAttribPointer(vertexHandle, 3, GLES20.GL_FLOAT, false, 0, vertexBuffer);
         GLES20.glEnableVertexAttribArray(vertexHandle);
 
         GLES20.glVertexAttribPointer(colorHandle, 4, GLES20.GL_FLOAT, false, 0, colorBuffer);
         GLES20.glEnableVertexAttribArray(colorHandle);
+
+        if (textureHandle != -1) {
+
+            textureBuffer.position(0);
+            GLES20.glVertexAttribPointer(textureHandle, 2, GLES20.GL_FLOAT,
+                    false, 0, textureBuffer);
+
+            GLES20.glEnableVertexAttribArray(textureHandle);
+
+        }
 
         GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, currentVertexPosition / 3);
 
@@ -128,6 +140,21 @@ public class GLESVertexArrayManager {
             e.printStackTrace();
             Log.d("bzk3", "length: " + length + " capacity: " + capacity);
         }
+    }
+
+
+    public void setTextureCoordenates(float[] fs) {
+
+        this.textureCoordinates = fs;
+
+        ByteBuffer byteBuf;
+        //4 vectors of 3 floats (having 4 bytes each)
+        byteBuf = ByteBuffer.allocateDirect( 3 * 4 * 4);
+        byteBuf.order(ByteOrder.nativeOrder());
+        textureBuffer = byteBuf.asFloatBuffer();
+        textureBuffer.put(textureCoordinates);
+        textureBuffer.position(0);
+
     }
 
     final public void pushIntoFrameAsStatic(float[] vertexData, float[] colorData) {
