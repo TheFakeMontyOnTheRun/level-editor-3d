@@ -187,7 +187,7 @@ public class SceneView extends GLSurfaceView {
 
     GLESRenderer renderer;
     int polyCount = 0;
-//    GeneralTriangleMesh enemy;
+    GeneralTriangleMesh enemy;
 
     public SceneView(Context context) {
         super(context);
@@ -212,16 +212,15 @@ public class SceneView extends GLSurfaceView {
                     this.getContext());
 
 
-//            WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
-//            List<Material> mats = matLoader.parseMaterials( context.getAssets().open( "gargoyle.mtl" ) );
-//
-//            WavefrontOBJLoader loader = new WavefrontOBJLoader( new GLES1TriangleFactory() );
-//            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
-//
-//
-//            enemy = mesh.get( 0 );
+            WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+            List<Material> mats = matLoader.parseMaterials( context.getAssets().open( "gargoyle.mtl" ) );
+
+            WavefrontOBJLoader loader = new WavefrontOBJLoader( new GLES1TriangleFactory() );
+            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
+
+            enemy = mesh.get( 0 );
 //            enemy.scale( 10.0f );
-//            renderer.meshes.add( enemy );
+            renderer.meshes.add( enemy );
 
 
 //            setFocusable(true);
@@ -301,7 +300,7 @@ public class SceneView extends GLSurfaceView {
                 return false;
         }
 
-//        enemy.translateTo( renderer.camera.add( new Vec3( 0.0f, 0.0f, 0.0f ) ) );
+        enemy.translateTo( renderer.camera.add( new Vec3( 0.0f, 0.0f, 0.0f ) ) );
 
         return true;
     }

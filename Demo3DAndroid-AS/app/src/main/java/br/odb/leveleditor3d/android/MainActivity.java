@@ -194,7 +194,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                             if (sr instanceof Sector) {
                                 if (((Sector) sr).isInside(view.renderer.camera)) {
-                                    System.out.println("got inside " + c);
+                                   // System.out.println("got inside " + c);
                                     lastValidPosition.set(view.renderer.camera);
                                     inside = true;
                                 }
@@ -232,6 +232,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        //findViewById( R.id.controlbar ).setVisibility( View.GONE );
 
         findViewById(R.id.btnLeft).setOnClickListener(this);
         findViewById(R.id.btnRight).setOnClickListener(this);

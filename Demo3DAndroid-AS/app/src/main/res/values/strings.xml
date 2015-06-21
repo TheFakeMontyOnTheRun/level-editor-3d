@@ -2,9 +2,9 @@
 <resources>
 
     <string name="app_name">Demo3D</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Demo3D</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu">Demo3D</string>
     <string name="title_activity_modify_geometry">Geometry</string>
     <string name="action_settings">Settings</string>
 
