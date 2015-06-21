@@ -10,9 +10,12 @@ import android.media.MediaRouter;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewManager;
+import android.view.WindowManager;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -30,6 +33,9 @@ import java.util.List;
 import br.odb.gamelib.android.GameView;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
+import br.odb.gamerendering.rendering.DisplayList;
+import br.odb.gamerendering.rendering.RenderingNode;
+import br.odb.gamerendering.rendering.SVGRenderingNode;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
@@ -37,6 +43,9 @@ import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.GeneralTriangle;
+import br.odb.libsvg.SVGGraphic;
+import br.odb.libsvg.SVGParsingUtils;
+import br.odb.libsvg.SVGUtils;
 import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
@@ -86,6 +95,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
     volatile InputStream fileInput;
     private MediaRouter mMediaRouter;
     private MediaRouter.RouteInfo mRouteInfo;
+
+
+
+    SVGRenderingNode[] nodes = new SVGRenderingNode[ 4 ];
+    int currentFrame;
+
+    void updateOverlay() {
+
+        for( SVGRenderingNode node : nodes ) {
+            node.setVisible( false );
+        }
+
+        nodes[ currentFrame ].setVisible(true);
+
+        Log.d("frame", "" + currentFrame);
+
+        currentFrame = ( currentFrame + 1 ) % 4;
+    }
+
 
     private class LevelLoader extends AsyncTask<Void, Void, Void> {
 
@@ -174,9 +202,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                         }
 
-                        if (!inside) {
-                            view.renderer.camera.set(lastValidPosition);
-                        }
+//                        if (!inside) {
+//                            view.renderer.camera.set(lastValidPosition);
+//                        }
 
                         map.position.set( view.renderer.camera );
                     }
@@ -190,6 +218,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 if (srs.get(index) instanceof GroupSector) {
                     view.renderer.camera
                             .set(((GroupSector) srs.get(index)).getAbsoluteCenter());
+//                    view.enemy.translateTo( view.renderer.camera );
                     return;
                 }
             }
@@ -207,6 +236,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.btnLeft).setOnClickListener(this);
         findViewById(R.id.btnRight).setOnClickListener(this);
         findViewById(R.id.btnWalk).setOnClickListener(this);
+
+
 
         try {
             vertexShader = getAssets().open("vertex.glsl");
@@ -227,8 +258,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
         loader.execute();
 
+        tryToUseSecondScreen();
+    }
 
-
+    private void tryToUseSecondScreen() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             mMediaRouter = (MediaRouter)getSystemService(Context.MEDIA_ROUTER_SERVICE);
 
@@ -245,7 +278,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }
             }
         }
+    }
 
+    private void setOverlay( GameView overlay) throws IOException {
+
+
+
+        SVGGraphic walk1 = SVGParsingUtils.readSVG( getAssets().open("guns_walk1.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
+        SVGGraphic walk2 = SVGParsingUtils.readSVG( getAssets().open("guns_walk2.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
+        SVGGraphic walk3 = SVGParsingUtils.readSVG( getAssets().open("guns_walk3.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
+        SVGGraphic walk4 = SVGParsingUtils.readSVG( getAssets().open("guns_walk4.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
+
+        nodes[ 0 ] = new SVGRenderingNode( walk1, "overlay-walk1" );
+        nodes[ 1 ] = new SVGRenderingNode( walk2, "overlay-walk2" );
+        nodes[ 2 ] = new SVGRenderingNode( walk3, "overlay-walk3" );
+        nodes[ 3 ] = new SVGRenderingNode( walk4, "overlay-walk4" );
+
+        DisplayList dl = new DisplayList( "overlay");
+        dl.setItems( nodes );
+        overlay.setRenderingContent( dl );
     }
 
     @Override
@@ -265,8 +316,35 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
 
         }
+
+        updateOverlay();
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if ( keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+            return true;
+        }
+
+        updateOverlay();
+        return view.onKeyDown( keyCode, event );
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+
+        if ( hasFocus ) {
+            try {
+                setOverlay( (GameView) findViewById( R.id.overlay ));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private final static class GamePresentation extends Presentation {

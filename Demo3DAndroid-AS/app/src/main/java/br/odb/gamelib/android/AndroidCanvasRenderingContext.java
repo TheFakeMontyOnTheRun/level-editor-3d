@@ -239,6 +239,11 @@ public class AndroidCanvasRenderingContext extends RenderingContext {
 	}
 
 	@Override
+	public void drawOval(Rect rect, Color color) {
+
+	}
+
+	@Override
 	public void drawBitmap(RasterImage image, Vec2 p0, Vec2 scale, int rotation) {
 		AndroidRasterImage ari = (AndroidRasterImage) image;
 

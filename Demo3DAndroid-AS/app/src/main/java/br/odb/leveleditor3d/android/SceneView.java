@@ -18,22 +18,28 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.gamelib.android.geometry.GLESMesh;
 import br.odb.gamelib.android.geometry.GLESRenderer;
+import br.odb.liboldfart.WavefrontMaterialLoader;
+import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
+import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
 //public class SceneView extends GLSurfaceView implements Runnable {
 public class SceneView extends GLSurfaceView {
+    private final Context context;
 
 //    final public Map<LightSource, GroupSector> lightsForPlace = new HashMap<LightSource, GroupSector>();
 //    LightSource light0 = new LightSource(new Vec3(), 128);
@@ -180,33 +186,51 @@ public class SceneView extends GLSurfaceView {
 //    }
 
     GLESRenderer renderer;
+    int polyCount = 0;
+//    GeneralTriangleMesh enemy;
 
     public SceneView(Context context) {
         super(context);
+
+        this.context = context;
     }
 
     public SceneView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.context = context;
     }
 
     public void init(InputStream vertex, InputStream fragment) {
 
-
         setEGLContextClientVersion(2);
+
         try {
             String vertexShader = readFully(vertex, "utf8");
             String fragmentShader = readFully(fragment, "utf8");
+
             renderer = new GLESRenderer(10000, vertexShader, fragmentShader,
                     this.getContext());
 
 
-            setFocusable(true);
-            setClickable(true);
-            setLongClickable(true);
-            setFocusableInTouchMode(true);
-            requestFocus();
+//            WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+//            List<Material> mats = matLoader.parseMaterials( context.getAssets().open( "gargoyle.mtl" ) );
+//
+//            WavefrontOBJLoader loader = new WavefrontOBJLoader( new GLES1TriangleFactory() );
+//            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
+//
+//
+//            enemy = mesh.get( 0 );
+//            enemy.scale( 10.0f );
+//            renderer.meshes.add( enemy );
 
+
+//            setFocusable(true);
+//            setClickable(true);
+//            setLongClickable(true);
+//            setFocusableInTouchMode(true);
+//            requestFocus();
             setRenderer(renderer);
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -277,6 +301,8 @@ public class SceneView extends GLSurfaceView {
                 return false;
         }
 
+//        enemy.translateTo( renderer.camera.add( new Vec3( 0.0f, 0.0f, 0.0f ) ) );
+
         return true;
     }
 
@@ -305,8 +331,6 @@ public class SceneView extends GLSurfaceView {
                 break;
         }
     }
-
-    int polyCount = 0;
 
     private void loadGeometryFromScene(GroupSector sector) {
 
