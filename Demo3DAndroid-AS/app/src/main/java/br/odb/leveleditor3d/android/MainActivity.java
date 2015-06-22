@@ -188,9 +188,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                         }
 
-//                        if (!inside) {
-//                            view.renderer.camera.set(lastValidPosition);
-//                        }
+                        if (!inside) {
+                            view.renderer.camera.set(lastValidPosition);
+                        }
 
                         map.position.set( view.renderer.camera );
                     }
