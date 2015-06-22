@@ -44,7 +44,7 @@ public class Editor3DViewerDriverApp {
 			private World world;
 			//private SVGGraphic graphic;
 			//private GeneralTriangle[] decal;
-			GeneralTriangleMesh enemy;
+			
 
 			@Override
 			public void run() {
@@ -72,11 +72,9 @@ public class Editor3DViewerDriverApp {
 		            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( new FileInputStream(
 							System.getProperty( "user.home" ) + "/gargoyle.obj"), mats );
 
-		            enemy = mesh.get( 0 );
-//		            enemy.scale( 10.0f );          
-		            
-					
-					
+		            for ( GeneralTriangle gt : mesh.get( 0 ).faces ) {
+		            	canvas.cube.add( gt );
+		            }
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -96,12 +94,7 @@ public class Editor3DViewerDriverApp {
 				canvas.cameraPosition.set( srs.get( srs.size() - 1 ).getAbsolutePosition() );
 			
 				canvas.setScene( world );
-				
-				enemy.translateTo( canvas.cameraPosition );
-				
-	            for ( GeneralTriangle gt : enemy.faces ) {
-	            	canvas.polysToRender.add( gt );	
-	            }
+				//canvas.spawnCube( canvas.cameraPosition );
 				
 //				for ( GeneralTriangle gt : decal ) {
 //					gt.x0 += canvas.cameraPosition.x;

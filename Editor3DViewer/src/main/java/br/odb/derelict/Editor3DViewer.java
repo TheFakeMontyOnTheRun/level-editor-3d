@@ -376,6 +376,10 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		this.loadGeometryFromScene( world.masterSector );
 	}
 
+	public void spawnCube(Vec3 position ) {
+		actors.add( position );		
+	}
+
 //	void sendPosition( int id ) throws IOException {
 //		
 //		String query = String.format("id=%s&x=%s&y=%s&z=%s",
