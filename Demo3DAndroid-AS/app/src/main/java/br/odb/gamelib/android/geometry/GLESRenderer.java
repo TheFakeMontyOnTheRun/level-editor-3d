@@ -20,7 +20,6 @@ import java.util.List;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import br.odb.leveleditor3d.android.R;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
@@ -51,7 +50,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     private boolean shouldCheckForBailingOut;
 
     final public ArrayList<Vec3> actors = new ArrayList<Vec3>();
-    public final List<GLES1Triangle> cube = new ArrayList<GLES1Triangle>();
+    public final List<GLES1Triangle> sampleEnemy = new ArrayList<GLES1Triangle>();
 
     //GLES2 stuff
     private int mProgram;
@@ -377,7 +376,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
 
     public void initCube(GeneralTriangleMesh cubeToInit) {
-        for (GLES1Triangle t : cube) {
+        for (GLES1Triangle t : sampleEnemy) {
             cubeToInit.faces.add(t.makeCopy());
         }
     }

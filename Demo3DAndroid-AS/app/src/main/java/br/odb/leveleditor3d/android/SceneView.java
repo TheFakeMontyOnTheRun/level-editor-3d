@@ -5,22 +5,12 @@ import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
@@ -34,7 +24,6 @@ import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
-import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
@@ -223,7 +212,7 @@ public class SceneView extends GLSurfaceView {
             enemy = mesh.get( 0 );
 
             for ( GeneralTriangle gt : enemy.faces ) {
-                renderer.cube.add( GLES1TriangleFactory.getInstance().makeTrigFrom( gt ) );
+                renderer.sampleEnemy.add(GLES1TriangleFactory.getInstance().makeTrigFrom(gt));
             }
 
 
