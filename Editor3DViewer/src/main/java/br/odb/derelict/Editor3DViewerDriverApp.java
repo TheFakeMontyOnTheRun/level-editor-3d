@@ -9,6 +9,7 @@ import java.awt.event.WindowEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -16,9 +17,15 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
+import br.odb.liboldfart.WavefrontMaterialLoader;
+import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
+import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleMesh;
+import br.odb.libstrip.Material;
+import br.odb.libstrip.builders.GeneralTriangleFactory;
 
 import com.jogamp.opengl.util.FPSAnimator;
 
@@ -37,6 +44,7 @@ public class Editor3DViewerDriverApp {
 			private World world;
 			//private SVGGraphic graphic;
 			//private GeneralTriangle[] decal;
+			GeneralTriangleMesh enemy;
 
 			@Override
 			public void run() {
@@ -45,7 +53,7 @@ public class Editor3DViewerDriverApp {
 
 				try {
 					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/ang2l1.opt.xml");
+							System.getProperty( "user.home" ) + "/floor1.opt.xml");
 					 
 					world = WorldLoader.build(fis);
 					canvas.tesselator.generateSubSectorQuadsForWorld(world);
@@ -54,6 +62,21 @@ public class Editor3DViewerDriverApp {
 //							System.getProperty( "user.home" ) + "/title.bin");
 					
 					//decal = Decal.loadGraphic( filePath, 800, 480 );
+										
+		            WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+		            List<Material> mats = matLoader.parseMaterials( new FileInputStream(
+							System.getProperty( "user.home" ) + "/gargoyle.mtl") );
+
+
+		            WavefrontOBJLoader loader = new WavefrontOBJLoader( new GeneralTriangleFactory() );
+		            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( new FileInputStream(
+							System.getProperty( "user.home" ) + "/gargoyle.obj"), mats );
+
+		            enemy = mesh.get( 0 );
+//		            enemy.scale( 10.0f );          
+		            
+					
+					
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -73,6 +96,12 @@ public class Editor3DViewerDriverApp {
 				canvas.cameraPosition.set( srs.get( srs.size() - 1 ).getAbsolutePosition() );
 			
 				canvas.setScene( world );
+				
+				enemy.translateTo( canvas.cameraPosition );
+				
+	            for ( GeneralTriangle gt : enemy.faces ) {
+	            	canvas.polysToRender.add( gt );	
+	            }
 				
 //				for ( GeneralTriangle gt : decal ) {
 //					gt.x0 += canvas.cameraPosition.x;
