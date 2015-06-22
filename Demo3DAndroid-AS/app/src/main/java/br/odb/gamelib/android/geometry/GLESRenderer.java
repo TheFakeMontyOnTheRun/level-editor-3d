@@ -270,9 +270,10 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      * @param mesh
      */
     private void drawMeshGLES2(GeneralTriangleMesh mesh) {
-
-        for (GeneralTriangle face : mesh.faces) {
-            ((GLES1Triangle) face).drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
+        synchronized ( mesh ) {
+            for (GeneralTriangle face : mesh.faces) {
+                ((GLES1Triangle) face).drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
+            }
         }
     }
 
