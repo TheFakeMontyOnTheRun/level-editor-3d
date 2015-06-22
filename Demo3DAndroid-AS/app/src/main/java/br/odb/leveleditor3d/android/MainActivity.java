@@ -205,7 +205,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     view.renderer.camera
                             .set(((GroupSector) srs.get(index)).getAbsoluteCenter());
                     Vec3 pos = new Vec3(view.renderer.camera);
-                    view.spawnCube( pos );
+                    view.spawnCube( pos.add( new Vec3( 10.0f, 0.0f, 10.0f )) );
                     return;
                 }
             }

@@ -170,10 +170,12 @@ public class SceneView extends GLSurfaceView {
 
     public void spawnCube(Vec3 v) {
         GLESMesh cube = new GLESMesh("" + renderer.actors.size());
-        renderer.actors.add(v);
-        renderer.meshes.add(cube);
-        renderer.initCube(cube);
-        cube.translateTo(v);
+        synchronized ( cube ) {
+            renderer.initCube(cube);
+            cube.translateTo(v);
+            renderer.meshes.add(cube);
+            renderer.actors.add(v);
+        }
     }
 
     GLESRenderer renderer;
