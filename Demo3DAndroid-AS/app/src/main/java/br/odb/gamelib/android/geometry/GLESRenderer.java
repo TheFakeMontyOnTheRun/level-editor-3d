@@ -47,12 +47,11 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     final private ArrayList<GLES1Triangle> sceneGeometryToRender;
     final public ArrayList<GLES1Triangle> fixedScreenShapesToRender;
     final public ArrayList<GLES1Triangle> screenShapesToRender;
-    public final ArrayList<GeneralTriangleMesh> meshes = new ArrayList<GeneralTriangleMesh>();
+    public final ArrayList<GLESMesh> meshes = new ArrayList<>();
     private boolean shouldCheckForBailingOut;
 
     final public ArrayList<Vec3> actors = new ArrayList<Vec3>();
     public final List<GLES1Triangle> cube = new ArrayList<GLES1Triangle>();
-    public final List<GLESMesh> cubes = new ArrayList<GLESMesh>();
 
     //GLES2 stuff
     private int mProgram;

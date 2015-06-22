@@ -17,6 +17,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -71,13 +72,6 @@ public class SceneView extends GLSurfaceView {
 
 //    public static final String SERVER = "http://192.241.246.87:8080/MServerTest";
 //
-//    private void spawnCube(Vec3 v) {
-//        GLESMesh cube = new GLESMesh("" + renderer.cubes.size());
-//        renderer.actors.add(v);
-//        renderer.meshes.add(cube);
-//        renderer.initCube(cube);
-//        cube.translate(v);
-//    }
 //
 //    void sendPosition(int id) throws IOException {
 //
@@ -185,6 +179,14 @@ public class SceneView extends GLSurfaceView {
 //        }
 //    }
 
+    public void spawnCube(Vec3 v) {
+        GLESMesh cube = new GLESMesh("" + renderer.actors.size());
+        renderer.actors.add(v);
+        renderer.meshes.add(cube);
+        renderer.initCube(cube);
+        cube.translateTo(v);
+    }
+
     GLESRenderer renderer;
     int polyCount = 0;
     GeneralTriangleMesh enemy;
@@ -219,8 +221,11 @@ public class SceneView extends GLSurfaceView {
             ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
 
             enemy = mesh.get( 0 );
-//            enemy.scale( 10.0f );
-            renderer.meshes.add( enemy );
+
+            for ( GeneralTriangle gt : enemy.faces ) {
+                renderer.cube.add( GLES1TriangleFactory.getInstance().makeTrigFrom( gt ) );
+            }
+
 
 
 //            setFocusable(true);
@@ -299,8 +304,6 @@ public class SceneView extends GLSurfaceView {
             case KeyEvent.KEYCODE_BACK:
                 return false;
         }
-
-        enemy.translateTo( renderer.camera.add( new Vec3( 0.0f, 0.0f, 0.0f ) ) );
 
         return true;
     }

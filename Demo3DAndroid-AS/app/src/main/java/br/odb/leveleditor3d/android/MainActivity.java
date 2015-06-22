@@ -130,20 +130,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 tesselator.generateSubSectorQuadsForWorld(world);
 
                 view.setScene(world);
-
-
-                SpaceRegion sr = new SpaceRegion("dummy");
-
-                sr.size.scale(10);
-
-                for (Direction d : Direction.values()) {
-                    for (GeneralTriangle trig : tesselator.generateQuadFor(d, sr)) {
-
-                        view.changeHue((GLES1Triangle) trig);
-                        view.renderer.cube.add((GLES1Triangle) trig);
-                    }
-                }
-
             } catch (Exception e) {
                 e.printStackTrace();
 
@@ -218,7 +204,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 if (srs.get(index) instanceof GroupSector) {
                     view.renderer.camera
                             .set(((GroupSector) srs.get(index)).getAbsoluteCenter());
-//                    view.enemy.translateTo( view.renderer.camera );
+                    Vec3 pos = new Vec3(view.renderer.camera);
+                    view.spawnCube( pos );
                     return;
                 }
             }
