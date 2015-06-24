@@ -236,7 +236,11 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	private void drawCube( GL2 gl, Vec3 p) {
 		for (GeneralTriangle poly : this.cube) {
 			
-			gl.glColor4f( 0.5f, 0.5f, 0.5f, 1.0f );
+			gl.glColor4f( poly.material.mainColor.r / 255.0f,
+					poly.material.mainColor.g / 255.0f,
+					poly.material.mainColor.b / 255.0f,
+					poly.material.mainColor.a / 255.0f					
+					);
 			
 			gl.glVertex3f( poly.x0 + p.x, poly.y0 + p.y, poly.z0 + p.z );
 			gl.glVertex3f( poly.x1 + p.x, poly.y1 + p.y, poly.z1 + p.z );

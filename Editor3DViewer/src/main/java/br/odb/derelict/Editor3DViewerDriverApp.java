@@ -20,12 +20,14 @@ import org.xml.sax.SAXException;
 import br.odb.liboldfart.WavefrontMaterialLoader;
 import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.SceneNode;
+import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
+import br.odb.utils.math.Vec3;
 
 import com.jogamp.opengl.util.FPSAnimator;
 
@@ -75,6 +77,7 @@ public class Editor3DViewerDriverApp {
 		            for ( GeneralTriangle gt : mesh.get( 0 ).faces ) {
 		            	canvas.cube.add( gt );
 		            }
+		            
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -88,13 +91,11 @@ public class Editor3DViewerDriverApp {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-
-				
-				final List<SceneNode> srs = world.getAllRegionsAsList();
-				canvas.cameraPosition.set( srs.get( srs.size() - 1 ).getAbsolutePosition() );
+				SpaceRegion sr = (SpaceRegion) world.masterSector.getChild( "Cube.002_Cube.112" );
+				canvas.cameraPosition.set( sr.getAbsolutePosition().add( new Vec3( sr.size.x / 2.0f, sr.size.y / 2.0f, sr.size.z / 2.0f ) ) );
 			
 				canvas.setScene( world );
-				//canvas.spawnCube( canvas.cameraPosition );
+				canvas.spawnCube( canvas.cameraPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ) );
 				
 //				for ( GeneralTriangle gt : decal ) {
 //					gt.x0 += canvas.cameraPosition.x;
