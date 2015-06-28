@@ -7,7 +7,6 @@ package br.odb.gamelib.android.geometry;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.opengl.GLES10;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
@@ -16,14 +15,16 @@ import android.opengl.Matrix;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import br.odb.SceneActorNode;
+import br.odb.libscene.CameraNode;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
-import br.odb.utils.math.Vec3;
 
 /*
  * Concerns:
@@ -34,52 +35,60 @@ import br.odb.utils.math.Vec3;
 
 public class GLESRenderer implements GLSurfaceView.Renderer {
 
-    public final Vec3 camera = new Vec3();
+    public final CameraNode camera = new CameraNode( "mainCamera" );
+
     private final int polycount;
-    private final Context context;
-    public float angle;
-    private GLESVertexArrayManager fixedGeometryManager;
-    //final GLESVertexArrayManager manager = new GLESVertexArrayManager();
 
-    final HashMap<Material, ArrayList< GLES1Triangle> > staticGeometryToAdd= new HashMap<Material, ArrayList<GLES1Triangle>>();
+
     final HashMap<Material, GLESVertexArrayManager > managers = new HashMap<Material, GLESVertexArrayManager >();
-    final private ArrayList<GLES1Triangle> sceneGeometryToRender;
-    final public ArrayList<GLES1Triangle> fixedScreenShapesToRender;
-    final public ArrayList<GLES1Triangle> screenShapesToRender;
-    public final ArrayList<GLESMesh> meshes = new ArrayList<>();
-    private boolean shouldCheckForBailingOut;
 
-    final public ArrayList<Vec3> actors = new ArrayList<Vec3>();
-    public final List<GLES1Triangle> sampleEnemy = new ArrayList<GLES1Triangle>();
+    final HashMap<Material, ArrayList< GLES1Triangle> > staticGeometryToAdd= new HashMap<>();
+
+    public final List<GLES1Triangle> sampleEnemy = new ArrayList<>();
+
+    public final ArrayList<GLESMesh> meshes = new ArrayList<>();
+
+    final public List<SceneActorNode> actors = new ArrayList<>();
+
 
     //GLES2 stuff
-    private int mProgram;
-    private int maPositionHandle;
+    private int mProgram; //manage the fragShader-vertShader coupling.
+
+    private int maPositionHandle; //manage the coordinates for a given mesh
+
     private int colorHandle;
     private String vertexShaderCode;
     private String fragmentShaderCode;
-    	int textureIndex;
+
+    int rockTextureIndex;
     private int mTextureCoordinateHandle = -1;
     private int mTextureUniformHandle = -1;
+
+
     private int muMVPMatrixHandle;
-    private float[] mMVPMatrix = new float[16];
-    private float[] mMMatrix = new float[16];
-    private float[] mVMatrix = new float[16];
-    private float[] mProjMatrix = new float[16];
+
+    br.odb.utils.math.Matrix mvpMatrix = new br.odb.utils.math.Matrix( 4, 4 );
+    br.odb.utils.math.Matrix mMatrix = new br.odb.utils.math.Matrix( 4, 4 );
+    br.odb.utils.math.Matrix vMatrix = new br.odb.utils.math.Matrix( 4, 4 );
+    br.odb.utils.math.Matrix projectionMatrix = new br.odb.utils.math.Matrix( 4, 4 );
+
     public volatile boolean ready;
+
+    private final Map< String, Integer > shaders = new HashMap<>();
 
     /**
      * @param type       GL_VERTEX_SHADER or GL_FRAGMENT_SHADER
      * @param shaderCode proper code for shader
      * @return
      */
-    private int loadShader(int type, String shaderCode) {
+    private int loadShader(int type, String name, String shaderCode) {
 
         int shader = GLES20.glCreateShader(type);
 
         GLES20.glShaderSource(shader, shaderCode);
         GLES20.glCompileShader(shader);
 
+        shaders.put( name, shader );
 
         return shader;
     }
@@ -88,19 +97,13 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      * @param maxVisiblePolys
      * @param vertexShader
      * @param fragmentShader
-     * @param context
      */
     public GLESRenderer(int maxVisiblePolys, String vertexShader,
-                        String fragmentShader, Context context) {
+                        String fragmentShader ) {
         super();
-        this.context = context;
         this.polycount = maxVisiblePolys;
         this.vertexShaderCode = vertexShader;
         this.fragmentShaderCode = fragmentShader;
-
-        sceneGeometryToRender = new ArrayList<GLES1Triangle>();
-        screenShapesToRender = new ArrayList<GLES1Triangle>();
-        fixedScreenShapesToRender = new ArrayList<GLES1Triangle>();
     }
 
     void initManagerForMaterial( Material mat, int polys ) {
@@ -110,7 +113,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         manager.init(polys);
         manager.flush();
 
-        if ( this.textureIndex != -1 ) {
+        if ( this.rockTextureIndex != -1 ) {
             manager.setTextureCoordenates( new float[] {
                             0.0f, 0.0f,
                             0.0f, 1.0f,
@@ -157,29 +160,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     }
 
     /**
-     * @param isf
-     */
-    public void addGeometryToScene(GLES1Triangle isf) {
-		isf.setTextureCoordenates( new float[] {
-				0.0f, 0.0f,
-		        0.0f, 1.0f,
-		        1.0f, 0.0f
-				}
-
-				);
-
-        sceneGeometryToRender.add(isf);
-    }
-
-    /**
-     * @param s
-     */
-    public void addGeometryToScreen(GLES1Triangle s) {
-        screenShapesToRender.add(s);
-
-    }
-
-    /**
      *
      */
     @Override
@@ -202,9 +182,9 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         xmin = ymin * ratio;
         xmax = ymax * ratio;
 
-        Matrix.frustumM(mProjMatrix, 0, xmin, xmax, ymin, ymax, 0.1f, 10000.0f);
+        Matrix.frustumM( projectionMatrix.values, 0, xmin, xmax, ymin, ymax, 0.1f, 10000.0f);
         muMVPMatrixHandle = GLES20.glGetUniformLocation(mProgram, "uMVPMatrix");
-        Matrix.setLookAtM(mVMatrix, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
+        Matrix.setLookAtM( vMatrix.values, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
     }
 
     /**
@@ -221,17 +201,15 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public void onSurfaceCreatedGLES20(EGLConfig config) {
 
 
-		textureIndex = -1;//loadTexture( context , R.drawable.tex );
+		rockTextureIndex = -1;//loadTexture( context , R.drawable.tex );
 
         GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         GLES20.glClearDepthf(1.0f);
-        GLES20.glEnable(GLES10.GL_DEPTH_TEST);
+        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
+        GLES20.glDepthFunc(GLES20.GL_LEQUAL);
 
-        GLES20.glDepthFunc(GLES10.GL_LEQUAL);
-
-        int vertexShader = loadShader(GLES20.GL_VERTEX_SHADER, vertexShaderCode);
-        int fragmentShader = loadShader(GLES20.GL_FRAGMENT_SHADER,
-                fragmentShaderCode);
+        int vertexShader = loadShader(GLES20.GL_VERTEX_SHADER, "defaultVertexShader", vertexShaderCode);
+        int fragmentShader = loadShader(GLES20.GL_FRAGMENT_SHADER, "defaultFragmentShader", fragmentShaderCode);
 
         mProgram = GLES20.glCreateProgram();
         GLES20.glAttachShader(mProgram, vertexShader);
@@ -250,20 +228,18 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public void onDrawFrame(GL10 gl) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 
-        if ( this.textureIndex != -1 ) {
-            mTextureUniformHandle = GLES20.glGetUniformLocation(mProgram, "u_Texture");
-            mTextureCoordinateHandle = GLES20.glGetAttribLocation(mProgram, "a_TexCoordinate");
-            GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-            GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureIndex);
-            GLES20.glUniform1i(mTextureUniformHandle, 0);
+        if (!ready) {
+            return;
         }
+        renderSceneGLES20();
+    }
 
-
-
-
-        if (ready) {
-            renderSceneGLES20();
-        }
+    private void prepareTextureWithIndex(int textureIndex) {
+        mTextureUniformHandle = GLES20.glGetUniformLocation(mProgram, "u_Texture");
+        mTextureCoordinateHandle = GLES20.glGetAttribLocation(mProgram, "a_TexCoordinate");
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureIndex);
+        GLES20.glUniform1i(mTextureUniformHandle, 0);
     }
 
     /**
@@ -278,33 +254,23 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     }
 
     /**
-     * @param Angle
-     */
-    public void setAngle(float Angle) {
-        angle = Angle;
-        this.needsToResetView(true);
-    }
-
-    /**
      *
      */
     private void setCamera() {
-        mVMatrix = new float[]{1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,
-                1,};
+        vMatrix.setAsIdentity();
 
-        Matrix.rotateM(mVMatrix, 0, angle, 0, 1.0f, 0);
+        Matrix.rotateM(vMatrix.values, 0, camera.angleXZ, 0, 1.0f, 0);
 
-        Matrix.translateM(mVMatrix, 0, -camera.x, -camera.y, -camera.z);
+        Matrix.translateM(vMatrix.values, 0, -camera.localPosition.x, -camera.localPosition.y, -camera.localPosition.z);
 
-        Matrix.multiplyMM(mMVPMatrix, 0, mVMatrix, 0, mMMatrix, 0);
-        Matrix.multiplyMM(mMVPMatrix, 0, mProjMatrix, 0, mMVPMatrix, 0);
+        Matrix.multiplyMM(mvpMatrix.values, 0, vMatrix.values, 0, mMatrix.values, 0);
+        Matrix.multiplyMM(mvpMatrix.values, 0, projectionMatrix.values, 0, mvpMatrix.values, 0);
 
         // Apply a ModelView Projection transformation
-        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mMVPMatrix, 0);
+        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
 
-        Matrix.multiplyMM(mMVPMatrix, 0, mProjMatrix, 0, mVMatrix, 0);
-        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mMVPMatrix, 0);
-
+        Matrix.multiplyMM(mvpMatrix.values, 0,  projectionMatrix.values, 0, vMatrix.values, 0);
+        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
     }
 
     /**
@@ -312,34 +278,19 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      */
     private void renderSceneGLES20() {
 
-
-        GLES20.glUseProgram(mProgram);
-
-
-        if (shouldCheckForBailingOut) {
-            return;
+        if ( this.rockTextureIndex != -1 ) {
+            prepareTextureWithIndex(rockTextureIndex);
         }
 
-
+        GLES20.glUseProgram(mProgram);
         GLES20.glClear(GLES20.GL_DEPTH_BUFFER_BIT);
 
         setCamera();
+        drawMeshes();
+        drawPerMaterialStaticMesh();
+    }
 
-        if (fixedGeometryManager != null) {
-            fixedGeometryManager.flush();
-            fixedGeometryManager.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
-        }
-
-        for (GLES1Triangle face : sceneGeometryToRender) {
-            face.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle );
-        }
-
-        synchronized (meshes) {
-            for (GeneralTriangleMesh mesh : meshes) {
-                drawMeshGLES2(mesh);
-            }
-        }
-
+    private void drawPerMaterialStaticMesh() {
 
         GLESVertexArrayManager manager;
 
@@ -348,6 +299,14 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
             manager = managers.get( mat );
             manager.flush();
             manager.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
+        }
+    }
+
+    private void drawMeshes() {
+        synchronized (meshes) {
+            for (GeneralTriangleMesh mesh : meshes) {
+                drawMeshGLES2(mesh);
+            }
         }
     }
 
@@ -376,77 +335,18 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     }
 
 
-    public void initCube(GeneralTriangleMesh cubeToInit) {
+    public void initActorAvatar(GeneralTriangleMesh cubeToInit) {
         for (GLES1Triangle t : sampleEnemy) {
             cubeToInit.faces.add(t.makeCopy());
         }
     }
 
     /**
-     * @param fastReset
-     */
-    public synchronized void needsToResetView(boolean fastReset) {
-        shouldCheckForBailingOut = fastReset;
-    }
-
-    /**
-     * @param graphic
-     */
-    public void addToFixedGeometryToScreen(GLES1Triangle[] graphic) {
-
-        for ( GLES1Triangle t : graphic ) {
-            t.flatten(-1.0f);
-            t.flush();
-            this.fixedScreenShapesToRender.add(t);
-        }
-    }
-
-    /**
-     *
-     */
-    public void detach() {
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        if (fixedGeometryManager != null)
-            fixedGeometryManager.reinit();
-
-        angle = 0;
-
-        for ( GLESVertexArrayManager manager : managers.values() ) {
-            manager.reinit();
-        }
-
-        sceneGeometryToRender.clear();
-        screenShapesToRender.clear();
-        meshes.clear();
-        fixedGeometryManager = null;
-    }
-
-    /**
      *
      */
     public void clearScreenGeometry() {
-        screenShapesToRender.clear();
-
         for ( GLESVertexArrayManager manager : managers.values() ) {
             manager.clear();
-        }
-    }
-
-    /**
-     * @param graphic
-     */
-    public void addToMovingGeometryToScreen(GLES1Triangle[] graphic) {
-
-        for ( GLES1Triangle t : graphic ) {
-            t.flatten(-1.0f);
-            t.flush();
-            this.addGeometryToScreen(t);
         }
     }
 

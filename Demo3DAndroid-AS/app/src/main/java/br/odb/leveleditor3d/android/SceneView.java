@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.odb.SceneActorNode;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.gamelib.android.geometry.GLESMesh;
@@ -168,19 +169,23 @@ public class SceneView extends GLSurfaceView {
 //        }
 //    }
 
-    public void spawnCube(Vec3 v) {
-        GLESMesh cube = new GLESMesh("" + renderer.actors.size());
-        synchronized ( cube ) {
-            renderer.initCube(cube);
-            cube.translateTo(v);
-            renderer.meshes.add(cube);
-            renderer.actors.add(v);
+    public void spawnCube(Vec3 v, float angleXZ ) {
+        GLESMesh temporaryAvatarMesh = new GLESMesh("" + renderer.actors.size());
+        SceneActorNode actor = new SceneActorNode( "actor@" + v.toString() );
+        actor.localPosition.set( v );
+
+        synchronized ( temporaryAvatarMesh ) {
+            renderer.initActorAvatar(temporaryAvatarMesh);
+            temporaryAvatarMesh.translateTo(v);
+            temporaryAvatarMesh.rotateXZ(angleXZ);
+            renderer.meshes.add(temporaryAvatarMesh);
+            renderer.actors.add( actor );
         }
     }
 
     GLESRenderer renderer;
     int polyCount = 0;
-    GeneralTriangleMesh enemy;
+
 
     public SceneView(Context context) {
         super(context);
@@ -197,12 +202,13 @@ public class SceneView extends GLSurfaceView {
 
         setEGLContextClientVersion(2);
 
+        GeneralTriangleMesh enemy;
+
         try {
             String vertexShader = readFully(vertex, "utf8");
             String fragmentShader = readFully(fragment, "utf8");
 
-            renderer = new GLESRenderer(10000, vertexShader, fragmentShader,
-                    this.getContext());
+            renderer = new GLESRenderer(10000, vertexShader, fragmentShader);
 
 
             WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
@@ -212,18 +218,11 @@ public class SceneView extends GLSurfaceView {
             ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
 
             enemy = mesh.get( 0 );
-
+            enemy.rotateXZ( 90.0f );
             for ( GeneralTriangle gt : enemy.faces ) {
                 renderer.sampleEnemy.add(GLES1TriangleFactory.getInstance().makeTrigFrom(gt));
             }
 
-
-
-//            setFocusable(true);
-//            setClickable(true);
-//            setLongClickable(true);
-//            setFocusableInTouchMode(true);
-//            requestFocus();
             setRenderer(renderer);
 
         } catch (FileNotFoundException e) {
@@ -236,17 +235,17 @@ public class SceneView extends GLSurfaceView {
     }
 
     public void onLeft() {
-        renderer.angle -= 10;
+        renderer.camera.angleXZ -= 10;
     }
 
     public void onRight() {
-        renderer.angle += 10;
+        renderer.camera.angleXZ += 10;
     }
 
     public void onWalkForward() {
-        renderer.camera.x += 10 * Math.sin(renderer.angle
+        renderer.camera.localPosition.x += 10 * Math.sin(renderer.camera.angleXZ
                 * (Math.PI / 180.0f));
-        renderer.camera.z -= 10 * Math.cos(renderer.angle
+        renderer.camera.localPosition.z -= 10 * Math.cos(renderer.camera.angleXZ
                 * (Math.PI / 180.0f));
     }
 
@@ -264,30 +263,30 @@ public class SceneView extends GLSurfaceView {
                 onWalkForward();
                 break;
             case KeyEvent.KEYCODE_DPAD_DOWN:
-                renderer.camera.x -= 10 * Math.sin(renderer.angle
+                renderer.camera.localPosition.x -= 10 * Math.sin(renderer.camera.angleXZ
                         * (Math.PI / 180.0f));
-                renderer.camera.z += 10 * Math.cos(renderer.angle
+                renderer.camera.localPosition.z += 10 * Math.cos(renderer.camera.angleXZ
                         * (Math.PI / 180.0f));
                 break;
 
             case KeyEvent.KEYCODE_COMMA:
-                renderer.camera.x += 10 * Math.sin((renderer.angle - 90)
+                renderer.camera.localPosition.x += 10 * Math.sin((renderer.camera.angleXZ - 90)
                         * (Math.PI / 180.0f));
-                renderer.camera.z -= 10 * Math.cos((renderer.angle - 90)
+                renderer.camera.localPosition.z -= 10 * Math.cos((renderer.camera.angleXZ - 90)
                         * (Math.PI / 180.0f));
                 break;
             case KeyEvent.KEYCODE_PERIOD:
-                renderer.camera.x -= 10 * Math.sin((renderer.angle - 90)
+                renderer.camera.localPosition.x -= 10 * Math.sin((renderer.camera.angleXZ - 90)
                         * (Math.PI / 180.0f));
-                renderer.camera.z += 10 * Math.cos((renderer.angle - 90)
+                renderer.camera.localPosition.z += 10 * Math.cos((renderer.camera.angleXZ - 90)
                         * (Math.PI / 180.0f));
                 break;
 
             case KeyEvent.KEYCODE_A:
-                renderer.camera.y += 10.0;
+                renderer.camera.localPosition.y += 10.0;
                 break;
             case KeyEvent.KEYCODE_Z:
-                renderer.camera.y -= 10.0;
+                renderer.camera.localPosition.y -= 10.0;
                 break;
             case KeyEvent.KEYCODE_Q:
                 System.exit(0);
@@ -326,9 +325,6 @@ public class SceneView extends GLSurfaceView {
     }
 
     private void loadGeometryFromScene(GroupSector sector) {
-
-        GLES1TriangleFactory factory = GLES1TriangleFactory.getInstance();
-        GLES1Triangle trig;
 
         for (GeneralTriangle isf : sector.mesh.faces) {
             ++polyCount;

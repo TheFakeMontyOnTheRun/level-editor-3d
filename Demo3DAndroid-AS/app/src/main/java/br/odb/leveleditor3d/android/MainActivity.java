@@ -5,48 +5,26 @@ import android.app.Activity;
 import android.app.Presentation;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.res.Resources;
 import android.media.MediaRouter;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewManager;
-import android.view.WindowManager;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.List;
 
-import br.odb.gamelib.android.GameView;
-import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
-import br.odb.gamerendering.rendering.DisplayList;
-import br.odb.gamerendering.rendering.RenderingNode;
-import br.odb.gamerendering.rendering.SVGRenderingNode;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
-import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.util.SceneTesselator;
-import br.odb.libstrip.GeneralTriangle;
-import br.odb.libsvg.SVGGraphic;
-import br.odb.libsvg.SVGParsingUtils;
-import br.odb.libsvg.SVGUtils;
-import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -98,21 +76,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
 
-    SVGRenderingNode[] nodes = new SVGRenderingNode[ 4 ];
-    int currentFrame;
+//    SVGRenderingNode[] nodes = new SVGRenderingNode[ 4 ];
+//    int currentFrame;
+//    private DisplayList gunImages;
 
-    void updateOverlay() {
-
-        for( SVGRenderingNode node : nodes ) {
-            node.setVisible( false );
-        }
-
-        nodes[ currentFrame ].setVisible(true);
-
-        Log.d("frame", "" + currentFrame);
-
-        currentFrame = ( currentFrame + 1 ) % 4;
-    }
+//    void updateOverlay() {
+//
+//        for( SVGRenderingNode node : nodes ) {
+//            node.setVisible( false );
+//        }
+//
+//        nodes[ currentFrame ].setVisible(true);
+//
+//        Log.d("frame", "" + currentFrame);
+//
+//        currentFrame = ( currentFrame + 1 ) % 4;
+//    }
 
 
     private class LevelLoader extends AsyncTask<Void, Void, Void> {
@@ -143,7 +122,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-            view.renderer.angle = 180.0f;
+            view.renderer.camera.angleXZ = 180.0f;
             final MapView map = (MapView) findViewById( R.id.map );
             final List<SceneNode> srs = world.getAllRegionsAsList();
 
@@ -179,9 +158,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             sr = srs.get(c);
 
                             if (sr instanceof Sector) {
-                                if (((Sector) sr).isInside(view.renderer.camera)) {
+                                if (((Sector) sr).isInside(view.renderer.camera.localPosition)) {
                                    // System.out.println("got inside " + c);
-                                    lastValidPosition.set(view.renderer.camera);
+                                    lastValidPosition.set(view.renderer.camera.localPosition);
                                     inside = true;
                                 }
                             }
@@ -189,10 +168,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         }
 
                         if (!inside) {
-                            view.renderer.camera.set(lastValidPosition);
+                            view.renderer.camera.localPosition.set(lastValidPosition);
                         }
 
-                        map.position.set( view.renderer.camera );
+                        map.position.set( view.renderer.camera .localPosition);
                     }
                 }
             }).start();
@@ -202,10 +181,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             for (index = size - 1; index >= 0; --index) {
                 if (srs.get(index) instanceof GroupSector) {
-                    view.renderer.camera
+                    view.renderer.camera.localPosition
                             .set(((GroupSector) srs.get(index)).getAbsoluteCenter());
-                    Vec3 pos = new Vec3(view.renderer.camera);
-                    view.spawnCube( pos.add( new Vec3( 10.0f, 0.0f, 10.0f )) );
+                    Vec3 pos = new Vec3(view.renderer.camera.localPosition);
+
+
+                    view.spawnCube( pos.add( new Vec3( 10.0f, 0.0f, 10.0f )), 180.0f );
+                    view.spawnCube( pos.add( new Vec3( 30.0f, 0.0f, 30.0f )), 0.0f );
+                    view.spawnCube( pos.add( new Vec3( 20.0f, 0.0f, 20.0f )), 90.0f );
+
                     return;
                 }
             }
@@ -219,9 +203,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        //findViewById( R.id.controlbar ).setVisibility( View.GONE );
-
         findViewById(R.id.btnLeft).setOnClickListener(this);
         findViewById(R.id.btnRight).setOnClickListener(this);
         findViewById(R.id.btnWalk).setOnClickListener(this);
@@ -233,7 +214,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             fragmentShader = getAssets().open("fragment.glsl");
             filename = getIntent().getStringExtra("level");
             fileInput = getAssets().open(filename);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -247,10 +227,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
         loader.execute();
 
-        tryToUseSecondScreen();
+    //    attemptToUseSecondScreenWith(findViewById(R.id.svScene));
     }
 
-    private void tryToUseSecondScreen() {
+    private void attemptToUseSecondScreenWith( View view ) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             mMediaRouter = (MediaRouter)getSystemService(Context.MEDIA_ROUTER_SERVICE);
 
@@ -261,6 +241,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Display presentationDisplay = mRouteInfo.getPresentationDisplay();
 
                 if ( presentationDisplay != null ) {
+
                     ((ViewManager) view.getParent()).removeView( view );
                     Presentation presentation = new GamePresentation( this, presentationDisplay, view );
                     presentation.show();
@@ -269,24 +250,35 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    private void setOverlay( GameView overlay) throws IOException {
-
-
-
-        SVGGraphic walk1 = SVGParsingUtils.readSVG( getAssets().open("guns_walk1.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
-        SVGGraphic walk2 = SVGParsingUtils.readSVG( getAssets().open("guns_walk2.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
-        SVGGraphic walk3 = SVGParsingUtils.readSVG( getAssets().open("guns_walk3.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
-        SVGGraphic walk4 = SVGParsingUtils.readSVG( getAssets().open("guns_walk4.svg") ).scaleTo(overlay.getWidth(), overlay.getHeight());
-
-        nodes[ 0 ] = new SVGRenderingNode( walk1, "overlay-walk1" );
-        nodes[ 1 ] = new SVGRenderingNode( walk2, "overlay-walk2" );
-        nodes[ 2 ] = new SVGRenderingNode( walk3, "overlay-walk3" );
-        nodes[ 3 ] = new SVGRenderingNode( walk4, "overlay-walk4" );
-
-        DisplayList dl = new DisplayList( "overlay");
-        dl.setItems( nodes );
-        overlay.setRenderingContent( dl );
-    }
+//    DisplayList loadGunImages() throws IOException {
+//        SVGGraphic walk1 = SVGParsingUtils.readSVG(getAssets().open("guns_walk1.svg"));
+//        SVGGraphic walk2 = SVGParsingUtils.readSVG(getAssets().open("guns_walk2.svg"));
+//        SVGGraphic walk3 = SVGParsingUtils.readSVG(getAssets().open("guns_walk3.svg"));
+//        SVGGraphic walk4 = SVGParsingUtils.readSVG(getAssets().open("guns_walk4.svg"));
+//
+//        nodes[ 0 ] = new SVGRenderingNode( walk1, "overlay-walk1" );
+//        nodes[ 1 ] = new SVGRenderingNode( walk2, "overlay-walk2" );
+//        nodes[ 2 ] = new SVGRenderingNode( walk3, "overlay-walk3" );
+//        nodes[ 3 ] = new SVGRenderingNode( walk4, "overlay-walk4" );
+//
+//        DisplayList dl = new DisplayList( "overlay");
+//        dl.setItems( nodes );
+//
+//        return dl;
+//    }
+//
+//    private void setOverlay( GameView overlay, DisplayList dl ) {
+//
+//        if ( overlay == null ) {
+//            return;
+//        }
+//
+//        for ( SVGRenderingNode node : nodes ) {
+//            node.graphic = node.graphic.scaleTo(overlay.getWidth(), overlay.getHeight());
+//        }
+//
+//        overlay.setRenderingContent( dl );
+//    }
 
     @Override
     public void onClick(View view) {
@@ -305,8 +297,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
 
         }
-
-        updateOverlay();
     }
 
     @Override
@@ -316,31 +306,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             finish();
             return true;
         }
-
-        updateOverlay();
         return view.onKeyDown( keyCode, event );
-    }
-
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-
-        if ( hasFocus ) {
-            try {
-                setOverlay( (GameView) findViewById( R.id.overlay ));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private final static class GamePresentation extends Presentation {
 
-        final SceneView canvas;
+        final View canvas;
 
-        public GamePresentation(Context context, Display display, SceneView gameView ) {
+        public GamePresentation(Context context, Display display, View gameView ) {
             super(context, display);
 
             this.canvas = gameView;
@@ -348,15 +322,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
-            // Be sure to call the super class.
             super.onCreate(savedInstanceState);
 
-            // Get the resources for the context of the presentation.
-            // Notice that we are getting the resources from the context of the presentation.
-            Resources r = getContext().getResources();
-
-            // Inflate the layout.
-            setContentView(canvas );
+            setContentView( canvas);
         }
     }
 }
