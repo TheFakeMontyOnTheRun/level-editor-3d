@@ -22,3 +22,10 @@ level-editor-cli/target/classes/test.xml
 level-editor-cli/target/maven-archiver/pom.properties
 
 level-editor-cli/.classpath
+
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
