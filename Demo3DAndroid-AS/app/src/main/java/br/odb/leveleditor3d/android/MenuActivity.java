@@ -29,7 +29,6 @@ public class MenuActivity extends Activity implements OnClickListener {
 		findViewById(R.id.btnNewProject).setOnClickListener(this);
 		findViewById(R.id.btnModifyGeometry).setOnClickListener(this);
 		findViewById(R.id.btnViewIn3D).setOnClickListener(this);
-
 	}
 
 	@Override

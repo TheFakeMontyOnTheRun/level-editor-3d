@@ -170,17 +170,10 @@ public class SceneView extends GLSurfaceView {
 //    }
 
     public void spawnActor(Vec3 v, float angleXZ) {
-        GLESMesh temporaryAvatarMesh = new GLESMesh("" + renderer.actors.size());
         SceneActorNode actor = new SceneActorNode( "actor@" + v.toString() );
         actor.localPosition.set( v );
-
-        synchronized ( temporaryAvatarMesh ) {
-            renderer.initActorAvatar(temporaryAvatarMesh);
-            temporaryAvatarMesh.translateTo(v);
-            temporaryAvatarMesh.rotateXZ(angleXZ);
-            renderer.meshes.add(temporaryAvatarMesh);
-            renderer.actors.add( actor );
-        }
+        actor.angleXZ = angleXZ;
+        renderer.actors.add( actor );
     }
 
     GLESRenderer renderer;
@@ -202,26 +195,13 @@ public class SceneView extends GLSurfaceView {
 
         setEGLContextClientVersion(2);
 
-        GeneralTriangleMesh enemy;
-
         try {
             String vertexShader = readFully(vertex, "utf8");
             String fragmentShader = readFully(fragment, "utf8");
 
             renderer = new GLESRenderer(10000, vertexShader, fragmentShader);
 
-
-            WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
-            List<Material> mats = matLoader.parseMaterials( context.getAssets().open( "gargoyle.mtl" ) );
-
-            WavefrontOBJLoader loader = new WavefrontOBJLoader( new GLES1TriangleFactory() );
-            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
-
-            enemy = mesh.get( 0 );
-            enemy.rotateXZ( 90.0f );
-            for ( GeneralTriangle gt : enemy.faces ) {
-                renderer.sampleEnemy.add(GLES1TriangleFactory.getInstance().makeTrigFrom(gt));
-            }
+            initDefaultMeshForActor();
 
             setRenderer(renderer);
 
@@ -231,6 +211,21 @@ public class SceneView extends GLSurfaceView {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        }
+    }
+
+    private void initDefaultMeshForActor() throws IOException {
+        GeneralTriangleMesh enemy;
+        WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+        List<Material> mats = matLoader.parseMaterials( context.getAssets().open( "gargoyle.mtl" ) );
+
+        WavefrontOBJLoader loader = new WavefrontOBJLoader( new GLES1TriangleFactory() );
+        ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
+
+        enemy = mesh.get( 0 );
+
+        for ( GeneralTriangle gt : enemy.faces ) {
+            renderer.sampleEnemy.faces.add(GLES1TriangleFactory.getInstance().makeTrigFrom(gt));
         }
     }
 

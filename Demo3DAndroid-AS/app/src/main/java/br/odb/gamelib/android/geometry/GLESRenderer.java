@@ -7,6 +7,7 @@ package br.odb.gamelib.android.geometry;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.opengl.GLES10;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
@@ -25,6 +26,7 @@ import br.odb.libscene.CameraNode;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
+import br.odb.utils.math.Vec3;
 
 /*
  * Concerns:
@@ -44,7 +46,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
     final HashMap<Material, ArrayList< GLES1Triangle> > staticGeometryToAdd= new HashMap<>();
 
-    public final List<GLES1Triangle> sampleEnemy = new ArrayList<>();
+    public final GLESMesh sampleEnemy = new GLESMesh( "sample-enemy" );
 
     public final ArrayList<GLESMesh> meshes = new ArrayList<>();
 
@@ -286,8 +288,8 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         GLES20.glClear(GLES20.GL_DEPTH_BUFFER_BIT);
 
         setCamera();
-        drawMeshes();
         drawPerMaterialStaticMesh();
+        drawMeshes();
     }
 
     private void drawPerMaterialStaticMesh() {
@@ -302,10 +304,26 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         }
     }
 
+
+//Took this form http://stackoverflow.com/questions/10551225/opengl-es-2-0-rotating-object-around-itself-on-android
+//reading it, makes a lot of sense. But I believe I can take this strategy and modify my stuff to use it.
+
+    public void transform(float[] mModelMatrix, float angleXZ, Vec3 trans ) {
+        Matrix.setIdentityM(mModelMatrix, 0);
+        Matrix.translateM(mModelMatrix, 0, trans.x, trans.y, trans.z);
+        Matrix.rotateM(mModelMatrix, 0, angleXZ, 0.0f, 1.0f, 0.0f);
+        Matrix.multiplyMM(mvpMatrix.values, 0, vMatrix.values, 0, mMatrix.values, 0);
+        Matrix.multiplyMM(mvpMatrix.values, 0, projectionMatrix.values, 0, mvpMatrix.values,   0);
+    }
+
     private void drawMeshes() {
         synchronized (meshes) {
-            for (GeneralTriangleMesh mesh : meshes) {
-                drawMeshGLES2(mesh);
+            for ( SceneActorNode actor : actors ) {
+
+                transform(mMatrix.values, actor.angleXZ, actor.localPosition );
+                GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
+
+                drawMeshGLES2(sampleEnemy);
             }
         }
     }
@@ -332,13 +350,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         }
         manager = managers.get(face.material );
         manager.pushIntoFrameAsStatic(face.getVertexData(), face.material.mainColor.getFloatData());
-    }
-
-
-    public void initActorAvatar(GeneralTriangleMesh cubeToInit) {
-        for (GLES1Triangle t : sampleEnemy) {
-            cubeToInit.faces.add(t.makeCopy());
-        }
     }
 
     /**
