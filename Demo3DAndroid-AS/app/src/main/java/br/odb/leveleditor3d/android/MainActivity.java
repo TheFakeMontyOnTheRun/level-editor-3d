@@ -177,7 +177,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             }).start();
 
             progressDialog.cancel();
-            view.renderer.ready = true;
 
             for (index = size - 1; index >= 0; --index) {
                 if (srs.get(index) instanceof GroupSector) {
@@ -189,7 +188,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     view.spawnCube( pos.add( new Vec3( 10.0f, 0.0f, 10.0f )), 180.0f );
                     view.spawnCube( pos.add( new Vec3( 30.0f, 0.0f, 30.0f )), 0.0f );
                     view.spawnCube( pos.add( new Vec3( 20.0f, 0.0f, 20.0f )), 90.0f );
-
+                    view.renderer.ready = true;
                     return;
                 }
             }
