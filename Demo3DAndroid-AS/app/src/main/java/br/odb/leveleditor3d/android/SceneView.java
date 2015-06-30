@@ -92,7 +92,7 @@ public class SceneView extends GLSurfaceView {
 //                v.y = Float.parseFloat(coords[1]);
 //                v.z = Float.parseFloat(coords[2]);
 //
-//                spawnCube(v);
+//                spawnActor(v);
 //            }
 //        }
 //    }
@@ -169,7 +169,7 @@ public class SceneView extends GLSurfaceView {
 //        }
 //    }
 
-    public void spawnCube(Vec3 v, float angleXZ ) {
+    public void spawnActor(Vec3 v, float angleXZ) {
         GLESMesh temporaryAvatarMesh = new GLESMesh("" + renderer.actors.size());
         SceneActorNode actor = new SceneActorNode( "actor@" + v.toString() );
         actor.localPosition.set( v );

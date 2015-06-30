@@ -185,9 +185,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     Vec3 pos = new Vec3(view.renderer.camera.localPosition);
 
 
-                    view.spawnCube( pos.add( new Vec3( 10.0f, 0.0f, 10.0f )), 180.0f );
-                    view.spawnCube( pos.add( new Vec3( 30.0f, 0.0f, 30.0f )), 0.0f );
-                    view.spawnCube( pos.add( new Vec3( 20.0f, 0.0f, 20.0f )), 90.0f );
+                    view.spawnActor(pos.add(new Vec3(10.0f, 0.0f, 10.0f)), 180.0f);
+                    view.spawnActor(pos.add(new Vec3(30.0f, 0.0f, 30.0f)), 0.0f);
+                    view.spawnActor(pos.add(new Vec3(20.0f, 0.0f, 20.0f)), 90.0f);
                     view.renderer.ready = true;
                     return;
                 }
