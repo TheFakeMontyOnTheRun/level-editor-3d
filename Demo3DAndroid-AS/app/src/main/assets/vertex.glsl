@@ -4,11 +4,6 @@ attribute vec4 a_color;
 varying vec4 v_color;
 
 void main() {
-
-	vec4 i_position = uMVPMatrix * vPosition;
-	gl_Position = i_position;
-
-	float diffuse = 1.0;
-
-	v_color = vec4 (a_color.r * diffuse, a_color.g * diffuse, a_color.b * diffuse, a_color.a * diffuse);
+	gl_Position = uMVPMatrix * vPosition;;
+	v_color = vec4 (a_color.r, a_color.g, a_color.b, a_color.a);
 }

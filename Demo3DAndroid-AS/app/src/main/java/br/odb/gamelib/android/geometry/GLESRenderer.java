@@ -267,10 +267,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
         Matrix.multiplyMM(mvpMatrix.values, 0, vMatrix.values, 0, mMatrix.values, 0);
         Matrix.multiplyMM(mvpMatrix.values, 0, projectionMatrix.values, 0, mvpMatrix.values, 0);
-
-        // Apply a ModelView Projection transformation
-        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
-
         Matrix.multiplyMM(mvpMatrix.values, 0,  projectionMatrix.values, 0, vMatrix.values, 0);
         GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
     }
