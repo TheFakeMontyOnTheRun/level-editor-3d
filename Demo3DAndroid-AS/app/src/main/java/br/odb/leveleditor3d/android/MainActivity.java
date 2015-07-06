@@ -9,6 +9,7 @@ import android.media.MediaRouter;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.transition.Scene;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
@@ -71,6 +72,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     volatile InputStream vertexShader;
     volatile InputStream fragmentShader;
     volatile InputStream fileInput;
+
     private MediaRouter mMediaRouter;
     private MediaRouter.RouteInfo mRouteInfo;
 

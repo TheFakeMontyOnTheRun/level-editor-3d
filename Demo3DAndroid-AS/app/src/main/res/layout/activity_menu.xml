@@ -9,7 +9,7 @@
     <br.odb.gamelib.android.GameView
         android:id="@+id/gameView1"
         android:layout_width="wrap_content"
-        android:layout_height="219dp"
+        android:layout_height="50dp"
         android:background="#FFF" />
 
     <Spinner
@@ -24,33 +24,9 @@
         android:text="View in 3D" />
 
     <Button
-        android:id="@+id/btnNewProject"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New Project" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Load Project" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save project" />
-
-    <Button
         android:id="@+id/btnModifyGeometry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Modify Geometry" />
-
-    <Button
-        android:id="@+id/btnCompile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Compile geometry" />
 
 </LinearLayout>

@@ -25,22 +25,25 @@ public class MenuActivity extends Activity implements OnClickListener {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnLevels.setAdapter(adapter);
 
-		findViewById(R.id.btnCompile).setOnClickListener(this);
-		findViewById(R.id.btnNewProject).setOnClickListener(this);
 		findViewById(R.id.btnModifyGeometry).setOnClickListener(this);
 		findViewById(R.id.btnViewIn3D).setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
+
+		Intent intent;
+
 		switch (v.getId()) {
 		
-		case R.id.btnCompile:
-			GenericTreeGeometryCompiler g;
+		case R.id.btnModifyGeometry:
+			intent = new Intent(this, UseCardboardActivity.class);
+			intent.putExtra( "level", (String)spnLevels.getSelectedItem() );
+			startActivity(intent);
 			break;
 		
 		case R.id.btnViewIn3D:
-			Intent intent = new Intent(this, MainActivity.class);
+			intent = new Intent(this, MainActivity.class);
             intent.putExtra( "level", (String)spnLevels.getSelectedItem() );
 			startActivity(intent);
 			break;

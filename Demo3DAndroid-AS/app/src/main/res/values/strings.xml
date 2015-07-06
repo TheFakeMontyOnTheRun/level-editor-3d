@@ -7,5 +7,6 @@
     <string name="title_activity_menu">Demo3D</string>
     <string name="title_activity_modify_geometry">Geometry</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_cardboard">CardboardActivity</string>
 
 </resources>
