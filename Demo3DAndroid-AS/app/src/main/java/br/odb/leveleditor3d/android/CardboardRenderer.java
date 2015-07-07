@@ -248,7 +248,19 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         headTransform.getForwardVector( forwardVector, 0 );
         Vec3 tmp = new Vec3( forwardVector[ 0 ], forwardVector[ 1 ], forwardVector[ 2 ] );
         tmp.normalize();
-        Log.d( "head", "v:" + ( Math.acos( tmp.x ) * ( 180 / Math.PI ) ) );
+
+        cameraNode.angleXZ = (float) (( Math.atan2(tmp.z, tmp.x )) * ( 180 / Math.PI )) - 90.0f;
+
+        while( cameraNode.angleXZ < 0 ) {
+            cameraNode.angleXZ += 360.0;
+        }
+
+        while( cameraNode.angleXZ > 360 ) {
+            cameraNode.angleXZ -= 360.0;
+        }
+
+        Log.d( "head", "v:" + cameraNode.angleXZ );
+
     }
 
     /**
@@ -421,10 +433,8 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
     }
 
     public void onWalkForward() {
-        cameraNode.localPosition.x += 10 * Math.sin(cameraNode.angleXZ
-                * (Math.PI / 180.0f));
-        cameraNode.localPosition.z -= 10 * Math.cos(cameraNode.angleXZ
-                * (Math.PI / 180.0f));
+        cameraNode.localPosition.x += 10 * Math.sin(cameraNode.angleXZ* (Math.PI / 180.0f));
+        cameraNode.localPosition.z += 10 * Math.cos(cameraNode.angleXZ* (Math.PI / 180.0f));
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -442,7 +452,7 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
             case KeyEvent.KEYCODE_DPAD_DOWN:
                 cameraNode.localPosition.x -= 10 * Math.sin(cameraNode.angleXZ
                         * (Math.PI / 180.0f));
-                cameraNode.localPosition.z += 10 * Math.cos(cameraNode.angleXZ
+                cameraNode.localPosition.z -= 10 * Math.cos(cameraNode.angleXZ
                         * (Math.PI / 180.0f));
                 break;
 
