@@ -245,11 +245,9 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         Matrix.setLookAtM(camera, 0, 0.0f, 0.0f, CAMERA_Z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
         checkGLError("onReadyToDraw");
 
-        headTransform.getForwardVector( forwardVector, 0 );
-        Vec3 tmp = new Vec3( forwardVector[ 0 ], forwardVector[ 1 ], forwardVector[ 2 ] );
-        tmp.normalize();
+        headTransform.getEulerAngles( forwardVector, 0 );
 
-        cameraNode.angleXZ = (float) (( Math.atan2(tmp.z, tmp.x )) * ( 180 / Math.PI )) - 90.0f;
+        cameraNode.angleXZ = (float) (( forwardVector[ 1 ] * ( 180 / Math.PI ) ));
 
         while( cameraNode.angleXZ < 0 ) {
             cameraNode.angleXZ += 360.0;
@@ -258,9 +256,6 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         while( cameraNode.angleXZ > 360 ) {
             cameraNode.angleXZ -= 360.0;
         }
-
-        Log.d( "head", "v:" + cameraNode.angleXZ );
-
     }
 
     /**
@@ -433,8 +428,8 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
     }
 
     public void onWalkForward() {
-        cameraNode.localPosition.x += 10 * Math.sin(cameraNode.angleXZ* (Math.PI / 180.0f));
-        cameraNode.localPosition.z += 10 * Math.cos(cameraNode.angleXZ* (Math.PI / 180.0f));
+        cameraNode.localPosition.x -= 10 * Math.sin(cameraNode.angleXZ* (Math.PI / 180.0f));
+        cameraNode.localPosition.z -= 10 * Math.cos(cameraNode.angleXZ* (Math.PI / 180.0f));
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -450,9 +445,9 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
                 onWalkForward();
                 break;
             case KeyEvent.KEYCODE_DPAD_DOWN:
-                cameraNode.localPosition.x -= 10 * Math.sin(cameraNode.angleXZ
+                cameraNode.localPosition.x += 10 * Math.sin(cameraNode.angleXZ
                         * (Math.PI / 180.0f));
-                cameraNode.localPosition.z -= 10 * Math.cos(cameraNode.angleXZ
+                cameraNode.localPosition.z += 10 * Math.cos(cameraNode.angleXZ
                         * (Math.PI / 180.0f));
                 break;
 
