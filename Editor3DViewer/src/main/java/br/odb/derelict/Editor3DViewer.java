@@ -13,16 +13,9 @@ import static javax.media.opengl.fixedfunc.GLMatrixFunc.GL_PROJECTION;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,14 +25,22 @@ import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.awt.GLCanvas;
 import javax.media.opengl.glu.GLU;
+import javax.xml.parsers.ParserConfigurationException;
 
+import org.xml.sax.SAXException;
+
+import br.odb.liboldfart.WavefrontMaterialLoader;
+import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
+import br.odb.libscene.builders.WorldLoader;
 import br.odb.libscene.util.SceneTesselator;
+import br.odb.libstrip.Decal;
 import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
@@ -61,7 +62,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	private static final long serialVersionUID = 3207880799571393702L;
 
 	final List<GeneralTriangle> polysToRender = new ArrayList<>();
-	final List<GeneralTriangle> cube = new ArrayList<>();
+	final List<GeneralTriangle> defaultActorMesh = new ArrayList<>();
 	
 	final List<Vec3> actors = new ArrayList<>();
 	
@@ -148,7 +149,47 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glEnable( GL.GL_BLEND );
 		gl.glBlendFunc( GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
 	}
+	
+	void initDefaultActorModel() throws FileNotFoundException {
+		WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+		List<Material> mats = matLoader.parseMaterials( new FileInputStream(
+				System.getProperty( "user.home" ) + "/gargoyle.mtl") );
 
+
+		WavefrontOBJLoader loader = new WavefrontOBJLoader( new GeneralTriangleFactory() );
+		ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( new FileInputStream(
+				System.getProperty( "user.home" ) + "/gargoyle.obj"), mats );
+
+		for ( GeneralTriangle gt : mesh.get( 0 ).faces ) {
+			defaultActorMesh.add( gt );
+		}
+	}
+	
+	void applyDecalToSector(Decal decal, GroupSector target) {
+		decal.scale( target.size );
+		target.mesh.faces.addAll( decal.faces );
+		decal.translate( target.getAbsolutePosition() );
+	}
+	
+	World loadMap(String filename)
+			throws FileNotFoundException, IOException, SAXException,
+			ParserConfigurationException {
+		FileInputStream fis = new FileInputStream(
+				System.getProperty( "user.home" ) + filename );
+		 
+		World world = WorldLoader.build(fis);
+		tesselator.generateSubSectorQuadsForWorld(world);
+		return world;
+	}	
+
+	void applyDecalToSector(String decalFilename, Direction direction, String targetSectorName )
+			throws FileNotFoundException, IOException {
+		FileInputStream fis;		            
+		fis = new FileInputStream(System.getProperty( "user.home" ) + decalFilename );
+		Decal decal = Decal.loadDecal( "gun", fis, direction );
+		applyDecalToSector( decal, (GroupSector) world.masterSector.getChild( targetSectorName ) );
+	}
+	
 	@Override
 	public void reshape(GLAutoDrawable drawable, int x, int y, int width,
 			int height) {
@@ -234,7 +275,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 
 
 	private void drawCube( GL2 gl, Vec3 p) {
-		for (GeneralTriangle poly : this.cube) {
+		for (GeneralTriangle poly : this.defaultActorMesh) {
 			
 			gl.glColor4f( poly.material.mainColor.r / 255.0f,
 					poly.material.mainColor.g / 255.0f,
@@ -380,7 +421,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		this.loadGeometryFromScene( world.masterSector );
 	}
 
-	public void spawnCube(Vec3 position ) {
+	public void spawnDefaultActor(Vec3 position ) {
 		actors.add( position );		
 	}
 

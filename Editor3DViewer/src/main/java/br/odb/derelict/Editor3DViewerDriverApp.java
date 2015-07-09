@@ -6,30 +6,16 @@ package br.odb.derelict;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JFrame;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import br.odb.liboldfart.WavefrontMaterialLoader;
-import br.odb.liboldfart.WavefrontOBJLoader;
-import br.odb.libscene.GroupSector;
-import br.odb.libscene.SceneNode;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-import br.odb.libscene.builders.WorldLoader;
-import br.odb.libstrip.Decal;
-import br.odb.libstrip.GeneralTriangle;
-import br.odb.libstrip.GeneralTriangleMesh;
-import br.odb.libstrip.Material;
-import br.odb.libstrip.builders.GeneralTriangleFactory;
-import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 import com.jogamp.opengl.util.FPSAnimator;
@@ -45,50 +31,18 @@ public class Editor3DViewerDriverApp {
 	private static final int FPS = 60;
 	
 	public static void main(String[] args) {
+		final Editor3DViewer canvas = new Editor3DViewer();
+		
 		new Thread(new Runnable() {
 			private World world;
-			//private SVGGraphic graphic;
-			//private GeneralTriangle[] decal;
-			
 
 			@Override
 			public void run() {
-
-				Editor3DViewer canvas = new Editor3DViewer();
-
-				try {
-					FileInputStream fis = new FileInputStream(
-							System.getProperty( "user.home" ) + "/floor1.opt.xml");
-					 
-					world = WorldLoader.build(fis);
-					canvas.tesselator.generateSubSectorQuadsForWorld(world);
-					
-//					FileInputStream filePath = new FileInputStream(
-//							System.getProperty( "user.home" ) + "/title.bin");
-					
-					//decal = Decal.loadGraphic( filePath, 800, 480 );
-										
-		            WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
-		            List<Material> mats = matLoader.parseMaterials( new FileInputStream(
-							System.getProperty( "user.home" ) + "/gargoyle.mtl") );
-
-
-		            WavefrontOBJLoader loader = new WavefrontOBJLoader( new GeneralTriangleFactory() );
-		            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( new FileInputStream(
-							System.getProperty( "user.home" ) + "/gargoyle.obj"), mats );
-
-
-//		            fis = new FileInputStream(System.getProperty( "user.home" ) + "/gun.bin");
-//		            Decal decal = Decal.loadDecal( "gun", fis, Direction.FLOOR );
-//		            applyDecalToSector( decal, (GroupSector) world.masterSector.getChild( "Cube.002_Cube.112" ) );
-
-		            
-		            
-		            for ( GeneralTriangle gt : mesh.get( 0 ).faces ) {
-		            	canvas.cube.add( gt );
-		            }
-		            
-		            
+				try {					
+					world = canvas.loadMap( "/floor1.opt.xml" );
+					canvas.setScene( world );
+					canvas.initDefaultActorModel();
+					//canvas.applyDecalToSector("/title.bin", Direction.FLOOR, "Cube.002_Cube.112" );
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -102,38 +56,17 @@ public class Editor3DViewerDriverApp {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				SpaceRegion sr = (SpaceRegion) world.masterSector.getChild( "Cube.002_Cube.112" );
-				canvas.cameraPosition.set( sr.getAbsolutePosition().add( new Vec3( sr.size.x / 2.0f, sr.size.y / 2.0f, sr.size.z / 2.0f ) ) );
-			
-				canvas.setScene( world );
-				canvas.spawnCube( canvas.cameraPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ) );
-				canvas.spawnCube( new Vec3( 0.0f, 0.0f, 0.0f ) );
 				
-//				for ( GeneralTriangle gt : decal ) {
-//					gt.x0 += canvas.cameraPosition.x;
-//					gt.x1 += canvas.cameraPosition.x;
-//					gt.x2 += canvas.cameraPosition.x;
-//
-//					gt.y0 += canvas.cameraPosition.y;
-//					gt.y1 += canvas.cameraPosition.y;
-//					gt.y2 += canvas.cameraPosition.y;
-//					
-//					gt.z0 += canvas.cameraPosition.z;
-//					gt.z1 += canvas.cameraPosition.z;
-//					gt.z2 += canvas.cameraPosition.z;
-//					
-//					canvas.polysToRender.add( gt );
-//				}				
+				createScene(canvas);
 				
 				System.out.println( "loaded " + canvas.polysToRender.size() + " polys" );
+				
 				canvas.setPreferredSize(new Dimension(CANVAS_WIDTH,
 						CANVAS_HEIGHT));
 
 				final FPSAnimator animator = new FPSAnimator(canvas, FPS, true);
 
-				// Create the top-level container
-				final JFrame frame = new JFrame(); // Swing's JFrame or AWT's
-													// Frame
+				final JFrame frame = new JFrame();
 				frame.getContentPane().add(canvas);
 
 				frame.addWindowListener(new WindowAdapter() {
@@ -155,13 +88,14 @@ public class Editor3DViewerDriverApp {
 				frame.setVisible(true);
 				animator.start(); // start the animation loop
 			}
+
+			private void createScene(Editor3DViewer canvas) {
 			
-			private void applyDecalToSector(Decal decal, GroupSector target) {
-				decal.scale( target.size );
-				target.mesh.faces.addAll( decal.faces );
-				decal.translate( target.getAbsolutePosition() );
+				SpaceRegion sr = (SpaceRegion) world.masterSector.getChild( "Cube.002_Cube.112" );
+				canvas.cameraPosition.set( sr.getAbsolutePosition().add( new Vec3( sr.size.x / 2.0f, sr.size.y / 2.0f, sr.size.z / 2.0f ) ) );
+				canvas.spawnDefaultActor( canvas.cameraPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ) );
+				canvas.spawnDefaultActor( new Vec3( 0.0f, 0.0f, 0.0f ) );
 			}
-			
 		}).start();
 	}
 }
