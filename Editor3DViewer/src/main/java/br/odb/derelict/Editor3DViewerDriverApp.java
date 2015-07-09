@@ -19,14 +19,17 @@ import org.xml.sax.SAXException;
 
 import br.odb.liboldfart.WavefrontMaterialLoader;
 import br.odb.liboldfart.WavefrontOBJLoader;
+import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
+import br.odb.libstrip.Decal;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
+import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 import com.jogamp.opengl.util.FPSAnimator;
@@ -74,9 +77,17 @@ public class Editor3DViewerDriverApp {
 		            ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( new FileInputStream(
 							System.getProperty( "user.home" ) + "/gargoyle.obj"), mats );
 
+
+//		            fis = new FileInputStream(System.getProperty( "user.home" ) + "/gun.bin");
+//		            Decal decal = Decal.loadDecal( "gun", fis, Direction.FLOOR );
+//		            applyDecalToSector( decal, (GroupSector) world.masterSector.getChild( "Cube.002_Cube.112" ) );
+
+		            
+		            
 		            for ( GeneralTriangle gt : mesh.get( 0 ).faces ) {
 		            	canvas.cube.add( gt );
 		            }
+		            
 		            
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
@@ -96,6 +107,7 @@ public class Editor3DViewerDriverApp {
 			
 				canvas.setScene( world );
 				canvas.spawnCube( canvas.cameraPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ) );
+				canvas.spawnCube( new Vec3( 0.0f, 0.0f, 0.0f ) );
 				
 //				for ( GeneralTriangle gt : decal ) {
 //					gt.x0 += canvas.cameraPosition.x;
@@ -143,6 +155,13 @@ public class Editor3DViewerDriverApp {
 				frame.setVisible(true);
 				animator.start(); // start the animation loop
 			}
+			
+			private void applyDecalToSector(Decal decal, GroupSector target) {
+				decal.scale( target.size );
+				target.mesh.faces.addAll( decal.faces );
+				decal.translate( target.getAbsolutePosition() );
+			}
+			
 		}).start();
 	}
 }
