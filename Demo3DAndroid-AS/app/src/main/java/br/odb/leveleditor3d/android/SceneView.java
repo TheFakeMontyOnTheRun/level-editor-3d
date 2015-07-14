@@ -197,8 +197,8 @@ public class SceneView extends GLSurfaceView {
         setEGLContextClientVersion(2);
 
         try {
-            String vertexShader = readFully(vertex, "utf8");
-            String fragmentShader = readFully(fragment, "utf8");
+            String vertexShader =  LevelEditor3DApplication.readFully(vertex, "utf8");
+            String fragmentShader = LevelEditor3DApplication.readFully(fragment, "utf8");
 
             renderer = new GLESRenderer(10000, vertexShader, fragmentShader);
 
@@ -297,37 +297,11 @@ public class SceneView extends GLSurfaceView {
         return true;
     }
 
-
-    public void changeHue(GLES1Triangle trig) {
-        trig.material = new Material(null, new Color(trig.material.mainColor), null, null, null);
-
-        switch (trig.hint) {
-            case W:
-                trig.material.mainColor.multiply(0.8f);
-                break;
-            case E:
-                trig.material.mainColor.multiply(0.6f);
-                break;
-            case N:
-                trig.material.mainColor.multiply(0.4f);
-                break;
-            case S:
-                trig.material.mainColor.multiply(0.2f);
-                break;
-            case FLOOR:
-                trig.material.mainColor.multiply(0.9f);
-                break;
-            case CEILING:
-                trig.material.mainColor.multiply(0.1f);
-                break;
-        }
-    }
-
     private void loadGeometryFromScene(GroupSector sector) {
 
         for (GeneralTriangle isf : sector.mesh.faces) {
             ++polyCount;
-            changeHue((GLES1Triangle) isf);
+            renderer.changeHue((GLES1Triangle) isf);
             isf.flush();
             renderer.addToVA((GLES1Triangle) isf);
         }
@@ -343,21 +317,6 @@ public class SceneView extends GLSurfaceView {
         renderer.clearScreenGeometry();
         loadGeometryFromScene(scene.masterSector);
         renderer.flush();
-    }
-
-    public String readFully(InputStream inputStream, String encoding)
-            throws IOException {
-        return new String(readFully(inputStream), encoding);
-    }
-
-    private byte[] readFully(InputStream inputStream) throws IOException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        byte[] buffer = new byte[1024];
-        int length = 0;
-        while ((length = inputStream.read(buffer)) != -1) {
-            baos.write(buffer, 0, length);
-        }
-        return baos.toByteArray();
     }
 }
 

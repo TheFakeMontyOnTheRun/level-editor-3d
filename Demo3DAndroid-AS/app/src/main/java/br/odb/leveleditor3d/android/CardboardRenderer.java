@@ -3,10 +3,8 @@ package br.odb.leveleditor3d.android;
 import android.content.Context;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
-import android.os.Vibrator;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 
 import com.google.vrtoolkit.cardboard.CardboardView;
 import com.google.vrtoolkit.cardboard.Eye;
@@ -32,10 +30,8 @@ import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
-import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
-import br.odb.utils.math.Vec3;
 
 /**
  * Created by monty on 7/2/15.
@@ -51,7 +47,7 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
 
     private static final int COORDS_PER_VERTEX = 3;
 
-    final HashMap<Material, GLESVertexArrayManager > managers = new HashMap<Material, GLESVertexArrayManager >();
+    final HashMap<Material, GLESVertexArrayManager > managers = new HashMap<>();
 
     private static final String TAG = CardboardRenderer.class.getSimpleName();
 
@@ -79,7 +75,6 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
 
     private float objectDistance = 12f;
 
-    public GeneralTriangleMesh sampleEnemy;
     volatile boolean ready = false;
 
     final HashMap<Material, ArrayList< GLES1Triangle> > staticGeometryToAdd= new HashMap<>();
@@ -271,7 +266,6 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         checkGLError("colorParam");
 
         // Apply the eye transformation to the camera.
-//        Matrix.rotateM(camera, 0, cameraNode.angleXZ, 0, 1.0f, 0);
         Matrix.multiplyMM(view, 0, eye.getEyeView(), 0, camera, 0);
         Matrix.translateM(view, 0, -cameraNode.localPosition.x, -cameraNode.localPosition.y, -cameraNode.localPosition.z);
 

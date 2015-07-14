@@ -26,6 +26,7 @@ import br.odb.libscene.CameraNode;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
+import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
 
 /*
@@ -83,7 +84,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
      * @param shaderCode proper code for shader
      * @return
      */
-    private int loadShader(int type, String name, String shaderCode) {
+    public int loadShader(int type, String name, String shaderCode) {
 
         int shader = GLES20.glCreateShader(type);
 
@@ -93,6 +94,31 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         shaders.put( name, shader );
 
         return shader;
+    }
+
+    public void changeHue(GLES1Triangle trig) {
+        trig.material = new Material(null, new Color(trig.material.mainColor), null, null, null);
+
+        switch (trig.hint) {
+            case W:
+                trig.material.mainColor.multiply(0.8f);
+                break;
+            case E:
+                trig.material.mainColor.multiply(0.6f);
+                break;
+            case N:
+                trig.material.mainColor.multiply(0.4f);
+                break;
+            case S:
+                trig.material.mainColor.multiply(0.2f);
+                break;
+            case FLOOR:
+                trig.material.mainColor.multiply(0.9f);
+                break;
+            case CEILING:
+                trig.material.mainColor.multiply(0.1f);
+                break;
+        }
     }
 
     /**
