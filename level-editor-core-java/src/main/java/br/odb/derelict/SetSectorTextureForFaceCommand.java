@@ -32,7 +32,7 @@ public class SetSectorTextureForFaceCommand extends UserCommandLineAction {
 		if ( sr instanceof GroupSector ) {
 			gs = (GroupSector)sr;
 			Direction d = Direction.valueOf( arg[ 1 ] );
-			gs.shades.put( d, new Material( "mat_" + d.simpleName + "_" + arg[ 2 ], null, arg[ 2 ], null, null  ) );
+			gs.shades.put( d, new Material( "mat_" + d.simpleName + "_" + arg[ 2 ], null, arg[ 2 ], null  ) );
 		} else {
 			app.getClient().alert( "Not a GroupSector" );
 		}

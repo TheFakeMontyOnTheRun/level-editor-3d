@@ -45,7 +45,7 @@ public class SetColorCommand extends UserCommandLineAction {
 		color = new Color(Float.parseFloat(parms[1]),
 				Float.parseFloat(parms[2]), Float.parseFloat(parms[3]));
 
-		Material m = new Material( null, color, null, null, null );
+		Material m = new Material( null, color, null, null );
 		target.material = m;
 
 	}
