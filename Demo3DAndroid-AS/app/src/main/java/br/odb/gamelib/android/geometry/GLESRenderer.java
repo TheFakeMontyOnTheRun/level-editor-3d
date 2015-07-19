@@ -241,7 +241,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
         maPositionHandle = GLES20.glGetAttribLocation(mProgram, "vPosition");
         colorHandle = GLES20.glGetAttribLocation(mProgram, "a_color");
-
     }
 
     /**

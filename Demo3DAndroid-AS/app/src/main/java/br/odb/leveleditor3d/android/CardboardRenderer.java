@@ -394,6 +394,10 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
             staticGeometryToAdd.get( m ).clear();
         }
 
+        for ( GLESVertexArrayManager manager : managers.values() ) {
+            manager.uploadToGPU();
+        }
+
         staticGeometryToAdd.clear();
     }
 
