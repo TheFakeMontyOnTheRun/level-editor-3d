@@ -26,6 +26,9 @@ import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
 import br.odb.libscene.World;
 import br.odb.libscene.util.SceneTesselator;
+import br.odb.libstrip.Material;
+import br.odb.utils.Color;
+import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -103,14 +106,30 @@ public class MainActivity extends Activity implements View.OnClickListener {
         protected Void doInBackground(Void... voids) {
             try {
 
-                //world = WorldLoader.build(fileInput);
-                world = (World) new ObjectInputStream(fileInput).readObject();
+                //world = WorldLoader.build(fileInput)
+                 world = (World) new ObjectInputStream(fileInput).readObject();
+
+//                GroupSector master0 = new GroupSector( "master" );
+//                master0.size.set( 20, 20, 20 );
+//                world = new World( master0 );
+//                GroupSector son0 = new GroupSector( "son0" );
+//                son0.size.set( 20, 20, 20 );
+//                master0.addChild(son0);
+//                Sector sonSon0 = new Sector( "sonSon0" );
+//                sonSon0.size.set( 20, 20, 20 );
+//                son0.addChild(sonSon0);
+//                son0.shades.put(Direction.N, new Material("mat0", new Color(255, 0, 0), null, null, null));
+//                son0.shades.put( Direction.E, new Material( "mat1", new Color( 0, 255, 0 ), null, null ,null  ) );
+//                son0.shades.put( Direction.S, new Material( "mat2", new Color( 0, 0, 255 ), null, null ,null  ) );
+//                son0.shades.put( Direction.W, new Material( "mat3", new Color( 255, 0, 255 ), null, null ,null  ) );
+//                son0.shades.put( Direction.FLOOR, new Material( "mat4", new Color( 255, 255, 0 ), null, null ,null  ) );
+//                son0.shades.put( Direction.CEILING, new Material( "mat5", new Color( 0, 255, 255 ), null, null ,null  ) );
+
+
 
                 SceneTesselator tesselator = new SceneTesselator(new GLES1TriangleFactory());
 
                 tesselator.generateSubSectorQuadsForWorld(world);
-
-                view.setScene(world);
             } catch (Exception e) {
                 e.printStackTrace();
 
@@ -124,9 +143,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
+            view.setScene(world);
+
             view.renderer.camera.angleXZ = 180.0f;
-            final MapView map = (MapView) findViewById( R.id.map );
+
             final List<SceneNode> srs = world.getAllRegionsAsList();
+
+            final MapView map = (MapView) findViewById( R.id.map );
 
             for ( SceneNode sn : srs ) {
                 if ( sn instanceof GroupSector ) {
@@ -190,7 +213,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     view.spawnActor(pos.add(new Vec3(10.0f, 0.0f, 10.0f)), 180.0f);
                     view.spawnActor(pos.add(new Vec3(30.0f, 0.0f, 30.0f)), 0.0f);
                     view.spawnActor(pos.add(new Vec3(20.0f, 0.0f, 20.0f)), 90.0f);
-                    view.renderer.ready = true;
+                    //view.renderer.ready = true;
                     return;
                 }
             }

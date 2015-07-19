@@ -287,8 +287,7 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         for ( Material mat : managers.keySet() ) {
 
             manager = managers.get( mat );
-            manager.flush();
-            manager.drawGLES2(cubePositionParam, cubeColorParam, -1 );
+            manager.draw(cubePositionParam, cubeColorParam, -1);
         }
     }
 
@@ -380,11 +379,7 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
 
     void initManagerForMaterial( Material mat, int polys ) {
 
-        GLESVertexArrayManager manager = new GLESVertexArrayManager();
-
-        manager.init(polys);
-        manager.flush();
-
+        GLESVertexArrayManager manager = new GLESVertexArrayManager( polys );
         managers.put( mat, manager );
     }
 

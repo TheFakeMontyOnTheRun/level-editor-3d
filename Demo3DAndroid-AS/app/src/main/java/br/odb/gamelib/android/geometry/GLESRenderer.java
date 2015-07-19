@@ -7,7 +7,6 @@ package br.odb.gamelib.android.geometry;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.opengl.GLES10;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLUtils;
@@ -52,7 +51,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public final ArrayList<GLESMesh> meshes = new ArrayList<>();
 
     final public List<SceneActorNode> actors = new ArrayList<>();
-
 
     //GLES2 stuff
     private int mProgram; //manage the fragShader-vertShader coupling.
@@ -136,10 +134,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
     void initManagerForMaterial( Material mat, int polys ) {
 
-        GLESVertexArrayManager manager = new GLESVertexArrayManager();
-
-        manager.init(polys);
-        manager.flush();
+        GLESVertexArrayManager manager = new GLESVertexArrayManager( polys );
 
         if ( this.rockTextureIndex != -1 ) {
             manager.setTextureCoordenates( new float[] {
@@ -315,14 +310,8 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     }
 
     private void drawPerMaterialStaticMesh() {
-
-        GLESVertexArrayManager manager;
-
-        for ( Material mat : managers.keySet() ) {
-
-            manager = managers.get( mat );
-            manager.flush();
-            manager.drawGLES2(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
+        for ( GLESVertexArrayManager manager : managers.values() ) {
+            manager.draw(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
         }
     }
 
@@ -374,15 +363,6 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         manager.pushIntoFrameAsStatic(face.getVertexData(), face.material.mainColor.getFloatData());
     }
 
-    /**
-     *
-     */
-    public void clearScreenGeometry() {
-        for ( GLESVertexArrayManager manager : managers.values() ) {
-            manager.clear();
-        }
-    }
-
     public void flush() {
 
         for ( Material m : staticGeometryToAdd.keySet() ) {
@@ -394,5 +374,10 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         }
 
         staticGeometryToAdd.clear();
+
+        for ( GLESVertexArrayManager manager : managers.values() ) {
+            manager.uploadToGPU();
+        }
+        ready = true;
     }
 }
