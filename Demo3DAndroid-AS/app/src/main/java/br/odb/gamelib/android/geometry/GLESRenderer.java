@@ -95,7 +95,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     }
 
     public void changeHue(GLES1Triangle trig) {
-        trig.material = new Material(null, new Color(trig.material.mainColor), null, null, null);
+        trig.material = new Material(null, new Color(trig.material.mainColor), null, null);
 
         switch (trig.hint) {
             case W:
