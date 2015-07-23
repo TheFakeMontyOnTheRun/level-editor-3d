@@ -15,23 +15,28 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.microedition.khronos.egl.EGLConfig;
 
+import br.odb.SceneActorNode;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
+import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
+import br.odb.gamelib.android.geometry.GLESMesh;
 import br.odb.gamelib.android.geometry.GLESVertexArrayManager;
+import br.odb.liboldfart.WavefrontMaterialLoader;
+import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.CameraNode;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
+import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
+import br.odb.utils.math.Vec3;
 
 /**
  * Created by monty on 7/2/15.
@@ -42,10 +47,7 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
 
     private static final float Z_NEAR = 0.1f;
     private static final float Z_FAR = 10000.0f;
-
     private static final float CAMERA_Z = 0.01f;
-
-    private static final int COORDS_PER_VERTEX = 3;
 
     final HashMap<Material, GLESVertexArrayManager > managers = new HashMap<>();
 
@@ -53,27 +55,21 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
 
     private final Context context;
 
-    private FloatBuffer cubeVertices;
-    private FloatBuffer cubeColors;
-    private FloatBuffer cubeFoundColors;
+    private int defaultProgram;
 
-    private int cubeProgram;
+    private int positionParam;
+    private int colorParam;
+    private int modelViewProjectionParam;
 
-    private int cubePositionParam;
-    private int cubeColorParam;
-    private int cubeModelParam;
-    private int cubeModelViewParam;
-    private int cubeModelViewProjectionParam;
+    private br.odb.utils.math.Matrix camera = new br.odb.utils.math.Matrix( 4, 4 );
+    private br.odb.utils.math.Matrix view = new br.odb.utils.math.Matrix( 4, 4 );
+    private br.odb.utils.math.Matrix modelViewProjection = new br.odb.utils.math.Matrix( 4, 4 );
 
-    private float[] modelCube;
-    private float[] camera;
-    private float[] view;
-    private float[] modelViewProjection;
-    private float[] modelView;
     private float[] forwardVector = new float[ 3 ];
 
-
-    private float objectDistance = 12f;
+    public final ArrayList<GLESMesh> meshes = new ArrayList<>();
+    public final GLESMesh sampleEnemy = new GLESMesh( "sample-enemy" );
+    final public List<SceneActorNode> actors = new ArrayList<>();
 
     volatile boolean ready = false;
 
@@ -82,12 +78,6 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
 
     CardboardRenderer(Context context) {
         this.context = context;
-
-        modelCube = new float[16];
-        camera = new float[16];
-        view = new float[16];
-        modelViewProjection = new float[16];
-        modelView = new float[16];
     }
 
     /**
@@ -158,51 +148,23 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         Log.i(TAG, "onSurfaceCreated");
         GLES20.glClearColor(0.1f, 0.1f, 0.1f, 0.5f); // Dark background so text shows up well.
 
-        ByteBuffer bbVertices = ByteBuffer.allocateDirect(WorldLayoutData.CUBE_COORDS.length * 4);
-        bbVertices.order(ByteOrder.nativeOrder());
-        cubeVertices = bbVertices.asFloatBuffer();
-        cubeVertices.put(WorldLayoutData.CUBE_COORDS);
-        cubeVertices.position(0);
-
-        ByteBuffer bbColors = ByteBuffer.allocateDirect(WorldLayoutData.CUBE_COLORS.length * 4);
-        bbColors.order(ByteOrder.nativeOrder());
-        cubeColors = bbColors.asFloatBuffer();
-        cubeColors.put(WorldLayoutData.CUBE_COLORS);
-        cubeColors.position(0);
-
-        ByteBuffer bbFoundColors = ByteBuffer.allocateDirect(
-                WorldLayoutData.CUBE_FOUND_COLORS.length * 4);
-        bbFoundColors.order(ByteOrder.nativeOrder());
-        cubeFoundColors = bbFoundColors.asFloatBuffer();
-        cubeFoundColors.put(WorldLayoutData.CUBE_FOUND_COLORS);
-        cubeFoundColors.position(0);
-
         int vertexShader = loadGLShader(GLES20.GL_VERTEX_SHADER, R.raw.light_vertex);
         int passthroughShader = loadGLShader(GLES20.GL_FRAGMENT_SHADER, R.raw.passthrough_fragment);
 
-        cubeProgram = GLES20.glCreateProgram();
-        GLES20.glAttachShader(cubeProgram, vertexShader);
-        GLES20.glAttachShader(cubeProgram, passthroughShader);
-        GLES20.glLinkProgram(cubeProgram);
-        GLES20.glUseProgram(cubeProgram);
+        defaultProgram = GLES20.glCreateProgram();
+        GLES20.glAttachShader(defaultProgram, vertexShader);
+        GLES20.glAttachShader(defaultProgram, passthroughShader);
+        GLES20.glLinkProgram(defaultProgram);
+        GLES20.glUseProgram(defaultProgram);
 
-        checkGLError("Cube program");
+        positionParam = GLES20.glGetAttribLocation(defaultProgram, "a_Position");
+        colorParam = GLES20.glGetAttribLocation(defaultProgram, "a_Color");
+        modelViewProjectionParam = GLES20.glGetUniformLocation(defaultProgram, "u_MVP");
 
-        cubePositionParam = GLES20.glGetAttribLocation(cubeProgram, "a_Position");
-        cubeColorParam = GLES20.glGetAttribLocation(cubeProgram, "a_Color");
+        GLES20.glEnableVertexAttribArray(positionParam);
+        GLES20.glEnableVertexAttribArray(colorParam);
 
-        cubeModelParam = GLES20.glGetUniformLocation(cubeProgram, "u_Model");
-        cubeModelViewParam = GLES20.glGetUniformLocation(cubeProgram, "u_MVMatrix");
-        cubeModelViewProjectionParam = GLES20.glGetUniformLocation(cubeProgram, "u_MVP");
-
-        GLES20.glEnableVertexAttribArray(cubePositionParam);
-        GLES20.glEnableVertexAttribArray(cubeColorParam);
-
-        checkGLError("Cube program params");
         // Object first appears directly in front of user.
-        Matrix.setIdentityM(modelCube, 0);
-        Matrix.translateM(modelCube, 0, 0, 0, -objectDistance);
-
         checkGLError("onSurfaceCreated");
     }
 
@@ -237,10 +199,10 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
     @Override
     public void onNewFrame(HeadTransform headTransform) {
         // Build the camera matrix and apply it to the ModelView.
-        Matrix.setLookAtM(camera, 0, 0.0f, 0.0f, CAMERA_Z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+        Matrix.setLookAtM(camera.values, 0, 0.0f, 0.0f, CAMERA_Z, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
         checkGLError("onReadyToDraw");
 
-        headTransform.getEulerAngles( forwardVector, 0 );
+        headTransform.getEulerAngles(forwardVector, 0);
 
         cameraNode.angleXZ = (float) (( forwardVector[ 1 ] * ( 180 / Math.PI ) ));
 
@@ -253,6 +215,21 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         }
     }
 
+    public void initDefaultMeshForActor() throws IOException {
+        GeneralTriangleMesh enemy;
+        WavefrontMaterialLoader matLoader = new WavefrontMaterialLoader();
+        List<Material> mats = matLoader.parseMaterials( context.getAssets().open( "gargoyle.mtl" ) );
+
+        WavefrontOBJLoader loader = new WavefrontOBJLoader( new GLES1TriangleFactory() );
+        ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader.loadMeshes( context.getAssets().open("gargoyle.obj"), mats );
+
+        enemy = mesh.get( 0 );
+
+        for ( GeneralTriangle gt : enemy.faces ) {
+            sampleEnemy.faces.add(GLES1TriangleFactory.getInstance().makeTrigFrom(gt));
+        }
+    }
+
     /**
      * Draws a frame for an eye.
      *
@@ -260,23 +237,63 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
      */
     @Override
     public void onDrawEye(Eye eye) {
-        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
+
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        checkGLError("colorParam");
-
-        // Apply the eye transformation to the camera.
-        Matrix.multiplyMM(view, 0, eye.getEyeView(), 0, camera, 0);
-        Matrix.translateM(view, 0, -cameraNode.localPosition.x, -cameraNode.localPosition.y, -cameraNode.localPosition.z);
-
-        // Build the ModelView and ModelViewProjection matrices
-        // for calculating cube position and light.
-        float[] perspective = eye.getPerspective(Z_NEAR, Z_FAR);
-        Matrix.multiplyMM(modelView, 0, view, 0, modelCube, 0);
-        Matrix.multiplyMM(modelViewProjection, 0, perspective, 0, modelView, 0);
-        drawCube();
         if ( ready ) {
+            // Build the ModelView and ModelViewProjection matrices
+            float[] perspective = eye.getPerspective(Z_NEAR, Z_FAR);
+
+            GLES20.glUseProgram(defaultProgram);
+            GLES20.glEnable(GLES20.GL_DEPTH_TEST);
+
+            // Apply the eye transformation to the camera.
+            Matrix.multiplyMM(view.values, 0, eye.getEyeView(), 0, camera.values, 0);
+            Matrix.translateM(view.values, 0, -cameraNode.localPosition.x, -cameraNode.localPosition.y, -cameraNode.localPosition.z);
+            Matrix.multiplyMM(modelViewProjection.values, 0, perspective, 0, view.values, 0);
+
+            // Set the ModelViewProjection matrix in the shader.
+            GLES20.glUniformMatrix4fv(modelViewProjectionParam, 1, false, modelViewProjection.values, 0);
+
             drawPerMaterialStaticMesh();
+            drawMeshes(eye);
+        }
+    }
+
+    public void transform( Eye eye, float angleXZ, Vec3 trans) {
+        float[] perspective = eye.getPerspective(Z_NEAR, Z_FAR);
+        Matrix.multiplyMM(view.values, 0, eye.getEyeView(), 0, camera.values, 0);
+        Matrix.translateM(view.values, 0, -cameraNode.localPosition.x, -cameraNode.localPosition.y, -cameraNode.localPosition.z);
+        Matrix.translateM(view.values, 0, trans.x, trans.y, trans.z);
+        Matrix.multiplyMM(modelViewProjection.values, 0, perspective, 0, view.values, 0);
+    }
+
+    private void drawMeshes( Eye eye ) {
+        synchronized (meshes) {
+            for ( SceneActorNode actor : actors ) {
+
+                transform( eye, actor.angleXZ, actor.localPosition );
+                GLES20.glUniformMatrix4fv(modelViewProjectionParam, 1, false, modelViewProjection.values, 0);
+                drawMeshGLES2(sampleEnemy);
+            }
+        }
+    }
+
+    public void spawnActor(Vec3 v, float angleXZ) {
+        SceneActorNode actor = new SceneActorNode( "actor@" + v.toString() );
+        actor.localPosition.set( v );
+        actor.angleXZ = angleXZ;
+        actors.add( actor );
+    }
+
+    /**
+     * @param mesh
+     */
+    private void drawMeshGLES2(GeneralTriangleMesh mesh) {
+        synchronized ( mesh ) {
+            for (GeneralTriangle face : mesh.faces) {
+                ((GLES1Triangle) face).drawGLES2(positionParam, colorParam, -1);
+            }
         }
     }
 
@@ -287,39 +304,12 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
         for ( Material mat : managers.keySet() ) {
 
             manager = managers.get( mat );
-            manager.draw(cubePositionParam, cubeColorParam, -1);
+            manager.draw(positionParam, colorParam, -1);
         }
     }
 
     @Override
     public void onFinishFrame(Viewport viewport) {
-    }
-
-    /**
-     * Draw the cube.
-     *
-     * <p>We've set all of our transformation matrices. Now we simply pass them into the shader.
-     */
-    public void drawCube() {
-        GLES20.glUseProgram(cubeProgram);
-        // Set the Model in the shader, used to calculate lighting
-        GLES20.glUniformMatrix4fv(cubeModelParam, 1, false, modelCube, 0);
-
-        // Set the ModelView in the shader, used to calculate lighting
-        GLES20.glUniformMatrix4fv(cubeModelViewParam, 1, false, modelView, 0);
-
-        // Set the position of the cube
-        GLES20.glVertexAttribPointer(cubePositionParam, COORDS_PER_VERTEX, GLES20.GL_FLOAT,
-                false, 0, cubeVertices);
-
-        // Set the ModelViewProjection matrix in the shader.
-        GLES20.glUniformMatrix4fv(cubeModelViewProjectionParam, 1, false, modelViewProjection, 0);
-
-        // Set the normal positions of the cube, again for shading
-        GLES20.glVertexAttribPointer(cubeColorParam, 4, GLES20.GL_FLOAT, false, 0, cubeColors);
-
-        GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 36);
-        checkGLError("Drawing cube");
     }
 
     public void setScene(World scene) {

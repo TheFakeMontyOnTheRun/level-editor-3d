@@ -207,7 +207,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
 
         Matrix.frustumM( projectionMatrix.values, 0, xmin, xmax, ymin, ymax, 0.1f, 10000.0f);
         muMVPMatrixHandle = GLES20.glGetUniformLocation(mProgram, "uMVPMatrix");
-        Matrix.setLookAtM( vMatrix.values, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
+        Matrix.setLookAtM(vMatrix.values, 0, 0, 0, -3, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
     }
 
     /**
@@ -275,21 +275,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         }
     }
 
-    /**
-     *
-     */
-    private void setCamera() {
-        vMatrix.setAsIdentity();
 
-        Matrix.rotateM(vMatrix.values, 0, camera.angleXZ, 0, 1.0f, 0);
-
-        Matrix.translateM(vMatrix.values, 0, -camera.localPosition.x, -camera.localPosition.y, -camera.localPosition.z);
-
-        Matrix.multiplyMM(mvpMatrix.values, 0, vMatrix.values, 0, mMatrix.values, 0);
-        Matrix.multiplyMM(mvpMatrix.values, 0, projectionMatrix.values, 0, mvpMatrix.values, 0);
-        Matrix.multiplyMM(mvpMatrix.values, 0,  projectionMatrix.values, 0, vMatrix.values, 0);
-        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
-    }
 
     /**
      *
@@ -309,30 +295,42 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     }
 
     private void drawPerMaterialStaticMesh() {
-        for ( GLESVertexArrayManager manager : managers.values() ) {
+        for (GLESVertexArrayManager manager : managers.values()) {
             manager.draw(maPositionHandle, colorHandle, this.mTextureCoordinateHandle);
         }
     }
 
-
 //Took this form http://stackoverflow.com/questions/10551225/opengl-es-2-0-rotating-object-around-itself-on-android
 //reading it, makes a lot of sense. But I believe I can take this strategy and modify my stuff to use it.
 
-    public void transform(float[] mModelMatrix, float angleXZ, Vec3 trans ) {
-        Matrix.setIdentityM(mModelMatrix, 0);
-        Matrix.translateM(mModelMatrix, 0, trans.x, trans.y, trans.z);
-        Matrix.rotateM(mModelMatrix, 0, angleXZ, 0.0f, 1.0f, 0.0f);
+    public void transform(float angleXZ, Vec3 trans ) {
+        Matrix.setIdentityM(mMatrix.values, 0);
+        Matrix.translateM(mMatrix.values, 0, trans.x, trans.y, trans.z);
+        Matrix.rotateM(mMatrix.values, 0, angleXZ, 0.0f, 1.0f, 0.0f);
         Matrix.multiplyMM(mvpMatrix.values, 0, vMatrix.values, 0, mMatrix.values, 0);
         Matrix.multiplyMM(mvpMatrix.values, 0, projectionMatrix.values, 0, mvpMatrix.values,   0);
+    }
+
+    /**
+     *
+     */
+    private void setCamera() {
+        vMatrix.setAsIdentity();
+
+        Matrix.rotateM(vMatrix.values, 0, camera.angleXZ, 0, 1.0f, 0);
+        Matrix.translateM(vMatrix.values, 0, -camera.localPosition.x, -camera.localPosition.y, -camera.localPosition.z);
+        Matrix.multiplyMM(mvpMatrix.values, 0, vMatrix.values, 0, mMatrix.values, 0);
+        Matrix.multiplyMM(mvpMatrix.values, 0, projectionMatrix.values, 0, mvpMatrix.values, 0);
+        Matrix.multiplyMM(mvpMatrix.values, 0,  projectionMatrix.values, 0, vMatrix.values, 0);
+        GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
     }
 
     private void drawMeshes() {
         synchronized (meshes) {
             for ( SceneActorNode actor : actors ) {
 
-                transform(mMatrix.values, actor.angleXZ, actor.localPosition );
+                transform(actor.angleXZ, actor.localPosition );
                 GLES20.glUniformMatrix4fv(muMVPMatrixHandle, 1, false, mvpMatrix.values, 0);
-
                 drawMeshGLES2(sampleEnemy);
             }
         }

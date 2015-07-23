@@ -38,7 +38,7 @@ public class UseCardboardActivity extends CardboardActivity {
                 world = (World) new ObjectInputStream(fileInput).readObject();
                 SceneTesselator tesselator = new SceneTesselator(new GLES1TriangleFactory());
                 tesselator.generateSubSectorQuadsForWorld(world);
-
+                renderer.initDefaultMeshForActor();
                 renderer.setScene(world);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -100,7 +100,16 @@ public class UseCardboardActivity extends CardboardActivity {
 
             for (index = size - 1; index >= 0; --index) {
                 if (srs.get(index) instanceof GroupSector) {
+
                     renderer.cameraNode.localPosition.set(((GroupSector) srs.get(index)).getAbsoluteCenter());
+
+                    Vec3 pos = new Vec3(renderer.cameraNode.localPosition);
+
+                    renderer.spawnActor(pos.add(new Vec3(10.0f, 0.0f, 10.0f)), 180.0f);
+                    renderer.spawnActor(pos.add(new Vec3(30.0f, 0.0f, 30.0f)), 0.0f);
+                    renderer.spawnActor(pos.add(new Vec3(20.0f, 0.0f, 20.0f)), 90.0f);
+
+
                     return;
                 }
             }
