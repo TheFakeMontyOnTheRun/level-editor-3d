@@ -25,18 +25,16 @@ import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.awt.GLCanvas;
 import javax.media.opengl.glu.GLU;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.xml.sax.SAXException;
 
 import br.odb.liboldfart.WavefrontMaterialLoader;
 import br.odb.liboldfart.WavefrontOBJLoader;
+import br.odb.libscene.CameraNode;
+import br.odb.libscene.DirectedSceneNode;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
 import br.odb.libscene.World;
-import br.odb.libscene.builders.WorldLoader;
 import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.Decal;
 import br.odb.libstrip.GeneralTriangle;
@@ -47,10 +45,11 @@ import br.odb.utils.Color;
 import br.odb.utils.Direction;
 import br.odb.utils.math.Vec3;
 // GL2 constants
+import br.odb.vintage.SceneRenderer;
 
 
 public class Editor3DViewer extends GLCanvas implements GLEventListener,
-		KeyListener
+		KeyListener, SceneRenderer
 //		,Runnable 
 		{
 	
@@ -64,9 +63,9 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	final List<GeneralTriangle> polysToRender = new ArrayList<>();
 	final List<GeneralTriangle> defaultActorMesh = new ArrayList<>();
 	
-	final List<Vec3> actors = new ArrayList<>();
+	final List<DirectedSceneNode> actors = new ArrayList<>();
 	
-	public final Vec3 cameraPosition = new Vec3();
+	public final CameraNode defaultCameraNode = new CameraNode( "default" );
 	float angle = 0.0f;
 	private GLU glu;
 
@@ -91,7 +90,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	}
 		
     public GeneralTriangle changeHue( GeneralTriangle trig ) {
-        trig.material = new Material( null, new Color( trig.material.mainColor ), null, null, null );
+        trig.material = new Material( null, new Color( trig.material.mainColor ), null, null );
 
         switch ( trig.hint ) {
             case W:
@@ -171,17 +170,6 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		decal.translate( target.getAbsolutePosition() );
 	}
 	
-	World loadMap(String filename)
-			throws FileNotFoundException, IOException, SAXException,
-			ParserConfigurationException {
-		FileInputStream fis = new FileInputStream(
-				System.getProperty( "user.home" ) + filename );
-		 
-		World world = WorldLoader.build(fis);
-		tesselator.generateSubSectorQuadsForWorld(world);
-		return world;
-	}	
-
 	void applyDecalToSector(String decalFilename, Direction direction, String targetSectorName )
 			throws FileNotFoundException, IOException {
 		FileInputStream fis;		            
@@ -220,7 +208,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glLoadIdentity();
 
 		gl.glRotatef(angle, 0.0f, 1.0f, 0.0f);
-		gl.glTranslatef( -cameraPosition.x, -cameraPosition.y, -cameraPosition.z); 
+		gl.glTranslatef( -defaultCameraNode.localPosition.x, -defaultCameraNode.localPosition.y, -defaultCameraNode.localPosition.z); 
 
 		Color c;
 		
@@ -253,8 +241,8 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glBegin(GL_TRIANGLES);
 
 		synchronized( actors ) {
-			for ( Vec3 p : actors ) {
-				drawCube( gl, p );
+			for ( DirectedSceneNode p : actors ) {
+				drawCube( gl, p.localPosition );
 			}
 		}
 		
@@ -341,16 +329,16 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			recalculateVisibility();
 			break;
 		case KeyEvent.VK_A:
-			cameraPosition.y += scale / 2.0f;
+			defaultCameraNode.localPosition.y += scale / 2.0f;
 			break;
 		case KeyEvent.VK_Z:
-			cameraPosition.y -= scale / 2.0f;
+			defaultCameraNode.localPosition.y -= scale / 2.0f;
 			break;
 
 		case KeyEvent.VK_P:
 			
 			
-			actors.add( new Vec3( cameraPosition ) );
+			actors.add( new DirectedSceneNode( defaultCameraNode ) );
 			this.repaint();
 			break;
 		case KeyEvent.VK_LEFT:
@@ -360,20 +348,20 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			angle += 10.0f;
 			break;
 		case KeyEvent.VK_UP:
-			cameraPosition.x += scale * Math.sin(angle * (Math.PI / 180.0f));
-			cameraPosition.z -= scale * Math.cos(angle * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.x += scale * Math.sin(angle * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.z -= scale * Math.cos(angle * (Math.PI / 180.0f));
 			break;
 		case KeyEvent.VK_DOWN:
-			cameraPosition.x -= scale * Math.sin(angle * (Math.PI / 180.0f));
-			cameraPosition.z += scale * Math.cos(angle * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.x -= scale * Math.sin(angle * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.z += scale * Math.cos(angle * (Math.PI / 180.0f));
 			break;
 		case KeyEvent.VK_COMMA:
-			cameraPosition.x += scale * Math.sin(( angle - 90.0f ) * (Math.PI / 180.0f));
-			cameraPosition.z -= scale * Math.cos(( angle - 90.0f )* (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.x += scale * Math.sin(( angle - 90.0f ) * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.z -= scale * Math.cos(( angle - 90.0f )* (Math.PI / 180.0f));
 			break;
 		case KeyEvent.VK_PERIOD:
-			cameraPosition.x += scale * Math.sin( (angle + 90.0f ) * (Math.PI / 180.0f));
-			cameraPosition.z -= scale * Math.cos( (angle + 90.0f ) * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.x += scale * Math.sin( (angle + 90.0f ) * (Math.PI / 180.0f));
+			defaultCameraNode.localPosition.z -= scale * Math.cos( (angle + 90.0f ) * (Math.PI / 180.0f));
 			break;
 
 		case KeyEvent.VK_ESCAPE:
@@ -386,7 +374,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 
 
 	private void recalculateVisibility() {
-		currentSector = world.masterSector.pick( this.cameraPosition );
+		currentSector = world.masterSector.pick( this.defaultCameraNode.localPosition );
 		
 		
 		
@@ -421,8 +409,17 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		this.loadGeometryFromScene( world.masterSector );
 	}
 
-	public void spawnDefaultActor(Vec3 position ) {
-		actors.add( position );		
+	@Override
+	public void spawnDefaultActor(Vec3 pos, float angleXZ) {
+		DirectedSceneNode dsn = new DirectedSceneNode( "actor" );
+		dsn.localPosition.set( pos );
+		dsn.angleXZ = angleXZ;
+		actors.add( dsn );
+	}
+
+	@Override
+	public CameraNode getCurrentCameraNode() {
+		return this.defaultCameraNode;
 	}
 
 //	void sendPosition( int id ) throws IOException {
