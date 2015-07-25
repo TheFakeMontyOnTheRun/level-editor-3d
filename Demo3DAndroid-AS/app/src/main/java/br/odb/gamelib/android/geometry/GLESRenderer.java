@@ -363,11 +363,13 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public void flush() {
 
         for ( Material m : staticGeometryToAdd.keySet() ) {
-            initManagerForMaterial( m, staticGeometryToAdd.get( m ).size() );
+            initManagerForMaterial(m, staticGeometryToAdd.get(m).size());
             for ( GLES1Triangle t : staticGeometryToAdd.get( m ) ) {
                 addToVAForReal( t );
+                t.clear();
             }
             staticGeometryToAdd.get( m ).clear();
+            staticGeometryToAdd.remove( staticGeometryToAdd.get( m ) );
         }
 
         staticGeometryToAdd.clear();

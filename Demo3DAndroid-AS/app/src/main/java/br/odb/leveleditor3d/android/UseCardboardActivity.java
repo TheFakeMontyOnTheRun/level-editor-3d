@@ -40,6 +40,13 @@ public class UseCardboardActivity extends CardboardActivity {
                 tesselator.generateSubSectorQuadsForWorld(world);
                 renderer.initDefaultMeshForActor();
                 renderer.setScene(world);
+
+                for ( SceneNode sn : world.getAllRegionsAsList() ) {
+                    if ( sn instanceof GroupSector ) {
+                        ((GroupSector) sn ).clearMeshes();
+                    }
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
 

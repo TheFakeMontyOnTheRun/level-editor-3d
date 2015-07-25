@@ -24,9 +24,8 @@ public class GLES1Triangle extends GeneralTriangle {
     private FloatBuffer textureBuffer;
     private FloatBuffer colorBuffer;
     private FloatBuffer vertexBuffer;
-    int[] verticesBits = new int[9];
+
     private float[] color = new float[12];
-    int[] colorBits = new int[4];
     public int light = 0;
     private float[] textureCoordinates;
 
@@ -78,14 +77,6 @@ public class GLES1Triangle extends GeneralTriangle {
             for (int d = 0; d < 4; ++d) {
                 color[(c * 4) + (d)] = oneColor[d];
             }
-        }
-
-        for (int c = 0; c < vertices.length; ++c) {
-            verticesBits[c] = Float.floatToRawIntBits(vertices[c]);
-        }
-
-        for (int c = 0; c < colorBits.length; ++c) {
-            colorBits[c] = Float.floatToRawIntBits(color[c]);
         }
 
         ByteBuffer byteBuf = ByteBuffer.allocateDirect(vertices.length * 4);
@@ -182,12 +173,8 @@ public class GLES1Triangle extends GeneralTriangle {
     }
 
     public void multiplyColor(float factor) {
-
-        for (int c = 0; c < color.length; ++c)
+        for (int c = 0; c < color.length; ++c) {
             color[c] *= factor;
-
-        for (int d = 0; d < colorBits.length; ++d) {
-            colorBits[d] = Float.floatToRawIntBits(color[d]);
         }
     }
 
@@ -204,4 +191,8 @@ public class GLES1Triangle extends GeneralTriangle {
 
     }
 
+    public void clear() {
+        color = null;
+        textureCoordinates = null;
+    }
 }
