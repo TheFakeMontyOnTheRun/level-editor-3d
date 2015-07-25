@@ -145,6 +145,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             view.setScene(world);
 
+            for ( SceneNode sn : world.getAllRegionsAsList() ) {
+                if ( sn instanceof GroupSector ) {
+                    ((GroupSector) sn ).clearMeshes();
+                }
+            }
+
             view.renderer.camera.angleXZ = 180.0f;
 
             final List<SceneNode> srs = world.getAllRegionsAsList();

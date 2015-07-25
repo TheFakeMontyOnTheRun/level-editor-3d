@@ -380,8 +380,10 @@ public class CardboardRenderer implements CardboardView.StereoRenderer {
             initManagerForMaterial( m, staticGeometryToAdd.get( m ).size() );
             for ( GLES1Triangle t : staticGeometryToAdd.get( m ) ) {
                 addToVAForReal( t );
+                t.clear();
             }
             staticGeometryToAdd.get( m ).clear();
+            staticGeometryToAdd.remove( staticGeometryToAdd.get( m ) );
         }
 
         for ( GLESVertexArrayManager manager : managers.values() ) {
