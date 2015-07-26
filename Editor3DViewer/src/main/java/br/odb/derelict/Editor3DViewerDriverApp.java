@@ -15,7 +15,8 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import br.odb.libscene.SpaceRegion;
+import br.odb.libscene.GroupSector;
+import br.odb.libscene.LightNode;
 import br.odb.libscene.World;
 import br.odb.libscene.builders.WorldLoader;
 import br.odb.utils.math.Vec3;
@@ -107,10 +108,15 @@ public class Editor3DViewerDriverApp {
 
 			private void createScene(Editor3DViewer canvas) {
 			
-				SpaceRegion sr = (SpaceRegion) world.masterSector.getChild( "Cube" );
-				canvas.getCurrentCameraNode().localPosition.set( sr.getAbsolutePosition().add( new Vec3( sr.size.x / 2.0f, sr.size.y / 2.0f, sr.size.z / 2.0f ) ) );
-				canvas.spawnDefaultActor( canvas.getCurrentCameraNode().localPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ), 0.0f );
-				canvas.spawnDefaultActor( new Vec3( 0.0f, 0.0f, 0.0f ), 0.0f );
+				GroupSector sr = (GroupSector) world.masterSector.getChild( "Cube" );
+				canvas.getCurrentCameraNode().setPositionFromGlobal( ( sr.getAbsolutePosition().add( new Vec3( sr.size.x / 2.0f, sr.size.y / 2.0f, sr.size.z / 2.0f ) ) ) );
+				LightNode light0 = new LightNode( "light0" );
+				light0.intensity = 0.5f;
+				
+				light0.setPositionFromGlobal( canvas.getCurrentCameraNode().getAbsolutePosition() );
+				canvas.addLight( light0 );
+				//canvas.spawnDefaultActor( canvas.getCurrentCameraNode().localPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ), 0.0f );
+				//canvas.spawnDefaultActor( new Vec3( 0.0f, 0.0f, 0.0f ), 0.0f );
 			}
 		}).start();
 	}
