@@ -54,7 +54,7 @@ public class Editor3DViewerDriverApp {
 			@Override
 			public void run() {
 				try {					
-					world = Editor3DViewerDriverApp.loadMap( "/floor1.opt.xml" );
+					world = Editor3DViewerDriverApp.loadMap( "/prison.opt.xml" );
 					canvas.tesselator.generateSubSectorQuadsForWorld(world);
 					canvas.setScene( world );
 					canvas.initDefaultActorModel();
@@ -107,7 +107,7 @@ public class Editor3DViewerDriverApp {
 
 			private void createScene(Editor3DViewer canvas) {
 			
-				SpaceRegion sr = (SpaceRegion) world.masterSector.getChild( "Cube.002_Cube.112" );
+				SpaceRegion sr = (SpaceRegion) world.masterSector.getChild( "Cube" );
 				canvas.getCurrentCameraNode().localPosition.set( sr.getAbsolutePosition().add( new Vec3( sr.size.x / 2.0f, sr.size.y / 2.0f, sr.size.z / 2.0f ) ) );
 				canvas.spawnDefaultActor( canvas.getCurrentCameraNode().localPosition.add( new Vec3( 5.0f, 0.0f, 5.0f ) ), 0.0f );
 				canvas.spawnDefaultActor( new Vec3( 0.0f, 0.0f, 0.0f ), 0.0f );
