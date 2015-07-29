@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.odb.derelict;
+package br.odb.vintage;
 
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;

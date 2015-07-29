@@ -1,6 +1,6 @@
 <project> 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>br.odb.derelict</groupId>
+  <groupId>br.odb.vintage</groupId>
   <artifactId>Editor3DViewer</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -94,7 +94,7 @@
 				exec-maven-plugin
 			</artifactId>
 			<configuration>
-				<mainClass>br.odb.derelict.Editor3DViewerDriverApp</mainClass>
+				<mainClass>br.odb.vintage.Editor3DViewerDriverApp</mainClass>
 			</configuration>
 			</plugin>
 		</plugins>

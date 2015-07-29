@@ -1,4 +1,4 @@
-package br.odb.derelict;
+package br.odb.vintage;
 
 import static javax.media.opengl.GL.GL_COLOR_BUFFER_BIT;
 import static javax.media.opengl.GL.GL_DEPTH_BUFFER_BIT;
