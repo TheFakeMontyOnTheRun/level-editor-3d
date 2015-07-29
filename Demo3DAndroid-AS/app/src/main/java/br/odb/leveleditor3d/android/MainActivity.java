@@ -33,41 +33,6 @@ import br.odb.utils.math.Vec3;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-
-    //    volatile int gameId;
-//    volatile int playerId;
-
-//    void startNetGame() {
-//        String response = makeRequest("http://localhost:8080/multiplayer-server/GetGameId?gameType=1");
-//        gameId = Integer.parseInt(response);
-//    }
-//
-//    public static String makeRequest(String url) {
-//
-//        try {
-//            HttpClient httpclient = new DefaultHttpClient();
-//            HttpResponse response = httpclient.execute(new HttpGet(url));
-//            StatusLine statusLine = response.getStatusLine();
-//
-//            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
-//                ByteArrayOutputStream out = new ByteArrayOutputStream();
-//                response.getEntity().writeTo(out);
-//                String responseString = out.toString();
-//                out.close();
-//
-//
-//                return responseString;
-//
-//            } else {
-//                //Closes the connection.
-//                response.getEntity().getContent().close();
-//                return null;
-//            }
-//        } catch (Exception e) {
-//            return null;
-//        }
-//    }
-
     volatile ProgressDialog progressDialog;
     volatile String filename;
     volatile SceneView view;
@@ -78,8 +43,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private MediaRouter mMediaRouter;
     private MediaRouter.RouteInfo mRouteInfo;
-
-
 
 //    SVGRenderingNode[] nodes = new SVGRenderingNode[ 4 ];
 //    int currentFrame;
@@ -108,25 +71,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 //world = WorldLoader.build(fileInput)
                  world = (World) new ObjectInputStream(fileInput).readObject();
-
-//                GroupSector master0 = new GroupSector( "master" );
-//                master0.size.set( 20, 20, 20 );
-//                world = new World( master0 );
-//                GroupSector son0 = new GroupSector( "son0" );
-//                son0.size.set( 20, 20, 20 );
-//                master0.addChild(son0);
-//                Sector sonSon0 = new Sector( "sonSon0" );
-//                sonSon0.size.set( 20, 20, 20 );
-//                son0.addChild(sonSon0);
-//                son0.shades.put(Direction.N, new Material("mat0", new Color(255, 0, 0), null, null, null));
-//                son0.shades.put( Direction.E, new Material( "mat1", new Color( 0, 255, 0 ), null, null ,null  ) );
-//                son0.shades.put( Direction.S, new Material( "mat2", new Color( 0, 0, 255 ), null, null ,null  ) );
-//                son0.shades.put( Direction.W, new Material( "mat3", new Color( 255, 0, 255 ), null, null ,null  ) );
-//                son0.shades.put( Direction.FLOOR, new Material( "mat4", new Color( 255, 255, 0 ), null, null ,null  ) );
-//                son0.shades.put( Direction.CEILING, new Material( "mat5", new Color( 0, 255, 255 ), null, null ,null  ) );
-
-
-
                 SceneTesselator tesselator = new SceneTesselator(new GLES1TriangleFactory());
 
                 tesselator.generateSubSectorQuadsForWorld(world);

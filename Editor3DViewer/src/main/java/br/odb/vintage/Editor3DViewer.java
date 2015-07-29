@@ -49,13 +49,8 @@ import br.odb.utils.math.Vec3;
 import br.odb.vintage.SceneRenderer;
 
 public class Editor3DViewer extends GLCanvas implements GLEventListener,
-		KeyListener, SceneRenderer
-// ,Runnable
-{
+		KeyListener, SceneRenderer {
 
-	// public static final String SERVER =
-	// "http://192.241.246.87:8080/MServerTest";
-	// public static final String SERVER = "http://127.0.0.1:8080/MServerTest";
 	/**
 	 * 
 	 */
@@ -411,107 +406,4 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	public CameraNode getCurrentCameraNode() {
 		return this.defaultCameraNode;
 	}
-
-	// void sendPosition( int id ) throws IOException {
-	//
-	// String query = String.format("id=%s&x=%s&y=%s&z=%s",
-	// URLEncoder.encode( "" + id, "UTF8"),
-	// URLEncoder.encode( "" + cameraPosition.x, "UTF8"),
-	// URLEncoder.encode( "" + cameraPosition.y, "UTF8"),
-	// URLEncoder.encode( "" + cameraPosition.z, "UTF8")
-	// );
-	//
-	//
-	// String received = blockSendHTTPGet( SERVER + "/Server?" + query );
-	// String[] positions = received.split( ";" );
-	//
-	// String[] coords;
-	// Vec3 v;
-	//
-	// synchronized( actors ) {
-	//
-	// actors.clear();
-	//
-	// for ( String pos : positions ) {
-	// coords = pos.split( "[ ]+");
-	// v = new Vec3();
-	//
-	// v.x = Float.parseFloat( coords[ 0 ] );
-	// v.y = Float.parseFloat( coords[ 1 ] );
-	// v.z = Float.parseFloat( coords[ 2 ] );
-	//
-	// actors.add( v );
-	// }
-	// }
-	// }
-	//
-	// String blockSendHTTPGet(final String url) {
-	// String msg = "";
-	// try {
-	// URL urlObj = new URL( url );
-	// URLConnection connection;
-	// connection = urlObj.openConnection();
-	// HttpURLConnection httpConnection = (HttpURLConnection) connection;
-	//
-	// int responseCode = httpConnection.getResponseCode();
-	//
-	// if ( responseCode == HttpURLConnection.HTTP_OK ) {
-	// InputStream in = httpConnection.getInputStream();
-	//
-	// InputStreamReader i=new InputStreamReader( in);
-	// BufferedReader str=new BufferedReader(i);
-	// StringBuilder sb = new StringBuilder();
-	// String line;
-	// while ((line=str.readLine())!=null)
-	// {
-	// sb.append(line);
-	// }
-	//
-	// msg=sb.toString();
-	//
-	//
-	// } else {
-	// System.out.println( "Error code: " + responseCode );
-	// }
-	// } catch (MalformedURLException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	//
-	// return msg;
-	// }
-
-	// @Override
-	// public void run() {
-	//
-	// String data = "" + blockSendHTTPGet( SERVER + "/GetId" ).trim().charAt( 0
-	// );
-	//
-	// if( data == null || data.length() == 0 ) {
-	// return;
-	// }
-	//
-	// int id = Integer.parseInt( data );
-	//
-	// System.out.println( "Player Id:" + id );
-	//
-	// while( true ) {
-	//
-	// try {
-	// sendPosition( id );
-	// } catch (IOException e1) {
-	// // TODO Auto-generated catch block
-	// e1.printStackTrace();
-	// }
-	// try {
-	// Thread.sleep( 50 );
-	// } catch (InterruptedException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	// }
 }

@@ -6,24 +6,14 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.odb.SceneActorNode;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
-import br.odb.gamelib.android.geometry.GLESMesh;
 import br.odb.gamelib.android.geometry.GLESRenderer;
 import br.odb.liboldfart.WavefrontMaterialLoader;
 import br.odb.liboldfart.WavefrontOBJLoader;
@@ -33,11 +23,12 @@ import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
-import br.odb.utils.Color;
+import br.odb.utils.Utils;
 import br.odb.utils.math.Vec3;
+import br.odb.vintage.SceneActorNode;
 
 //public class SceneView extends GLSurfaceView implements Runnable {
-public class SceneView extends GLSurfaceView implements Runnable {
+public class SceneView extends GLSurfaceView {
     private final Context context;
 
 //    final public Map<LightSource, GroupSector> lightsForPlace = new HashMap<LightSource, GroupSector>();
@@ -67,111 +58,6 @@ public class SceneView extends GLSurfaceView implements Runnable {
 //        }
 //    }
 
-
-    public static final String SERVER = "http://192.241.246.87:8080/MServerTest";
-
-    void sendPosition(int id) throws IOException {
-
-        String query = String.format("id=%s&x=%s&y=%s&z=%s",
-                URLEncoder.encode("" + id, "UTF8"),
-                URLEncoder.encode("" + renderer.camera.localPosition.x, "UTF8"),
-                URLEncoder.encode("" + renderer.camera.localPosition.y, "UTF8"),
-                URLEncoder.encode("" + renderer.camera.localPosition.z, "UTF8")
-        );
-
-
-        String received = blockSendHTTPGet(SERVER + "/Server?" + query);
-        String[] positions = received.split(";");
-
-        String[] coords;
-        Vec3 v;
-
-        synchronized (renderer.meshes) {
-
-            renderer.actors.clear();
-            renderer.meshes.clear();
-
-            for (String pos : positions) {
-                coords = pos.split("[ ]+");
-                v = new Vec3();
-
-                v.x = Float.parseFloat(coords[0]);
-                v.y = Float.parseFloat(coords[1]);
-                v.z = Float.parseFloat(coords[2]);
-
-                spawnActor(v, 0 );
-            }
-        }
-    }
-
-    String blockSendHTTPGet(final String url) {
-        String msg = "";
-        try {
-            URL urlObj = new URL(url);
-            URLConnection connection;
-            connection = urlObj.openConnection();
-            HttpURLConnection httpConnection = (HttpURLConnection) connection;
-
-            int responseCode = httpConnection.getResponseCode();
-
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                InputStream in = httpConnection.getInputStream();
-
-                InputStreamReader i = new InputStreamReader(in);
-                BufferedReader str = new BufferedReader(i);
-                StringBuilder sb = new StringBuilder();
-                String line;
-                while ((line = str.readLine()) != null) {
-                    sb.append(line);
-                }
-
-                msg = sb.toString();
-
-
-            } else {
-                System.out.println("Error code: " + responseCode);
-            }
-        } catch (MalformedURLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        return msg;
-    }
-
-    @Override
-    public void run() {
-
-        String data = "" + blockSendHTTPGet(SERVER + "/GetId").trim().charAt(0);
-
-        if (data == null || data.length() == 0) {
-            return;
-        }
-
-        int id = Integer.parseInt(data);
-
-        System.out.println("Player Id:" + id);
-
-        while (true) {
-
-            try {
-                sendPosition(id);
-            } catch (IOException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-    }
-
     public void spawnActor(Vec3 v, float angleXZ) {
         SceneActorNode actor = new SceneActorNode( "actor@" + v.toString() );
         actor.localPosition.set( v );
@@ -199,8 +85,8 @@ public class SceneView extends GLSurfaceView implements Runnable {
         setEGLContextClientVersion(2);
 
         try {
-            String vertexShader =  LevelEditor3DApplication.readFully(vertex, "utf8");
-            String fragmentShader = LevelEditor3DApplication.readFully(fragment, "utf8");
+            String vertexShader =  Utils.readFully(vertex, "utf8");
+            String fragmentShader = Utils.readFully(fragment, "utf8");
 
             renderer = new GLESRenderer(10000, vertexShader, fragmentShader);
 
@@ -301,25 +187,8 @@ public class SceneView extends GLSurfaceView implements Runnable {
         return true;
     }
 
-    private void loadGeometryFromScene(GroupSector sector) {
-
-        for (GeneralTriangle isf : sector.mesh.faces) {
-            ++polyCount;
-            renderer.changeHue((GLES1Triangle) isf);
-            isf.flush();
-            renderer.addToVA((GLES1Triangle) isf);
-        }
-
-        for (SceneNode sr : sector.getSons()) {
-            if (sr instanceof GroupSector) {
-                loadGeometryFromScene((GroupSector) sr);
-            }
-        }
-    }
-
     public void setScene(World scene) {
-        loadGeometryFromScene(scene.masterSector);
-        renderer.flush();
+        renderer.setScene( scene );
     }
 }
 

@@ -21,7 +21,6 @@ import java.util.List;
 
 import javax.microedition.khronos.egl.EGLConfig;
 
-import br.odb.SceneActorNode;
 import br.odb.gamelib.android.geometry.GLES1Triangle;
 import br.odb.gamelib.android.geometry.GLES1TriangleFactory;
 import br.odb.gamelib.android.geometry.GLESMesh;
@@ -37,6 +36,7 @@ import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
+import br.odb.vintage.SceneActorNode;
 
 /**
  * Created by monty on 7/2/15.

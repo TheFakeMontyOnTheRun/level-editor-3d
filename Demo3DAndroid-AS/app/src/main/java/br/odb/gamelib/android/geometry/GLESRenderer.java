@@ -20,13 +20,17 @@ import java.util.Map;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import br.odb.SceneActorNode;
 import br.odb.libscene.CameraNode;
+import br.odb.libscene.GroupSector;
+import br.odb.libscene.SceneNode;
+import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
 import br.odb.libstrip.GeneralTriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
 import br.odb.utils.math.Vec3;
+import br.odb.vintage.SceneActorNode;
+import br.odb.vintage.SceneRenderer;
 
 /*
  * Concerns:
@@ -35,7 +39,7 @@ import br.odb.utils.math.Vec3;
  * - so, work to keep showing stuff efficiently
  * */
 
-public class GLESRenderer implements GLSurfaceView.Renderer {
+public class GLESRenderer implements GLSurfaceView.Renderer, SceneRenderer {
 
     public final CameraNode camera = new CameraNode( "mainCamera" );
 
@@ -76,6 +80,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
     public volatile boolean ready;
 
     private final Map< String, Integer > shaders = new HashMap<>();
+    private int polyCount;
 
     /**
      * @param type       GL_VERTEX_SHADER or GL_FRAGMENT_SHADER
@@ -354,7 +359,7 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
         GLESVertexArrayManager manager;
 
         if ( !managers.containsKey( face.material ) ) {
-            initManagerForMaterial( face.material, polycount / 10 );
+            initManagerForMaterial(face.material, polycount / 10);
         }
         manager = managers.get(face.material );
         manager.pushIntoFrameAsStatic(face.getVertexData(), face.material.mainColor.getFloatData());
@@ -378,5 +383,38 @@ public class GLESRenderer implements GLSurfaceView.Renderer {
             manager.uploadToGPU();
         }
         ready = true;
+    }
+
+
+    private void loadGeometryFromScene(GroupSector sector) {
+
+        for (GeneralTriangle isf : sector.mesh.faces) {
+            ++polyCount;
+            changeHue((GLES1Triangle) isf);
+            isf.flush();
+            addToVA((GLES1Triangle) isf);
+        }
+
+        for (SceneNode sr : sector.getSons()) {
+            if (sr instanceof GroupSector) {
+                loadGeometryFromScene((GroupSector) sr);
+            }
+        }
+    }
+
+    @Override
+    public void setScene(World scene) {
+        loadGeometryFromScene(scene.masterSector);
+        flush();
+    }
+
+    @Override
+    public void spawnDefaultActor(Vec3 vec3, float v) {
+
+    }
+
+    @Override
+    public CameraNode getCurrentCameraNode() {
+        return null;
     }
 }
