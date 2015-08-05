@@ -7,7 +7,7 @@ import br.odb.liboldfart.WavefrontMaterialLoader;
 import br.odb.liboldfart.WavefrontOBJLoader;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.World;
-import br.odb.libstrip.GeneralTriangleMesh;
+import br.odb.libstrip.TriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
 
@@ -20,9 +20,9 @@ public class WavefrontOBJImporter {
 		World world;
 		GroupSector sector;
 		GroupSector master = new GroupSector("root");
-		List<GeneralTriangleMesh> meshes = loader.loadMeshes( meshData, materials );
+		List<TriangleMesh> meshes = loader.loadMeshes( meshData, materials );
 		
-		for (GeneralTriangleMesh m : meshes) {
+		for (TriangleMesh m : meshes) {
 
 			if ( m.faces.size() > 0) {
 				System.out.println( "sector: " + m.name );

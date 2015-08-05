@@ -22,8 +22,6 @@ public class ImportOBJCommand extends UserCommandLineAction {
 		String[] operand = operands.split( "[ ]+" );
 		world = WavefrontOBJImporter.build( app.openAsInputStream( operand[ 0 ] ), app.openAsInputStream( operand[ 1 ] ) );
 		((LevelEditor)app).world = world;
-
-	
 	}
 
 	@Override

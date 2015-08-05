@@ -1,6 +1,7 @@
 package br.odb.derelict;
 
 import br.odb.libscene.GroupSector;
+import br.odb.libscene.MeshNode;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.World;
 import br.odb.libstrip.GeneralTriangle;
@@ -11,22 +12,24 @@ public class SVGRenderer {
 		
 		StringBuilder sb = new StringBuilder( "<g id='" + sector.id + "' >" );
 				
-		for ( GeneralTriangle isf : sector.mesh.faces ) {
-			sb.append( "<rect " );
-			
-			sb.append( " x = '" + isf.getVertex( 0 ).x + "' " );
-			sb.append( " y = '" + isf.getVertex( 0 ).z + "' " );
-			sb.append( " width = '" + ( isf.getVertex( 2 ).x - isf.getVertex( 0 ).x ) + "' " );
-			sb.append( " height = '" + ( isf.getVertex( 2 ).z - isf.getVertex( 0 ).z ) + "' " );
-			
-			sb.append( " style = 'fill: " + isf.material.mainColor.getHTMLColor() + ";' " );
-			
-			sb.append( " />\n" );
-		}
-		
-		for ( SceneNode sr : sector.getSons() ) {
-			if ( sr instanceof GroupSector ) {
-				sb.append( generateSVGForSector( (GroupSector) sr ) );
+		for( SceneNode sn : sector.getSons() ) {
+			if ( sn instanceof MeshNode ) {
+				for ( GeneralTriangle isf : ( (MeshNode ) sn ).mesh.faces ) {
+					sb.append( "<rect " );
+					
+					sb.append( " x = '" + isf.getVertex( 0 ).x + "' " );
+					sb.append( " y = '" + isf.getVertex( 0 ).z + "' " );
+					sb.append( " width = '" + ( isf.getVertex( 2 ).x - isf.getVertex( 0 ).x ) + "' " );
+					sb.append( " height = '" + ( isf.getVertex( 2 ).z - isf.getVertex( 0 ).z ) + "' " );
+					
+					sb.append( " style = 'fill: " + isf.material.mainColor.getHTMLColor() + ";' " );
+					
+					sb.append( " />\n" );
+				}				
+			}
+
+			if ( sn instanceof GroupSector ) {
+				sb.append( generateSVGForSector( (GroupSector) sn ) );
 			}
 		}
 		

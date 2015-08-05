@@ -5,6 +5,7 @@ import br.odb.gameapp.UserCommandLineAction;
 import br.odb.libscene.GroupSector;
 import br.odb.libstrip.Material;
 import br.odb.utils.Color;
+import br.odb.utils.Direction;
 
 public class SetColorCommand extends UserCommandLineAction {
 
@@ -15,7 +16,7 @@ public class SetColorCommand extends UserCommandLineAction {
 
 	@Override
 	public int requiredOperands() {
-		return 3;
+		return 5;
 	}
 
 	@Override
@@ -42,11 +43,13 @@ public class SetColorCommand extends UserCommandLineAction {
 			return;
 		}
 		
-		color = new Color(Float.parseFloat(parms[1]),
-				Float.parseFloat(parms[2]), Float.parseFloat(parms[3]));
+		Direction d = Direction.getDirectionForSimpleName( parms[ 1 ] );
+		
+		color = new Color(Float.parseFloat(parms[2]),
+				Float.parseFloat(parms[3]), Float.parseFloat(parms[4]));
 
 		Material m = new Material( null, color, null, null );
-		target.material = m;
+		target.shades.put( d,  m );
 
 	}
 
