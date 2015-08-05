@@ -32,6 +32,7 @@ import br.odb.libscene.CameraNode;
 import br.odb.libscene.DirectedSceneNode;
 import br.odb.libscene.GroupSector;
 import br.odb.libscene.LightNode;
+import br.odb.libscene.MeshNode;
 import br.odb.libscene.SceneNode;
 import br.odb.libscene.Sector;
 import br.odb.libscene.SpaceRegion;
@@ -39,7 +40,7 @@ import br.odb.libscene.World;
 import br.odb.libscene.util.SceneTesselator;
 import br.odb.libstrip.Decal;
 import br.odb.libstrip.GeneralTriangle;
-import br.odb.libstrip.GeneralTriangleMesh;
+import br.odb.libstrip.TriangleMesh;
 import br.odb.libstrip.Material;
 import br.odb.libstrip.builders.GeneralTriangleFactory;
 import br.odb.utils.Color;
@@ -91,26 +92,26 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		trig.material = new Material(null, new Color(trig.material.mainColor),
 				null, null);
 
-		// switch (trig.hint) {
-		// case W:
-		// trig.material.mainColor.multiply(0.1f);
-		// break;
-		// case E:
-		// trig.material.mainColor.multiply(0.4f);
-		// break;
-		// case N:
-		// trig.material.mainColor.multiply(0.2f);
-		// break;
-		// case S:
-		// trig.material.mainColor.multiply(0.6f);
-		// break;
-		// case FLOOR:
-		// trig.material.mainColor.multiply(0.9f);
-		// break;
-		// case CEILING:
-		// trig.material.mainColor.multiply(0.3f);
-		// break;
-		// }
+		 switch (trig.hint) {
+		 case W:
+		 trig.material.mainColor.multiply(0.1f);
+		 break;
+		 case E:
+		 trig.material.mainColor.multiply(0.4f);
+		 break;
+		 case N:
+		 trig.material.mainColor.multiply(0.2f);
+		 break;
+		 case S:
+		 trig.material.mainColor.multiply(0.6f);
+		 break;
+		 case FLOOR:
+		 trig.material.mainColor.multiply(0.9f);
+		 break;
+		 case CEILING:
+		 trig.material.mainColor.multiply(0.3f);
+		 break;
+		 }
 
 		Vec3 normal = trig.makeNormal();
 
@@ -126,14 +127,15 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 
 	public void loadGeometryFromScene(GroupSector sector) {
 
-		for (GeneralTriangle isf : sector.mesh.faces) {
-
-			changeHue(isf);
-			polysToRender.add(isf);
-		}
-
 		for (SceneNode sr : sector.getSons()) {
-			if (sr instanceof GroupSector) {
+			
+			if (sr instanceof MeshNode ) {
+				for (GeneralTriangle isf : ((MeshNode)sr).mesh.faces) {
+
+					changeHue(isf);
+					polysToRender.add(isf);
+				}				
+			}else if (sr instanceof GroupSector) {
 				loadGeometryFromScene((GroupSector) sr);
 			} else if (sr instanceof LightNode) {
 				addLight((LightNode) sr);
@@ -156,7 +158,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		gl.glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 		gl.glShadeModel(GL_SMOOTH);
 		gl.glEnable(GL.GL_BLEND);
-		gl.glEnable(gl.GL_LIGHTING);
+//		gl.glEnable(gl.GL_LIGHTING);
 		gl.glEnable(gl.GL_COLOR_MATERIAL);
 		gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
 	}
@@ -168,7 +170,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 
 		WavefrontOBJLoader loader = new WavefrontOBJLoader(
 				new GeneralTriangleFactory());
-		ArrayList<GeneralTriangleMesh> mesh = (ArrayList<GeneralTriangleMesh>) loader
+		ArrayList<TriangleMesh> mesh = (ArrayList<TriangleMesh>) loader
 				.loadMeshes(new FileInputStream(System.getProperty("user.home")
 						+ "/gargoyle.obj"), mats);
 
@@ -179,7 +181,8 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 
 	void applyDecalToSector(Decal decal, GroupSector target) {
 		decal.scale(target.size);
-		target.mesh.faces.addAll(decal.faces);
+		MeshNode node = new MeshNode( decal.name, decal );
+		target.addChild( node );
 		decal.translate(target.getAbsolutePosition());
 	}
 
@@ -358,6 +361,23 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 		}
 
 	}
+	
+	private void clearMeshesOn(GroupSector sector ) {
+		
+		List< MeshNode > nodes = new ArrayList<MeshNode>();
+		
+		for ( SceneNode sn : sector.getSons() ) {
+			if ( sn instanceof MeshNode ) {
+				nodes.add( (MeshNode) sn );
+			} else if ( sn instanceof GroupSector ) {
+				clearMeshesOn( (GroupSector) sn );
+			}
+		}
+		
+		for ( MeshNode node : nodes ) {
+			sector.removeChild( node );
+		}
+	}
 
 	private void recalculateVisibility() {
 		currentSector = world.masterSector
@@ -368,7 +388,7 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 			Sector visitingSon = (Sector) currentSector;
 			GroupSector visitingParent = (GroupSector) visitingSon.parent;
 			this.polysToRender.clear();
-			this.world.masterSector.clearMeshes();
+			clearMeshesOn( this.world.masterSector );
 
 			while (visitingSon != null) {
 
@@ -405,5 +425,23 @@ public class Editor3DViewer extends GLCanvas implements GLEventListener,
 	@Override
 	public CameraNode getCurrentCameraNode() {
 		return this.defaultCameraNode;
+	}
+
+	@Override
+	public void flush() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setAsReady() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setDefaultMeshForActor(TriangleMesh arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }
